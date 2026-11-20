@@ -38,8 +38,10 @@ EXTRA_FEATURES = ["workdays", "ip_chem", "nuclear_gwh"]
 # 사전예측에서 바꿔 넣는 열: 원래 열 → 예측 시점에 아는 대체 열
 SAME_MONTH_VARS = ["price_retail", "price_wholesale", "ip", "hicp_gas", "ip_chem", "nuclear_gwh", "wind_gwh",
                    "ttf_usd", "coal_usd", "lng_asia_usd", "cpi_city_gas"]
-EX_ANTE = {"hdd": "hdd_norm", "cdd": "cdd_norm", **{v: f"{v}_prev" for v in SAME_MONTH_VARS}}
+EX_ANTE = {"hdd": "hdd_norm", "cdd": "cdd_norm", "hdd_crisis": "hdd_crisis_norm",
+           **{v: f"{v}_prev" for v in SAME_MONTH_VARS}}
 NORMAL_YEARS = 10
+CRISIS_START = "2022-03"   # 러시아 침공(2022-02) 이후 가격 급등·수요 감축 (R2 구조변화 변수)
 
 
 def add_features(df, target=TARGET):
@@ -67,6 +69,9 @@ def add_features(df, target=TARGET):
     for v in SAME_MONTH_VARS:
         if v in df:
             df[f"{v}_prev"] = df[v].shift(1)
+    df["crisis"] = (df.month >= CRISIS_START).astype(float)
+    df["hdd_crisis"] = df["hdd"] * df["crisis"]
+    df["hdd_crisis_norm"] = df["hdd_norm"] * df["crisis"]
     return df
 
 
@@ -92,13 +97,17 @@ def make_test(row, features, mode):
 
 
 def rolling_forecast(df, fit_predict, features, target=TARGET, train_start=TRAIN_START,
-                     eval_start=EVAL_START, eval_end=EVAL_END, modes=("ex_post",)):
-    """매달 재추정 후 1개월 앞 예측. 반환: month, mode, actual, pred, n_train."""
+                     eval_start=EVAL_START, eval_end=EVAL_END, modes=("ex_post",), window=None):
+    """매달 재추정 후 1개월 앞 예측. 반환: month, mode, actual, pred, n_train.
+    window: None이면 train_start부터 쌓는 확장창, 정수 N이면 직전 N개월만 쓰는 이동창."""
     features = list(features)
     need = list(dict.fromkeys(features + [target]))
     rows = []
     for t in eval_months(eval_start, eval_end):
-        train = df[(df.month >= train_start) & (df.month < t)].dropna(subset=need)
+        start = train_start
+        if window:
+            start = max(train_start, (pd.Period(t, "M") - window).strftime("%Y-%m"))
+        train = df[(df.month >= start) & (df.month < t)].dropna(subset=need)
         row = df[df.month == t]
         tests = [make_test(row, features, mode) for mode in modes]
         test = pd.concat(tests, ignore_index=True)
