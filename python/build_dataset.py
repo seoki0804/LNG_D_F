@@ -15,16 +15,19 @@
 국가별 추가 열
   유럽: gas_tj, gas_pj, gas_flag, hicp_gas, ip_chem, nuclear_gwh, wind_gwh, ttf_usd, lng_asia_usd, coal_usd
   독일: slp_pj, rlm_pj, the_total_pj (THE 부문별 소비, 2021-10~, fetch_the.py)
+  hdd_source: eurostat 또는 dwd_calibrated (독일 2026~, Eurostat HDD 공개 전 DWD 보정값, fetch_dwd.py)
+  price_retail은 2026~ ECOICOP ver.2 가스 지수(prc_hicp_minr)를 2025-12 비율로 이어 붙인 값
   한국: gas_kt, gas_city_kt, gas_power_kt, cpi_city_gas, lng_asia_usd, ttf_usd, coal_usd
 
 실행: python python/build_dataset.py
 """
 import holidays
+import numpy as np
 import pandas as pd
 
 from config import EU_GEOS, INTERIM, PROCESSED, START, END
 
-COUNTRY_SERIES = ["gas_tj", "hdd", "cdd", "hicp_gas", "ip", "ip_chem", "nuclear_gwh", "wind_gwh"]
+COUNTRY_SERIES = ["gas_tj", "hdd", "cdd", "hicp_gas", "hicp_gas_v2", "ip", "ip_chem", "nuclear_gwh", "wind_gwh"]
 WORLD_SERIES = ["ttf_usd", "lng_asia_usd", "coal_usd"]
 KR_START = "2006-01"   # 한국 수요는 2016-01부터. 그 앞 10년은 평년 HDD 계산용 기온·가격만 둔다.
 COMMON = ["geo", "month", "y", "y_unit", "hdd", "cdd", "price_retail", "price_wholesale", "ip",
@@ -53,6 +56,20 @@ def world_prices():
             .pivot(index="month", columns="series", values="value").reset_index())
 
 
+def splice_hicp(df):
+    """prc_hicp_midx(~2025-12) 뒤에 prc_hicp_minr(ECOICOP ver.2)를 마지막 겹치는 달의 비율로 이어 붙인다."""
+    out = df["hicp_gas"].copy()
+    if "hicp_gas_v2" not in df:
+        return out
+    both = df.dropna(subset=["hicp_gas", "hicp_gas_v2"])
+    if both.empty:
+        return out
+    ratio = both.hicp_gas.iloc[-1] / both.hicp_gas_v2.iloc[-1]
+    after = (df.month > both.month.iloc[-1]) & df.hicp_gas.isna()
+    out[after] = df.loc[after, "hicp_gas_v2"] * ratio
+    return out
+
+
 def build_europe(geo, long, world):
     sub = long[(long.geo == geo) & long.series.isin(COUNTRY_SERIES)]
     wide = sub.pivot(index="month", columns="series", values="value").reset_index()
@@ -67,8 +84,16 @@ def build_europe(geo, long, world):
     df["gas_pj"] = df["gas_tj"] / 1000
     df["gas_flag"] = df["gas_flag"].fillna("")
     df["y"], df["y_unit"] = df["gas_pj"], "PJ"
-    df["price_retail"], df["price_wholesale"] = df["hicp_gas"], df["ttf_usd"]
+    df["price_retail"], df["price_wholesale"] = splice_hicp(df), df["ttf_usd"]
+    df["hdd_source"] = np.where(df.hdd.notna(), "eurostat", "")
+    if geo == "DE" and (INTERIM / "dwd_de_degree_days.csv").exists():   # 2026~ HDD·CDD (fetch_dwd.py)
+        dwd = pd.read_csv(INTERIM / "dwd_de_degree_days.csv", dtype={"month": str}).set_index("month")
+        gap = df.hdd.isna() & df.month.isin(dwd.index)
+        df.loc[gap, "hdd"] = df.loc[gap, "month"].map(dwd.hdd_cal)
+        df.loc[gap, "cdd"] = df.loc[gap, "month"].map(dwd.cdd_cal)
+        df.loc[gap, "hdd_source"] = "dwd_calibrated"
     extra = ["gas_tj", "gas_pj", "gas_flag", "hicp_gas", "ip_chem", "nuclear_gwh", "wind_gwh"] + WORLD_SERIES
+    extra += ["hdd_source"]
     if geo == "DE" and (INTERIM / "the_sector.csv").exists():   # THE 부문별 (fetch_the.py), 2021-10~
         the = pd.read_csv(INTERIM / "the_sector.csv", dtype={"month": str})[["month", "slp_pj", "rlm_pj"]]
         df = df.merge(the, on="month", how="left")

@@ -30,6 +30,8 @@ EUROSTAT_SERIES = [
     ("ip_chem", "sts_inpr_m", {"nace_r2": "C20", "s_adj": "SCA", "unit": "I21", "indic_bt": "PRD"}, START),
     ("nuclear_gwh", "nrg_cb_pem", {"siec": "N9000", "unit": "GWH"}, START),
     ("wind_gwh", "nrg_cb_pem", {"siec": "RA300", "unit": "GWH"}, START),
+    # HICP 가스 ECOICOP ver.2 (2026년부터는 이 데이터셋만 갱신된다; prc_hicp_midx는 2025-12에서 끝남)
+    ("hicp_gas_v2", "prc_hicp_minr", {"coicop18": "CP0452", "unit": "I15"}, START),
 ]
 
 FRED_SERIES = {

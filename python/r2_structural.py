@@ -11,7 +11,7 @@
 모델: 기준 회귀(√Y~HDD+가격), Ridge, GBM. 하이퍼파라미터는 본 실험에서 고른 국가별 설정을 그대로 쓴다.
 DM 검정: 같은 모델의 '확장 2015~' 대비 (APE, 사후예측).
 
-출력: outputs/r2_structural.md, outputs/r2_structural.csv
+출력: outputs/r2_structural.md, outputs/r2_structural.csv, outputs/r2_structural_predictions.csv
 실행: python python/r2_structural.py   (run_experiment.py 결과 필요)
 """
 import json
@@ -95,6 +95,7 @@ def main():
     raw = pd.concat(Parallel(n_jobs=-1)(delayed(task)(*j) for j in jobs), ignore_index=True)
     pred = (raw.groupby(["geo", "model", "strategy", "mode", "month"], as_index=False)
             .agg(actual=("actual", "first"), pred=("pred", "mean"), n_train=("n_train", "first")))
+    pred.to_csv(OUTPUTS / "r2_structural_predictions.csv", index=False, encoding="utf-8-sig")
 
     rows = []
     for (g, m, st, mode), r in pred.groupby(["geo", "model", "strategy", "mode"]):

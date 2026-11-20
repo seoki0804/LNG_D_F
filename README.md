@@ -17,7 +17,8 @@ python/
   fetch_europe.py      유럽 5개국 + FRED 수집
   fetch_korea.py       한국: KOGAS 공급량(키 불필요), 기상청 HDD·CDD·KOSIS(키 필요)
   fetch_the.py         독일 부문별: THE 일별 SLP·RLM → 월 PJ (키 불필요, 2021-10~)
-  build_dataset.py     국가별 월 데이터셋 병합 (영업일 수 포함)
+  fetch_dwd.py         독일 2026년 HDD·CDD: DWD 12개 도시 일평균기온 → Eurostat 값에 보정 (R² 0.999)
+  build_dataset.py     국가별 월 데이터셋 병합 (영업일 수, 2026년 HDD·요금 연결 포함)
   rolling_eval.py      공통 롤링 평가 코드 (사후·사전예측, MAPE·RMSE·MASE)
   models.py            모델 정의 (회귀·Ridge·Lasso·RF·GBM·LightGBM·SVR·MLP·SARIMAX·Holt-Winters·하이브리드)
   dm_test.py           Diebold-Mariano 검정 (HLN 보정)
@@ -27,6 +28,11 @@ python/
   r3_shap.py           R3 해석가능성: Ridge vs LightGBM 순열 SHAP 기여도 (6개국)
   r6_global.py         R6 6개국 통합 모델 vs 국가별 모델
   r7_sector.py         R7 부문별 예측: 부문 합산 vs 총량 직접 (독일·한국), 부문별 민감도
+  r8_foundation.py     R8 파운데이션 모델 Chronos-2·TimesFM 2.5 zero-shot (.venv-fm에서 실행)
+  r9_intervals.py      R9 예측구간: 회귀 PI·분위수 GBM·conformal·Chronos-2 분위수의 포함률
+  r10_ensemble.py      R10 앙상블: 사전에 정한 구성의 단순 평균 vs 단일 모델
+  r11_climate.py       R11 기후 시나리오: 겨울·난방철 HDD −10% → 연간 수요 변화
+  oos_de2026.py        독일 2026-01~09 표본 외 검증
   pre_experiment_de.py 계획서의 독일 사전 실험(기본 설정) 재현
   sensitivity_de.py    독일 ML 모델 설정 민감도
 R/
@@ -48,6 +54,7 @@ cd python
 python fetch_europe.py        # 유럽·FRED 데이터 (data/raw/<오늘 날짜>/ 에 원자료 저장)
 python fetch_korea.py all     # 한국: KOGAS·기상청·KOSIS (키는 docs/API_KEYS.md, 키 없으면 kogas만 가능)
 python fetch_the.py           # 독일 부문별 THE SLP·RLM
+python fetch_dwd.py           # 독일 2026년 HDD (DWD 보정)
 python build_dataset.py       # data/processed/ 생성
 python run_experiment.py      # 본 실험 6개국 (12코어 약 7분) → outputs/experiment/report.md
 python r1_variables_de.py     # R1 (약 4분) → outputs/r1_de_variables.md   (R1~R7은 run_experiment 결과가 필요)
@@ -59,7 +66,23 @@ cd ..
 Rscript R/01_de_simple_regression.R     # → outputs/de_simple_regression.txt, outputs/figures/
 Rscript R/02_de_multiple_regression.R   # → outputs/de_multiple_regression.txt, outputs/figures/
 Rscript R/03_country_regression.R       # R5 → outputs/r5_country_regression.txt, outputs/figures/
+
+# R8 파운데이션 모델: 별도 가상환경 (torch·transformers가 기본 환경과 충돌하지 않게)
+py -3.12 -m venv .venv-fm
+.venv-fm\Scripts\python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+.venv-fm\Scripts\python -m pip install chronos-forecasting==2.3.2 "timesfm[torch]==3.0.2" jax scikit-learn pandas scipy
+cd python
+..\.venv-fm\Scripts\python r8_foundation.py                                             # 6개국 (CPU 약 4분)
+..\.venv-fm\Scripts\python r8_foundation.py --geos DE --start 2026-01 --end 2026-09 --tag de2026
+
+# R8 이후 (기본 환경)
+python r9_intervals.py        # → outputs/r9_intervals.md
+python r10_ensemble.py        # → outputs/r10_ensemble.md
+python r11_climate.py         # → outputs/r11_climate.md (R5 결과 필요)
+python oos_de2026.py          # → outputs/oos_de2026.md
 ```
+
+TimesFM의 `timesfm[xreg]`는 Windows에 없는 `jax[cuda]`를 요구해서, CPU용 `jax`를 따로 설치한다.
 
 보조 스크립트: `pre_experiment_de.py`(계획서 기본 설정 재현), `sensitivity_de.py`(설정 민감도).
 특정 Eurostat 계열만 새로 받기: `python fetch_europe.py wind_gwh` (다른 계열은 수정치로 바뀌지 않는다).
@@ -115,8 +138,9 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 - [x] 독일 다중회귀·VIF·변수선택·HAC (Ch6~), 외부 변수 평가 (R1)
 - [x] 국가별 회귀계수·HDD 민감도 비교 (R5), 구조변화 대응 (R2)
 - [x] 6개국 통합 모델 (R6), SHAP 해석 (R3)
-- [ ] 파운데이션 모델 Chronos-2·TimesFM 2.5 (R8) — 별도 가상환경 설치 필요
-- [ ] 선택 과제: 예측구간 (R9), 하이브리드·앙상블 (R10), 기후 시나리오 (R11), 독일 2026년 표본 외 검증
+- [x] 파운데이션 모델 Chronos-2·TimesFM 2.5 zero-shot (R8)
+- [x] 예측구간 (R9), 앙상블 (R10), 기후 시나리오 (R11), 독일 2026년 표본 외 검증
+- [ ] 최종 산출물: 논문 형식 보고서, 학술대회 발표 자료와 스크립트
 
 ## 본 실험 결과 (6개국) — `outputs/experiment/report.md`
 
@@ -138,6 +162,79 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 - **한국은 HDD 하나로 충분하다.** 단순회귀 4.6%보다 유의하게 정확한 모델이 없고, Ridge·LightGBM·SVR은 유의하게 부정확하다(DM p < 0.05).
 - **독일에서 기준 회귀보다 유의하게 정확한 모델은 Lasso 하나뿐이다**(p = 0.034). LightGBM(5.3%)도 p = 0.29로 유의하지 않다. 36개월 평가로는 1%p 차이를 가르기 어렵다.
 - **사전예측(평년 HDD)에서는 트리 모델이 크게 나빠진다**(독일 GBM 5.8% → 9.2%). 하이브리드·MLP·Ridge가 더 안정적이다. MLP는 시드에 따라 MAPE가 ±0.4~1.3%p 흔들린다.
+
+## 독일 2026년 표본 외 검증 — `outputs/oos_de2026.md`
+
+2023~2025년 평가로 고정한 모델·설정을 그 뒤 2026-01~09(9회)에 그대로 적용했다. 2026년 HDD는 DWD 12개 도시 일평균기온을 Eurostat HDD에 보정한 값(2014~2025 R² 0.999), 소비자요금은 HICP ECOICOP ver.2를 2025-12 비율로 이은 값이다.
+
+| 모델 | 2026 MAPE 사후 | 2026 MAPE 사전 | 2023~2025 MAPE 사후 |
+| --- | --- | --- | --- |
+| Ridge + 위기 변수 | **2.5** | 4.5 | 5.0 |
+| 하이브리드 (회귀+GBM 잔차) | 3.2 | **4.4** | 6.3 |
+| 회귀 √Y~HDD+가격 + 위기 변수 | 3.3 | 6.9 | 5.4 |
+| LightGBM | 3.7 | 7.0 | 5.3 |
+| Chronos-2 + 공변량 | 5.3 | 5.9 | 6.9 |
+| 회귀 √Y~HDD+가격 (기준) | 5.6 | 9.6 | 6.5 |
+
+- 모델 순위가 2023~2025년과 거의 같다(순위상관 0.85). 평가 기간에 맞춘 결론이 아니다.
+- Ridge + 위기 변수는 9개월만으로도 기준 회귀보다 유의하게 정확하다(DM p = 0.013).
+
+## R8 파운데이션 모델 (zero-shot) — `outputs/r8_foundation.md`
+
+학습 없이 수요 이력(과 공변량)만 넣어 예측했다. CPU에서 6개국 전체가 약 4분이다.
+
+| 모델 | 독일 | 이탈리아 | 프랑스 | 스페인 | 네덜란드 | 한국 | 평균 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Chronos-2 단변량 | 6.8 | 4.9 | 8.8 | 5.5 | 6.6 | 6.4 | 6.5 |
+| Chronos-2 + 공변량 | 6.9 | 4.3 | 5.8 | 6.0 | **5.4** | 5.9 | **5.7** |
+| TimesFM 2.5 단변량 | 7.9 | 5.4 | 7.7 | 5.6 | 6.9 | 6.2 | 6.6 |
+| TimesFM 2.5 + 공변량 | 7.4 | **4.0** | 7.4 | 5.6 | 9.4 | 4.9 | 6.4 |
+| 국가 최고 학습 모델 | 5.3 | 4.3 | 6.5 | 5.7 | 7.5 | 4.5 | 5.6 |
+
+- Chronos-2 + 공변량은 6개국 평균이 학습한 국가별 최고 모델(사후에 고른 것)과 비슷하고, 네덜란드에서는 더 낫다. 어느 나라에서도 최고 모델보다 유의하게 나쁘지 않다.
+- 공변량 없는 단변량도 사전예측에서 평균 6.5%로 안정적이다(기온 전망이 필요 없다).
+- 한계: 사전학습 자료에 2023~2025년 공개 통계가 섞였을 가능성을 배제할 수 없다. 독일 2026년 검증에서는 중위권(5.3%)이었다.
+
+## R9 예측구간 — `outputs/r9_intervals.md`
+
+| 방법 | 명목 80% 포함률 | 평균 폭 | 명목 95% 포함률 | 평균 폭 |
+| --- | --- | --- | --- | --- |
+| 회귀 PI (위기 변수) | 88% | 30.7% | 96% | 47.2% |
+| Conformal (LightGBM) | 84% | 25.1% | 98% | 40.2% |
+| Chronos-2 분위수 | **81%** | **21.1%** | — | — |
+| 분위수 GBM | 56% | 23.2% | 81% | 108% |
+
+- Chronos-2 분위수가 명목 수준에 가장 가깝고 폭도 가장 좁다. 회귀 PI·conformal은 보수적(더 넓음)이다.
+- 분위수 GBM은 과소 포함한다. 학습 표본이 100개 남짓이라 극단 분위수를 직접 배우기 어렵다.
+
+## R10 앙상블 — `outputs/r10_ensemble.md`
+
+평가 전에 정한 구성의 단순 평균. 6개국 평균 MAPE(%).
+
+| 앙상블 | 사후예측 | 사전예측 |
+| --- | --- | --- |
+| 회귀(위기)+ML 4종+Chronos-2 | **5.8** | **7.3** |
+| 회귀(위기)+ML 4종 | 6.1 | 7.7 |
+| ML 4종 평균 (Ridge·GBM·LightGBM·MLP) | 6.1 | 7.6 |
+| 검증 상위 3 | 6.3 | 8.3 |
+| 국가 최고 단일 모델 (평가 구간에서 고름) | 5.6 | 7.4 |
+| 기준 회귀 | 9.5 | 11.8 |
+
+- 앙상블은 5개국에서 기준 회귀보다 유의하게 정확하고, 어느 나라에서도 최고 단일 모델보다 유의하게 나쁘지 않다. 어떤 모델이 최고일지 미리 모르는 상황에서는 앙상블이 가장 안전한 선택이다.
+- 독일은 앙상블(4.3%)이 최고 단일 모델(LightGBM 5.3%)보다 낫다.
+
+## R11 기후 시나리오 — `outputs/r11_climate.md`
+
+R5의 위기 후 HDD 민감도를 2023~2025년 월평균 수요·HDD에 적용했다(다른 요인 고정).
+
+| 국가 | 겨울(12~2월) HDD −10% | 난방철(10~4월) HDD −10% |
+| --- | --- | --- |
+| 프랑스 | −4.6% | −7.3% |
+| 독일 | −4.3% | −7.0% |
+| 네덜란드 | −2.5% | −4.3% |
+| 이탈리아 | −2.6% | −3.9% |
+| 한국 | −2.4% | −3.2% |
+| 스페인 | −0.8% | −1.3% |
 
 ## R2 구조변화 대응 — `outputs/r2_structural.md`
 
