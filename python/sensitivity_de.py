@@ -48,7 +48,7 @@ CASES = [
     ("GBM", "CDD 제외", M.gbm, drop("cdd")),
     ("GBM", "산업생산 제외", M.gbm, drop("ip")),
     ("GBM", "시차 수요 제외", M.gbm, drop("lag1", "lag12")),
-    ("GBM", "도매가격 같은 달", M.gbm, [f if f != "ttf_lag1" else "ttf_usd" for f in B]),
+    ("GBM", "도매가격 같은 달", M.gbm, [f if f != "price_wholesale_lag1" else "price_wholesale" for f in B]),
     ("GBM", "n_estimators 300, lr 0.05", GBM(n_estimators=300, learning_rate=0.05), B),
     ("GBM", "subsample 0.8", GBM(subsample=0.8), B),
     ("GBM", "huber 손실", GBM(loss="huber"), B),

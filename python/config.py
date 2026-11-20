@@ -12,6 +12,7 @@ for p in (RAW, INTERIM, PROCESSED, OUTPUTS):
 
 # 유럽 5개국 (Eurostat geo 코드)
 EU_GEOS = ["DE", "IT", "FR", "ES", "NL"]
+ALL_GEOS = EU_GEOS + ["KR"]
 GEO_NAMES = {"DE": "독일", "IT": "이탈리아", "FR": "프랑스", "ES": "스페인", "NL": "네덜란드", "KR": "한국"}
 
 START = "2008-01"          # 유럽 분석 시작

@@ -15,14 +15,21 @@ data/
 python/
   config.py            경로·국가·기간 설정
   fetch_europe.py      유럽 5개국 + FRED 수집
+  fetch_korea.py       한국: KOGAS 공급량(키 불필요), 기상청 HDD·CDD·KOSIS(키 필요)
   build_dataset.py     국가별 월 데이터셋 병합 (영업일 수 포함)
-  rolling_eval.py      공통 롤링 평가 코드 (모든 모델이 이 코드로 평가)
-  models.py            사전 실험 모델 (회귀·Ridge·Lasso·RF·GBM·SVR·MLP·SARIMAX·Holt-Winters·하이브리드)
-  pre_experiment_de.py 독일 사전 실험 재현
+  rolling_eval.py      공통 롤링 평가 코드 (사후·사전예측, MAPE·RMSE·MASE)
+  models.py            모델 정의 (회귀·Ridge·Lasso·RF·GBM·LightGBM·SVR·MLP·SARIMAX·Holt-Winters·하이브리드)
+  dm_test.py           Diebold-Mariano 검정 (HLN 보정)
+  run_experiment.py    본 실험: 튜닝 → 고정 → 5개국 평가 → DM 검정
+  pre_experiment_de.py 계획서의 독일 사전 실험(기본 설정) 재현
   sensitivity_de.py    독일 ML 모델 설정 민감도
 R/
   01_de_simple_regression.R   독일 단순회귀 추론(Ch1~2), 진단 plot 6종·검정·Box-Cox(Ch3)
-outputs/               결과표(.csv, .md, .txt)와 그림(figures/)
+docs/
+  API_KEYS.md          기상청·KOSIS API 키 발급 절차
+outputs/
+  experiment/          본 실험 결과 (report.md, summary.csv, predictions.csv, dm_tests.csv, tuning.csv)
+  figures/             그림
 ```
 
 ## 실행 순서
@@ -30,13 +37,15 @@ outputs/               결과표(.csv, .md, .txt)와 그림(figures/)
 ```bash
 pip install -r requirements.txt
 cd python
-python fetch_europe.py        # 데이터 다시 받기 (data/raw/<오늘 날짜>/ 에 저장)
+python fetch_europe.py        # 유럽·FRED 데이터 (data/raw/<오늘 날짜>/ 에 원자료 저장)
+python fetch_korea.py all     # 한국: KOGAS·기상청·KOSIS (키는 docs/API_KEYS.md, 키 없으면 kogas만 가능)
 python build_dataset.py       # data/processed/ 생성
-python pre_experiment_de.py   # 독일 사전 실험 재현 → outputs/de_pre_experiment.md
-python sensitivity_de.py      # ML 설정 민감도 → outputs/de_sensitivity.csv
+python run_experiment.py      # 본 실험 6개국 (12코어 약 7분) → outputs/experiment/report.md
 cd ..
 Rscript R/01_de_simple_regression.R   # → outputs/de_simple_regression.txt, outputs/figures/
 ```
+
+보조 스크립트: `pre_experiment_de.py`(계획서 기본 설정 재현), `sensitivity_de.py`(설정 민감도).
 
 R 패키지: `install.packages(c("lmtest", "car"))` (MASS는 기본 포함)
 
@@ -49,40 +58,68 @@ from rolling_eval import load_country, rolling_forecast, metrics, BASE_FEATURES
 
 def my_model(train, test, features, target):
     ...  # train으로만 적합 (표준화도 train으로만)
-    return 예측값_배열
+    return 예측값_배열   # test 행 수만큼
 
 df = load_country("DE")
-res = rolling_forecast(df, my_model, BASE_FEATURES)   # 2023-01~2025-12, 36회
-print(metrics(res, df))                               # MAPE, RMSE, MASE
+res = rolling_forecast(df, my_model, BASE_FEATURES, modes=("ex_post", "ex_ante"))  # 2023-01~2025-12, 36회
+print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 ```
+
+본 실험에 넣으려면 `run_experiment.py`의 `SPECS`에 `Spec(이름, 특성, build=..., grid=...)` 한 줄을 추가한다. 하이퍼파라미터는 2020~2022 검증 구간에서만 고르고, 2023~2025 평가 구간은 튜닝에 쓰지 않는다.
 
 ## 데이터
 
 | 변수 | 유럽 5개국 | 한국 |
 | --- | --- | --- |
-| 수요 Y | Eurostat `nrg_cb_gasm` 내수 소비 (TJ, GCV) | KOGAS 용도별 월 공급량 (톤) — 수동 다운로드 필요 |
-| HDD·CDD | Eurostat `nrg_chdd_m` | 기상청 ASOS 일자료로 계산 — API 키 필요 |
-| 가스 요금 | Eurostat `prc_hicp_midx` CP0452 (2015=100) | KOSIS 도시가스 물가 — API 키 필요 |
-| 도매가격 | FRED `PNGASEUUSDM` | FRED `PNGASJPUSDM` |
-| 산업생산 | Eurostat `sts_inpr_m` B-D (2021=100) | KOSIS 광공업생산지수 |
-| 화학 생산 | Eurostat `sts_inpr_m` C20 | — |
-| 원자력 발전 | Eurostat `nrg_cb_pem` N9000 (GWh) | — |
-| 영업일 수 | python-holidays 국가 공휴일 | 같음 |
+| 변수 (공통 열 이름) | 유럽 5개국 | 한국 |
+| --- | --- | --- |
+| 수요 `y` | Eurostat `nrg_cb_gasm` 내수 소비 (PJ, GCV), 2008-01~ | KOGAS 용도별 월 공급량 도시가스용+발전용 (천 톤), 2016-01~ |
+| `hdd`, `cdd` | Eurostat `nrg_chdd_m` | 기상청 ASOS 7개 도시(서울·부산·대구·인천·광주·대전·울산) 일평균기온으로 Eurostat 방식 계산, 지점 평균 |
+| `price_retail` | Eurostat `prc_hicp_midx` CP0452 (2015=100) | KOSIS 소비자물가 도시가스 `DT_1J22112` (2020=100) |
+| `price_wholesale` | FRED `PNGASEUUSDM` (USD/MMBtu) | FRED `PNGASJPUSDM` 아시아 LNG (USD/MMBtu) |
+| `ip` | Eurostat `sts_inpr_m` B-D 계절조정 (2021=100) | KOSIS 광공업생산지수 계절조정 총지수 `DT_1F02001` (2020=100) |
+| `ip_chem` | Eurostat `sts_inpr_m` C20 | — |
+| `nuclear_gwh` | Eurostat `nrg_cb_pem` N9000 (GWh) | — |
+| `workdays` | python-holidays 국가 공휴일 | 같음 (설·추석·대체공휴일 포함) |
 
-주의: Eurostat `prc_hicp_midx`는 2025년 12월에서 끝난다(COICOP 개편). 2026년 추가 검증에는 대체 출처가 필요하다.
+- 한국 HDD: HDD = Σ(18 − Tm) (Tm ≤ 15°C인 날), CDD = Σ(Tm − 21) (Tm ≥ 24°C인 날)을 지점별로 월합한 뒤 7개 지점을 단순평균한다. 일평균기온 결측 2일(2011-10-16 인천, 2013-09-30 대구)은 앞뒤 날로 보간했다.
+- Eurostat `prc_hicp_midx`는 2025년 12월에서 끝난다(COICOP 개편). 2026년 추가 검증에는 대체 출처가 필요하다.
+- 한국 소비자 도시가스 요금은 규제 요금이라 몇 달에 한 번만 바뀐다.
 
 ## 진행 상황
 
 - [x] 유럽 5개국 + FRED 데이터 수집 (2026-11-21 호출, 2008-01~2025-12 결측 없음)
+- [x] 한국 데이터: KOGAS 공급량, 기상청 7개 도시 HDD·CDD, KOSIS 도시가스 CPI·광공업생산지수 (2016-01~2025-12 결측 없음)
 - [x] 국가별 데이터셋 병합 (2025년 소비량·최대월/최소월 비 계획서와 일치)
-- [x] 공통 롤링 평가 코드
+- [x] 공통 롤링 평가 코드 (사후·사전예측)
 - [x] 독일 단순회귀 추론·진단·Box-Cox (R)
-- [x] 독일 사전 실험 재현 — 통계 모델은 일치, ML 모델은 차이 (아래)
-- [ ] 한국 데이터 (KOGAS·기상청·KOSIS) — 기상청·KOSIS API 키 필요
-- [ ] 독일 부문별 자료 (THE SLP·RLM)
-- [ ] 다중회귀·VIF (Ch6~), 국가별 회귀, DM 검정
+- [x] 본 실험: 6개국 × 13개 모델, 검증 구간 튜닝, 시드 평균, DM 검정 (R4·R5 일부)
+- [ ] 독일 부문별 자료 (THE SLP·RLM), 한국 부문별 예측 (R7)
+- [ ] 독일 다중회귀·VIF·변수선택 (Ch6~, R1), 국가별 회귀계수 비교 (R5)
+- [ ] 6개국 통합 모델 (R6), SHAP (R3), 파운데이션 모델 (R8)
 
-## 지금까지의 결과 (독일)
+## 본 실험 결과 (6개국) — `outputs/experiment/report.md`
+
+2023~2025년 롤링 1개월 앞 사후예측 MAPE(%). 하이퍼파라미터는 2020~2022년 검증 구간에서만 골랐다.
+
+| 모델 | 독일 | 이탈리아 | 프랑스 | 스페인 | 네덜란드 | 한국 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 기준: 회귀 √Y~HDD+가격 | 6.5 | 9.1 | 10.0 | 9.8 | 17.1 | 4.6 |
+| SARIMAX+HDD·가격 | 7.0 | 6.0 | 9.1 | 6.9 | 10.2 | **4.5** |
+| Holt-Winters | 7.6 | 6.7 | 13.6 | **5.7** | 9.3 | 6.1 |
+| Ridge | 5.6 | 5.6 | 7.1 | 9.2 | 10.5 | 6.6 |
+| Gradient Boosting | 5.8 | 5.7 | 7.0 | 6.3 | **7.5** | 5.1 |
+| LightGBM | **5.3** | 5.3 | 10.2 | 7.6 | 7.5 | 6.1 |
+| MLP (16-8) | 5.8 | 5.6 | 7.1 | 7.3 | 8.8 | 5.3 |
+| 하이브리드 (회귀+GBM 잔차) | 6.3 | **4.3** | **6.5** | 7.5 | 7.9 | 4.6 |
+
+- **최고 모델이 국가마다 다르다.** 독일은 LightGBM, 이탈리아·프랑스는 하이브리드, 스페인은 Holt-Winters, 네덜란드는 GBM, 한국은 SARIMAX다.
+- **기준 회귀는 수요 수준이 구조적으로 바뀐 나라에서 크게 틀린다.** 네덜란드는 17.1%, 프랑스는 10.0%다. 전월 수요를 쓰는 모델은 이 변화를 따라간다.
+- **한국은 HDD 하나로 충분하다.** 단순회귀 4.6%보다 유의하게 정확한 모델이 없고, Ridge·LightGBM·SVR은 유의하게 부정확하다(DM p < 0.05).
+- **독일에서 기준 회귀보다 유의하게 정확한 모델은 Lasso 하나뿐이다**(p = 0.034). LightGBM(5.3%)도 p = 0.29로 유의하지 않다. 36개월 평가로는 1%p 차이를 가르기 어렵다.
+- **사전예측(평년 HDD)에서는 트리 모델이 크게 나빠진다**(독일 GBM 5.8% → 9.2%). 하이브리드·MLP·Ridge가 더 안정적이다. MLP는 시드에 따라 MAPE가 ±0.4~1.3%p 흔들린다.
+
+## 독일 상세 결과
 
 **단순회귀 Y ~ HDD (2008~2025, n = 216)** — `outputs/de_simple_regression.txt`
 
@@ -91,7 +128,7 @@ print(metrics(res, df))                               # MAPE, RMSE, MASE
 - 등분산: BP(Koenker) p = 0.028 → √Y 변환 후 p = 0.32. Box-Cox 최적 λ = 0.56 (95% CI 0.36~0.76). 계획서의 BP p = 0.004는 재현되지 않았지만 결론(이분산 → √Y로 해소)은 같다.
 - **잔차 자기상관이 강하다: Durbin-Watson 0.96 (p < 10⁻¹⁴), √Y 후에도 0.89.** 계획서에 없는 위반으로, 추론(표준오차·구간)을 해석할 때 주의가 필요하다. 시차 변수나 HAC 표준오차를 검토해야 한다.
 
-**롤링 MAPE 재현 (2023~2025, 36회, 추정 시작 2015-01)** — `outputs/de_pre_experiment.md`
+**계획서 사전 실험 재현 (기본 설정, 튜닝 없음)** — `outputs/de_pre_experiment.md`
 
 | 모델 | 재현 | 계획서 |
 | --- | --- | --- |
@@ -104,5 +141,5 @@ print(metrics(res, df))                               # MAPE, RMSE, MASE
 | 하이브리드 (회귀 + GBM 잔차) | 6.2% | 6.8% |
 
 - 통계 모델과 외부 변수 표의 OLS 열 9개는 모두 정확히 재현된다. 따라서 데이터와 평가 코드는 원 분석과 같다.
-- ML 모델은 원 분석의 설정을 알 수 없어 차이가 난다. 설정만 바꿔도 GBM은 5.7~7.5%, Ridge는 5.6~7.7% 범위에서 움직인다(`outputs/de_sensitivity.csv`). 모델 간 차이 1%p 안팎은 설정 변동 폭보다 작으므로, 모델 순위는 튜닝을 고정한 뒤 DM 검정(R4)으로 판단해야 한다.
+- ML 모델은 원 분석의 설정을 알 수 없어 차이가 난다. 설정만 바꿔도 GBM은 5.7~7.5%, Ridge는 5.6~7.7% 범위에서 움직인다(`outputs/de_sensitivity.csv`). 그래서 본 실험은 검증 구간 튜닝으로 설정을 고정했다. **보고서·발표에는 본 실험 수치를 쓴다** (계획서의 GBM 5.6%, Ridge 6.4% 대신 GBM 5.8%, Ridge 5.6%, LightGBM 5.3%).
 - RMSE·MASE 기준으로는 GBM(19.9 PJ, 0.40)이 회귀(25.9 PJ, 0.47)보다 낫다. MAPE는 수요가 낮은 여름 달의 오차를 크게 반영한다.

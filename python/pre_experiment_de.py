@@ -13,7 +13,7 @@ import models as M
 from config import OUTPUTS
 from rolling_eval import BASE_FEATURES, load_country, mape_by_year, metrics, rolling_forecast
 
-REG = ["hdd", "hicp_gas"]  # 회귀 √Y ~ HDD + 소비자가격
+REG = ["hdd", "price_retail"]  # 회귀 √Y ~ HDD + 소비자가격 (독일은 HICP 가스)
 
 # (이름, fit_predict, 특성, 계획서 MAPE: 전체/2023/2025)
 MODELS = [
