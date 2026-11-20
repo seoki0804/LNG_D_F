@@ -2,15 +2,27 @@
 
 독일 월별 천연가스 수요를 회귀분석(강의 Ch1~6)과 AI 모델로 예측하고, 같은 모델 구조를 이탈리아·프랑스·스페인·네덜란드·한국에 적용해 국가별 정확도와 난방 민감도를 비교한다.
 
-- 평가: 2023년 1월~2025년 12월, 매달 재추정 후 1개월 앞 예측(36회), MAPE·RMSE·MASE, Diebold-Mariano 검정
-- 도구: 회귀 R, AI Python
+- 평가: 2023년 1월~2025년 12월, 매달 재추정 후 1개월 앞 예측(36회), MAPE·RMSE·MASE, Diebold-Mariano 검정, 모델 신뢰집합(MCS)
+- 검정력 보강: 장기 평가(유럽 2018~2025 96회, 한국 2020~2025 72회), 6개국 2026-01~09 표본 외 검증
+- 도구: 회귀 R, AI Python, 보고서·발표 자료 Node(docx·pptxgenjs)
+
+## 최종 산출물
+
+| 산출물 | 위치 |
+| --- | --- |
+| 논문 형식 보고서 (A4 15쪽, 그림 7 + 부록 그림 3) | `report/천연가스_수요예측_보고서.docx` |
+| 학술대회 발표 자료 (17장, 슬라이드마다 발표 스크립트를 노트에 수록) | `report/천연가스_수요예측_발표.pptx` |
+| 논문 그림 (영문, 300 dpi PNG + 벡터 PDF) | `outputs/figures/paper/` |
+| 문서에 쓴 모든 수치 (결과 파일에서 자동 추출) | `report/numbers.json` |
+
+문서의 숫자는 손으로 옮기지 않았다. `report_numbers.py`가 `outputs/`에서 수치를 모으고, `build_report.js`·`build_deck.js`가 그 값으로 문서를 만든다. 분석을 다시 돌리면 문서도 같은 숫자로 다시 만들어진다.
 
 ## 폴더 구조
 
 ```
 data/
-  raw/<호출일>/        원자료 그대로 (Eurostat JSON-stat, FRED CSV)
-  interim/             long 형식 정리본 (europe_long.csv)
+  raw/<호출일>/        원자료 그대로 (Eurostat JSON-stat, FRED CSV, KOGAS, 기상청, THE, DWD, Open-Meteo)
+  interim/             long 형식 정리본 (europe_long.csv, 2026년 HDD 보정값 등)
   processed/           국가별 분석 데이터셋 (DE.csv … panel.csv)
 python/
   config.py            경로·국가·기간 설정
@@ -18,6 +30,7 @@ python/
   fetch_korea.py       한국: KOGAS 공급량(키 불필요), 기상청 HDD·CDD·KOSIS(키 필요)
   fetch_the.py         독일 부문별: THE 일별 SLP·RLM → 월 PJ (키 불필요, 2021-10~)
   fetch_dwd.py         독일 2026년 HDD·CDD: DWD 12개 도시 일평균기온 → Eurostat 값에 보정 (R² 0.999)
+  fetch_openmeteo.py   이탈리아·프랑스·스페인·네덜란드 2026년 HDD·CDD: Open-Meteo ERA5 도시 기온 → Eurostat 값에 보정 (R² 0.988~0.998)
   build_dataset.py     국가별 월 데이터셋 병합 (영업일 수, 2026년 HDD·요금 연결 포함)
   rolling_eval.py      공통 롤링 평가 코드 (사후·사전예측, MAPE·RMSE·MASE)
   models.py            모델 정의 (회귀·Ridge·Lasso·RF·GBM·LightGBM·SVR·MLP·SARIMAX·Holt-Winters·하이브리드)
@@ -32,11 +45,15 @@ python/
   r9_intervals.py      R9 예측구간: 회귀 PI·분위수 GBM·conformal·Chronos-2 분위수의 포함률
   r10_ensemble.py      R10 앙상블: 사전에 정한 구성의 단순 평균 vs 단일 모델
   r11_climate.py       R11 기후 시나리오: 겨울·난방철 HDD −10% → 연간 수요 변화
-  oos_de2026.py        독일 2026-01~09 표본 외 검증
+  oos_de2026.py        독일 2026-01~09 표본 외 검증 (위기 시점 2022-09 견고성 포함)
+  oos_2026.py          6개국 2026-01~09 표본 외 검증 (스페인은 2026-08 자료 오류로 2026-07까지)
+  long_eval.py         장기 롤링 평가: 유럽 2018~2025, 한국 2020~2025 (튜닝 구간을 앞당겨 같은 절차 적용), 국면별 MAPE, MCS
   r4_mcs.py            R4 모델 신뢰집합 (25개 후보, 다중비교 보정)
   realtime_check.py    공표 지연을 반영한 실시간 예측 견고성 확인
   leakage_check.py     데이터 누수 자동 점검 (미래 자료를 망가뜨려도 예측이 그대로인지)
-  run_all.py           분석 전체를 의존 순서대로 실행
+  figures.py           논문 그림 7종 + 부록 3종 (outputs/figures/paper/)
+  report_numbers.py    보고서·발표 자료에 들어갈 수치를 outputs/에서 모아 report/numbers.json으로 저장
+  run_all.py           분석 → 그림 → 보고서·발표 자료까지 의존 순서대로 실행
   pre_experiment_de.py 계획서의 독일 사전 실험(기본 설정) 재현
   sensitivity_de.py    독일 ML 모델 설정 민감도
 R/
@@ -49,7 +66,14 @@ docs/
   API_KEYS.md          기상청·KOSIS API 키 발급 절차
 outputs/
   experiment/          본 실험 결과 (report.md, summary.csv, predictions.csv, dm_tests.csv, tuning.csv)
-  figures/             그림
+  long_eval/           장기 평가 결과 (report.md, summary_all.csv, mcs.csv, regimes.csv, predictions_all.csv)
+  figures/             분석 단계별 그림
+  figures/paper/       보고서·발표용 그림 (영문)
+report/
+  docx_kit.js          보고서 양식 (스타일·표·그림·수식 도우미)
+  build_report.js      보고서 생성 → 천연가스_수요예측_보고서.docx
+  build_deck.js        발표 자료 생성 → 천연가스_수요예측_발표.pptx (발표 스크립트는 슬라이드 노트)
+  numbers.json         문서에 쓰는 수치 (report_numbers.py가 생성)
 ```
 
 ## 실행 순서
@@ -58,6 +82,7 @@ outputs/
 # 1) 환경
 pip install -r requirements.txt
 #    R: install.packages(c("lmtest", "car", "sandwich", "strucchange"))
+#    보고서·발표 자료: Node.js 18+ 에서  cd report && npm install
 #    R8 파운데이션 모델은 별도 가상환경 (torch·transformers가 기본 환경과 충돌하지 않게)
 py -3.12 -m venv .venv-fm
 .venv-fm\Scripts\python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
@@ -69,15 +94,20 @@ python fetch_europe.py        # 유럽·FRED (data/raw/<오늘 날짜>/ 에 원�
 python fetch_korea.py all     # 한국: KOGAS·기상청·KOSIS (키는 docs/API_KEYS.md, 키 없으면 kogas만 가능)
 python fetch_the.py           # 독일 부문별 THE SLP·RLM
 python fetch_dwd.py           # 독일 2026년 HDD (DWD 보정)
+python fetch_openmeteo.py     # 유럽 4개국 2026년 HDD (Open-Meteo ERA5 보정)
 python build_dataset.py       # data/processed/ 생성
 cd ..
 
-# 3) 분석 전체 (본 실험 → 누수 점검 → R 스크립트 → R1~R11 → MCS → 실시간 → 2026 검증, 12코어 약 30분)
+# 3) 분석 전체 (본 실험 → 누수 점검 → R 스크립트 → R1~R11 → MCS → 실시간 → 2026 검증
+#    → 장기 평가 → 6개국 2026 검증 → 그림 → 보고서·발표 자료, 12코어 약 60분)
 python python/run_all.py
-python python/run_all.py --from r9    # 특정 단계부터
+python python/run_all.py --from r9      # 특정 단계부터
+python python/run_all.py --from figures # 그림과 문서만 다시 만들기 (1분 이내)
 ```
 
-단계별 결과 위치: 본 실험 `outputs/experiment/report.md`, 각 연구 과제 `outputs/r*.md`, 회귀 추론 `outputs/de_*.txt`, 그림 `outputs/figures/`.
+단계별 결과 위치: 본 실험 `outputs/experiment/report.md`, 장기 평가 `outputs/long_eval/report.md`, 각 연구 과제 `outputs/r*.md`, 회귀 추론 `outputs/de_*.txt`, 그림 `outputs/figures/paper/`, 문서 `report/`.
+
+발표 자료의 테마 색은 Claude pptx 스킬의 `apply_theme.js`가 있을 때만 입힌다(`PPTX_SKILL_DIR` 환경변수로 위치 지정). 없으면 Office 기본 테마 색으로 저장되고 내용은 같다.
 
 TimesFM의 `timesfm[xreg]`는 Windows에 없는 `jax[cuda]`를 요구해서, CPU용 `jax`를 따로 설치한다.
 
@@ -106,8 +136,6 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 
 ## 데이터
 
-| 변수 | 유럽 5개국 | 한국 |
-| --- | --- | --- |
 | 변수 (공통 열 이름) | 유럽 5개국 | 한국 |
 | --- | --- | --- |
 | 수요 `y` | Eurostat `nrg_cb_gasm` 내수 소비 (PJ, GCV), 2008-01~ | KOGAS 용도별 월 공급량 도시가스용+발전용 (천 톤), 2016-01~ |
@@ -120,7 +148,9 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 | `workdays` | python-holidays 국가 공휴일 | 같음 (설·추석·대체공휴일 포함) |
 
 - 한국 HDD: HDD = Σ(18 − Tm) (Tm ≤ 15°C인 날), CDD = Σ(Tm − 21) (Tm ≥ 24°C인 날)을 지점별로 월합한 뒤 7개 지점을 단순평균한다. 일평균기온 결측 2일(2011-10-16 인천, 2013-09-30 대구)은 앞뒤 날로 보간했다.
-- Eurostat `prc_hicp_midx`는 2025년 12월에서 끝난다(COICOP 개편). 2026년 추가 검증에는 대체 출처가 필요하다.
+- Eurostat `prc_hicp_midx`는 2025년 12월에서 끝난다(COICOP 개편). 2026년 값은 ECOICOP ver.2 `prc_hicp_minr`를 2025-12 비율로 이어 붙였다.
+- 2026년 HDD·CDD: Eurostat 월 HDD가 아직 없어 독일은 DWD 12개 도시, 유럽 4개국은 Open-Meteo ERA5 도시 기온으로 계산해 2014~2025 Eurostat 값에 보정했다(`hdd_source` 열). 한국은 기상청 값을 그대로 쓴다.
+- 스페인 2026-08 수요가 Eurostat에 0으로 올라와 있다. 자료 오류로 보고 결측 처리했다(`gas_flag = invalid_zero`).
 - 한국 소비자 도시가스 요금은 규제 요금이라 몇 달에 한 번만 바뀐다.
 
 ## 진행 상황
@@ -137,7 +167,9 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 - [x] 6개국 통합 모델 (R6), SHAP 해석 (R3)
 - [x] 파운데이션 모델 Chronos-2·TimesFM 2.5 zero-shot (R8)
 - [x] 예측구간 (R9), 앙상블 (R10), 기후 시나리오 (R11), 독일 2026년 표본 외 검증
-- [ ] 최종 산출물: 논문 형식 보고서, 학술대회 발표 자료와 스크립트
+- [x] 검정력 보강: 장기 평가(유럽 96개월·한국 72개월), 6개국 2026년 표본 외 검증, 6개국 통합 MCS
+- [x] 논문 그림 10종 (영문)
+- [x] 최종 산출물: 논문 형식 보고서, 학술대회 발표 자료와 스크립트
 
 ## 본 실험 결과 (6개국) — `outputs/experiment/report.md`
 
@@ -158,7 +190,7 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 - **검증 구간에서 차수를 고른 SARIMAX(계절 차분 (0,1,1)₁₂)가 학습형 단일 모델 중 평균 1위다**(사후 5.9%, 사전 7.1%). 처음 실행에서 차수를 고정했을 때(평균 7.4%)는 ML보다 낮게 나왔는데, 같은 튜닝 절차를 적용하자 순위가 바뀌었다 (아래 '연구 검토와 보완').
 - **기준 회귀는 수요 수준이 구조적으로 바뀐 나라에서 크게 틀린다.** 네덜란드 17.1%, 프랑스 10.0%. 전월 수요나 계절 차분을 쓰는 모델은 이 변화를 따라간다.
 - **한국은 HDD 하나로 충분하다.** 단순회귀 4.6%보다 유의하게 정확한 모델이 없다.
-- **36개월 평가로는 상위 모델끼리 구분하기 어렵다.** 모델 신뢰집합(MCS, 아래)에 국가마다 25개 후보 중 14~21개가 남는다.
+- **36개월 평가로는 상위 모델끼리 구분하기 어렵다.** 모델 신뢰집합(MCS, 아래)에 국가마다 25개 후보 중 14~21개가 남는다. 그래서 평가 기간을 늘린 장기 평가와 2026년 표본 외 검증을 더했다(아래).
 - **사전예측(평년 HDD)에서는 트리 모델이 크게 나빠진다**(독일 GBM 5.8% → 9.2%). SARIMAX·MLP·하이브리드가 더 안정적이다. MLP는 시드에 따라 MAPE가 ±0.4~1.3%p 흔들린다.
 
 ## 연구 검토와 보완 (2026-11-21)
@@ -178,9 +210,43 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 | 회귀 추론 | 계획서의 Ch4~5(Bonferroni 동시구간, 겨울 3개월 동시예측, 역예측, 행렬 계산)를 빠뜨렸다 | `R/04_de_simultaneous_matrix.R` 추가 | 행렬 계산이 lm()과 1e-13 이내로 일치 |
 | 회귀 추론 | 단순회귀 신뢰구간이 잔차 자기상관을 무시했다 | Newey-West 구간 병기, 적합결여 검정 추가 | HAC 표준오차가 OLS의 1.6~1.8배. 적합결여: Y 모형 기각(p = 0.002), √Y 모형 기각 안 됨(p = 0.11) |
 | 결과 해석 | R1 외부 변수 비교 50건 중 2건만 유의 | 다중비교 관점에서 재해석 | 우연 기대치(2.5건) 수준 → 외부 변수 효과 없음 결론 강화 |
-| 재현성 | 분석이 스크립트 20여 개로 나뉘어 순서를 알아야 했다 | `run_all.py`로 전체를 의존 순서대로 실행 | 12코어 약 30분 |
+| 재현성 | 분석이 스크립트 20여 개로 나뉘어 순서를 알아야 했다 | `run_all.py`로 전체를 의존 순서대로 실행 | 12코어 약 60분 (그림·문서 포함) |
+| 검정력 | 평가 36개월로는 상위 모델을 구분하기 어렵다 | 장기 평가(유럽 96·한국 72개월), 6개국 2026년 표본 외 검증, 국가 평균 손실의 통합 MCS | 통합 MCS가 SARIMAX·앙상블·Chronos-2로 좁혀짐. 2026년 순위 상관 0.74 |
 
-남은 한계: 평가 기간이 36개월로 짧다. 파운데이션 모델의 사전학습 자료에 평가 기간 통계가 섞였을 가능성을 배제할 수 없다. Eurostat 최근 값은 잠정치(프랑스 3개월, 네덜란드 12개월)이고 2026-11-21 호출본 기준이다. 1개월 앞 예측만 다뤘다.
+남은 한계: 파운데이션 모델의 사전학습 자료에 평가 기간 통계가 섞였을 가능성을 배제할 수 없다. Eurostat 최근 값은 잠정치(프랑스 3개월, 네덜란드 12개월)이고 2026-11-21 호출본 기준이다. 1개월 앞 예측만 다뤘다.
+
+## 장기 평가 — `outputs/long_eval/report.md`
+
+평가 기간을 유럽 2018~2025(96개월), 한국 2020~2025(72개월)로 늘리고, 튜닝 구간도 그만큼 앞당겼다(유럽 2015~2017, 한국 2019). 모델·후보·절차는 본 실험과 같다. 6개국 평균 MAPE(%), 통합 MCS는 공통 구간 2020~2025의 국가 평균 손실로 계산했다.
+
+| 모델 | 사후예측 | 통합 MCS | 사전예측 | 통합 MCS |
+| --- | --- | --- | --- | --- |
+| SARIMAX+HDD·가격 | **6.2** | ✓ | **7.6** | ✓ |
+| 앙상블 (회귀·ML·Chronos) | 6.4 | ✓ | 8.0 | ✓ |
+| Chronos-2 + 공변량 | 6.7 | ✓ | 7.7 | ✓ |
+| 하이브리드 (회귀+GBM 잔차) | 7.1 | | 8.5 | |
+| LightGBM | 7.3 | | 9.0 | |
+| Chronos-2 단변량 | 7.8 | | 7.8 | ✓ |
+| Holt-Winters | 7.9 | | 7.9 | ✓ |
+| 회귀 √Y~HDD+가격 (기준) | 9.5 | | 10.6 | |
+
+- 36개월 평가의 결론이 그대로 유지된다. 사후예측에서 튜닝한 SARIMAX와 앙상블은 6개국 모두 각국 MCS에 남고, 통합 MCS에는 SARIMAX·앙상블·Chronos-2(공변량)만 남는다. 사전예측에서는 기온 전망이 필요 없는 Chronos-2 단변량과 Holt-Winters도 통합 MCS에 든다.
+- 국면별로 보면 2022년 위기에 앙상블(6.5%)이 가장 덜 흔들렸다. SARIMAX는 위기 해에 7.7%로 나빠졌다가 회복했다.
+
+## 6개국 2026년 표본 외 검증 — `outputs/oos_2026.md`
+
+2023~2025 평가로 고정한 모델·설정을 2026-01~09에 그대로 적용했다(국가당 9회, 스페인 7회). 사후예측 MAPE(%).
+
+| 모델 | 독일 | 이탈리아 | 프랑스 | 스페인 | 네덜란드 | 한국 | 평균 2026 | 평균 2023~2025 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 앙상블 (회귀·ML·Chronos) | 3.1 | 3.9 | 4.0 | 4.5 | 8.7 | 6.6 | **5.1** | 5.8 |
+| Chronos-2 + 공변량 | 5.3 | 3.8 | 5.6 | 3.4 | 6.7 | 7.2 | 5.3 | 5.7 |
+| 하이브리드 (회귀+GBM 잔차) | 3.2 | 4.7 | 6.9 | 4.3 | 6.0 | 6.5 | 5.3 | 6.2 |
+| SARIMAX+HDD·가격 | 4.6 | 4.2 | 10.3 | 4.1 | 5.7 | 7.3 | 6.0 | 5.9 |
+| 회귀 √Y~HDD+가격 (기준) | 5.6 | 7.5 | 9.2 | 8.5 | 14.9 | 9.1 | 9.2 | 9.5 |
+
+- 6개국 평균 순위가 2023~2025년과 비슷하다(Spearman 0.74). 앙상블이 2026년에도 평균 1위다.
+- 국가별 순위 상관은 0.14~0.86으로 흔들린다. 9개월로는 국가 하나의 순위를 가리기 어렵고, 평균으로 보는 것이 맞다.
 
 ## R4 모델 신뢰집합 (MCS) — `outputs/r4_mcs.md`
 

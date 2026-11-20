@@ -42,8 +42,13 @@ def main():
                    "2023~2025 롤링 1개월 앞, 손실 APE. 'MCS 포함' = 그 나라 최고 모델과 통계적으로 구별되지 않는다 "
                    "(Hansen et al. 2011, 범위 통계량, 정상 부트스트랩 5,000회).", ""]
     for mode in MODES:
-        for g in ALL_GEOS:
-            loss = p[(p.geo == g) & (p["mode"] == mode)].pivot(index="month", columns="model", values="ape")
+        for g in ALL_GEOS + ["ALL"]:
+            if g == "ALL":   # 6개국 평균 손실: 같은 달의 국가별 APE 평균 → 나라 간 잡음이 줄어 검정력이 오른다
+                q = p[p["mode"] == mode]
+                loss = q.groupby(["month", "model"]).ape.mean().unstack()
+                loss = loss.loc[:, q.groupby("model").geo.nunique().reindex(loss.columns).eq(len(ALL_GEOS))]
+            else:
+                loss = p[(p.geo == g) & (p["mode"] == mode)].pivot(index="month", columns="model", values="ape")
             loss = loss.dropna(axis=1)
             mcs = MCS(loss, size=SIZE, reps=5000, block_size=3, method="R", bootstrap="stationary", seed=0)
             mcs.compute()
@@ -55,7 +60,11 @@ def main():
     tab.to_csv(OUTPUTS / "r4_mcs.csv", index=False, encoding="utf-8-sig")
 
     for mode, title in (("ex_post", "사후예측"), ("ex_ante", "사전예측")):
-        sub = tab[tab["mode"] == mode]
+        allm = tab[(tab["mode"] == mode) & (tab.geo == "ALL")].sort_values("MAPE")
+        L += [f"## {title}: 6개국 평균 손실 MCS (월별 국가 평균 APE, 36개월)", "",
+              f"후보 {len(allm)}개 중 {int(allm.in_mcs.sum())}개: "
+              + ", ".join(f"{r.model} ({r.MAPE:.1f}, p={r.mcs_p:.2f})" for r in allm[allm.in_mcs].itertuples()), ""]
+        sub = tab[(tab["mode"] == mode) & (tab.geo != "ALL")]
         L += [f"## {title}: 국가별 MCS 크기와 구성", "", "| 국가 | 후보 수 | MCS 크기 | MCS에 남은 모델 (MAPE %) |",
               "| --- | --- | --- | --- |"]
         for g in ALL_GEOS:

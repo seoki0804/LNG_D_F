@@ -1,6 +1,7 @@
 """분석 전체를 의존 순서대로 다시 실행한다 (데이터 수집은 제외 — fetch_*.py, build_dataset.py를 먼저).
+마지막에 그림(outputs/figures/paper)과 보고서·발표 자료(report/)까지 만든다 (report/에서 npm install 필요).
 
-    python python/run_all.py            # 전부 (12코어 약 30분)
+    python python/run_all.py            # 전부 (12코어 약 60분)
     python python/run_all.py --from r9  # 특정 단계부터
 
 R 스크립트는 Rscript가 PATH에 없으면 RSCRIPT 환경변수나 아래 기본 경로를 쓴다.
@@ -41,7 +42,21 @@ STEPS = [  # (이름, 명령)
     ("r11", [PY, "python/r11_climate.py"]),
     ("mcs", [PY, "python/r4_mcs.py"]),
     ("realtime", [PY, "python/realtime_check.py"]),
-    ("oos2026", [PY, "python/oos_de2026.py"]),
+    ("oos_de2026", [PY, "python/oos_de2026.py"]),
+    # 검정력 보강: 장기 평가, 6개국 2026 표본 외
+    ("r8_long_eu", [str(FM_PY), "python/r8_foundation.py", "--geos", "DE", "IT", "FR", "ES", "NL",
+                    "--start", "2018-01", "--end", "2025-12", "--tag", "long_eu"]),
+    ("r8_long_kr", [str(FM_PY), "python/r8_foundation.py", "--geos", "KR", "--start", "2020-01", "--end", "2025-12",
+                    "--tag", "long_kr"]),
+    ("r8_oos2026", [str(FM_PY), "python/r8_foundation.py", "--start", "2026-01", "--end", "2026-09",
+                    "--tag", "oos2026"]),
+    ("long", [PY, "python/long_eval.py"]),
+    ("oos_2026", [PY, "python/oos_2026.py"]),
+    # 그림·문서
+    ("figures", [PY, "python/figures.py"]),
+    ("numbers", [PY, "python/report_numbers.py"]),
+    ("report", ["node", "report/build_report.js"]),
+    ("deck", ["node", "report/build_deck.js"]),
 ]
 
 
@@ -49,7 +64,7 @@ def main():
     start = sys.argv[sys.argv.index("--from") + 1] if "--from" in sys.argv else STEPS[0][0]
     names = [s[0] for s in STEPS]
     env = {**os.environ, "PYTHONIOENCODING": "utf-8", "HF_HUB_DISABLE_SYMLINKS_WARNING": "1",
-           "PYTHONPATH": str(ROOT / "python")}
+           "PYTHONPATH": str(ROOT / "python"), "NODE_PATH": str(ROOT / "report" / "node_modules")}
     t0 = time.time()
     for name, cmd in STEPS[names.index(start):]:
         if cmd[0] == str(FM_PY) and not FM_PY.exists():

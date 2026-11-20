@@ -101,33 +101,43 @@ SPECS = [
 SPEC = {s.name: s for s in SPECS}
 
 
-def tune_task(geo, name, params, features=None):
+# 평가 설계: 학습 시작, 검증 구간(튜닝), 평가 구간. 본 실험은 DEFAULT, 장기 평가(long_eval.py)는 다른 설계를 넘긴다.
+DEFAULT = {"train_start": TRAIN_START, "val": (VAL_START, VAL_END), "eval": (EVAL_START, EVAL_END)}
+
+
+def tune_task(geo, name, params, features=None, design=None):
     """검증 구간 MAPE. features를 주면 모델 기본 입력 대신 쓴다 (변수 설계 실험용)."""
+    d = design or DEFAULT
     s = SPEC[name]
     df = load_country(geo)
-    res = rolling_forecast(df, s.make(params), features or s.features, train_start=TRAIN_START,
-                           eval_start=VAL_START, eval_end=VAL_END)
+    res = rolling_forecast(df, s.make(params), features or s.features, train_start=d["train_start"],
+                           eval_start=d["val"][0], eval_end=d["val"][1])
     return {"geo": geo, "model": name, "params": json.dumps(params, ensure_ascii=False),
-            "val_MAPE": metrics(res, df, eval_start=VAL_START)["MAPE"]}
+            "val_MAPE": metrics(res, df, train_start=d["train_start"], eval_start=d["val"][0])["MAPE"]}
 
 
-def final_task(geo, name, params, seed, features=None):
+def final_task(geo, name, params, seed, features=None, design=None):
+    d = design or DEFAULT
     s = SPEC[name]
     df = load_country(geo)
     fp = s.make(params, seeds=[seed] if seed is not None else None)
-    res = rolling_forecast(df, fp, features or s.features, train_start=TRAIN_START, modes=MODES)
+    res = rolling_forecast(df, fp, features or s.features, train_start=d["train_start"],
+                           eval_start=d["eval"][0], eval_end=d["eval"][1], modes=MODES)
     return res.assign(geo=geo, model=name, seed=-1 if seed is None else seed)
 
 
-def run(geos, n_jobs):
-    OUT.mkdir(parents=True, exist_ok=True)
+def run(geos, n_jobs, designs=None, out=OUT):
+    """designs: {국가: 설계}. 없으면 모든 나라 DEFAULT (본 실험)."""
+    designs = designs or {g: DEFAULT for g in geos}
+    out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
 
     # 1) 튜닝
     tasks = [(g, s.name, p) for g in geos for s in SPECS if s.grid for p in s.grid]
-    print(f"[1/3] 튜닝: {len(tasks)}개 설정 × 36회 (검증 {VAL_START}~{VAL_END})", flush=True)
-    tun = pd.DataFrame(Parallel(n_jobs=n_jobs)(delayed(tune_task)(*t) for t in tasks))
-    tun.to_csv(OUT / "tuning.csv", index=False, encoding="utf-8-sig")
+    vals = ", ".join(f"{g} {d['val'][0]}~{d['val'][1]}" for g, d in designs.items())
+    print(f"[1/3] 튜닝: {len(tasks)}개 설정 (검증 {vals})", flush=True)
+    tun = pd.DataFrame(Parallel(n_jobs=n_jobs)(delayed(tune_task)(g, m, p, None, designs[g]) for g, m, p in tasks))
+    tun.to_csv(out / "tuning.csv", index=False, encoding="utf-8-sig")
     # 동점(같은 예측을 내는 설정)일 때도 항상 같은 설정을 고르도록 반올림 후 설정 문자열로 2차 정렬
     best = (tun.assign(_k=tun.val_MAPE.round(10)).sort_values(["_k", "params"], kind="mergesort")
             .groupby(["geo", "model"]).head(1)
@@ -141,8 +151,9 @@ def run(geos, n_jobs):
             p = json.loads(best.loc[(g, s.name), "params"]) if s.grid else {}
             seeds = SEEDS if s.stochastic(p) else [None]
             jobs += [(g, s.name, p, sd) for sd in seeds]
-    print(f"[2/3] 평가: {len(jobs)}개 작업 (국가×모델×시드) × 36회, 사후·사전예측", flush=True)
-    raw = pd.concat(Parallel(n_jobs=n_jobs)(delayed(final_task)(*j) for j in jobs), ignore_index=True)
+    print(f"[2/3] 평가: {len(jobs)}개 작업 (국가×모델×시드), 사후·사전예측", flush=True)
+    raw = pd.concat(Parallel(n_jobs=n_jobs)(delayed(final_task)(g, m, p, sd, None, designs[g])
+                                            for g, m, p, sd in jobs), ignore_index=True)
     print(f"      완료 {time.time() - t0:.0f}s", flush=True)
 
     # 시드 간 MAPE 표준편차, 시드 평균 예측
@@ -151,14 +162,14 @@ def run(geos, n_jobs):
                .groupby(["geo", "model", "mode"]).std().fillna(0.0))
     pred = (raw.groupby(["geo", "model", "mode", "month"], as_index=False)
             .agg(actual=("actual", "first"), pred=("pred", "mean"), n_seeds=("seed", "nunique")))
-    pred.to_csv(OUT / "predictions.csv", index=False, encoding="utf-8-sig")
+    pred.to_csv(out / "predictions.csv", index=False, encoding="utf-8-sig")
 
     # 3) 지표와 DM 검정
     rows, dms = [], []
     for g in geos:
         df = load_country(g)
         for (name, mode), r in pred[pred.geo == g].groupby(["model", "mode"]):
-            m = metrics(r, df)
+            m = metrics(r, df, train_start=designs[g]["train_start"], eval_start=designs[g]["eval"][0])
             rows.append({"geo": g, "model": name, "mode": mode, **m,
                          "MAPE_seed_sd": seed_sd.get((g, name, mode), 0.0),
                          "n_seeds": int(r.n_seeds.iloc[0]),
@@ -176,11 +187,12 @@ def run(geos, n_jobs):
                     dms.append({"geo": g, "mode": mode, "model": name, "vs": BENCH, "loss": kind,
                                 "DM": stat, "p": pv})
     summ = pd.DataFrame(rows)
-    summ.to_csv(OUT / "summary.csv", index=False, encoding="utf-8-sig")
+    summ.to_csv(out / "summary.csv", index=False, encoding="utf-8-sig")
     dmt = pd.DataFrame(dms)
-    dmt.to_csv(OUT / "dm_tests.csv", index=False, encoding="utf-8-sig")
-    write_report(summ, dmt, geos, time.time() - t0)
-    print(f"[3/3] 저장: {OUT} ({time.time() - t0:.0f}s)")
+    dmt.to_csv(out / "dm_tests.csv", index=False, encoding="utf-8-sig")
+    if out == OUT:
+        write_report(summ, dmt, geos, time.time() - t0)
+    print(f"[3/3] 저장: {out} ({time.time() - t0:.0f}s)")
 
 
 def stars(p):

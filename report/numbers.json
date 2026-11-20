@@ -1,0 +1,1313 @@
+{
+ "simple": {
+  "r2": 0.905,
+  "b1": 0.549,
+  "b1_lo": 0.525,
+  "b1_hi": 0.573,
+  "bp_y": 0.0284,
+  "bp_sqrt": 0.3178,
+  "dw_y": 0.964,
+  "dw_sqrt": 0.887,
+  "lof_y": 0.002471,
+  "lof_sqrt": 0.1106,
+  "boxcox": 0.56,
+  "boxcox_lo": 0.36,
+  "boxcox_hi": 0.76
+ },
+ "multiple": {
+  "hdd_pre": 0.499,
+  "hdd_post": 0.614,
+  "workdays_t": 1.81,
+  "r2": 0.927
+ },
+ "ch45": {
+  "W": 2.465,
+  "B": 2.519,
+  "hac_ratio_b1": 1.61
+ },
+ "r5": {
+  "DE": {
+   "hdd10_pre": 2.09,
+   "hdd10_post": 2.6,
+   "p_hdd_change": 0.0,
+   "price_elast": -0.0,
+   "crisis_level_pct": -21.23,
+   "R2": 0.96
+  },
+  "IT": {
+   "hdd10_pre": 2.36,
+   "hdd10_post": 2.36,
+   "p_hdd_change": 0.98,
+   "price_elast": 0.06,
+   "crisis_level_pct": -11.96,
+   "R2": 0.93
+  },
+  "FR": {
+   "hdd10_pre": 3.29,
+   "hdd10_post": 3.35,
+   "p_hdd_change": 0.75,
+   "price_elast": -0.23,
+   "crisis_level_pct": -4.61,
+   "R2": 0.96
+  },
+  "ES": {
+   "hdd10_pre": 1.09,
+   "hdd10_post": 0.94,
+   "p_hdd_change": 0.48,
+   "price_elast": 0.28,
+   "crisis_level_pct": -5.63,
+   "R2": 0.58
+  },
+  "NL": {
+   "hdd10_pre": 1.91,
+   "hdd10_post": 1.97,
+   "p_hdd_change": 0.66,
+   "price_elast": 0.0,
+   "crisis_level_pct": -23.19,
+   "R2": 0.89
+  },
+  "KR": {
+   "hdd10_pre": 1.45,
+   "hdd10_post": 1.49,
+   "p_hdd_change": 0.68,
+   "price_elast": -0.51,
+   "crisis_level_pct": 19.38,
+   "R2": 0.9
+  }
+ },
+ "break": {
+  "DE": {
+   "chow_p": 3.90674549710646e-07,
+   "supF_hac_date": "2022-07",
+   "bp_dates": "2011-06, 2014-04, 2019-01"
+  },
+  "IT": {
+   "chow_p": 0.336241145373429,
+   "supF_hac_date": "2011-09",
+   "bp_dates": "2013-03, 2016-08"
+  },
+  "FR": {
+   "chow_p": 0.000810054307571,
+   "supF_hac_date": "2013-06",
+   "bp_dates": "2015-06, 2022-11"
+  },
+  "ES": {
+   "chow_p": 3.81047573272397e-07,
+   "supF_hac_date": "2023-04",
+   "bp_dates": "2013-01, 2018-09, 2022-10"
+  },
+  "NL": {
+   "chow_p": 1.88282323509981e-07,
+   "supF_hac_date": "2022-09",
+   "bp_dates": "2012-01, 2015-11, 2021-07"
+  },
+  "KR": {
+   "chow_p": 2.65798252266913e-05,
+   "supF_hac_date": "2017-08",
+   "bp_dates": "2018-09, 2020-03, 2022-02"
+  }
+ },
+ "mcs_ex_post": {
+  "n": 25,
+  "in": [
+   "앙상블: 검증 상위 3",
+   "Chronos-2 + 공변량",
+   "ENS",
+   "SARIMAX+HDD·가격",
+   "앙상블: ML 평균",
+   "하이브리드 (회귀+GBM 잔차)",
+   "Gradient Boosting",
+   "GBM + 위기 변수",
+   "TimesFM 2.5 + 공변량(XReg)",
+   "통합 LightGBM (6개국)",
+   "Ridge + 위기 변수",
+   "TimesFM 2.5 단변량",
+   "MLP (16-8)",
+   "회귀 + 위기 변수"
+  ],
+  "mape": {
+   "앙상블: 검증 상위 3": 5.6,
+   "Chronos-2 + 공변량": 5.7,
+   "ENS": 5.8,
+   "SARIMAX+HDD·가격": 5.9,
+   "앙상블: 회귀(위기)+ML": 6.1,
+   "앙상블: ML 평균": 6.1,
+   "하이브리드 (회귀+GBM 잔차)": 6.2,
+   "Gradient Boosting": 6.2,
+   "GBM + 위기 변수": 6.2,
+   "TimesFM 2.5 + 공변량(XReg)": 6.4,
+   "통합 LightGBM (6개국)": 6.4,
+   "Chronos-2 단변량": 6.5,
+   "Ridge + 위기 변수": 6.6,
+   "TimesFM 2.5 단변량": 6.6,
+   "MLP (16-8)": 6.7,
+   "LightGBM": 7.0,
+   "Ridge": 7.4,
+   "회귀 + 위기 변수": 7.5,
+   "Holt-Winters": 7.5,
+   "Lasso": 7.8,
+   "Random Forest": 8.0,
+   "SVR": 8.1,
+   "계절 naive": 9.1,
+   "회귀 √Y~HDD+가격": 9.5,
+   "단순회귀 Y~HDD": 14.0
+  }
+ },
+ "mcs_size_ex_post": {
+  "DE": 14,
+  "ES": 21,
+  "FR": 18,
+  "IT": 20,
+  "KR": 19,
+  "NL": 16
+ },
+ "mcs_all6_ex_post": [
+  "ENS",
+  "GBM + 위기 변수",
+  "Gradient Boosting",
+  "SARIMAX+HDD·가격",
+  "앙상블: 검증 상위 3",
+  "앙상블: 회귀(위기)+ML"
+ ],
+ "mcs_ex_ante": {
+  "n": 25,
+  "in": [
+   "Chronos-2 + 공변량",
+   "Chronos-2 단변량",
+   "TimesFM 2.5 단변량",
+   "SARIMAX+HDD·가격",
+   "ENS",
+   "통합 LightGBM (6개국)"
+  ],
+  "mape": {
+   "Chronos-2 + 공변량": 6.4,
+   "Chronos-2 단변량": 6.5,
+   "TimesFM 2.5 단변량": 6.6,
+   "SARIMAX+HDD·가격": 7.1,
+   "ENS": 7.3,
+   "통합 LightGBM (6개국)": 7.4,
+   "MLP (16-8)": 7.4,
+   "앙상블: 검증 상위 3": 7.5,
+   "Ridge + 위기 변수": 7.5,
+   "Holt-Winters": 7.5,
+   "TimesFM 2.5 + 공변량(XReg)": 7.5,
+   "앙상블: ML 평균": 7.6,
+   "앙상블: 회귀(위기)+ML": 7.7,
+   "하이브리드 (회귀+GBM 잔차)": 7.8,
+   "GBM + 위기 변수": 8.2,
+   "Gradient Boosting": 8.3,
+   "SVR": 8.5,
+   "Ridge": 8.5,
+   "LightGBM": 8.5,
+   "계절 naive": 9.1,
+   "회귀 + 위기 변수": 9.3,
+   "Lasso": 9.4,
+   "Random Forest": 9.5,
+   "회귀 √Y~HDD+가격": 11.8,
+   "단순회귀 Y~HDD": 17.0
+  }
+ },
+ "mcs_size_ex_ante": {
+  "DE": 21,
+  "ES": 15,
+  "FR": 14,
+  "IT": 22,
+  "KR": 24,
+  "NL": 13
+ },
+ "mcs_all6_ex_ante": [
+  "Chronos-2 + 공변량",
+  "Chronos-2 단변량",
+  "ENS",
+  "Ridge + 위기 변수",
+  "SARIMAX+HDD·가격",
+  "TimesFM 2.5 단변량"
+ ],
+ "main": {
+  "ex_post": {
+   "Gradient Boosting": {
+    "DE": 5.8,
+    "ES": 6.3,
+    "FR": 7.0,
+    "IT": 5.7,
+    "KR": 5.1,
+    "NL": 7.5
+   },
+   "Holt-Winters": {
+    "DE": 9.2,
+    "ES": 6.0,
+    "FR": 13.1,
+    "IT": 4.8,
+    "KR": 6.0,
+    "NL": 6.0
+   },
+   "Lasso": {
+    "DE": 5.6,
+    "ES": 8.6,
+    "FR": 11.7,
+    "IT": 5.7,
+    "KR": 5.7,
+    "NL": 9.2
+   },
+   "LightGBM": {
+    "DE": 5.3,
+    "ES": 7.6,
+    "FR": 10.2,
+    "IT": 5.3,
+    "KR": 6.1,
+    "NL": 7.5
+   },
+   "MLP (16-8)": {
+    "DE": 5.8,
+    "ES": 7.3,
+    "FR": 7.1,
+    "IT": 5.6,
+    "KR": 5.3,
+    "NL": 8.8
+   },
+   "Random Forest": {
+    "DE": 6.9,
+    "ES": 6.9,
+    "FR": 12.5,
+    "IT": 7.0,
+    "KR": 5.7,
+    "NL": 9.1
+   },
+   "Ridge": {
+    "DE": 5.6,
+    "ES": 9.2,
+    "FR": 7.1,
+    "IT": 5.6,
+    "KR": 6.6,
+    "NL": 10.5
+   },
+   "SARIMAX+HDD·가격": {
+    "DE": 5.7,
+    "ES": 6.0,
+    "FR": 6.9,
+    "IT": 4.3,
+    "KR": 4.5,
+    "NL": 7.6
+   },
+   "SVR": {
+    "DE": 9.0,
+    "ES": 7.3,
+    "FR": 10.3,
+    "IT": 5.8,
+    "KR": 7.7,
+    "NL": 8.2
+   },
+   "계절 naive": {
+    "DE": 8.3,
+    "ES": 10.9,
+    "FR": 10.7,
+    "IT": 8.0,
+    "KR": 9.1,
+    "NL": 7.8
+   },
+   "단순회귀 Y~HDD": {
+    "DE": 11.8,
+    "ES": 9.9,
+    "FR": 22.0,
+    "IT": 12.2,
+    "KR": 4.6,
+    "NL": 23.5
+   },
+   "하이브리드 (회귀+GBM 잔차)": {
+    "DE": 6.3,
+    "ES": 7.5,
+    "FR": 6.5,
+    "IT": 4.3,
+    "KR": 4.6,
+    "NL": 7.9
+   },
+   "회귀 √Y~HDD+가격": {
+    "DE": 6.5,
+    "ES": 9.8,
+    "FR": 10.0,
+    "IT": 9.1,
+    "KR": 4.6,
+    "NL": 17.1
+   }
+  },
+  "ex_ante": {
+   "Gradient Boosting": {
+    "DE": 9.2,
+    "ES": 7.1,
+    "FR": 11.7,
+    "IT": 6.8,
+    "KR": 5.7,
+    "NL": 9.2
+   },
+   "Holt-Winters": {
+    "DE": 9.2,
+    "ES": 6.0,
+    "FR": 13.1,
+    "IT": 4.8,
+    "KR": 6.0,
+    "NL": 6.0
+   },
+   "Lasso": {
+    "DE": 6.8,
+    "ES": 8.7,
+    "FR": 15.3,
+    "IT": 6.9,
+    "KR": 6.7,
+    "NL": 12.1
+   },
+   "LightGBM": {
+    "DE": 7.4,
+    "ES": 7.9,
+    "FR": 13.3,
+    "IT": 6.4,
+    "KR": 7.0,
+    "NL": 8.8
+   },
+   "MLP (16-8)": {
+    "DE": 6.7,
+    "ES": 7.8,
+    "FR": 7.9,
+    "IT": 6.3,
+    "KR": 5.3,
+    "NL": 10.7
+   },
+   "Random Forest": {
+    "DE": 9.5,
+    "ES": 8.1,
+    "FR": 15.5,
+    "IT": 7.9,
+    "KR": 6.0,
+    "NL": 10.0
+   },
+   "Ridge": {
+    "DE": 6.7,
+    "ES": 9.3,
+    "FR": 8.9,
+    "IT": 6.8,
+    "KR": 6.8,
+    "NL": 12.2
+   },
+   "SARIMAX+HDD·가격": {
+    "DE": 7.0,
+    "ES": 6.6,
+    "FR": 8.2,
+    "IT": 6.6,
+    "KR": 6.2,
+    "NL": 8.1
+   },
+   "SVR": {
+    "DE": 11.2,
+    "ES": 7.1,
+    "FR": 9.5,
+    "IT": 5.8,
+    "KR": 7.5,
+    "NL": 9.6
+   },
+   "계절 naive": {
+    "DE": 8.3,
+    "ES": 10.9,
+    "FR": 10.7,
+    "IT": 8.0,
+    "KR": 9.1,
+    "NL": 7.8
+   },
+   "단순회귀 Y~HDD": {
+    "DE": 15.5,
+    "ES": 10.9,
+    "FR": 27.1,
+    "IT": 15.1,
+    "KR": 6.1,
+    "NL": 27.2
+   },
+   "하이브리드 (회귀+GBM 잔차)": {
+    "DE": 6.4,
+    "ES": 7.9,
+    "FR": 9.5,
+    "IT": 6.3,
+    "KR": 5.8,
+    "NL": 10.9
+   },
+   "회귀 √Y~HDD+가격": {
+    "DE": 8.0,
+    "ES": 10.7,
+    "FR": 14.1,
+    "IT": 11.7,
+    "KR": 6.1,
+    "NL": 20.1
+   }
+  }
+ },
+ "realtime": {
+  "Chronos-2 + 공변량": {
+   "MAPE_realtime": 7.2,
+   "MAPE_exante": 6.4
+  },
+  "Chronos-2 단변량": {
+   "MAPE_realtime": 7.4,
+   "MAPE_exante": 6.5
+  },
+  "ENS": {
+   "MAPE_realtime": 8.0,
+   "MAPE_exante": 7.3
+  },
+  "Gradient Boosting": {
+   "MAPE_realtime": 9.2,
+   "MAPE_exante": 8.3
+  },
+  "Holt-Winters": {
+   "MAPE_realtime": 8.8,
+   "MAPE_exante": 7.5
+  },
+  "Lasso": {
+   "MAPE_realtime": 10.0,
+   "MAPE_exante": 9.4
+  },
+  "LightGBM": {
+   "MAPE_realtime": 9.8,
+   "MAPE_exante": 8.5
+  },
+  "MLP (16-8)": {
+   "MAPE_realtime": 8.2,
+   "MAPE_exante": 7.4
+  },
+  "Ridge": {
+   "MAPE_realtime": 8.8,
+   "MAPE_exante": 8.5
+  },
+  "Ridge + 위기 변수": {
+   "MAPE_realtime": 8.0,
+   "MAPE_exante": 7.5
+  },
+  "계절 naive": {
+   "MAPE_realtime": 9.1,
+   "MAPE_exante": 9.1
+  },
+  "하이브리드 (회귀+GBM 잔차)": {
+   "MAPE_realtime": 9.1,
+   "MAPE_exante": 7.8
+  },
+  "회귀 + 위기 변수": {
+   "MAPE_realtime": 9.8,
+   "MAPE_exante": 9.3
+  },
+  "회귀 √Y~HDD+가격": {
+   "MAPE_realtime": 12.1,
+   "MAPE_exante": 11.8
+  }
+ },
+ "long": {
+  "ex_post": {
+   "Chronos-2 + 공변량": 6.7,
+   "Chronos-2 단변량": 7.8,
+   "ENS": 6.4,
+   "Gradient Boosting": 7.6,
+   "Holt-Winters": 7.9,
+   "Lasso": 8.4,
+   "LightGBM": 7.3,
+   "MLP (16-8)": 7.7,
+   "Random Forest": 8.6,
+   "Ridge": 8.3,
+   "Ridge + 위기 변수": 8.0,
+   "SARIMAX+HDD·가격": 6.2,
+   "SVR": 11.7,
+   "계절 naive": 11.7,
+   "단순회귀 Y~HDD": 12.0,
+   "하이브리드 (회귀+GBM 잔차)": 7.1,
+   "회귀 + 위기 변수": 8.9,
+   "회귀 √Y~HDD+가격": 9.5
+  },
+  "ex_ante": {
+   "Chronos-2 + 공변량": 7.7,
+   "Chronos-2 단변량": 7.8,
+   "ENS": 8.0,
+   "Gradient Boosting": 9.3,
+   "Holt-Winters": 7.9,
+   "Lasso": 10.0,
+   "LightGBM": 9.0,
+   "MLP (16-8)": 8.9,
+   "Random Forest": 9.7,
+   "Ridge": 9.8,
+   "Ridge + 위기 변수": 9.4,
+   "SARIMAX+HDD·가격": 7.6,
+   "SVR": 11.5,
+   "계절 naive": 11.7,
+   "단순회귀 Y~HDD": 13.8,
+   "하이브리드 (회귀+GBM 잔차)": 8.5,
+   "회귀 + 위기 변수": 9.5,
+   "회귀 √Y~HDD+가격": 10.6
+  }
+ },
+ "long_mcs": {
+  "ex_post": [
+   "Chronos-2 + 공변량",
+   "SARIMAX+HDD·가격",
+   "ENS"
+  ],
+  "ex_ante": [
+   "Chronos-2 + 공변량",
+   "Chronos-2 단변량",
+   "Holt-Winters",
+   "SARIMAX+HDD·가격",
+   "ENS"
+  ]
+ },
+ "long_mcs_size": {
+  "ex_post": {
+   "DE": 12,
+   "ES": 14,
+   "FR": 7,
+   "IT": 10,
+   "KR": 12,
+   "NL": 3
+  },
+  "ex_ante": {
+   "DE": 15,
+   "ES": 14,
+   "FR": 4,
+   "IT": 12,
+   "KR": 11,
+   "NL": 11
+  }
+ },
+ "regimes": {
+  "Chronos-2 + 공변량": {
+   "위기 (2022)": 7.4,
+   "위기 전 (~2021)": 7.3,
+   "위기 후 (2023~2025)": 5.7
+  },
+  "Chronos-2 단변량": {
+   "위기 (2022)": 9.6,
+   "위기 전 (~2021)": 8.3,
+   "위기 후 (2023~2025)": 6.5
+  },
+  "ENS": {
+   "위기 (2022)": 6.5,
+   "위기 전 (~2021)": 6.6,
+   "위기 후 (2023~2025)": 6.4
+  },
+  "Gradient Boosting": {
+   "위기 (2022)": 8.4,
+   "위기 전 (~2021)": 7.2,
+   "위기 후 (2023~2025)": 8.3
+  },
+  "Holt-Winters": {
+   "위기 (2022)": 9.5,
+   "위기 전 (~2021)": 8.6,
+   "위기 후 (2023~2025)": 6.4
+  },
+  "Lasso": {
+   "위기 (2022)": 9.9,
+   "위기 전 (~2021)": 8.0,
+   "위기 후 (2023~2025)": 8.8
+  },
+  "LightGBM": {
+   "위기 (2022)": 9.3,
+   "위기 전 (~2021)": 7.3,
+   "위기 후 (2023~2025)": 7.0
+  },
+  "MLP (16-8)": {
+   "위기 (2022)": 9.2,
+   "위기 전 (~2021)": 8.1,
+   "위기 후 (2023~2025)": 7.0
+  },
+  "Random Forest": {
+   "위기 (2022)": 11.0,
+   "위기 전 (~2021)": 8.1,
+   "위기 후 (2023~2025)": 8.8
+  },
+  "Ridge": {
+   "위기 (2022)": 9.2,
+   "위기 전 (~2021)": 8.5,
+   "위기 후 (2023~2025)": 8.1
+  },
+  "Ridge + 위기 변수": {
+   "위기 (2022)": 10.5,
+   "위기 전 (~2021)": 8.5,
+   "위기 후 (2023~2025)": 6.9
+  },
+  "SARIMAX+HDD·가격": {
+   "위기 (2022)": 7.7,
+   "위기 전 (~2021)": 6.2,
+   "위기 후 (2023~2025)": 5.9
+  },
+  "SVR": {
+   "위기 (2022)": 26.2,
+   "위기 전 (~2021)": 11.3,
+   "위기 후 (2023~2025)": 8.0
+  },
+  "계절 naive": {
+   "위기 (2022)": 15.6,
+   "위기 전 (~2021)": 13.2,
+   "위기 후 (2023~2025)": 9.1
+  },
+  "단순회귀 Y~HDD": {
+   "위기 (2022)": 14.0,
+   "위기 전 (~2021)": 9.2,
+   "위기 후 (2023~2025)": 15.4
+  },
+  "하이브리드 (회귀+GBM 잔차)": {
+   "위기 (2022)": 8.3,
+   "위기 전 (~2021)": 7.0,
+   "위기 후 (2023~2025)": 7.1
+  },
+  "회귀 + 위기 변수": {
+   "위기 (2022)": 10.5,
+   "위기 전 (~2021)": 8.9,
+   "위기 후 (2023~2025)": 8.6
+  },
+  "회귀 √Y~HDD+가격": {
+   "위기 (2022)": 10.3,
+   "위기 전 (~2021)": 8.9,
+   "위기 후 (2023~2025)": 10.2
+  }
+ },
+ "oos": {
+  "Chronos-2 + 공변량": {
+   "MAPE_ex_post": 5.3,
+   "MAPE_ex_ante": 6.2,
+   "MAPE_2023_2025": 5.7
+  },
+  "Chronos-2 단변량": {
+   "MAPE_ex_post": 6.4,
+   "MAPE_ex_ante": 6.4,
+   "MAPE_2023_2025": 6.5
+  },
+  "ENS": {
+   "MAPE_ex_post": 5.1,
+   "MAPE_ex_ante": 7.3,
+   "MAPE_2023_2025": 5.8
+  },
+  "Gradient Boosting": {
+   "MAPE_ex_post": 5.3,
+   "MAPE_ex_ante": 7.5,
+   "MAPE_2023_2025": 6.2
+  },
+  "Holt-Winters": {
+   "MAPE_ex_post": 8.9,
+   "MAPE_ex_ante": 8.9,
+   "MAPE_2023_2025": 7.5
+  },
+  "Lasso": {
+   "MAPE_ex_post": 6.4,
+   "MAPE_ex_ante": 9.0,
+   "MAPE_2023_2025": 7.8
+  },
+  "LightGBM": {
+   "MAPE_ex_post": 5.4,
+   "MAPE_ex_ante": 8.0,
+   "MAPE_2023_2025": 7.0
+  },
+  "MLP (16-8)": {
+   "MAPE_ex_post": 7.6,
+   "MAPE_ex_ante": 7.9,
+   "MAPE_2023_2025": 6.7
+  },
+  "Random Forest": {
+   "MAPE_ex_post": 5.7,
+   "MAPE_ex_ante": 8.0,
+   "MAPE_2023_2025": 8.0
+  },
+  "Ridge": {
+   "MAPE_ex_post": 6.5,
+   "MAPE_ex_ante": 8.8,
+   "MAPE_2023_2025": 7.4
+  },
+  "Ridge + 위기 변수": {
+   "MAPE_ex_post": 6.1,
+   "MAPE_ex_ante": 8.5,
+   "MAPE_2023_2025": 6.6
+  },
+  "SARIMAX+HDD·가격": {
+   "MAPE_ex_post": 6.0,
+   "MAPE_ex_ante": 7.3,
+   "MAPE_2023_2025": 5.9
+  },
+  "SVR": {
+   "MAPE_ex_post": 11.8,
+   "MAPE_ex_ante": 9.0,
+   "MAPE_2023_2025": 8.1
+  },
+  "TimesFM 2.5 + 공변량(XReg)": {
+   "MAPE_ex_post": 6.6,
+   "MAPE_ex_ante": 9.1,
+   "MAPE_2023_2025": 6.4
+  },
+  "TimesFM 2.5 단변량": {
+   "MAPE_ex_post": 7.6,
+   "MAPE_ex_ante": 7.6,
+   "MAPE_2023_2025": 6.6
+  },
+  "계절 naive": {
+   "MAPE_ex_post": 7.3,
+   "MAPE_ex_ante": 7.3,
+   "MAPE_2023_2025": 9.1
+  },
+  "단순회귀 Y~HDD": {
+   "MAPE_ex_post": 14.3,
+   "MAPE_ex_ante": 18.6,
+   "MAPE_2023_2025": 14.0
+  },
+  "하이브리드 (회귀+GBM 잔차)": {
+   "MAPE_ex_post": 5.3,
+   "MAPE_ex_ante": 7.5,
+   "MAPE_2023_2025": 6.2
+  },
+  "회귀 + 위기 변수": {
+   "MAPE_ex_post": 7.2,
+   "MAPE_ex_ante": 10.8,
+   "MAPE_2023_2025": 7.5
+  },
+  "회귀 √Y~HDD+가격": {
+   "MAPE_ex_post": 9.2,
+   "MAPE_ex_ante": 13.5,
+   "MAPE_2023_2025": 9.5
+  }
+ },
+ "oos_by_geo": {
+  "Chronos-2 + 공변량": {
+   "DE": 5.3,
+   "ES": 3.4,
+   "FR": 5.6,
+   "IT": 3.8,
+   "KR": 7.2,
+   "NL": 6.7
+  },
+  "Chronos-2 단변량": {
+   "DE": 5.7,
+   "ES": 5.4,
+   "FR": 5.7,
+   "IT": 5.9,
+   "KR": 8.1,
+   "NL": 7.8
+  },
+  "ENS": {
+   "DE": 3.1,
+   "ES": 4.5,
+   "FR": 4.0,
+   "IT": 3.9,
+   "KR": 6.6,
+   "NL": 8.7
+  },
+  "Gradient Boosting": {
+   "DE": 4.0,
+   "ES": 4.5,
+   "FR": 4.6,
+   "IT": 4.1,
+   "KR": 6.4,
+   "NL": 8.4
+  },
+  "Holt-Winters": {
+   "DE": 9.2,
+   "ES": 4.8,
+   "FR": 19.0,
+   "IT": 5.6,
+   "KR": 7.1,
+   "NL": 7.9
+  },
+  "Lasso": {
+   "DE": 3.6,
+   "ES": 8.3,
+   "FR": 5.0,
+   "IT": 4.2,
+   "KR": 7.5,
+   "NL": 9.9
+  },
+  "LightGBM": {
+   "DE": 3.7,
+   "ES": 3.9,
+   "FR": 4.2,
+   "IT": 3.9,
+   "KR": 7.3,
+   "NL": 9.6
+  },
+  "MLP (16-8)": {
+   "DE": 6.1,
+   "ES": 5.3,
+   "FR": 8.4,
+   "IT": 5.7,
+   "KR": 7.7,
+   "NL": 12.1
+  },
+  "Random Forest": {
+   "DE": 4.0,
+   "ES": 5.3,
+   "FR": 4.9,
+   "IT": 4.4,
+   "KR": 6.0,
+   "NL": 9.4
+  },
+  "Ridge": {
+   "DE": 3.7,
+   "ES": 8.1,
+   "FR": 4.5,
+   "IT": 4.3,
+   "KR": 7.3,
+   "NL": 11.0
+  },
+  "Ridge + 위기 변수": {
+   "DE": 2.5,
+   "ES": 7.2,
+   "FR": 3.8,
+   "IT": 4.4,
+   "KR": 7.8,
+   "NL": 10.8
+  },
+  "SARIMAX+HDD·가격": {
+   "DE": 4.6,
+   "ES": 4.1,
+   "FR": 10.3,
+   "IT": 4.2,
+   "KR": 7.3,
+   "NL": 5.7
+  },
+  "SVR": {
+   "DE": 13.6,
+   "ES": 5.1,
+   "FR": 18.0,
+   "IT": 5.9,
+   "KR": 7.9,
+   "NL": 20.1
+  },
+  "TimesFM 2.5 + 공변량(XReg)": {
+   "DE": 4.8,
+   "ES": 3.7,
+   "FR": 12.4,
+   "IT": 4.9,
+   "KR": 7.7,
+   "NL": 6.0
+  },
+  "TimesFM 2.5 단변량": {
+   "DE": 7.1,
+   "ES": 6.2,
+   "FR": 8.0,
+   "IT": 6.9,
+   "KR": 7.7,
+   "NL": 9.6
+  },
+  "계절 naive": {
+   "DE": 5.7,
+   "ES": 4.5,
+   "FR": 6.7,
+   "IT": 6.9,
+   "KR": 11.7,
+   "NL": 8.2
+  },
+  "단순회귀 Y~HDD": {
+   "DE": 10.8,
+   "ES": 9.3,
+   "FR": 23.7,
+   "IT": 9.9,
+   "KR": 9.8,
+   "NL": 22.1
+  },
+  "하이브리드 (회귀+GBM 잔차)": {
+   "DE": 3.2,
+   "ES": 4.3,
+   "FR": 6.9,
+   "IT": 4.7,
+   "KR": 6.5,
+   "NL": 6.0
+  },
+  "회귀 + 위기 변수": {
+   "DE": 3.3,
+   "ES": 5.7,
+   "FR": 7.3,
+   "IT": 7.8,
+   "KR": 10.8,
+   "NL": 8.0
+  },
+  "회귀 √Y~HDD+가격": {
+   "DE": 5.6,
+   "ES": 8.5,
+   "FR": 9.2,
+   "IT": 7.5,
+   "KR": 9.1,
+   "NL": 14.9
+  }
+ },
+ "oos_rho": 0.74,
+ "intervals": [
+  {
+   "method": "Chronos-2 + 공변량 분위수",
+   "level": 0.8,
+   "cover": 81.5,
+   "width": 21.1
+  },
+  {
+   "method": "Conformal (LightGBM)",
+   "level": 0.8,
+   "cover": 84.3,
+   "width": 25.1
+  },
+  {
+   "method": "Conformal (LightGBM)",
+   "level": 0.95,
+   "cover": 97.7,
+   "width": 40.2
+  },
+  {
+   "method": "Conformal (회귀 위기 변수)",
+   "level": 0.8,
+   "cover": 88.0,
+   "width": 30.3
+  },
+  {
+   "method": "Conformal (회귀 위기 변수)",
+   "level": 0.95,
+   "cover": 98.6,
+   "width": 57.4
+  },
+  {
+   "method": "분위수 GBM",
+   "level": 0.8,
+   "cover": 56.0,
+   "width": 23.2
+  },
+  {
+   "method": "분위수 GBM",
+   "level": 0.95,
+   "cover": 81.0,
+   "width": 108.4
+  },
+  {
+   "method": "회귀 PI (위기 변수)",
+   "level": 0.8,
+   "cover": 87.5,
+   "width": 30.7
+  },
+  {
+   "method": "회귀 PI (위기 변수)",
+   "level": 0.95,
+   "cover": 96.3,
+   "width": 47.2
+  }
+ ],
+ "global": {
+  "Gradient Boosting": {
+   "global_ex_post": 6.7,
+   "local_ex_post": 6.2,
+   "global_ex_ante": 7.5,
+   "local_ex_ante": 8.3
+  },
+  "LightGBM": {
+   "global_ex_post": 6.4,
+   "local_ex_post": 7.0,
+   "global_ex_ante": 7.4,
+   "local_ex_ante": 8.5
+  },
+  "MLP (16-8)": {
+   "global_ex_post": 7.8,
+   "local_ex_post": 6.7,
+   "global_ex_ante": 8.4,
+   "local_ex_ante": 7.4
+  },
+  "Ridge": {
+   "global_ex_post": 8.0,
+   "local_ex_post": 7.4,
+   "global_ex_ante": 8.7,
+   "local_ex_ante": 8.5
+  }
+ },
+ "sector": {
+  "DE|총량": 2.33,
+  "DE|SLP (가정·소규모)": 4.72,
+  "DE|RLM (산업·발전)": 1.09,
+  "KR|총량": 1.34,
+  "KR|도시가스용": 1.92,
+  "KR|발전용": 0.71
+ },
+ "climate": {
+  "DE|겨울(12~2월) HDD −10%": -4.3,
+  "DE|난방철(10~4월) HDD −10%": -7.0,
+  "IT|겨울(12~2월) HDD −10%": -2.6,
+  "IT|난방철(10~4월) HDD −10%": -3.9,
+  "FR|겨울(12~2월) HDD −10%": -4.6,
+  "FR|난방철(10~4월) HDD −10%": -7.3,
+  "ES|겨울(12~2월) HDD −10%": -0.8,
+  "ES|난방철(10~4월) HDD −10%": -1.3,
+  "NL|겨울(12~2월) HDD −10%": -2.5,
+  "NL|난방철(10~4월) HDD −10%": -4.3,
+  "KR|겨울(12~2월) HDD −10%": -2.4,
+  "KR|난방철(10~4월) HDD −10%": -3.2
+ },
+ "shap_rho": {
+  "DE": 0.63,
+  "ES": 0.75,
+  "FR": 0.83,
+  "IT": 0.6,
+  "KR": 0.28,
+  "NL": 0.7
+ },
+ "shap_hdd": {
+  "DE": [
+   59.7,
+   72.9
+  ],
+  "IT": [
+   50.5,
+   40.8
+  ],
+  "FR": [
+   51.0,
+   64.1
+  ],
+  "ES": [
+   22.5,
+   30.6
+  ],
+  "NL": [
+   27.6,
+   38.6
+  ],
+  "KR": [
+   40.8,
+   64.3
+  ]
+ },
+ "leakage": 96,
+ "design": {
+  "columns": [
+   "Main ex-post",
+   "Main ex-ante",
+   "Real-time",
+   "Long ex-post",
+   "Long ex-ante",
+   "Hold-out 2026 ex-post",
+   "Hold-out 2026 ex-ante"
+  ],
+  "models": [
+   "회귀 √Y~HDD+가격",
+   "회귀 + 위기 변수",
+   "SARIMAX+HDD·가격",
+   "Holt-Winters",
+   "Ridge + 위기 변수",
+   "Gradient Boosting",
+   "LightGBM",
+   "MLP (16-8)",
+   "하이브리드 (회귀+GBM 잔차)",
+   "Chronos-2 단변량",
+   "Chronos-2 + 공변량",
+   "ENS"
+  ],
+  "values": [
+   [
+    9.5,
+    11.8,
+    12.1,
+    9.5,
+    10.6,
+    9.2,
+    13.5
+   ],
+   [
+    7.5,
+    9.3,
+    9.8,
+    8.9,
+    9.5,
+    7.2,
+    10.8
+   ],
+   [
+    5.9,
+    7.1,
+    null,
+    6.2,
+    7.6,
+    6.0,
+    7.3
+   ],
+   [
+    7.5,
+    7.5,
+    8.8,
+    7.9,
+    7.9,
+    8.9,
+    8.9
+   ],
+   [
+    6.6,
+    7.5,
+    8.0,
+    8.0,
+    9.4,
+    6.1,
+    8.5
+   ],
+   [
+    6.2,
+    8.3,
+    9.2,
+    7.6,
+    9.3,
+    5.3,
+    7.5
+   ],
+   [
+    7.0,
+    8.5,
+    9.8,
+    7.3,
+    9.0,
+    5.4,
+    8.0
+   ],
+   [
+    6.7,
+    7.4,
+    8.2,
+    7.7,
+    8.9,
+    7.6,
+    7.9
+   ],
+   [
+    6.2,
+    7.8,
+    9.1,
+    7.1,
+    8.5,
+    5.3,
+    7.5
+   ],
+   [
+    6.5,
+    6.5,
+    7.4,
+    7.8,
+    7.8,
+    6.4,
+    6.4
+   ],
+   [
+    5.7,
+    6.4,
+    7.2,
+    6.7,
+    7.7,
+    5.3,
+    6.2
+   ],
+   [
+    5.8,
+    7.3,
+    8.0,
+    6.4,
+    8.0,
+    5.1,
+    7.3
+   ]
+  ],
+  "mcs": [
+   [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false
+   ],
+   [
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false
+   ],
+   [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   [
+    false,
+    true,
+    false,
+    false,
+    true,
+    false,
+    false
+   ],
+   [
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false
+   ],
+   [
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false
+   ]
+  ]
+ }
+}

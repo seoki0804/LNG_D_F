@@ -28,3 +28,6 @@ desktop.ini
 
 # 파운데이션 모델용 가상환경 (R8)
 .venv-fm/
+
+# 보고서 생성용 Node 패키지
+node_modules/

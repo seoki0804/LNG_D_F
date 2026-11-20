@@ -149,6 +149,31 @@ KR,ex_post,통합 LightGBM (6개국),5.078299260604893,0.9582,True
 KR,ex_post,하이브리드 (회귀+GBM 잔차),4.568023049739828,0.9974,True
 KR,ex_post,회귀 + 위기 변수,4.4064275789024885,0.9974,True
 KR,ex_post,회귀 √Y~HDD+가격,4.627860419475502,0.9974,True
+ALL,ex_post,Chronos-2 + 공변량,5.7278988527472565,0.8772,True
+ALL,ex_post,Chronos-2 단변량,6.50070191956333,0.0146,False
+ALL,ex_post,GBM + 위기 변수,6.247712979132646,0.3662,True
+ALL,ex_post,Gradient Boosting,6.232332833029544,0.3944,True
+ALL,ex_post,Holt-Winters,7.506877289693746,0.0,False
+ALL,ex_post,Lasso,7.758446028683447,0.0,False
+ALL,ex_post,LightGBM,6.983676001408508,0.0,False
+ALL,ex_post,MLP (16-8),6.662539335595903,0.1798,True
+ALL,ex_post,Random Forest,8.017554287200703,0.0032,False
+ALL,ex_post,Ridge,7.433956056398993,0.0,False
+ALL,ex_post,Ridge + 위기 변수,6.582122923387968,0.101,True
+ALL,ex_post,SARIMAX+HDD·가격,5.861219296098243,0.8772,True
+ALL,ex_post,SVR,8.054688982002288,0.0552,False
+ALL,ex_post,TimesFM 2.5 + 공변량(XReg),6.421977877802808,0.3332,True
+ALL,ex_post,TimesFM 2.5 단변량,6.616594002184457,0.139,True
+ALL,ex_post,계절 naive,9.130095970517434,0.0,False
+ALL,ex_post,단순회귀 Y~HDD,14.01002662730664,0.0,False
+ALL,ex_post,앙상블: ML 평균,6.127882535939529,0.3186,True
+ALL,ex_post,앙상블: 검증 상위 3,5.638230281384607,1.0,True
+ALL,ex_post,앙상블: 회귀(위기)+ML,6.050039674130257,0.0366,False
+ALL,ex_post,앙상블: 회귀(위기)+ML+Chronos,5.807525856092146,0.8772,True
+ALL,ex_post,통합 LightGBM (6개국),6.447497104795001,0.1496,True
+ALL,ex_post,하이브리드 (회귀+GBM 잔차),6.184148052021277,0.3186,True
+ALL,ex_post,회귀 + 위기 변수,7.496787553899799,0.1032,True
+ALL,ex_post,회귀 √Y~HDD+가격,9.52018508065451,0.0,False
 DE,ex_ante,Chronos-2 + 공변량,7.350752781448469,0.4458,True
 DE,ex_ante,Chronos-2 단변량,6.781497070508197,0.9344,True
 DE,ex_ante,GBM + 위기 변수,9.35213456931961,0.0714,False
@@ -299,3 +324,28 @@ KR,ex_ante,통합 LightGBM (6개국),5.445465632267741,0.9436,True
 KR,ex_ante,하이브리드 (회귀+GBM 잔차),5.762594825102748,0.8936,True
 KR,ex_ante,회귀 + 위기 변수,6.389904705183774,0.5634,True
 KR,ex_ante,회귀 √Y~HDD+가격,6.115892723098488,0.8866,True
+ALL,ex_ante,Chronos-2 + 공변량,6.415839134981556,1.0,True
+ALL,ex_ante,Chronos-2 단변량,6.50070191956333,0.6912,True
+ALL,ex_ante,GBM + 위기 변수,8.216087579175884,0.0,False
+ALL,ex_ante,Gradient Boosting,8.290972024285422,0.0012,False
+ALL,ex_ante,Holt-Winters,7.506877289693746,0.0814,False
+ALL,ex_ante,Lasso,9.417813148447216,0.0,False
+ALL,ex_ante,LightGBM,8.471018277873831,0.0,False
+ALL,ex_ante,MLP (16-8),7.442189233757034,0.0746,False
+ALL,ex_ante,Random Forest,9.500192981898925,0.0,False
+ALL,ex_ante,Ridge,8.461027820939883,0.0,False
+ALL,ex_ante,Ridge + 위기 변수,7.503197793105345,0.0814,False
+ALL,ex_ante,SARIMAX+HDD·가격,7.125125832654798,0.2706,True
+ALL,ex_ante,SVR,8.458377807601885,0.0442,False
+ALL,ex_ante,TimesFM 2.5 + 공변량(XReg),7.544934696165058,0.0814,False
+ALL,ex_ante,TimesFM 2.5 단변량,6.616594002184457,0.6912,True
+ALL,ex_ante,계절 naive,9.130095970517434,0.0,False
+ALL,ex_ante,단순회귀 Y~HDD,17.00959513565472,0.0,False
+ALL,ex_ante,앙상블: ML 평균,7.567418674257867,0.0394,False
+ALL,ex_ante,앙상블: 검증 상위 3,7.469779716725968,0.0594,False
+ALL,ex_ante,앙상블: 회귀(위기)+ML,7.653758719755424,0.0,False
+ALL,ex_ante,앙상블: 회귀(위기)+ML+Chronos,7.288461846836368,0.1156,True
+ALL,ex_ante,통합 LightGBM (6개국),7.383650743788983,0.1156,True
+ALL,ex_ante,하이브리드 (회귀+GBM 잔차),7.805433064555697,0.0594,False
+ALL,ex_ante,회귀 + 위기 변수,9.345729666242583,0.057,False
+ALL,ex_ante,회귀 √Y~HDD+가격,11.780103213861144,0.0,False

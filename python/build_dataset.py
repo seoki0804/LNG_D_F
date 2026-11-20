@@ -81,8 +81,13 @@ def build_europe(geo, long, world):
           .merge(world, on="month", how="left")
           .merge(calendar_features(geo, months), on="month", how="left"))
     df["geo"] = geo
-    df["gas_pj"] = df["gas_tj"] / 1000
     df["gas_flag"] = df["gas_flag"].fillna("")
+    bad = df["gas_tj"] <= 0   # 0 이하 수요는 자료 오류 (스페인 2026-08 = 0) → 결측 처리하고 표시
+    if bad.any():
+        print(f"  {geo}: 0 이하 수요 {df.loc[bad, 'month'].tolist()} → 결측 처리 (gas_flag = invalid_zero)")
+        df.loc[bad, "gas_flag"] = "invalid_zero"
+        df.loc[bad, "gas_tj"] = np.nan
+    df["gas_pj"] = df["gas_tj"] / 1000
     df["y"], df["y_unit"] = df["gas_pj"], "PJ"
     df["price_retail"], df["price_wholesale"] = splice_hicp(df), df["ttf_usd"]
     df["hdd_source"] = np.where(df.hdd.notna(), "eurostat", "")
@@ -92,6 +97,13 @@ def build_europe(geo, long, world):
         df.loc[gap, "hdd"] = df.loc[gap, "month"].map(dwd.hdd_cal)
         df.loc[gap, "cdd"] = df.loc[gap, "month"].map(dwd.cdd_cal)
         df.loc[gap, "hdd_source"] = "dwd_calibrated"
+    if geo != "DE" and (INTERIM / "openmeteo_degree_days.csv").exists():   # 2026~ (fetch_openmeteo.py)
+        om = pd.read_csv(INTERIM / "openmeteo_degree_days.csv", dtype={"month": str})
+        om = om[om.geo == geo].set_index("month")
+        gap = df.hdd.isna() & df.month.isin(om.index)
+        df.loc[gap, "hdd"] = df.loc[gap, "month"].map(om.hdd_cal)
+        df.loc[gap, "cdd"] = df.loc[gap, "month"].map(om.cdd_cal)
+        df.loc[gap, "hdd_source"] = "openmeteo_calibrated"
     extra = ["gas_tj", "gas_pj", "gas_flag", "hicp_gas", "ip_chem", "nuclear_gwh", "wind_gwh"] + WORLD_SERIES
     extra += ["hdd_source"]
     if geo == "DE" and (INTERIM / "the_sector.csv").exists():   # THE 부문별 (fetch_the.py), 2021-10~
