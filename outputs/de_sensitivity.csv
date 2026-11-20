@@ -1,0 +1,20 @@
+﻿모델,설정,MAPE
+GBM,기본 (sklearn),6.57
+GBM,CDD 제외,6.42
+GBM,산업생산 제외,6.69
+GBM,시차 수요 제외,6.32
+GBM,도매가격 같은 달,7.45
+GBM,"n_estimators 300, lr 0.05",6.36
+GBM,subsample 0.8,5.87
+GBM,huber 손실,6.46
+GBM,log Y,6.36
+GBM,HistGradientBoosting,5.93
+GBM,XGBoost 기본,6.76
+GBM,LightGBM 기본,6.09
+GBM,LightGBM min_child_samples 5,5.7
+Ridge,기본 (alpha 1),6.82
+Ridge,alpha 0.1,6.8
+Ridge,alpha 10,7.06
+Ridge,월 sin·cos 대신 월 정수,7.73
+Ridge,√Y,5.58
+Ridge,log Y,7.71
