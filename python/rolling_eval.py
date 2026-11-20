@@ -36,7 +36,7 @@ BASE_FEATURES = ["hdd", "cdd", "price_retail", "price_wholesale_lag1", "ip", "ms
 EXTRA_FEATURES = ["workdays", "ip_chem", "nuclear_gwh"]
 
 # 사전예측에서 바꿔 넣는 열: 원래 열 → 예측 시점에 아는 대체 열
-SAME_MONTH_VARS = ["price_retail", "price_wholesale", "ip", "hicp_gas", "ip_chem", "nuclear_gwh",
+SAME_MONTH_VARS = ["price_retail", "price_wholesale", "ip", "hicp_gas", "ip_chem", "nuclear_gwh", "wind_gwh",
                    "ttf_usd", "coal_usd", "lng_asia_usd", "cpi_city_gas"]
 EX_ANTE = {"hdd": "hdd_norm", "cdd": "cdd_norm", **{v: f"{v}_prev" for v in SAME_MONTH_VARS}}
 NORMAL_YEARS = 10

@@ -16,15 +16,19 @@ python/
   config.py            경로·국가·기간 설정
   fetch_europe.py      유럽 5개국 + FRED 수집
   fetch_korea.py       한국: KOGAS 공급량(키 불필요), 기상청 HDD·CDD·KOSIS(키 필요)
+  fetch_the.py         독일 부문별: THE 일별 SLP·RLM → 월 PJ (키 불필요, 2021-10~)
   build_dataset.py     국가별 월 데이터셋 병합 (영업일 수 포함)
   rolling_eval.py      공통 롤링 평가 코드 (사후·사전예측, MAPE·RMSE·MASE)
   models.py            모델 정의 (회귀·Ridge·Lasso·RF·GBM·LightGBM·SVR·MLP·SARIMAX·Holt-Winters·하이브리드)
   dm_test.py           Diebold-Mariano 검정 (HLN 보정)
-  run_experiment.py    본 실험: 튜닝 → 고정 → 5개국 평가 → DM 검정
+  run_experiment.py    본 실험: 튜닝 → 고정 → 6개국 평가 → DM 검정
+  r1_variables_de.py   R1 변수 설계: 독일 외부 변수를 같은 튜닝 절차로 평가
+  r7_sector.py         R7 부문별 예측: 부문 합산 vs 총량 직접 (독일·한국), 부문별 민감도
   pre_experiment_de.py 계획서의 독일 사전 실험(기본 설정) 재현
   sensitivity_de.py    독일 ML 모델 설정 민감도
 R/
   01_de_simple_regression.R   독일 단순회귀 추론(Ch1~2), 진단 plot 6종·검정·Box-Cox(Ch3)
+  02_de_multiple_regression.R 독일 다중회귀(Ch6~): 부분 F·VIF·모든 부분집합 선택·HAC 표준오차·추가변수 plot
 docs/
   API_KEYS.md          기상청·KOSIS API 키 발급 절차
 outputs/
@@ -39,15 +43,20 @@ pip install -r requirements.txt
 cd python
 python fetch_europe.py        # 유럽·FRED 데이터 (data/raw/<오늘 날짜>/ 에 원자료 저장)
 python fetch_korea.py all     # 한국: KOGAS·기상청·KOSIS (키는 docs/API_KEYS.md, 키 없으면 kogas만 가능)
+python fetch_the.py           # 독일 부문별 THE SLP·RLM
 python build_dataset.py       # data/processed/ 생성
 python run_experiment.py      # 본 실험 6개국 (12코어 약 7분) → outputs/experiment/report.md
+python r1_variables_de.py     # R1 (약 4분) → outputs/r1_de_variables.md
+python r7_sector.py           # R7 (약 1분, run_experiment 결과 필요) → outputs/r7_sector.md
 cd ..
-Rscript R/01_de_simple_regression.R   # → outputs/de_simple_regression.txt, outputs/figures/
+Rscript R/01_de_simple_regression.R     # → outputs/de_simple_regression.txt, outputs/figures/
+Rscript R/02_de_multiple_regression.R   # → outputs/de_multiple_regression.txt, outputs/figures/
 ```
 
 보조 스크립트: `pre_experiment_de.py`(계획서 기본 설정 재현), `sensitivity_de.py`(설정 민감도).
+특정 Eurostat 계열만 새로 받기: `python fetch_europe.py wind_gwh` (다른 계열은 수정치로 바뀌지 않는다).
 
-R 패키지: `install.packages(c("lmtest", "car"))` (MASS는 기본 포함)
+R 패키지: `install.packages(c("lmtest", "car", "sandwich"))` (MASS는 기본 포함)
 
 ## 새 모델을 평가하는 법
 
@@ -94,8 +103,9 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 - [x] 공통 롤링 평가 코드 (사후·사전예측)
 - [x] 독일 단순회귀 추론·진단·Box-Cox (R)
 - [x] 본 실험: 6개국 × 13개 모델, 검증 구간 튜닝, 시드 평균, DM 검정 (R4·R5 일부)
-- [ ] 독일 부문별 자료 (THE SLP·RLM), 한국 부문별 예측 (R7)
-- [ ] 독일 다중회귀·VIF·변수선택 (Ch6~, R1), 국가별 회귀계수 비교 (R5)
+- [x] 독일 부문별 자료 THE SLP·RLM (2021-10~, Eurostat 총량과 상관 0.995), 부문별 예측 (R7)
+- [x] 독일 다중회귀·VIF·변수선택·HAC (Ch6~), 외부 변수 평가 (R1)
+- [ ] 국가별 회귀계수·HDD 민감도 비교 (R5), 구조변화 대응 (R2)
 - [ ] 6개국 통합 모델 (R6), SHAP (R3), 파운데이션 모델 (R8)
 
 ## 본 실험 결과 (6개국) — `outputs/experiment/report.md`
@@ -118,6 +128,42 @@ print(metrics(res[res["mode"] == "ex_post"], df))     # MAPE, RMSE, MASE
 - **한국은 HDD 하나로 충분하다.** 단순회귀 4.6%보다 유의하게 정확한 모델이 없고, Ridge·LightGBM·SVR은 유의하게 부정확하다(DM p < 0.05).
 - **독일에서 기준 회귀보다 유의하게 정확한 모델은 Lasso 하나뿐이다**(p = 0.034). LightGBM(5.3%)도 p = 0.29로 유의하지 않다. 36개월 평가로는 1%p 차이를 가르기 어렵다.
 - **사전예측(평년 HDD)에서는 트리 모델이 크게 나빠진다**(독일 GBM 5.8% → 9.2%). 하이브리드·MLP·Ridge가 더 안정적이다. MLP는 시드에 따라 MAPE가 ±0.4~1.3%p 흔들린다.
+
+## R1 외부 변수 (독일) — `outputs/r1_de_variables.md`
+
+변수 조합마다 검증 구간에서 다시 튜닝해 고정한 사후예측 MAPE(%). 기존 변수는 회귀 6.5 / Ridge 5.6 / Lasso 5.6 / GBM 5.8 / LightGBM 5.3이다.
+
+- 외부 변수(영업일·화학 생산·원자력·풍력·석탄 가격 등)는 모델에 따라 −0.6~+1.7%p로 엇갈리고, 같은 모델의 기존 변수 대비 DM 검정에서 유의하게 좋아진 경우는 Lasso + 화학 생산지수 하나뿐이다.
+- 화학 + 영업일 + 원자력 조합: Ridge 5.5, GBM 5.3 (계획서의 5.3, 5.0은 튜닝 없이 나온 값). 유의한 개선은 없다.
+- 사전예측에서는 외부 변수가 대부분 오차를 키운다. 같은 달 값을 미리 알 수 없기 때문이다.
+- 결론: 본 실험은 기본 9개 변수를 유지한다.
+
+## 독일 다중회귀 (Ch6~) — `outputs/de_multiple_regression.txt`
+
+√Y ~ HDD, CDD, 소비자요금, 전월 도매가, 산업생산, 화학 생산, 영업일, 원자력, 풍력, 2022년 위기(2022-03~) 더미와 HDD×위기, 2008-02~2025-12 (n = 215).
+
+- **VIF:** 소비자요금 21, 위기 더미 19. 2022년에 요금 급등과 수요 감축이 함께 일어나 두 효과를 따로 추정하기 어렵다.
+- **변수선택:** BIC 최적은 √Y ~ HDD + 풍력 + 위기 + HDD×위기 (R² 0.927). 수정 R²·AIC·PRESS 최적은 여기에 영업일·원자력을 더한 7개 계수 모형이다.
+- **위기 후 변화:** 기저수요는 줄고 난방 민감도는 커졌다. 평균 수준에서 HDD 1당 0.50 PJ → 0.61 PJ (HDD×위기 HAC p < 0.001).
+- **영업일 t값:** 1.8 (HAC 1.9)로 유의하지 않다. 계획서의 t = 3.3은 재현되지 않는다.
+- **풍력 계수:** 양(+)으로, 예상(풍력↑ → 가스 발전↓)과 반대다. 풍력이 겨울에 많아 계절성과 섞인 것으로 보이며, 인과 해석은 하지 않는다.
+- **잔차:** 다중회귀 후에도 자기상관이 남는다(DW 1.12). OLS 표준오차 대신 Newey-West 표준오차로 추론했다.
+
+## R7 부문별 예측 — `outputs/r7_sector.md`
+
+같은 모델로 부문별 예측을 합산한 값과 총량을 바로 예측한 값의 사후예측 MAPE(%). 하이퍼파라미터는 본 실험의 설정을 쓴다.
+
+| 모델 | 독일 직접 | 독일 합산 | 한국 직접 | 한국 합산 |
+| --- | --- | --- | --- | --- |
+| 회귀 √Y~HDD+가격 | 3.9 | 3.7 | 4.6 | 4.6 |
+| SARIMAX+HDD·가격 | 4.7 | 4.6 | 4.5 | 4.4 |
+| Gradient Boosting | 5.6 | 5.1 | 5.1 | 5.7 |
+| 하이브리드 | 4.4 | 3.7 | 4.6 | 4.7 |
+
+- 독일(THE 총량, 평가 2024~2025년 24회)은 합산이 대체로 조금 더 정확하지만 유의하지 않다(DM p ≥ 0.13). 한국은 차이가 없다.
+- **부문별 HDD 민감도:** 독일 SLP는 HDD 10당 수요 +4.7%로 RLM(+1.1%)의 4배다. 한국은 도시가스용 +1.9%, 발전용 +0.7%다.
+- **요금 탄력성:** 독일 RLM(산업·발전)만 유의하다(−0.29). 한국은 규제 요금이라 유의하지 않다.
+- THE 자료는 2021-10부터라 독일 부문 모델의 학습 표본이 15~27개월로 짧다. 그래서 독일 직접 예측 MAPE(3.9%)는 본 실험(Eurostat 총량, 2023~2025)과 바로 비교하지 않는다.
 
 ## 독일 상세 결과
 

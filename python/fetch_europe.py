@@ -9,6 +9,7 @@ import datetime as dt
 import io
 import itertools
 import json
+import sys
 import time
 
 import pandas as pd
@@ -28,6 +29,7 @@ EUROSTAT_SERIES = [
     ("ip", "sts_inpr_m", {"nace_r2": "B-D", "s_adj": "SCA", "unit": "I21", "indic_bt": "PRD"}, START),
     ("ip_chem", "sts_inpr_m", {"nace_r2": "C20", "s_adj": "SCA", "unit": "I21", "indic_bt": "PRD"}, START),
     ("nuclear_gwh", "nrg_cb_pem", {"siec": "N9000", "unit": "GWH"}, START),
+    ("wind_gwh", "nrg_cb_pem", {"siec": "RA300", "unit": "GWH"}, START),
 ]
 
 FRED_SERIES = {
@@ -74,9 +76,11 @@ def parse_jsonstat(js):
     return pd.DataFrame(rows)
 
 
-def fetch_eurostat(outdir):
+def fetch_eurostat(outdir, only=None):
     frames = []
     for name, code, fixed, since in EUROSTAT_SERIES:
+        if only and name not in only:
+            continue
         params = [("geo", g) for g in EU_GEOS] + list(fixed.items())
         params += [("sinceTimePeriod", since), ("lang", "EN")]
         print(f"Eurostat {code} → {name}")
@@ -116,13 +120,22 @@ def fetch_fred(outdir):
 
 
 def main():
+    """인자 없이: 전부 다시 받는다. 계열 이름을 주면 그 Eurostat 계열만 받아 기존 파일에 끼워 넣는다
+    (예: python fetch_europe.py wind_gwh) — 다른 계열이 새 수정치로 바뀌지 않게 할 때 쓴다."""
+    only = sys.argv[1:]
     today = dt.date.today().strftime("%Y%m%d")
     outdir = RAW / today
     outdir.mkdir(parents=True, exist_ok=True)
-    long = pd.concat([fetch_eurostat(outdir), fetch_fred(outdir)], ignore_index=True)
-    long["fetched"] = today
-    long = long[["series", "geo", "month", "value", "flag", "source_updated", "fetched"]]
     out = INTERIM / "europe_long.csv"
+    if only:
+        new = fetch_eurostat(outdir, only)
+        new["fetched"] = today
+        old = pd.read_csv(out, dtype={"month": str})
+        long = pd.concat([old[~old.series.isin(only)], new], ignore_index=True)
+    else:
+        long = pd.concat([fetch_eurostat(outdir), fetch_fred(outdir)], ignore_index=True)
+        long["fetched"] = today
+    long = long[["series", "geo", "month", "value", "flag", "source_updated", "fetched"]]
     long.to_csv(out, index=False, encoding="utf-8")
     print(f"\n저장: {out} ({len(long)}행)")
 

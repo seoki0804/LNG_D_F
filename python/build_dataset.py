@@ -13,7 +13,8 @@
   workdays, days    영업일 수(월~금 − 국가 공휴일), 달의 일수
 
 국가별 추가 열
-  유럽: gas_tj, gas_pj, gas_flag, hicp_gas, ip_chem, nuclear_gwh, ttf_usd, lng_asia_usd, coal_usd
+  유럽: gas_tj, gas_pj, gas_flag, hicp_gas, ip_chem, nuclear_gwh, wind_gwh, ttf_usd, lng_asia_usd, coal_usd
+  독일: slp_pj, rlm_pj, the_total_pj (THE 부문별 소비, 2021-10~, fetch_the.py)
   한국: gas_kt, gas_city_kt, gas_power_kt, cpi_city_gas, lng_asia_usd, ttf_usd, coal_usd
 
 실행: python python/build_dataset.py
@@ -23,7 +24,7 @@ import pandas as pd
 
 from config import EU_GEOS, INTERIM, PROCESSED, START, END
 
-COUNTRY_SERIES = ["gas_tj", "hdd", "cdd", "hicp_gas", "ip", "ip_chem", "nuclear_gwh"]
+COUNTRY_SERIES = ["gas_tj", "hdd", "cdd", "hicp_gas", "ip", "ip_chem", "nuclear_gwh", "wind_gwh"]
 WORLD_SERIES = ["ttf_usd", "lng_asia_usd", "coal_usd"]
 KR_START = "2006-01"   # 한국 수요는 2016-01부터. 그 앞 10년은 평년 HDD 계산용 기온·가격만 둔다.
 COMMON = ["geo", "month", "y", "y_unit", "hdd", "cdd", "price_retail", "price_wholesale", "ip",
@@ -67,7 +68,12 @@ def build_europe(geo, long, world):
     df["gas_flag"] = df["gas_flag"].fillna("")
     df["y"], df["y_unit"] = df["gas_pj"], "PJ"
     df["price_retail"], df["price_wholesale"] = df["hicp_gas"], df["ttf_usd"]
-    extra = ["gas_tj", "gas_pj", "gas_flag", "hicp_gas", "ip_chem", "nuclear_gwh"] + WORLD_SERIES
+    extra = ["gas_tj", "gas_pj", "gas_flag", "hicp_gas", "ip_chem", "nuclear_gwh", "wind_gwh"] + WORLD_SERIES
+    if geo == "DE" and (INTERIM / "the_sector.csv").exists():   # THE 부문별 (fetch_the.py), 2021-10~
+        the = pd.read_csv(INTERIM / "the_sector.csv", dtype={"month": str})[["month", "slp_pj", "rlm_pj"]]
+        df = df.merge(the, on="month", how="left")
+        df["the_total_pj"] = df["slp_pj"] + df["rlm_pj"]
+        extra += ["slp_pj", "rlm_pj", "the_total_pj"]
     return df[COMMON + extra]
 
 

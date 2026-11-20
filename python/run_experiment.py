@@ -96,20 +96,21 @@ SPECS = [
 SPEC = {s.name: s for s in SPECS}
 
 
-def tune_task(geo, name, params):
+def tune_task(geo, name, params, features=None):
+    """검증 구간 MAPE. features를 주면 모델 기본 입력 대신 쓴다 (변수 설계 실험용)."""
     s = SPEC[name]
     df = load_country(geo)
-    res = rolling_forecast(df, s.make(params), s.features, train_start=TRAIN_START,
+    res = rolling_forecast(df, s.make(params), features or s.features, train_start=TRAIN_START,
                            eval_start=VAL_START, eval_end=VAL_END)
     return {"geo": geo, "model": name, "params": json.dumps(params, ensure_ascii=False),
             "val_MAPE": metrics(res, df, eval_start=VAL_START)["MAPE"]}
 
 
-def final_task(geo, name, params, seed):
+def final_task(geo, name, params, seed, features=None):
     s = SPEC[name]
     df = load_country(geo)
     fp = s.make(params, seeds=[seed] if seed is not None else None)
-    res = rolling_forecast(df, fp, s.features, train_start=TRAIN_START, modes=MODES)
+    res = rolling_forecast(df, fp, features or s.features, train_start=TRAIN_START, modes=MODES)
     return res.assign(geo=geo, model=name, seed=-1 if seed is None else seed)
 
 

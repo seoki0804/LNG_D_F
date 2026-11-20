@@ -1,0 +1,139 @@
+# 독일 다중회귀 √Y(PJ) ~ X, 2008-02~2025-12 (n = 215)
+변수: hdd·cdd(도일), hicp_gas(소비자 가스요금 지수), ttf_lag1(전월 도매가 USD/MMBtu),
+      ip(산업생산 B-D), ip_chem(화학 생산 C20), workdays(영업일), nuclear_twh·wind_twh(발전량 TWh),
+      crisis(2022-03 이후 = 1), hdd:crisis(위기 후 난방 민감도 변화)
+
+## 1. 전체 모형
+
+Call:
+lm(formula = full_f, data = de)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.65622 -0.52479 -0.00722  0.53697  2.21251 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 10.9094224  2.1121381   5.165 5.72e-07 ***
+hdd          0.0150473  0.0005004  30.068  < 2e-16 ***
+cdd          0.0088648  0.0134199   0.661 0.509635    
+hicp_gas    -0.0066950  0.0083310  -0.804 0.422551    
+ttf_lag1    -0.0077205  0.0084141  -0.918 0.359933    
+ip          -0.0133446  0.0141735  -0.942 0.347560    
+ip_chem      0.0077908  0.0163166   0.477 0.633537    
+workdays     0.0957455  0.0534603   1.791 0.074789 .  
+nuclear_twh  0.0805771  0.0475864   1.693 0.091936 .  
+wind_twh     0.0914319  0.0238888   3.827 0.000172 ***
+crisis      -0.7712240  0.6743430  -1.144 0.254109    
+hdd:crisis   0.0033323  0.0008431   3.952 0.000107 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.8707 on 203 degrees of freedom
+Multiple R-squared:  0.9306,	Adjusted R-squared:  0.9269 
+F-statistic: 247.6 on 11 and 203 DF,  p-value: < 2.2e-16
+
+순차 ANOVA (Type I):
+Analysis of Variance Table
+
+Response: sqrtY
+             Df  Sum Sq Mean Sq   F value    Pr(>F)    
+hdd           1 2009.50 2009.50 2650.9171 < 2.2e-16 ***
+cdd           1    1.03    1.03    1.3555 0.2456897    
+hicp_gas      1   19.88   19.88   26.2205 7.055e-07 ***
+ttf_lag1      1    1.34    1.34    1.7721 0.1846146    
+ip            1    0.63    0.63    0.8302 0.3632982    
+ip_chem       1    0.11    0.11    0.1456 0.7031295    
+workdays      1    2.86    2.86    3.7691 0.0535923 .  
+nuclear_twh   1    2.70    2.70    3.5563 0.0607464 .  
+wind_twh      1   14.88   14.88   19.6323 1.534e-05 ***
+crisis        1    0.06    0.06    0.0753 0.7839976    
+hdd:crisis    1   11.84   11.84   15.6215 0.0001068 ***
+Residuals   203  153.88    0.76                        
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+묶음별 부분 F 검정 (해당 변수들을 빼면 설명력이 유의하게 주는가):
+  가격 (요금·도매가)   F =   0.71, df = (2, 203), p = 0.494
+  산업 (산업생산·화학) F =   0.45, df = (2, 203), p = 0.6389
+  발전 (원자력·풍력)   F =   8.46, df = (2, 203), p = 0.000297
+  2022년 위기 (절편·기울기) F =   7.85, df = (2, 203), p = 0.000521
+  영업일                    F =   3.21, df = (1, 203), p = 0.07479
+
+## 2. 다중공선성
+상관행렬:
+              hdd   cdd hicp_gas ttf_lag1    ip ip_chem workdays nuclear_twh
+hdd          1.00 -0.47    -0.06     0.02 -0.01   -0.01    -0.18        0.20
+cdd         -0.47  1.00    -0.02    -0.03  0.08    0.03     0.25       -0.07
+hicp_gas    -0.06 -0.02     1.00     0.40 -0.38   -0.85    -0.02       -0.80
+ttf_lag1     0.02 -0.03     0.40     1.00 -0.10   -0.25     0.03       -0.23
+ip          -0.01  0.08    -0.38    -0.10  1.00    0.61     0.03        0.12
+ip_chem     -0.01  0.03    -0.85    -0.25  0.61    1.00     0.07        0.66
+workdays    -0.18  0.25    -0.02     0.03  0.03    0.07     1.00        0.04
+nuclear_twh  0.20 -0.07    -0.80    -0.23  0.12    0.66     0.04        1.00
+wind_twh     0.30 -0.15     0.44     0.12  0.15   -0.36    -0.10       -0.67
+            wind_twh
+hdd             0.30
+cdd            -0.15
+hicp_gas        0.44
+ttf_lag1        0.12
+ip              0.15
+ip_chem        -0.36
+workdays       -0.10
+nuclear_twh    -0.67
+wind_twh        1.00
+VIF (상호작용 제외 모형):
+   hicp_gas      crisis nuclear_twh     ip_chem    wind_twh          ip 
+      21.25       18.97        7.98        5.89        3.90        2.31 
+        hdd    ttf_lag1         cdd    workdays 
+       2.28        1.43        1.35        1.10 
+VIF > 10: hicp_gas, crisis
+
+## 3. 변수선택 (모든 부분집합, hdd는 항상 포함, hdd:crisis는 crisis가 있을 때만)
+후보 모형 768개 (outputs/de_subset_selection.csv)
+  adjR2  최적: p =  7 | hdd + workdays + nuclear_twh + wind_twh + crisis + hdd:crisis
+  AIC    최적: p =  7 | hdd + workdays + nuclear_twh + wind_twh + crisis + hdd:crisis
+  BIC    최적: p =  5 | hdd + wind_twh + crisis + hdd:crisis
+  Cp     최적: p = 12 | hdd + cdd + hicp_gas + ttf_lag1 + ip + ip_chem + workdays + nuclear_twh + wind_twh + crisis + hdd:crisis
+  PRESS  최적: p =  7 | hdd + workdays + nuclear_twh + wind_twh + crisis + hdd:crisis
+단계적 선택 (AIC, 양방향, 시작: hdd만):
+  sqrtY ~ hdd + hicp_gas + wind_twh + workdays + nuclear_twh
+
+## 4. 최종 모형 (BIC 최적)
+
+Call:
+lm(formula = reformulate(final_terms, "sqrtY"), data = de)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.6944 -0.5282  0.0027  0.5453  2.5008 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 12.4265367  0.1280832  97.019  < 2e-16 ***
+hdd          0.0153110  0.0003753  40.796  < 2e-16 ***
+wind_twh     0.0515361  0.0145007   3.554 0.000469 ***
+crisis      -1.8090856  0.2422098  -7.469 2.13e-12 ***
+hdd:crisis   0.0035268  0.0008431   4.183 4.22e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.8782 on 210 degrees of freedom
+Multiple R-squared:  0.927,	Adjusted R-squared:  0.9256 
+F-statistic: 666.6 on 4 and 210 DF,  p-value: < 2.2e-16
+
+OLS 표준오차 vs Newey-West(HAC, 시차 4) 표준오차:
+                coef   se_OLS   se_HAC t_OLS t_HAC     p_HAC
+(Intercept) 12.40000 0.128000 0.256000 97.00 48.60 3.20e-116
+hdd          0.01530 0.000375 0.000451 40.80 33.90  3.72e-87
+wind_twh     0.05150 0.014500 0.020100  3.55  2.56  1.11e-02
+crisis      -1.81000 0.242000 0.208000 -7.47 -8.69  1.04e-15
+hdd:crisis   0.00353 0.000843 0.000840  4.18  4.20  3.97e-05
+HAC 표준오차가 OLS보다 크면 잔차 자기상관 때문에 OLS가 정밀도를 과대평가한 것이다.
+해석(평균 수준 √Y = 16.31에서 dY/dX = 2·√Y·β): HDD 1 증가 → 월 수요 0.499 PJ
+  위기 후 HDD 효과: 0.614 PJ (위기 전 대비 +0.115 PJ)
+참고: √Y ~ HDD + 소비자가격 + 영업일 에서 영업일 t = 1.81 (OLS), 1.92 (HAC)
+
+## 5. 최종 모형 진단
+BP(Koenker) p = 0.0093, Shapiro-Wilk p = 0.6824, Durbin-Watson = 1.119 (p = 8.96e-12)
+외적 스튜던트화 잔차 상위 3: 2018-12 (-3.18), 2009-07 (+2.93), 2013-10 (-2.91)
+레버리지 > 2p/n (0.047): 27개, Cook's D > 4/n: 6개
