@@ -415,7 +415,7 @@ def design_table():
         cols["Hold-out 2026\nex-post"] = oo.groupby("model").MAPE_ex_post.mean()
         cols["Hold-out 2026\nex-ante"] = oo.groupby("model").MAPE_ex_ante.mean()
     mat = pd.DataFrame(cols).reindex(KEY)
-    dots = pd.DataFrame(mcs).reindex(index=KEY, columns=mat.columns).fillna(False).astype(bool)
+    dots = pd.DataFrame(mcs).reindex(index=KEY, columns=mat.columns).eq(True)
     return mat, dots
 
 
@@ -440,18 +440,36 @@ def fig5():
 
 
 # ---------------- Fig 6: 독일 예측 사례 ----------------
-def fig6(geo="DE"):
+FIG6_MODELS = ["회귀 √Y~HDD+가격", "SARIMAX+HDD·가격", "Chronos-2 + 공변량", "ENS"]
+
+
+def forecast_panel(geo="DE"):
+    """그림 6과 보고서의 연도별 수치가 같이 쓰는 사후예측 모음 (2023~2025 본 평가 + 2026 표본 외)."""
     main = pd.read_csv(OUTPUTS / "experiment" / "predictions.csv")
     r8 = pd.read_csv(OUTPUTS / "r8_foundation_predictions.csv")
     ens = pd.read_csv(OUTPUTS / "r10_ensemble_predictions.csv")
     ens = ens[ens.model == "회귀(위기)+ML+Chronos"].assign(model="ENS")   # 미리 정한 앙상블 (2023~2025)
     oo = pd.read_csv(OUTPUTS / "oos_2026_predictions.csv").replace({"model": ENS_ALIASES})
+    allp = pd.concat([main, r8, ens, oo], ignore_index=True)
+    allp = allp[(allp.geo == geo) & (allp["mode"] == "ex_post")].drop_duplicates(["model", "month"], keep="last")
+    allp = allp.dropna(subset=["actual"]).copy()
+    allp["date"] = pd.to_datetime(allp.month + "-01")
+    allp["year"] = allp.month.str[:4]
+    return allp
+
+
+def yearly_mape(geo="DE", models=FIG6_MODELS):
+    allp = forecast_panel(geo)
+    return {k: {y: float(((g.pred - g.actual).abs() / g.actual).mean() * 100)
+                for y, g in allp[allp.model == k].groupby("year")} for k in models}
+
+
+def fig6(geo="DE"):
+    r8 = pd.read_csv(OUTPUTS / "r8_foundation_predictions.csv")
     sel = {"회귀 √Y~HDD+가격": ("Benchmark regression", C["bench"]), "SARIMAX+HDD·가격": ("SARIMAX (tuned)", C["sarimax"]),
            "Chronos-2 + 공변량": ("Chronos-2 (covariates)", C["chronos"]),
            "ENS": ("Ensemble: regression + ML + Chronos", C["ens"])}
-    allp = pd.concat([main, r8, ens, oo], ignore_index=True)
-    allp = allp[(allp.geo == geo) & (allp["mode"] == "ex_post")].drop_duplicates(["model", "month"], keep="last")
-    allp["date"] = pd.to_datetime(allp.month + "-01")
+    allp = forecast_panel(geo)
     act = allp.groupby("date").actual.first()
     oofm = pd.read_csv(OUTPUTS / "r8_foundation_oos2026_predictions.csv")
     band = pd.concat([r8, oofm])
@@ -474,12 +492,11 @@ def fig6(geo="DE"):
     a.xaxis.set_major_formatter(mdates.DateFormatter("%b\n%Y"))
     # (b) 연도별 MAPE
     b = axes[1]
-    allp["year"] = allp.month.str[:4]
     years = ["2023", "2024", "2025", "2026"]
+    ym = yearly_mape(geo, list(sel))
     w = 0.19
     for i, (k, (lab, col)) in enumerate(sel.items()):
-        q = allp[allp.model == k]
-        v = [((q[q.year == y].pred - q[q.year == y].actual).abs() / q[q.year == y].actual).mean() * 100 for y in years]
+        v = [ym[k].get(y, np.nan) for y in years]
         b.bar(np.arange(len(years)) + (i - 1.5) * w, v, width=w - 0.02, color=col, label=lab)
     b.set_xticks(range(len(years)), ["2023", "2024", "2025", "2026\n(hold-out)"])
     b.set_ylabel("MAPE (%)")

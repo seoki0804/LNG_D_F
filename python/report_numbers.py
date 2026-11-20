@@ -109,9 +109,17 @@ def main():
     N["shap_rho"] = r3.groupby("geo").spearman.first().round(2).to_dict()
     N["shap_hdd"] = {g: [r(a), r(b)] for g, a, b in
                      r3[r3.feature == "hdd"][["geo", "ridge_shap_pct", "lgbm_shap_pct"]].itertuples(index=False)}
+    # 2026년 HDD 보정의 연도별 교차검증 오차 (fetch_dwd.py, fetch_openmeteo.py → degree_days.py)
+    from config import INTERIM
+    cal = pd.concat([pd.read_csv(INTERIM / "dwd_de_degree_days.csv").assign(geo="DE"),
+                     pd.read_csv(INTERIM / "openmeteo_degree_days.csv")])
+    N["hdd_cal"] = cal.groupby("geo")[["cv_mae", "cv_mae_linear", "delta"]].first().to_dict(orient="index")
     N["leakage"] = text_num(OUTPUTS / "leakage_check.md", r"통과 (\d+)건", cast=int)
     # 평가 설계별 6개국 평균 MAPE와 통합 MCS (그림 5와 같은 표 — 발표 자료의 표로 쓴다)
-    from figures import design_table
+    from figures import design_table, yearly_mape
+    N["de_yearly"] = {ENS.get(k, k): {y: r(v) for y, v in d.items()} for k, d in yearly_mape("DE").items()}
+    if "oos" in N:   # 2026년 6개국 평균 순위 (상위 모델이 얼마나 붙어 있는지 문서에 쓴다)
+        N["oos_rank"] = sorted(([m, v["MAPE_ex_post"]] for m, v in N["oos"].items()), key=lambda x: x[1])
     mat, dots = design_table()
     N["design"] = {"columns": [c.replace("\n", " ") for c in mat.columns], "models": list(mat.index),
                    "values": [[r(v) for v in row] for row in mat.values.tolist()],

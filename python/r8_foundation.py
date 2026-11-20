@@ -191,8 +191,12 @@ def main():
     MONTHS = eval_months(args.start, args.end)
     t0 = time.time()
     frames = {g: history(load_country(g)) for g in args.geos}
+    act = pd.concat([d[["month", "y"]].assign(geo=g) for g, d in frames.items()]).rename(columns={"y": "actual"})
     for g, df in frames.items():   # 공변량 결측(문맥 앞부분 전월 도매가 등)은 가까운 값으로 채운다
         df[COVS] = df[COVS].bfill().ffill()
+        # 수요 문맥 중간의 결측(스페인 2026-08 자료 오류)은 입력 문맥에서만 앞뒤 값으로 잇는다.
+        # 실제값(act)은 결측 그대로 두므로 그 달은 평가되지 않는다. 이어 주지 않으면 TimesFM XReg가 전체 실패한다.
+        df["y"] = df.y.interpolate(limit_area="inside")
     parts = []
     if args.realtime:
         print("Chronos-2 실시간", flush=True)
@@ -207,7 +211,6 @@ def main():
     except Exception as e:   # 설치·가중치 문제로 실패해도 Chronos 결과는 남긴다
         print(f"  TimesFM 실패: {type(e).__name__}: {e}")
     pred = pd.concat(parts, ignore_index=True)
-    act = pd.concat([d[["month", "y"]].assign(geo=g) for g, d in frames.items()]).rename(columns={"y": "actual"})
     pred = pred.merge(act, on=["geo", "month"], how="left")
     if args.tag:   # 다른 평가 기간(예: 독일 2026 표본 외 검증) — 비교표는 그 스크립트가 만든다
         pred.to_csv(OUTPUTS / f"r8_foundation_{args.tag}_predictions.csv", index=False, encoding="utf-8-sig")

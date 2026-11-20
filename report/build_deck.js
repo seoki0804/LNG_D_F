@@ -100,6 +100,14 @@ function caption(slide, text, y) {
     objectName: "caption" });
 }
 const f1 = (x) => Number(x).toFixed(1), f2 = (x) => Number(x).toFixed(2);
+// 2026년 표본 외·HDD 보정·독일 연도별 수치 (report_numbers.py)
+const OR = N.oos_rank || [], OG = N.oos_by_geo || {}, DY = N.de_yearly || {}, HC = N.hdd_cal || {};
+const calMae = Object.values(HC).map((v) => v.cv_mae);
+const calTxt = `${Math.min(...calMae).toFixed(1)}~${Math.max(...calMae).toFixed(1)}`;
+const SHORT = { "회귀 √Y~HDD+가격": "기준 회귀", "SARIMAX+HDD·가격": "SARIMAX", "Chronos-2 + 공변량": "Chronos-2",
+  ENS: "앙상블", "하이브리드 (회귀+GBM 잔차)": "하이브리드", "Gradient Boosting": "GBM", LightGBM: "LightGBM" };
+const sn = (m) => SHORT[m] || m;
+const ensRank = OR.findIndex((x) => x[0] === "ENS") + 1, sarRank = OR.findIndex((x) => x[0] === "SARIMAX+HDD·가격") + 1;
 const mcsMape = (mode, m) => N[`mcs_${mode}`].mape[m];
 const S = N.simple, R5 = N.r5;
 
@@ -163,12 +171,12 @@ const rows = [
   ["HDD·CDD", "Eurostat (18°C 기준, 15°C 이하인 날)", "기상청 7개 도시 일평균기온 → 같은 방식"],
   ["가격", "HICP 가스 요금 · EU 도매가 (전월)", "도시가스 CPI · 아시아 LNG (전월)"],
   ["산업·달력", "산업생산지수 · 영업일 수", "광공업생산지수 · 영업일 수"],
-  ["2026년 HDD", "DWD 관측소(독일) · ERA5(4개국) 보정, R² 0.988~0.999", "기상청 관측"],
+  ["2026년 HDD", `DWD(독일) · ERA5(4개국) 월별 보정, 오차 ${calTxt} HDD`, "기상청 관측"],
 ];
 s.addTable(rows, { x: MX, y: 1.55, w: W - 2 * MX, colW: [2.0, 5.1, 5.033], fontSize: 14, color: HEX.dk1,
   border: { type: "solid", pt: 0.75, color: "D0D4DE" }, rowH: 0.62, valign: "middle", objectName: "data table" });
 caption(s, "평가 구간 2023~2025년 결측 없음 · 2026-11-21 호출 · 스페인 2026-08 값(0)은 자료 오류로 제외", 5.6);
-s.addNotes("자료입니다. 유럽 5개국은 Eurostat의 월별 가스 내수 소비를, 한국은 가스공사의 용도별 공급량을 씁니다. 설명변수는 난방도일과 냉방도일, 소비자 요금과 전월 도매가격, 산업생산, 영업일 수입니다. 한국의 난방도일은 기상청 7개 도시 기온으로 Eurostat과 같은 방식으로 계산했습니다. 2026년 검증에 필요한 유럽의 난방도일은 아직 공표 전이라 관측소와 재분석 자료로 계산해 Eurostat 값에 보정했고, 보정 설명력은 0.99 수준입니다.");
+s.addNotes("자료입니다. 유럽 5개국은 Eurostat의 월별 가스 내수 소비를, 한국은 가스공사의 용도별 공급량을 씁니다. 설명변수는 난방도일과 냉방도일, 소비자 요금과 전월 도매가격, 산업생산, 영업일 수입니다. 한국의 난방도일은 기상청 7개 도시 기온으로 Eurostat과 같은 방식으로 계산했습니다. 2026년 검증에 필요한 유럽의 난방도일은 아직 공표 전이라 관측소와 재분석 자료로 계산해 Eurostat 값에 맞췄습니다. Eurostat 값은 산간을 포함한 국토 전체 기준이라 달마다 보정식을 따로 두었고, 한 해씩 빼고 맞혀 본 오차는 월 " + calTxt + " HDD입니다.");
 
 // ---------------- 5. 방법: 모델 ----------------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "자료와 방법" });
@@ -314,13 +322,13 @@ const O = N.oos || {}, RT = N.realtime;
 stat(s, `${f1(O.ENS.MAPE_ex_post)}%`, "2026년 1~9월 표본 외\n앙상블 6개국 평균 MAPE", 9.5, 1.45, 3.25, HEX.accent5);
 stat(s, `${f1(RT["Chronos-2 + 공변량"].MAPE_realtime)}%`, "실시간 예측 1위\nChronos-2 (공변량)", 9.5, 3.15, 3.25, HEX.accent4);
 stat(s, f2(N.oos_rho), "2023~2025 대비 2026년\n모델 순위 상관", 9.5, 4.85, 3.25, HEX.accent1);
-s.addNotes("결론이 평가 방식에 따라 바뀌는지 확인했습니다. 표의 각 열이 서로 다른 평가 설계입니다. 장기 평가, 공표 지연을 반영한 실시간 예측, 그리고 2023~2025년으로 고정한 모델을 그대로 2026년에 적용한 표본 외 검증까지, 앙상블과 SARIMAX, Chronos-2가 꾸준히 상위에 있습니다. 2026년 표본 외에서는 앙상블이 평균 5.1%로 가장 정확했고, 모델 순위는 2023~2025년과 0.74의 상관을 보였습니다.");
+s.addNotes(`결론이 평가 방식에 따라 바뀌는지 확인했습니다. 표의 각 열이 서로 다른 평가 설계입니다. 장기 평가와 공표 지연을 반영한 실시간 예측에서는 앙상블과 SARIMAX, Chronos-2가 꾸준히 상위에 있습니다. 2023~2025년으로 고정한 모델을 그대로 2026년에 적용한 표본 외 검증에서는 ${OR.slice(0, 4).map(([m, v]) => `${sn(m)} ${f1(v)}%`).join(", ")}로 상위 모델이 거의 붙어 있었고, 앙상블은 ${ensRank}위였습니다. SARIMAX는 프랑스에서 ${f1(OG["SARIMAX+HDD·가격"].FR)}%로 크게 틀려 ${sarRank}위로 내려갔습니다. 전체 모델 순위는 2023~2025년과 ${f2(N.oos_rho)}의 상관을 보였습니다.`);
 
 // ---------------- 12. 사례 ----------------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
 s.addText("독일 사례: 앙상블은 겨울 정점을 가장 잘 따라간다", { placeholder: "title" });
 figure(s, FIG("fig6_forecasts_DE.png"), { x: MX, y: 1.35, w: W - 2 * MX, h: 4.9 }, "Fig 6 Germany");
-caption(s, "앙상블 연도별 MAPE: 2023년 3.2% · 2024년 3.6% · 2025년 6.1%(SARIMAX 5.3%) · 2026년 3.1%", 6.4);
+caption(s, "앙상블 연도별 MAPE: " + ["2023", "2024", "2025", "2026"].map((y) => `${y}년 ${f1(DY.ENS[y])}%` + (DY["SARIMAX+HDD·가격"][y] < DY.ENS[y] ? `(SARIMAX ${f1(DY["SARIMAX+HDD·가격"][y])}%)` : "")).join(" · "), 6.4);
 s.addNotes("독일의 실제 수요와 예측을 겹쳐 본 그림입니다. 기준 회귀는 위기 직후 겨울 정점을 낮게 예측했고, 앙상블이 정점을 가장 잘 따라갔습니다. 오른쪽 연도별 오차를 보면 앙상블은 2023년, 2024년, 그리고 표본 외인 2026년에 가장 정확했습니다. 다만 2025년에는 SARIMAX가 더 나았는데, 이처럼 해마다 최고 모델이 바뀐다는 점이 모델군을 권고하는 이유입니다.");
 
 // ---------------- 13. 예측구간 ----------------
@@ -347,7 +355,7 @@ s = pres.addSlide({ masterName: "CONTENT_DARK", sectionTitle: "결론" });
 s.addText("결론과 시사점", { placeholder: "title" });
 const take = [
   ["구조변화를 모형에 넣어라", "위기 항 두 개로 기준 회귀 오차가 절반 이하로. 긴 과거 자료는 오히려 해롭다."],
-  ["단일 최고 모델보다 모델군", "튜닝한 SARIMAX·앙상블·Chronos-2가 모든 평가에서 MCS에 남는다."],
+  ["단일 최고 모델보다 모델군", "튜닝한 SARIMAX·앙상블·Chronos-2는 본·장기 평가의 통합 MCS에 모두 남는다."],
   ["파운데이션 모델은 강한 기준선", "학습 없이 학습한 모델과 대등, 예측구간 보정도 가장 좋다."],
 ];
 take.forEach(([h, t], i) => {
@@ -361,7 +369,7 @@ take.forEach(([h, t], i) => {
   s.addText(t, { x: MX + 1.1, y: y + 0.62, w: 10.8, h: 0.75, fontSize: 16, color: "D6DCEA", margin: 0, valign: "top",
     isTextBox: true, objectName: `takeaway text ${i + 1}` });
 });
-s.addNotes("결론은 세 가지입니다. 첫째, 위기처럼 구조가 바뀌는 시기에는 그 변화를 모형에 직접 넣는 것이 모델 종류를 바꾸는 것보다 효과가 큽니다. 둘째, 최고 단일 모델은 나라와 해마다 바뀌므로, 모든 평가에서 꾸준히 살아남은 SARIMAX, 앙상블, Chronos-2 같은 모델군을 쓰는 것이 안전합니다. 셋째, 파운데이션 모델은 학습 없이도 강한 기준선이 되며, 특히 불확실성 표현이 좋았습니다.");
+s.addNotes("결론은 세 가지입니다. 첫째, 위기처럼 구조가 바뀌는 시기에는 그 변화를 모형에 직접 넣는 것이 모델 종류를 바꾸는 것보다 효과가 큽니다. 둘째, 최고 단일 모델은 나라와 해마다 바뀌므로, 본 평가와 장기 평가의 통계 검정에서 꾸준히 살아남은 SARIMAX, 앙상블, Chronos-2 같은 모델군을 쓰는 것이 안전합니다. 셋째, 파운데이션 모델은 학습 없이도 강한 기준선이 되며, 특히 불확실성 표현이 좋았습니다.");
 
 // ---------------- 16. 한계 ----------------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결론" });

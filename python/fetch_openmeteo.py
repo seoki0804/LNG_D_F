@@ -4,19 +4,22 @@ Eurostat nrg_chdd_m은 2025-12에서 끝나서 2026년 표본 외 검증에 쓸 
 나머지 유럽 4개국은 여기서 만든다. 키가 필요 없다 (https://open-meteo.com, 비상업적 이용 무료).
   1) 나라별 주요 6~8개 도시의 일평균기온(temperature_2m_mean)
   2) 도시별 Eurostat 방식 HDD = Σ(18 − Tm) (Tm ≤ 15°C), CDD = Σ(Tm − 21) (Tm ≥ 24°C) → 도시 단순평균
-  3) 2014-01~2025-12 겹치는 기간에 Eurostat ~ Open-Meteo 선형회귀로 보정식을 만들고 2026년에 적용
+  3) 2014-01~2025-12에서 Eurostat에 맞춘 보정식(월 고정효과, 기온 오프셋 δ는 연도별 교차검증으로 선택)을 2026년에 적용
+     — 보정 방법은 degree_days.py 참고
 
 출력: data/raw/<호출일>/openmeteo_daily.csv, data/interim/openmeteo_degree_days.csv
-실행: python python/fetch_openmeteo.py
+실행: python python/fetch_openmeteo.py              (새로 받기)
+      python python/fetch_openmeteo.py --raw 20261121 (저장한 원자료로 보정만 다시)
 """
 import datetime as dt
+import sys
 import time
 
 import pandas as pd
 import requests
-import statsmodels.api as sm
 
 from config import INTERIM, RAW
+from degree_days import calibrate
 
 URL = "https://archive-api.open-meteo.com/v1/archive"
 CITIES = {
@@ -30,7 +33,6 @@ CITIES = {
            "Eindhoven": (51.44, 5.48), "Groningen": (53.22, 6.57)},
 }
 START = "2013-01-01"
-CAL = ("2014-01", "2025-12")
 
 
 def fetch(geo, cities, end):
@@ -51,49 +53,26 @@ def fetch(geo, cities, end):
     return pd.concat(frames, ignore_index=True)
 
 
-def degree_days(daily):
-    d = daily.copy()
-    d["tm"] = pd.to_numeric(d.tm, errors="coerce")
-    d["hdd"] = (18 - d.tm).where(d.tm <= 15, 0.0)
-    d["cdd"] = (d.tm - 21).where(d.tm >= 24, 0.0)
-    d["month"] = d.date.str[:7]
-    m = d.dropna(subset=["tm"]).groupby(["geo", "city", "month"]).agg(hdd=("hdd", "sum"), cdd=("cdd", "sum"),
-                                                                        n=("date", "size")).reset_index()
-    m["days"] = m.month.map(lambda x: pd.Period(x).days_in_month)
-    m = m[m.n == m.days]
-    out = m.groupby(["geo", "month"]).agg(om_hdd=("hdd", "mean"), om_cdd=("cdd", "mean"),
-                                          cities=("city", "nunique")).reset_index()
-    ncity = {g: len(c) for g, c in CITIES.items()}
-    return out[out.cities == out.geo.map(ncity)]
-
-
 def main():
-    end = (dt.date.today() - dt.timedelta(days=6)).isoformat()   # 과거 기상 자료는 약 5일 늦게 갱신
-    daily = pd.concat([fetch(g, c, end) for g, c in CITIES.items()], ignore_index=True)
-    today = dt.date.today().strftime("%Y%m%d")
-    (RAW / today).mkdir(parents=True, exist_ok=True)
-    daily.to_csv(RAW / today / "openmeteo_daily.csv", index=False, encoding="utf-8")
-    dd = degree_days(daily)
+    if "--raw" in sys.argv:
+        daily = pd.read_csv(RAW / sys.argv[sys.argv.index("--raw") + 1] / "openmeteo_daily.csv")
+    else:
+        end = (dt.date.today() - dt.timedelta(days=6)).isoformat()   # 과거 기상 자료는 약 5일 늦게 갱신
+        daily = pd.concat([fetch(g, c, end) for g, c in CITIES.items()], ignore_index=True)
+        today = dt.date.today().strftime("%Y%m%d")
+        (RAW / today).mkdir(parents=True, exist_ok=True)
+        daily.to_csv(RAW / today / "openmeteo_daily.csv", index=False, encoding="utf-8")
+    daily["tm"] = pd.to_numeric(daily.tm, errors="coerce")
     eu = pd.read_csv(INTERIM / "europe_long.csv", dtype={"month": str})
     eu = (eu[eu.series.isin(["hdd", "cdd"])].pivot_table(index=["geo", "month"], columns="series", values="value")
           .rename(columns={"hdd": "eurostat_hdd", "cdd": "eurostat_cdd"}).reset_index())
-    dd = dd.merge(eu, on=["geo", "month"], how="left")
-    parts = []
-    for g, d in dd.groupby("geo"):
-        d = d.copy()
-        cal = d[(d.month >= CAL[0]) & (d.month <= CAL[1])]
-        for v in ("hdd", "cdd"):
-            m = sm.OLS(cal[f"eurostat_{v}"], sm.add_constant(cal[f"om_{v}"])).fit()
-            d[f"{v}_cal"] = (m.params.iloc[0] + m.params.iloc[1] * d[f"om_{v}"]).clip(lower=0)
-            fit = d.loc[cal.index]
-            mae = (fit[f"{v}_cal"] - fit[f"eurostat_{v}"]).abs().mean()
-            print(f"{g} {v.upper()} 보정: Eurostat = {m.params.iloc[0]:.2f} + {m.params.iloc[1]:.3f} × OM, "
-                  f"R² {m.rsquared:.4f}, MAE {mae:.1f} ({len(cal)}개월)")
-        parts.append(d)
+    parts = [calibrate(daily[daily.geo == g], "city", eu[eu.geo == g], g).assign(geo=g) for g in CITIES]
     out = pd.concat(parts, ignore_index=True)
+    out = out[["geo"] + [c for c in out.columns if c != "geo"]]
     out.to_csv(INTERIM / "openmeteo_degree_days.csv", index=False, encoding="utf-8")
-    new = out[out.month > CAL[1]]
+    new = out[out.month > "2025-12"]
     print(f"저장: {INTERIM / 'openmeteo_degree_days.csv'} (2026: {new.month.min()}~{new.month.max()})")
+    print(new.pivot(index="month", columns="geo", values="hdd_cal").round(1).to_string())
 
 
 if __name__ == "__main__":

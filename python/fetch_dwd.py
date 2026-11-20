@@ -3,7 +3,8 @@
 Eurostat nrg_chdd_m은 2025-12에서 끝나서 2026년 표본 외 검증에 쓸 HDD가 없다 (계획서 보완 조치 1).
   1) DWD Open Data 일별 기후자료(KL)의 일평균기온(TMK), 주요 12개 도시 관측소
   2) 관측소별 Eurostat 방식 HDD = Σ(18 − Tm) (Tm ≤ 15°C), CDD = Σ(Tm − 21) (Tm ≥ 24°C) → 12개 관측소 단순평균
-  3) 2014-01~2025-12 겹치는 기간에 Eurostat HDD ~ DWD HDD 선형회귀로 보정식을 만들고 2026년에 적용
+  3) 2014-01~2025-12에서 Eurostat에 맞춘 보정식(월 고정효과, 기온 오프셋 δ는 연도별 교차검증으로 선택)을 2026년에 적용
+     — 보정 방법은 degree_days.py 참고. 저장한 원자료로 다시: python python/fetch_dwd.py --raw 20261121
      (Eurostat는 NUTS3 지역 인구가중이라 도시 관측소 평균과 수준이 다르다)
 
 출력: data/raw/<호출일>/dwd_daily.csv, data/interim/dwd_de_degree_days.csv
@@ -12,21 +13,20 @@ Eurostat nrg_chdd_m은 2025-12에서 끝나서 2026년 표본 외 검증에 쓸 
 import datetime as dt
 import io
 import re
+import sys
 import zipfile
 
 import numpy as np
 import pandas as pd
 import requests
-import statsmodels.api as sm
-
 from config import INTERIM, RAW
+from degree_days import calibrate
 
 BASE = "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/"
 STATIONS = {433: "Berlin-Tempelhof", 1975: "Hamburg-Fuhlsbüttel", 3379: "München-Stadt", 1420: "Frankfurt/Main",
             4931: "Stuttgart-Echterdingen", 1078: "Düsseldorf", 1303: "Essen-Bredeney", 2932: "Leipzig/Halle",
             1048: "Dresden-Klotzsche", 2014: "Hannover", 3668: "Nürnberg", 691: "Bremen"}
 START = "2013-01-01"
-CAL = ("2014-01", "2025-12")
 
 
 def read_zip(url):
@@ -54,43 +54,26 @@ def fetch_daily():
     return pd.concat(frames, ignore_index=True)
 
 
-def degree_days(daily):
-    d = daily.sort_values(["stn", "date"]).copy()
-    d["TMK"] = d.groupby("stn").TMK.transform(lambda s: s.interpolate(limit=3))
-    d = d.dropna(subset=["TMK"])
-    d["hdd"] = (18 - d.TMK).where(d.TMK <= 15, 0.0)
-    d["cdd"] = (d.TMK - 21).where(d.TMK >= 24, 0.0)
-    d["month"] = d.date.dt.strftime("%Y-%m")
-    m = d.groupby(["stn", "month"]).agg(hdd=("hdd", "sum"), cdd=("cdd", "sum"), n=("date", "size")).reset_index()
-    m["days"] = m.month.map(lambda x: pd.Period(x).days_in_month)
-    m = m[m.n == m.days]
-    out = m.groupby("month").agg(dwd_hdd=("hdd", "mean"), dwd_cdd=("cdd", "mean"), stations=("stn", "nunique"))
-    return out[out.stations == len(STATIONS)].reset_index()
-
-
 def main():
-    today = dt.date.today().strftime("%Y%m%d")
-    daily = fetch_daily()
-    (RAW / today).mkdir(parents=True, exist_ok=True)
-    daily.to_csv(RAW / today / "dwd_daily.csv", index=False, encoding="utf-8")
-    dd = degree_days(daily)
+    if "--raw" in sys.argv:
+        daily = pd.read_csv(RAW / sys.argv[sys.argv.index("--raw") + 1] / "dwd_daily.csv", parse_dates=["date"])
+    else:
+        today = dt.date.today().strftime("%Y%m%d")
+        daily = fetch_daily()
+        (RAW / today).mkdir(parents=True, exist_ok=True)
+        daily.to_csv(RAW / today / "dwd_daily.csv", index=False, encoding="utf-8")
+    d = daily.sort_values(["stn", "date"]).copy()
+    d["tm"] = d.groupby("stn").TMK.transform(lambda s: s.interpolate(limit=3))   # 관측소 결측 3일 이내는 보간
+    d["date"] = d.date.dt.strftime("%Y-%m-%d")
 
     eu = pd.read_csv(INTERIM / "europe_long.csv", dtype={"month": str})
-    eu = eu[eu.geo == "DE"].pivot(index="month", columns="series", values="value")[["hdd", "cdd"]]
-    dd = dd.merge(eu.rename(columns={"hdd": "eurostat_hdd", "cdd": "eurostat_cdd"}).reset_index(),
-                  on="month", how="left")
-    cal = dd[(dd.month >= CAL[0]) & (dd.month <= CAL[1])]
-    for v in ("hdd", "cdd"):
-        m = sm.OLS(cal[f"eurostat_{v}"], sm.add_constant(cal[f"dwd_{v}"])).fit()
-        dd[f"{v}_cal"] = (m.params.iloc[0] + m.params.iloc[1] * dd[f"dwd_{v}"]).clip(lower=0)
-        fit = dd.loc[cal.index]
-        mae = (fit[f"{v}_cal"] - fit[f"eurostat_{v}"]).abs().mean()
-        print(f"{v.upper()} 보정: Eurostat = {m.params.iloc[0]:.2f} + {m.params.iloc[1]:.3f} × DWD, "
-              f"R² {m.rsquared:.4f}, MAE {mae:.1f} ({CAL[0]}~{CAL[1]}, {len(cal)}개월)")
+    eu = (eu[(eu.geo == "DE") & eu.series.isin(["hdd", "cdd"])].pivot(index="month", columns="series", values="value")
+          .rename(columns={"hdd": "eurostat_hdd", "cdd": "eurostat_cdd"}).reset_index())
+    dd = calibrate(d[["stn", "date", "tm"]], "stn", eu, "DE")
     dd.to_csv(INTERIM / "dwd_de_degree_days.csv", index=False, encoding="utf-8")
-    new = dd[dd.month > CAL[1]]
+    new = dd[dd.month > "2025-12"]
     print(f"저장: {INTERIM / 'dwd_de_degree_days.csv'} (보정 HDD 2026: {new.month.min()}~{new.month.max()})")
-    print(new[["month", "dwd_hdd", "hdd_cal", "cdd_cal"]].round(1).to_string(index=False))
+    print(new[["month", "raw_hdd", "hdd_cal", "cdd_cal"]].round(1).to_string(index=False))
 
 
 if __name__ == "__main__":
