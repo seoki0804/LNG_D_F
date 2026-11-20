@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# 비밀값·API 키
+.env
+*.key
+secrets*
+
+# 파운데이션 모델 가중치·캐시
+*.safetensors
+*.bin
+*.ckpt
+hf_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
