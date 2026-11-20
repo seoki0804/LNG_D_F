@@ -23,6 +23,10 @@ F-statistic:  2042 on 1 and 214 DF,  p-value: < 2.2e-16
                   2.5 %     97.5 %
 (Intercept) 134.7820136 149.497848
 hdd           0.5251312   0.573029
+β 95% 신뢰구간 (Newey-West HAC 표준오차 — 잔차 자기상관 반영, 아래 진단 참고):
+                  2.5 %      97.5 %
+(Intercept) 131.5312248 152.7486368
+hdd           0.5145429   0.5836172
 분산분석표:
 Analysis of Variance Table
 
@@ -51,6 +55,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
   등분산: BP(Koenker) p = 0.0284, BP(원래) p = 0.0418, Brown-Forsythe p = 0.1528
   정규성: Shapiro-Wilk p = 0.4071
   자기상관: Durbin-Watson = 0.964, p = 6.911e-15
+  적합결여(Kutner 3.7, HDD 20개 구간 근사 반복): F = 2.33, df = (18, 196), p = 0.002471
 Box-Cox: 최적 λ = 0.56 (95% CI 0.36~0.76) → √Y(λ = 0.5) 선택
 
 ## 진단 (√Y 변환 후)
@@ -61,3 +66,4 @@ hdd          0.01656798 0.0003644374  45.46178 6.264527e-112
   등분산: BP(Koenker) p = 0.3178, BP(원래) p = 0.3958, Brown-Forsythe p = 0.1054
   정규성: Shapiro-Wilk p = 0.2089
   자기상관: Durbin-Watson = 0.887, p = 6.823e-17
+  적합결여(Kutner 3.7, HDD 20개 구간 근사 반복): F = 1.45, df = (18, 196), p = 0.1106

@@ -72,8 +72,13 @@ SPECS = [
     Spec("계절 naive", ["lag12"], fixed=M.seasonal_naive),
     Spec("단순회귀 Y~HDD", ["hdd"], fixed=M.ols()),
     Spec(BENCH, REG, fixed=M.ols(sqrt=True)),
-    Spec("SARIMAX+HDD·가격", REG, fixed=M.sarimax),
-    Spec("Holt-Winters", [], fixed=M.holt_winters),
+    # 통계 시계열 모델도 ML과 같은 절차로 검증 구간에서 형태를 고른다 (공정한 비교)
+    Spec("SARIMAX+HDD·가격", REG, build=M.build_sarimax,
+         grid=grid(order=[[1, 0, 0], [1, 0, 1], [2, 0, 0]], seasonal=[[1, 0, 0], [0, 1, 1]])),
+    Spec("Holt-Winters", [], build=M.build_hw,
+         grid=[{"trend": "add", "seasonal": "add", "damped": False}, {"trend": "add", "seasonal": "add", "damped": True},
+               {"trend": "add", "seasonal": "mul", "damped": False}, {"trend": "add", "seasonal": "mul", "damped": True},
+               {"trend": None, "seasonal": "add", "damped": False}, {"trend": None, "seasonal": "mul", "damped": False}]),
     Spec("Ridge", BASE_FEATURES, build=M.build_ridge,
          grid=grid(alpha=[0.1, 1, 10, 100], target=[None, "sqrt"])),
     Spec("Lasso", BASE_FEATURES, build=M.build_lasso,
@@ -123,7 +128,9 @@ def run(geos, n_jobs):
     print(f"[1/3] 튜닝: {len(tasks)}개 설정 × 36회 (검증 {VAL_START}~{VAL_END})", flush=True)
     tun = pd.DataFrame(Parallel(n_jobs=n_jobs)(delayed(tune_task)(*t) for t in tasks))
     tun.to_csv(OUT / "tuning.csv", index=False, encoding="utf-8-sig")
-    best = (tun.sort_values("val_MAPE").groupby(["geo", "model"]).head(1)
+    # 동점(같은 예측을 내는 설정)일 때도 항상 같은 설정을 고르도록 반올림 후 설정 문자열로 2차 정렬
+    best = (tun.assign(_k=tun.val_MAPE.round(10)).sort_values(["_k", "params"], kind="mergesort")
+            .groupby(["geo", "model"]).head(1)
             .set_index(["geo", "model"]))
     print(f"      완료 {time.time() - t0:.0f}s", flush=True)
 

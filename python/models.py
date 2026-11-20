@@ -88,6 +88,31 @@ def sarimax(train, test, features, target):
                          for i in range(len(test))])
 
 
+def build_hw(p, seeds=None):
+    """Holt-Winters: 추세(가법/없음), 계절성(가법/승법), 감쇠 추세를 검증 구간에서 고른다."""
+    def fit_predict(train, test, features, target):
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            m = ExponentialSmoothing(train[target].to_numpy(), trend=p["trend"], seasonal=p["seasonal"],
+                                     damped_trend=p["damped"] if p["trend"] else False,
+                                     seasonal_periods=12).fit()
+        return np.repeat(m.forecast(1), len(test))
+    return fit_predict
+
+
+def build_sarimax(p, seeds=None):
+    """SARIMAX(p,0,q)(P,D,Q)12 + 외생변수: 차수를 검증 구간에서 고른다."""
+    def fit_predict(train, test, features, target):
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            m = SARIMAX(train[target].to_numpy(), exog=train[features].to_numpy(), order=tuple(p["order"]),
+                        seasonal_order=tuple(p["seasonal"]) + (12,),
+                        trend="c" if p["seasonal"][1] == 0 else "n").fit(disp=False)
+            return np.array([m.forecast(1, exog=test[features].iloc[[i]].to_numpy())[0]
+                             for i in range(len(test))])
+    return fit_predict
+
+
 def hybrid(reg_features, ml_features, gbm_params=None, seeds=None):
     """회귀(√Y ~ reg_features) + GBM이 회귀 잔차(원 단위)를 학습."""
     gbm_params = gbm_params or {}

@@ -41,7 +41,23 @@ diagnose <- function(fit, label) {
               bp_k$p.value, bp_o$p.value, bf$p.value))
   say(sprintf("  정규성: Shapiro-Wilk p = %.4f", sw$p.value))
   say(sprintf("  자기상관: Durbin-Watson = %.3f, p = %.4g", dw$statistic, dw$p.value))
-  invisible(list(bp_k = bp_k, bp_o = bp_o, bf = bf, sw = sw, dw = dw))
+  lof <- lack_of_fit(fit)
+  say(sprintf("  적합결여(Kutner 3.7, HDD 20개 구간 근사 반복): F = %.2f, df = (%d, %d), p = %.4g",
+              lof$F, lof$df1, lof$df2, lof$p))
+  invisible(list(bp_k = bp_k, bp_o = bp_o, bf = bf, sw = sw, dw = dw, lof = lof))
+}
+
+# ---- 적합결여 검정 (Kutner 3.7): 반복 관측이 없어 HDD를 20개 등빈도 구간으로 묶어 근사 반복으로 쓴다
+lack_of_fit <- function(fit, c = 20) {
+  y <- model.response(model.frame(fit))
+  grp <- cut(de$hdd, breaks = unique(quantile(de$hdd, seq(0, 1, length.out = c + 1))), include.lowest = TRUE)
+  c <- nlevels(grp)
+  sspe <- sum((y - ave(y, grp))^2)
+  sslf <- sum(resid(fit)^2) - sspe
+  df1 <- c - 2
+  df2 <- length(y) - c
+  f <- (sslf / df1) / (sspe / df2)
+  list(F = f, df1 = df1, df2 = df2, p = pf(f, df1, df2, lower.tail = FALSE))
 }
 
 # 진단 plot 6종 (Kutner 3.3): 잔차 vs X, |잔차| vs X, 잔차 vs 적합값, 잔차 vs 시간, 상자그림, 정규확률그림
@@ -71,6 +87,10 @@ fit <- lm(gas_pj ~ hdd, data = de)
 show(summary(fit))
 say("β 95% 신뢰구간:")
 show(confint(fit))
+nw <- sandwich::NeweyWest(fit, prewhite = FALSE)
+tq <- qt(0.975, nrow(de) - 2)
+say("β 95% 신뢰구간 (Newey-West HAC 표준오차 — 잔차 자기상관 반영, 아래 진단 참고):")
+show(cbind(`2.5 %` = coef(fit) - tq * sqrt(diag(nw)), `97.5 %` = coef(fit) + tq * sqrt(diag(nw))))
 say("분산분석표:")
 show(anova(fit))
 say(sprintf("해석: HDD가 1 늘면 월 수요는 %.3f PJ 늘어난다 (95%% CI %.3f~%.3f).",

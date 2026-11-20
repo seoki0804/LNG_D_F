@@ -1,4 +1,16 @@
 ﻿geo,model,params,val_MAPE
+DE,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",7.162445193385281
+DE,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",6.936855029397887
+DE,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",7.5892985388595555
+DE,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",6.774087570309319
+DE,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",7.243287118629229
+DE,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",7.049283564590344
+DE,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",14.735261724219603
+DE,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",13.36852948376267
+DE,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",14.245522911513891
+DE,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",13.279103401771996
+DE,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",13.019066941933877
+DE,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",12.162847060907296
 DE,Ridge,"{""alpha"": 0.1, ""target"": null}",9.38611357173114
 DE,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",8.739289092298257
 DE,Ridge,"{""alpha"": 1, ""target"": null}",9.432922073359805
@@ -61,6 +73,18 @@ DE,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators
 DE,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",7.36682625806919
 DE,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",7.871358333803736
 DE,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",7.153620558782427
+IT,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",7.228178942032767
+IT,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",5.689534425067571
+IT,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",7.394319945347205
+IT,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",6.131850055489068
+IT,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",7.563948899025935
+IT,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",5.851008609886946
+IT,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",7.721822697498716
+IT,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",7.681572999646067
+IT,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",6.653136121677752
+IT,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",6.839532912286097
+IT,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",7.375381422563936
+IT,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",6.577410078740191
 IT,Ridge,"{""alpha"": 0.1, ""target"": null}",6.486097857868117
 IT,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",6.331308236837578
 IT,Ridge,"{""alpha"": 1, ""target"": null}",6.300206632416269
@@ -123,6 +147,18 @@ IT,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators
 IT,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",6.789446462312224
 IT,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",6.578629091763657
 IT,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",6.835226750081574
+FR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",7.070497114743003
+FR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",5.970982517979895
+FR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",7.252058412617564
+FR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",6.161945047706095
+FR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",7.151638571173001
+FR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",6.131081990613597
+FR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",10.301464663574164
+FR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",10.43553891409436
+FR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",10.57757920881554
+FR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",10.437031169047927
+FR,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",10.278308118852973
+FR,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",10.401758987885886
 FR,Ridge,"{""alpha"": 0.1, ""target"": null}",8.309900058012229
 FR,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",6.764158495244202
 FR,Ridge,"{""alpha"": 1, ""target"": null}",7.999784914810136
@@ -185,6 +221,18 @@ FR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators
 FR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",5.948324744581866
 FR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",5.866568746441254
 FR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",5.869248815049314
+ES,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",7.568109016624756
+ES,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",6.6427631763697415
+ES,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",7.624669609433219
+ES,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",6.728858114965354
+ES,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",7.649631031734501
+ES,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",6.749347182892852
+ES,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",7.101496951479618
+ES,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",7.083306887084122
+ES,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",6.870081221168975
+ES,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",6.8517365811281445
+ES,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",7.019204260928917
+ES,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",6.787444995809317
 ES,Ridge,"{""alpha"": 0.1, ""target"": null}",8.771259051806576
 ES,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",8.68889604230383
 ES,Ridge,"{""alpha"": 1, ""target"": null}",8.858399341786624
@@ -247,6 +295,18 @@ ES,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators
 ES,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",8.972926575614402
 ES,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",7.962139287583908
 ES,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",8.678744835106059
+NL,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",9.58858494469696
+NL,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",9.320651978380507
+NL,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",9.985412323876117
+NL,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",8.36565063346848
+NL,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",9.498715694236095
+NL,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",8.687668736339406
+NL,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",11.351723726066282
+NL,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",11.263313083678783
+NL,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",10.42209475334658
+NL,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",10.556407677747824
+NL,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",11.20462047173666
+NL,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",10.544113083820422
 NL,Ridge,"{""alpha"": 0.1, ""target"": null}",10.57879939451169
 NL,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",9.528432282083479
 NL,Ridge,"{""alpha"": 1, ""target"": null}",10.405498594224385
@@ -309,6 +369,18 @@ NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators
 NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",8.54227507849769
 NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",8.406164026003019
 NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",8.300657262883197
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",6.631698315165472
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",7.1143522620968955
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",6.859732016085965
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",7.3144196505105326
+KR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",6.736998630455907
+KR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",7.470510462421694
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",7.764244026057267
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",7.659153702612459
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",7.403467493205834
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",7.4689056810787395
+KR,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",7.275136012460679
+KR,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",7.3084331324854075
 KR,Ridge,"{""alpha"": 0.1, ""target"": null}",10.115131485285204
 KR,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",10.228883129703568
 KR,Ridge,"{""alpha"": 1, ""target"": null}",9.543624745022898

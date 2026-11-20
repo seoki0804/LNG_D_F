@@ -6,7 +6,8 @@
   이동 60개월  : 직전 60개월만
   이동 36개월  : 직전 36개월만
   지수가중 24  : 확장창 2015~, 관측 가중치 0.5^(경과 개월/24) (반감기 24개월)
-  위기 변수    : 확장창 2015~ + 위기 더미(2022-03~) + HDD×위기
+  위기 변수    : 확장창 2015~ + 위기 더미(2022-03~) + HDD×위기 (사전에 정한 시점)
+  위기 변수 (2022-09): 같은 구조, 시점만 EU 수요 감축 규정 직후 (견고성 확인; R/05 구조변화 검정 참고)
 
 모델: 기준 회귀(√Y~HDD+가격), Ridge, GBM. 하이퍼파라미터는 본 실험에서 고른 국가별 설정을 그대로 쓴다.
 DM 검정: 같은 모델의 '확장 2015~' 대비 (APE, 사후예측).
@@ -35,13 +36,15 @@ from run_experiment import BENCH, MODES, OUT as EXP_OUT, REG, SEEDS, SPEC
 
 MODELS = [BENCH, "Ridge", "Gradient Boosting"]
 CRISIS = ["crisis", "hdd_crisis"]
+CRISIS9 = ["crisis9", "hdd_crisis9"]   # 견고성: 위기 시점 2022-09
 STRATEGIES = {   # 이름: (train_start, window, 반감기, 위기 변수)
-    "확장 2015~": ("2015-01", None, None, False),
-    "확장 2009~": ("2009-01", None, None, False),
-    "이동 60개월": ("2009-01", 60, None, False),
-    "이동 36개월": ("2009-01", 36, None, False),
-    "지수가중 24": ("2015-01", None, 24, False),
-    "위기 변수": ("2015-01", None, None, True),
+    "확장 2015~": ("2015-01", None, None, None),
+    "확장 2009~": ("2009-01", None, None, None),
+    "이동 60개월": ("2009-01", 60, None, None),
+    "이동 36개월": ("2009-01", 36, None, None),
+    "지수가중 24": ("2015-01", None, 24, None),
+    "위기 변수": ("2015-01", None, None, CRISIS),
+    "위기 변수 (2022-09)": ("2015-01", None, None, CRISIS9),
 }
 BASE = "확장 2015~"
 
@@ -73,7 +76,7 @@ def weighted(model, params, halflife, seed):
 def task(geo, model, params, strategy, seed):
     start, window, halflife, crisis = STRATEGIES[strategy]
     spec = SPEC[model]
-    feats = list(spec.features) + (CRISIS if crisis else [])
+    feats = list(spec.features) + (crisis or [])
     fp = (weighted(model, params, halflife, seed) if halflife
           else spec.make(params, seeds=[seed] if seed is not None else None))
     df = load_country(geo)

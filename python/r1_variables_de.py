@@ -53,7 +53,8 @@ def main():
     print(f"[1/2] 튜닝 {len(tasks)}개", flush=True)
     out = Parallel(n_jobs=-1)(delayed(tune_task)(GEO, m, p, feats(m, extra[c])) for m, c, p in tasks)
     tun = pd.DataFrame(out).assign(cand=[c for _, c, _ in tasks])
-    best = tun.sort_values("val_MAPE").groupby(["model", "cand"]).head(1).set_index(["model", "cand"])
+    best = (tun.assign(_k=tun.val_MAPE.round(10)).sort_values(["_k", "params"], kind="mergesort")
+            .groupby(["model", "cand"]).head(1).set_index(["model", "cand"]))
 
     # 2) 최종 평가
     jobs = []

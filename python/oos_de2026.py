@@ -26,7 +26,9 @@ from run_experiment import BENCH, MODES, OUT as EXP_OUT, SEEDS, SPEC, SPECS
 
 GEO, START, END = "DE", "2026-01", "2026-09"
 CRISIS = ["crisis", "hdd_crisis"]
-EXTRA = {"회귀 √Y~HDD+가격 + 위기 변수": BENCH, "Ridge + 위기 변수": "Ridge"}
+EXTRA = {"회귀 √Y~HDD+가격 + 위기 변수": (BENCH, CRISIS), "Ridge + 위기 변수": ("Ridge", CRISIS),
+         "회귀 √Y~HDD+가격 + 위기 변수 (2022-09)": (BENCH, ["crisis9", "hdd_crisis9"]),
+         "Ridge + 위기 변수 (2022-09)": ("Ridge", ["crisis9", "hdd_crisis9"])}
 
 
 def task(name, base, params, feats, seed):
@@ -43,9 +45,9 @@ def main():
     for s in SPECS:
         p = json.loads(post.loc[s.name, "params"]) if s.grid else {}
         jobs += [(s.name, s.name, p, s.features, sd) for sd in (SEEDS if s.stochastic(p) else [None])]
-    for name, base in EXTRA.items():
+    for name, (base, extra) in EXTRA.items():
         p = json.loads(post.loc[base, "params"]) if SPEC[base].grid else {}
-        jobs.append((name, base, p, list(SPEC[base].features) + CRISIS, None))
+        jobs.append((name, base, p, list(SPEC[base].features) + extra, None))
     raw = pd.concat(Parallel(n_jobs=-1)(delayed(task)(*j) for j in jobs), ignore_index=True)
     pred = (raw.groupby(["model", "mode", "month"], as_index=False)
             .agg(actual=("actual", "first"), pred=("pred", "mean")))
@@ -63,6 +65,11 @@ def main():
                                               & (r2["mode"] == "ex_post")].MAPE.iloc[0],
            "Ridge + 위기 변수": r2[(r2.geo == GEO) & (r2.model == "Ridge") & (r2.strategy == "위기 변수")
                                  & (r2["mode"] == "ex_post")].MAPE.iloc[0],
+           "회귀 √Y~HDD+가격 + 위기 변수 (2022-09)": r2[(r2.geo == GEO) & (r2.model == BENCH)
+                                                     & (r2.strategy == "위기 변수 (2022-09)")
+                                                     & (r2["mode"] == "ex_post")].MAPE.iloc[0],
+           "Ridge + 위기 변수 (2022-09)": r2[(r2.geo == GEO) & (r2.model == "Ridge")
+                                          & (r2.strategy == "위기 변수 (2022-09)") & (r2["mode"] == "ex_post")].MAPE.iloc[0],
            **r8[r8.geo == GEO].set_index("model").MAPE_ex_post.to_dict()}
     rows = []
     bench = pred[(pred.model == BENCH) & (pred["mode"] == "ex_post")].sort_values("month")

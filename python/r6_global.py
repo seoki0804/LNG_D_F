@@ -121,7 +121,8 @@ def main():
     tasks = [(n, p) for n, (_, g, _) in MODELS.items() for p in g]
     print(f"[1/2] 튜닝 {len(tasks)}개", flush=True)
     tun = pd.DataFrame(Parallel(n_jobs=-1)(delayed(tune_task)(*t) for t in tasks))
-    best = tun.sort_values("val_MAPE").groupby("model").head(1).set_index("model")
+    best = (tun.assign(_k=tun.val_MAPE.round(10)).sort_values(["_k", "params"], kind="mergesort")
+            .groupby("model").head(1).set_index("model"))
     jobs = []
     for n, (_, _, stoch) in MODELS.items():
         p = json.loads(best.loc[n, "params"])

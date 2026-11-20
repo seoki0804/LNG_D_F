@@ -38,10 +38,23 @@ EXTRA_FEATURES = ["workdays", "ip_chem", "nuclear_gwh"]
 # 사전예측에서 바꿔 넣는 열: 원래 열 → 예측 시점에 아는 대체 열
 SAME_MONTH_VARS = ["price_retail", "price_wholesale", "ip", "hicp_gas", "ip_chem", "nuclear_gwh", "wind_gwh",
                    "ttf_usd", "coal_usd", "lng_asia_usd", "cpi_city_gas"]
-EX_ANTE = {"hdd": "hdd_norm", "cdd": "cdd_norm", "hdd_crisis": "hdd_crisis_norm",
+EX_ANTE = {"hdd": "hdd_norm", "cdd": "cdd_norm", "hdd_crisis": "hdd_crisis_norm", "hdd_crisis9": "hdd_crisis9_norm",
            **{v: f"{v}_prev" for v in SAME_MONTH_VARS}}
 NORMAL_YEARS = 10
-CRISIS_START = "2022-03"   # 러시아 침공(2022-02) 이후 가격 급등·수요 감축 (R2 구조변화 변수)
+CRISIS_START = "2022-03"   # 러시아 침공(2022-02) 이후 가격 급등·수요 감축 (R2 구조변화 변수, 사전에 정한 시점)
+CRISIS9_START = "2022-09"  # 견고성 확인용: EU 수요 감축 규정(2022/1369, 2022-08 시행) 직후
+
+# 실시간 예측의 공표 지연 (개월). 2026-11-21에 관측한 최신 자료 시점 기준:
+#   수요: 독일·이탈리아·스페인·네덜란드 2026-10, 프랑스·한국 2026-09 → 예측 달 t의 직전 달 말에 아는 최신 수요 = t-2 / t-3
+#   산업생산: 2026-09 → t-3,  소비자요금·도매가: t-1 (속보·월평균),  기온: 평년값
+DEMAND_LAG = {"DE": 2, "IT": 2, "ES": 2, "NL": 2, "FR": 3, "KR": 3}
+IP_LAG = 3
+
+
+def realtime_features(geo):
+    """실시간 예측용 입력 9개: 전월 수요·같은 달 산업생산 대신 공표 지연을 반영한 시차를 쓴다."""
+    return ["hdd", "cdd", "price_retail", "price_wholesale_lag1", f"ip_lag{IP_LAG}", "msin", "mcos",
+            f"lag{DEMAND_LAG[geo]}", "lag12"]
 
 
 def add_features(df, target=TARGET):
@@ -53,7 +66,11 @@ def add_features(df, target=TARGET):
     df["msin"] = np.sin(2 * np.pi * m / 12)
     df["mcos"] = np.cos(2 * np.pi * m / 12)
     df["lag1"] = df[target].shift(1)
+    df["lag2"] = df[target].shift(2)
+    df["lag3"] = df[target].shift(3)
     df["lag12"] = df[target].shift(12)
+    df["ip_lag2"] = df["ip"].shift(2)
+    df["ip_lag3"] = df["ip"].shift(3)
     df["price_wholesale_lag1"] = df["price_wholesale"].shift(1)
     if "ttf_usd" in df:
         df["ttf_lag1"] = df["ttf_usd"].shift(1)
@@ -72,6 +89,9 @@ def add_features(df, target=TARGET):
     df["crisis"] = (df.month >= CRISIS_START).astype(float)
     df["hdd_crisis"] = df["hdd"] * df["crisis"]
     df["hdd_crisis_norm"] = df["hdd_norm"] * df["crisis"]
+    df["crisis9"] = (df.month >= CRISIS9_START).astype(float)
+    df["hdd_crisis9"] = df["hdd"] * df["crisis9"]
+    df["hdd_crisis9_norm"] = df["hdd_norm"] * df["crisis9"]
     return df
 
 
@@ -97,9 +117,10 @@ def make_test(row, features, mode):
 
 
 def rolling_forecast(df, fit_predict, features, target=TARGET, train_start=TRAIN_START,
-                     eval_start=EVAL_START, eval_end=EVAL_END, modes=("ex_post",), window=None):
+                     eval_start=EVAL_START, eval_end=EVAL_END, modes=("ex_post",), window=None, gap=0):
     """매달 재추정 후 1개월 앞 예측. 반환: month, mode, actual, pred, n_train.
-    window: None이면 train_start부터 쌓는 확장창, 정수 N이면 직전 N개월만 쓰는 이동창."""
+    window: None이면 train_start부터 쌓는 확장창, 정수 N이면 직전 N개월만 쓰는 이동창.
+    gap: 실시간 예측에서 아직 공표되지 않은 최근 gap개월을 학습에서 뺀다 (목표값을 모르므로)."""
     features = list(features)
     need = list(dict.fromkeys(features + [target]))
     rows = []
@@ -107,7 +128,8 @@ def rolling_forecast(df, fit_predict, features, target=TARGET, train_start=TRAIN
         start = train_start
         if window:
             start = max(train_start, (pd.Period(t, "M") - window).strftime("%Y-%m"))
-        train = df[(df.month >= start) & (df.month < t)].dropna(subset=need)
+        end = (pd.Period(t, "M") - gap).strftime("%Y-%m")
+        train = df[(df.month >= start) & (df.month < end)].dropna(subset=need)
         row = df[df.month == t]
         tests = [make_test(row, features, mode) for mode in modes]
         test = pd.concat(tests, ignore_index=True)

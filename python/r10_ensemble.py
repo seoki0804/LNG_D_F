@@ -41,7 +41,9 @@ def main():
     rows, ens_preds = [], []
     for g in ALL_GEOS:
         df = load_country(g)
-        top3 = post[(post.geo == g) & post.val_MAPE.notna()].sort_values("val_MAPE").model.head(3).tolist()
+        cand = post[(post.geo == g) & post.val_MAPE.notna()]
+        top3 = (cand.assign(_k=cand.val_MAPE.round(10)).sort_values(["_k", "model"], kind="mergesort")
+                .model.head(3).tolist())
         sets = {**ENSEMBLES, "검증 상위 3": top3}
         best = post[post.geo == g].sort_values("MAPE").model.iloc[0]
         for mode in MODES:

@@ -88,6 +88,50 @@ def run_chronos(frames):
     return pd.concat(out, ignore_index=True)
 
 
+def run_chronos_realtime(frames):
+    """실시간: 공표된 수요(t-k까지)만 문맥으로 쓰고 k단계 앞을 예측해 마지막 단계(t)를 취한다.
+    공변량은 t-1월 말에 아는 값만: 지난달까지 실제 HDD·CDD·요금·전월 도매가, 예측 달은 평년 HDD·CDD와 직전 달 요금.
+    산업생산은 공표가 늦어(t-3) 뺀다."""
+    from chronos import Chronos2Pipeline
+    from rolling_eval import DEMAND_LAG
+    pipe = Chronos2Pipeline.from_pretrained("amazon/chronos-2", device_map="cpu")
+    covs = ["hdd", "cdd", "price_retail", "price_wholesale_lag1"]
+    out = []
+    for covariates in (False, True):
+        for k in sorted({DEMAND_LAG[g] for g in frames}):
+            ctx, fut = [], []
+            for g, df in frames.items():
+                if DEMAND_LAG[g] != k:
+                    continue
+                for t in MONTHS:
+                    item = f"{g}|{t}"
+                    last = (pd.Period(t, "M") - k).strftime("%Y-%m")
+                    h = df[df.month <= last].copy()
+                    h["item_id"], h["timestamp"] = item, pd.to_datetime(h.month + "-01")
+                    ctx.append(h[["item_id", "timestamp", "y"] + (covs if covariates else [])])
+                    if covariates:
+                        for j in range(k - 1, -1, -1):
+                            mth = (pd.Period(t, "M") - j).strftime("%Y-%m")
+                            r = df[df.month == mth].iloc[0]
+                            vals = ({c: r[c] for c in covs} if j > 0 else
+                                    {"hdd": r["hdd_norm"], "cdd": r["cdd_norm"], "price_retail": r["price_retail_prev"],
+                                     "price_wholesale_lag1": r["price_wholesale_lag1"]})
+                            fut.append({"item_id": item, "timestamp": pd.Timestamp(mth + "-01"), **vals})
+            if not ctx:
+                continue
+            pred = pipe.predict_df(pd.concat(ctx, ignore_index=True),
+                                   future_df=pd.DataFrame(fut) if covariates else None, id_column="item_id",
+                                   timestamp_column="timestamp", target="y", prediction_length=k,
+                                   quantile_levels=[0.1, 0.5, 0.9], freq="MS")
+            pred = pred.sort_values("timestamp").groupby("item_id").tail(1)
+            name = "Chronos-2 + 공변량" if covariates else "Chronos-2 단변량"
+            out.append(pd.DataFrame({"geo": pred.item_id.str[:2].to_numpy(), "month": pred.item_id.str[3:].to_numpy(),
+                                     "mode": "ex_ante", "model": name, "pred": pred["0.5"].to_numpy(),
+                                     "lo": pred["0.1"].to_numpy(), "hi": pred["0.9"].to_numpy()}))
+            print(f"  {name} 실시간 k={k}: {len(pred)}개", flush=True)
+    return pd.concat(out, ignore_index=True)
+
+
 # ---------------- TimesFM 2.5 ----------------
 def run_timesfm(frames):
     import timesfm
@@ -142,6 +186,7 @@ def main():
     ap.add_argument("--start", default=EVAL_START)
     ap.add_argument("--end", default=EVAL_END)
     ap.add_argument("--tag", default="", help="주면 예측값만 outputs/r8_foundation_<tag>_predictions.csv로 저장")
+    ap.add_argument("--realtime", action="store_true", help="공표 지연 반영 실시간 예측 (Chronos-2만)")
     args = ap.parse_args()
     MONTHS = eval_months(args.start, args.end)
     t0 = time.time()
@@ -149,11 +194,16 @@ def main():
     for g, df in frames.items():   # 공변량 결측(문맥 앞부분 전월 도매가 등)은 가까운 값으로 채운다
         df[COVS] = df[COVS].bfill().ffill()
     parts = []
-    print("Chronos-2", flush=True)
-    parts.append(run_chronos(frames))
+    if args.realtime:
+        print("Chronos-2 실시간", flush=True)
+        parts.append(run_chronos_realtime(frames))
+    else:
+        print("Chronos-2", flush=True)
+        parts.append(run_chronos(frames))
     print(f"TimesFM 2.5 ({time.time() - t0:.0f}s)", flush=True)
     try:
-        parts.append(run_timesfm(frames))
+        if not args.realtime:
+            parts.append(run_timesfm(frames))
     except Exception as e:   # 설치·가중치 문제로 실패해도 Chronos 결과는 남긴다
         print(f"  TimesFM 실패: {type(e).__name__}: {e}")
     pred = pd.concat(parts, ignore_index=True)
