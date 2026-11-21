@@ -56,7 +56,7 @@ add(
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 240 }, children: [new TextRun({ text:
     "Monthly natural gas demand forecasting after the 2022 energy crisis: regression, machine learning and time-series foundation models in six countries",
     italics: true, size: 19, color: "52514E" })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 60 }, children: [new TextRun({ text: "수요예측 팀: 팀원 1, 팀원 2, 팀원 3", size: 21 })] }),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 60 }, children: [new TextRun({ text: "수요예측 팀: 안형석, 양의창, 권기범", size: 21 })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 360 }, children: [new TextRun({ text: "수요예측 수업 최종 보고서 · 2026년 11월", size: 19, color: "52514E" })] }),
 );
 

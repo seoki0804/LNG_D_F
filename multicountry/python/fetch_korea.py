@@ -40,7 +40,7 @@ KOSIS_META = "https://kosis.kr/openapi/statisticsData.do"
 
 
 def load_env():
-    path = ROOT / ".env"
+    path = next((p for p in (ROOT / ".env", ROOT.parent / ".env") if p.exists()), ROOT / ".env")   # 저장소 루트
     if path.exists():
         for line in path.read_text(encoding="utf-8").splitlines():
             line = line.strip()

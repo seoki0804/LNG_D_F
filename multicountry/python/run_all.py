@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PY = sys.executable
-FM_PY = ROOT / ".venv-fm" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+FM_PY = ROOT.parent / ".venv-fm" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
 RSCRIPT = (os.environ.get("RSCRIPT") or shutil.which("Rscript")
            or r"C:\Program Files\R\R-4.6.1\bin\Rscript.exe")
 

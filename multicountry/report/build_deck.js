@@ -115,7 +115,7 @@ const S = N.simple, R5 = N.r5;
 pres.addSection({ title: "도입" });
 let s = pres.addSlide({ masterName: "TITLE_DARK", sectionTitle: "도입" });
 s.addText("2022년 에너지 위기 이후\n월별 천연가스 수요예측", { placeholder: "title" });
-s.addText("회귀분석 · 기계학습 · 시계열 파운데이션 모델의 6개국 비교\n수요예측 팀 (팀원 1, 팀원 2, 팀원 3) · 2026년 11월", { placeholder: "body" });
+s.addText("회귀분석 · 기계학습 · 시계열 파운데이션 모델의 6개국 비교\n수요예측 팀 (안형석, 양의창, 권기범) · 2026년 11월", { placeholder: "body" });
 s.addNotes("안녕하십니까. 저희는 2022년 에너지 위기 이후 월별 천연가스 수요를 얼마나 정확하게 예측할 수 있는지, 회귀분석과 기계학습, 그리고 최근 나온 시계열 파운데이션 모델을 6개국 자료로 비교한 결과를 발표하겠습니다.");
 
 // ---------------- 2. 배경 ----------------
