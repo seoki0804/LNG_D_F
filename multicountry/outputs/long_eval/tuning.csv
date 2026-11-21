@@ -369,77 +369,77 @@ NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators
 NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",13.100015489579256
 NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",12.144790570321337
 NL,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",13.247525403228941
-KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",9.409319028154457
-KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",8.725189489795717
-KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",9.851536925318644
-KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",8.8527610087033
-KR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",9.376333258562632
-KR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",9.260878840257362
-KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",13.892134438008991
-KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",13.686915101215465
-KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",13.331799550837376
-KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",13.305229714798047
-KR,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",14.435859761627087
-KR,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",13.02874290614659
-KR,Ridge,"{""alpha"": 0.1, ""target"": null}",11.980172387753237
-KR,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",12.157253139646205
-KR,Ridge,"{""alpha"": 1, ""target"": null}",11.634381604315928
-KR,Ridge,"{""alpha"": 1, ""target"": ""sqrt""}",11.867128514255965
-KR,Ridge,"{""alpha"": 10, ""target"": null}",11.71328624226434
-KR,Ridge,"{""alpha"": 10, ""target"": ""sqrt""}",11.408881248505896
-KR,Ridge,"{""alpha"": 100, ""target"": null}",9.534485029512355
-KR,Ridge,"{""alpha"": 100, ""target"": ""sqrt""}",9.3228408644295
-KR,Lasso,"{""alpha"": 0.01, ""target"": null}",12.026788093370632
-KR,Lasso,"{""alpha"": 0.01, ""target"": ""sqrt""}",11.987475774021407
-KR,Lasso,"{""alpha"": 0.1, ""target"": null}",12.02080097906853
-KR,Lasso,"{""alpha"": 0.1, ""target"": ""sqrt""}",11.274029938964299
-KR,Lasso,"{""alpha"": 0.5, ""target"": null}",11.986281192048297
-KR,Lasso,"{""alpha"": 0.5, ""target"": ""sqrt""}",12.473127188275217
-KR,Lasso,"{""alpha"": 1, ""target"": null}",11.93516859804799
-KR,Lasso,"{""alpha"": 1, ""target"": ""sqrt""}",12.509634335553846
-KR,Lasso,"{""alpha"": 2, ""target"": null}",11.877690694009372
-KR,Lasso,"{""alpha"": 2, ""target"": ""sqrt""}",9.905674799652441
-KR,Random Forest,"{""max_features"": 1.0, ""min_samples_leaf"": 1}",13.417292810480955
-KR,Random Forest,"{""max_features"": 1.0, ""min_samples_leaf"": 3}",13.97038907305358
-KR,Random Forest,"{""max_features"": 1.0, ""min_samples_leaf"": 5}",13.00970139562255
-KR,Random Forest,"{""max_features"": 0.5, ""min_samples_leaf"": 1}",12.550073866881513
-KR,Random Forest,"{""max_features"": 0.5, ""min_samples_leaf"": 3}",12.498466375475651
-KR,Random Forest,"{""max_features"": 0.5, ""min_samples_leaf"": 5}",11.782479993157363
-KR,Random Forest,"{""max_features"": 0.33, ""min_samples_leaf"": 1}",11.679037171114704
-KR,Random Forest,"{""max_features"": 0.33, ""min_samples_leaf"": 3}",10.548828704311198
-KR,Random Forest,"{""max_features"": 0.33, ""min_samples_leaf"": 5}",9.970930790403667
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 1.0}",11.961875566755854
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 0.8}",11.661852114248678
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 1.0}",13.07956048161533
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 0.8}",11.89600306881752
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 1.0}",12.396208522638881
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 0.8}",11.275005756741873
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 1.0}",13.294274145368787
-KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 0.8}",11.973784472778137
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 1.0}",12.7609087029802
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 0.8}",12.047327180222371
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 1.0}",13.43141996982616
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 0.8}",11.957701370376212
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 1.0}",12.901280814377483
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 0.8}",12.150245700064866
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 1.0}",13.418853884172313
-KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 0.8}",11.947366339176112
-KR,LightGBM,"{""num_leaves"": 7, ""min_child_samples"": 5}",12.117733813951348
-KR,LightGBM,"{""num_leaves"": 7, ""min_child_samples"": 10}",12.135850967508738
-KR,LightGBM,"{""num_leaves"": 7, ""min_child_samples"": 20}",12.83857932359999
-KR,LightGBM,"{""num_leaves"": 15, ""min_child_samples"": 5}",12.117733813951348
-KR,LightGBM,"{""num_leaves"": 15, ""min_child_samples"": 10}",12.135850967508738
-KR,LightGBM,"{""num_leaves"": 15, ""min_child_samples"": 20}",12.83857932359999
-KR,SVR,"{""C"": 1, ""epsilon"": 0.01}",11.262125644293077
-KR,SVR,"{""C"": 1, ""epsilon"": 0.1}",10.75147003869974
-KR,SVR,"{""C"": 10, ""epsilon"": 0.01}",10.941158142516317
-KR,SVR,"{""C"": 10, ""epsilon"": 0.1}",10.50503543137384
-KR,SVR,"{""C"": 100, ""epsilon"": 0.01}",10.941158142516317
-KR,SVR,"{""C"": 100, ""epsilon"": 0.1}",10.50503543137384
-KR,MLP (16-8),"{""alpha"": 0.0001}",17.015693444221014
-KR,MLP (16-8),"{""alpha"": 0.01}",16.993779233575555
-KR,MLP (16-8),"{""alpha"": 1.0}",12.455565292400223
-KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 2}",12.208647921470995
-KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",12.284313504382869
-KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",11.803071060852893
-KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",12.016117658640947
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",4.725674446334389
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",4.5675807629488805
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",4.679168892689766
+KR,SARIMAX+HDD·가격,"{""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",5.702383385464253
+KR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",4.610969922290037
+KR,SARIMAX+HDD·가격,"{""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",4.60299728039808
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": false}",6.046843664713491
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""add"", ""damped"": true}",5.810385684899448
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": false}",5.927907496275898
+KR,Holt-Winters,"{""trend"": ""add"", ""seasonal"": ""mul"", ""damped"": true}",5.723380191994002
+KR,Holt-Winters,"{""trend"": null, ""seasonal"": ""add"", ""damped"": false}",5.357646957858689
+KR,Holt-Winters,"{""trend"": null, ""seasonal"": ""mul"", ""damped"": false}",5.603682207437932
+KR,Ridge,"{""alpha"": 0.1, ""target"": null}",5.441269413917321
+KR,Ridge,"{""alpha"": 0.1, ""target"": ""sqrt""}",4.759363895465147
+KR,Ridge,"{""alpha"": 1, ""target"": null}",4.5696677922293345
+KR,Ridge,"{""alpha"": 1, ""target"": ""sqrt""}",4.264499623775805
+KR,Ridge,"{""alpha"": 10, ""target"": null}",6.597684656644427
+KR,Ridge,"{""alpha"": 10, ""target"": ""sqrt""}",6.4072077601649315
+KR,Ridge,"{""alpha"": 100, ""target"": null}",11.666740572340197
+KR,Ridge,"{""alpha"": 100, ""target"": ""sqrt""}",11.547650900762347
+KR,Lasso,"{""alpha"": 0.01, ""target"": null}",5.71027400753378
+KR,Lasso,"{""alpha"": 0.01, ""target"": ""sqrt""}",4.827736776712306
+KR,Lasso,"{""alpha"": 0.1, ""target"": null}",5.694120617361232
+KR,Lasso,"{""alpha"": 0.1, ""target"": ""sqrt""}",4.4334135910292725
+KR,Lasso,"{""alpha"": 0.5, ""target"": null}",5.618935158473903
+KR,Lasso,"{""alpha"": 0.5, ""target"": ""sqrt""}",5.8162951536396115
+KR,Lasso,"{""alpha"": 1, ""target"": null}",5.532053441823515
+KR,Lasso,"{""alpha"": 1, ""target"": ""sqrt""}",6.169522879457454
+KR,Lasso,"{""alpha"": 2, ""target"": null}",5.325751451637899
+KR,Lasso,"{""alpha"": 2, ""target"": ""sqrt""}",7.146249106592729
+KR,Random Forest,"{""max_features"": 1.0, ""min_samples_leaf"": 1}",7.79703609481954
+KR,Random Forest,"{""max_features"": 1.0, ""min_samples_leaf"": 3}",8.90931607826444
+KR,Random Forest,"{""max_features"": 1.0, ""min_samples_leaf"": 5}",10.039024031308633
+KR,Random Forest,"{""max_features"": 0.5, ""min_samples_leaf"": 1}",6.2545371780996035
+KR,Random Forest,"{""max_features"": 0.5, ""min_samples_leaf"": 3}",6.887016631987231
+KR,Random Forest,"{""max_features"": 0.5, ""min_samples_leaf"": 5}",8.633280077719556
+KR,Random Forest,"{""max_features"": 0.33, ""min_samples_leaf"": 1}",6.4774979423256625
+KR,Random Forest,"{""max_features"": 0.33, ""min_samples_leaf"": 3}",7.432332022047344
+KR,Random Forest,"{""max_features"": 0.33, ""min_samples_leaf"": 5}",9.177135379192276
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 1.0}",7.42999186479104
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 0.8}",6.608335636475872
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 1.0}",7.829844572351038
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 0.8}",7.062085906536737
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 1.0}",6.624214436193736
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 0.8}",5.934170083048473
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 1.0}",7.406219474324799
+KR,Gradient Boosting,"{""learning_rate"": 0.03, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 0.8}",6.622753601570213
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 1.0}",6.835712851876494
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 2, ""subsample"": 0.8}",6.02569499672523
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 1.0}",7.3034422113123725
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""max_depth"": 3, ""subsample"": 0.8}",6.334384446799242
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 1.0}",6.738669040168542
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 2, ""subsample"": 0.8}",6.070084520007246
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 1.0}",7.300082126209341
+KR,Gradient Boosting,"{""learning_rate"": 0.1, ""n_estimators"": 300, ""max_depth"": 3, ""subsample"": 0.8}",6.325028217159422
+KR,LightGBM,"{""num_leaves"": 7, ""min_child_samples"": 5}",9.430398969387038
+KR,LightGBM,"{""num_leaves"": 7, ""min_child_samples"": 10}",9.95756762960706
+KR,LightGBM,"{""num_leaves"": 7, ""min_child_samples"": 20}",28.7709279701353
+KR,LightGBM,"{""num_leaves"": 15, ""min_child_samples"": 5}",9.430398969387038
+KR,LightGBM,"{""num_leaves"": 15, ""min_child_samples"": 10}",9.95756762960706
+KR,LightGBM,"{""num_leaves"": 15, ""min_child_samples"": 20}",28.7709279701353
+KR,SVR,"{""C"": 1, ""epsilon"": 0.01}",6.1922575437270675
+KR,SVR,"{""C"": 1, ""epsilon"": 0.1}",6.892897845957006
+KR,SVR,"{""C"": 10, ""epsilon"": 0.01}",5.2863463307549345
+KR,SVR,"{""C"": 10, ""epsilon"": 0.1}",6.974389511534358
+KR,SVR,"{""C"": 100, ""epsilon"": 0.01}",5.2863463307549345
+KR,SVR,"{""C"": 100, ""epsilon"": 0.1}",6.974389511534358
+KR,MLP (16-8),"{""alpha"": 0.0001}",13.160518285375069
+KR,MLP (16-8),"{""alpha"": 0.01}",13.282552743828663
+KR,MLP (16-8),"{""alpha"": 1.0}",5.51794667556702
+KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 2}",5.763653933852849
+KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 50, ""max_depth"": 3}",5.910658653880446
+KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 2}",5.892029770753218
+KR,하이브리드 (회귀+GBM 잔차),"{""learning_rate"": 0.05, ""n_estimators"": 100, ""max_depth"": 3}",5.7224185666621095

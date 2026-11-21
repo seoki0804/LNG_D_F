@@ -863,369 +863,369 @@ DE,회귀 √Y~HDD+가격,the_total_pj,ex_post,2025-09,161.0123173488,164.608636
 DE,회귀 √Y~HDD+가격,the_total_pj,ex_post,2025-10,251.6676324912,249.54765643549322
 DE,회귀 √Y~HDD+가격,the_total_pj,ex_post,2025-11,347.2893138384,336.465629983271
 DE,회귀 √Y~HDD+가격,the_total_pj,ex_post,2025-12,391.5737619984,390.32721060513677
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-01,2849.049,2660.57885153331
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-02,2183.538,2372.6566732072324
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-03,1703.591,1892.5826244464386
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-04,1270.463,1441.992087898232
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-05,1058.013,1125.344259683715
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-06,908.6,958.5786433093791
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-07,918.626,950.9014388681795
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-08,878.449,946.9307871892926
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-09,887.683,936.2162991556654
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-10,1121.286,1193.1180036866479
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-11,1865.011,1834.046038256764
-KR,Gradient Boosting,gas_city_kt,ex_ante,2023-12,2664.11,2623.847406688532
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-01,2803.483,2649.7663825746154
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-02,2216.172,2200.9786014746956
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-03,2020.986,1869.4090634883642
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-04,1247.463,1419.7316331618488
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-05,1117.754,1051.0068780102995
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-06,965.801,995.1039545018558
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-07,964.15,941.0461625103583
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-08,915.602,943.2834700440069
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-09,855.056,933.1878670060227
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-10,1076.31,1141.6276453973246
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-11,1583.346,1778.6505201780597
-KR,Gradient Boosting,gas_city_kt,ex_ante,2024-12,2611.085,2645.6087624368483
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-01,2794.096,2725.6970492303094
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-02,2665.549,2213.5336122046365
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-03,1975.46,1947.7095985951635
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-04,1382.978,1403.3985289892307
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-05,1126.962,1204.0278490978808
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-06,938.799,979.5969318661528
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-07,933.132,949.4751477599386
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-08,890.125,932.3036012629874
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-09,910.326,921.5293774117829
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-10,1070.676,1153.3713461955856
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-11,1718.557,1784.830266561852
-KR,Gradient Boosting,gas_city_kt,ex_ante,2025-12,2565.632,2657.4106330130876
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-01,2849.049,2660.57885153331
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-02,2183.538,2231.317464253415
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-03,1703.591,1799.7270630995395
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-04,1270.463,1441.992087898232
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-05,1058.013,1125.344259683715
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-06,908.6,958.5786433093791
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-07,918.626,950.9014388681795
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-08,878.449,946.9307871892926
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-09,887.683,936.2162991556654
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-10,1121.286,1178.9857770504711
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-11,1865.011,1926.240851196312
-KR,Gradient Boosting,gas_city_kt,ex_post,2023-12,2664.11,2570.859440220371
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-01,2803.483,2654.125471112208
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-02,2216.172,2223.9080680899033
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-03,2020.986,1882.9588922110713
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-04,1247.463,1419.7316331618488
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-05,1117.754,1067.1917799542912
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-06,965.801,965.8418012138653
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-07,964.15,941.0461625103583
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-08,915.602,960.0238962403995
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-09,855.056,933.1878670060227
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-10,1076.31,1025.3880960253532
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-11,1583.346,1492.5705231112665
-KR,Gradient Boosting,gas_city_kt,ex_post,2024-12,2611.085,2661.3028860774693
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-01,2794.096,2725.6970492303094
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-02,2665.549,2624.6707167341488
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-03,1975.46,1947.7095985951635
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-04,1382.978,1403.3985289892307
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-05,1126.962,1251.9228561231655
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-06,938.799,979.5969318661528
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-07,933.132,949.4751477599386
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-08,890.125,932.3036012629874
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-09,910.326,920.4653496844332
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-10,1070.676,1153.3713461955856
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-11,1718.557,1784.830266561852
-KR,Gradient Boosting,gas_city_kt,ex_post,2025-12,2565.632,2601.360465746068
-KR,Gradient Boosting,gas_kt,ex_ante,2023-01,4630.735,4691.268443888288
-KR,Gradient Boosting,gas_kt,ex_ante,2023-02,3938.56,3735.4470637066365
-KR,Gradient Boosting,gas_kt,ex_ante,2023-03,3142.234,3575.5335237955687
-KR,Gradient Boosting,gas_kt,ex_ante,2023-04,2491.457,2819.759830984886
-KR,Gradient Boosting,gas_kt,ex_ante,2023-05,2150.129,2436.406086215781
-KR,Gradient Boosting,gas_kt,ex_ante,2023-06,2101.904,2179.6648012479427
-KR,Gradient Boosting,gas_kt,ex_ante,2023-07,2282.499,2164.296902888301
-KR,Gradient Boosting,gas_kt,ex_ante,2023-08,2311.495,2344.6866643677527
-KR,Gradient Boosting,gas_kt,ex_ante,2023-09,2137.276,2187.701321379699
-KR,Gradient Boosting,gas_kt,ex_ante,2023-10,2253.258,2250.5292184026466
-KR,Gradient Boosting,gas_kt,ex_ante,2023-11,3102.344,3216.5292133934095
-KR,Gradient Boosting,gas_kt,ex_ante,2023-12,4080.144,4067.004331330148
-KR,Gradient Boosting,gas_kt,ex_ante,2024-01,4421.79,4048.3925685281292
-KR,Gradient Boosting,gas_kt,ex_ante,2024-02,3496.569,3698.6346191068233
-KR,Gradient Boosting,gas_kt,ex_ante,2024-03,3420.91,3240.5895723256954
-KR,Gradient Boosting,gas_kt,ex_ante,2024-04,2302.596,2716.3202691570905
-KR,Gradient Boosting,gas_kt,ex_ante,2024-05,2278.372,2248.415350037137
-KR,Gradient Boosting,gas_kt,ex_ante,2024-06,2283.675,2268.043077947517
-KR,Gradient Boosting,gas_kt,ex_ante,2024-07,2435.199,2319.2106527146434
-KR,Gradient Boosting,gas_kt,ex_ante,2024-08,2558.951,2417.6315852269367
-KR,Gradient Boosting,gas_kt,ex_ante,2024-09,2136.978,2245.1514744375877
-KR,Gradient Boosting,gas_kt,ex_ante,2024-10,2132.601,2263.21639942672
-KR,Gradient Boosting,gas_kt,ex_ante,2024-11,2671.522,3076.3956504501502
-KR,Gradient Boosting,gas_kt,ex_ante,2024-12,3962.129,4066.551846306216
-KR,Gradient Boosting,gas_kt,ex_ante,2025-01,4297.525,4214.980621586097
-KR,Gradient Boosting,gas_kt,ex_ante,2025-02,4210.568,3625.164306712097
-KR,Gradient Boosting,gas_kt,ex_ante,2025-03,3355.905,3450.3922721554704
-KR,Gradient Boosting,gas_kt,ex_ante,2025-04,2623.954,2687.2654451257
-KR,Gradient Boosting,gas_kt,ex_ante,2025-05,2389.638,2353.7389700058343
-KR,Gradient Boosting,gas_kt,ex_ante,2025-06,2001.92,2294.748599771493
-KR,Gradient Boosting,gas_kt,ex_ante,2025-07,2249.769,2151.7560222014
-KR,Gradient Boosting,gas_kt,ex_ante,2025-08,2284.816,2366.2408139991458
-KR,Gradient Boosting,gas_kt,ex_ante,2025-09,1917.023,2076.1511651420583
-KR,Gradient Boosting,gas_kt,ex_ante,2025-10,2253.964,2157.0513310274378
-KR,Gradient Boosting,gas_kt,ex_ante,2025-11,3020.459,3051.865014073398
-KR,Gradient Boosting,gas_kt,ex_ante,2025-12,3872.285,4096.847728372668
-KR,Gradient Boosting,gas_kt,ex_post,2023-01,4630.735,4693.005452963696
-KR,Gradient Boosting,gas_kt,ex_post,2023-02,3938.56,3675.4978709679353
-KR,Gradient Boosting,gas_kt,ex_post,2023-03,3142.234,3443.1092439703825
-KR,Gradient Boosting,gas_kt,ex_post,2023-04,2491.457,2819.759830984886
-KR,Gradient Boosting,gas_kt,ex_post,2023-05,2150.129,2438.004204425236
-KR,Gradient Boosting,gas_kt,ex_post,2023-06,2101.904,2179.6648012479427
-KR,Gradient Boosting,gas_kt,ex_post,2023-07,2282.499,2164.296902888301
-KR,Gradient Boosting,gas_kt,ex_post,2023-08,2311.495,2340.0804343605796
-KR,Gradient Boosting,gas_kt,ex_post,2023-09,2137.276,2224.794132404662
-KR,Gradient Boosting,gas_kt,ex_post,2023-10,2253.258,2250.5292184026466
-KR,Gradient Boosting,gas_kt,ex_post,2023-11,3102.344,3278.669892572743
-KR,Gradient Boosting,gas_kt,ex_post,2023-12,4080.144,4031.8118060428374
-KR,Gradient Boosting,gas_kt,ex_post,2024-01,4421.79,4054.1525200430196
-KR,Gradient Boosting,gas_kt,ex_post,2024-02,3496.569,3698.6346191068233
-KR,Gradient Boosting,gas_kt,ex_post,2024-03,3420.91,3240.5895723256954
-KR,Gradient Boosting,gas_kt,ex_post,2024-04,2302.596,2506.323739318917
-KR,Gradient Boosting,gas_kt,ex_post,2024-05,2278.372,2248.415350037137
-KR,Gradient Boosting,gas_kt,ex_post,2024-06,2283.675,2268.043077947517
-KR,Gradient Boosting,gas_kt,ex_post,2024-07,2435.199,2369.4177081154558
-KR,Gradient Boosting,gas_kt,ex_post,2024-08,2558.951,2365.0551100570146
-KR,Gradient Boosting,gas_kt,ex_post,2024-09,2136.978,2295.886430942909
-KR,Gradient Boosting,gas_kt,ex_post,2024-10,2132.601,2263.21639942672
-KR,Gradient Boosting,gas_kt,ex_post,2024-11,2671.522,2960.613970586933
-KR,Gradient Boosting,gas_kt,ex_post,2024-12,3962.129,4066.551846306216
-KR,Gradient Boosting,gas_kt,ex_post,2025-01,4297.525,4214.980621586097
-KR,Gradient Boosting,gas_kt,ex_post,2025-02,4210.568,4075.972907128281
-KR,Gradient Boosting,gas_kt,ex_post,2025-03,3355.905,3450.3922721554704
-KR,Gradient Boosting,gas_kt,ex_post,2025-04,2623.954,2687.2654451257
-KR,Gradient Boosting,gas_kt,ex_post,2025-05,2389.638,2353.7389700058343
-KR,Gradient Boosting,gas_kt,ex_post,2025-06,2001.92,2294.748599771493
-KR,Gradient Boosting,gas_kt,ex_post,2025-07,2249.769,2319.5982583030777
-KR,Gradient Boosting,gas_kt,ex_post,2025-08,2284.816,2194.805792859148
-KR,Gradient Boosting,gas_kt,ex_post,2025-09,1917.023,2109.0982366611393
-KR,Gradient Boosting,gas_kt,ex_post,2025-10,2253.964,2215.0318428410064
-KR,Gradient Boosting,gas_kt,ex_post,2025-11,3020.459,2972.8724882384417
-KR,Gradient Boosting,gas_kt,ex_post,2025-12,3872.285,4089.1461368349715
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-01,1781.686,1779.6772656620017
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-02,1755.022,1636.2772876941328
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-03,1438.643,1692.226456169759
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-04,1220.994,1376.095602665555
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-05,1092.116,1232.8879567413994
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-06,1193.304,1301.9600969528988
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-07,1363.873,1347.8032659695987
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-08,1433.046,1312.756679958319
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-09,1249.593,1267.0878500372069
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-10,1131.972,1191.3484838805239
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-11,1237.333,1402.9496203289398
-KR,Gradient Boosting,gas_power_kt,ex_ante,2023-12,1416.034,1290.9926182019503
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-01,1618.307,1579.7796930497066
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-02,1280.397,1555.1097806577195
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-03,1399.924,1309.1072827036814
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-04,1055.133,1265.4528371609777
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-05,1160.618,1031.5567193074705
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-06,1317.874,1133.5858339826839
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-07,1471.049,1346.4014290692817
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-08,1643.349,1391.9542350046727
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-09,1281.922,1291.045007392908
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-10,1056.291,1221.2967591222646
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-11,1088.176,1222.7138908214338
-KR,Gradient Boosting,gas_power_kt,ex_ante,2024-12,1351.044,1348.2268342122788
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-01,1503.429,1564.1544059745547
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-02,1545.019,1345.9909661400352
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-03,1380.445,1373.385005971851
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-04,1240.976,1222.7663526313609
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-05,1262.676,1115.512270777967
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-06,1063.121,1220.459638844993
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-07,1316.637,1262.7745732499357
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-08,1394.691,1507.8985593885664
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-09,1006.697,1217.9646636382242
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-10,1183.288,995.1909781448251
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-11,1301.902,1258.886197909415
-KR,Gradient Boosting,gas_power_kt,ex_ante,2025-12,1306.653,1420.0811955373385
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-01,1781.686,1773.4105186304196
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-02,1755.022,1630.791969779848
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-03,1438.643,1692.226456169759
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-04,1220.994,1352.238393743918
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-05,1092.116,1271.3449172330286
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-06,1193.304,1298.0806348519711
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-07,1363.873,1352.4502890388553
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-08,1433.046,1439.465158172248
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-09,1249.593,1321.9238579026762
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-10,1131.972,1191.3484838805239
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-11,1237.333,1402.9496203289398
-KR,Gradient Boosting,gas_power_kt,ex_post,2023-12,1416.034,1289.5305051141174
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-01,1618.307,1579.7796930497066
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-02,1280.397,1552.404507649319
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-03,1399.924,1321.2374031622842
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-04,1055.133,1259.6757222030428
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-05,1160.618,1024.4983369605197
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-06,1317.874,1141.2046901873498
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-07,1471.049,1365.9341907504681
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-08,1643.349,1374.8138350562517
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-09,1281.922,1349.3419264564604
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-10,1056.291,1221.2967591222646
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-11,1088.176,1237.8255510475185
-KR,Gradient Boosting,gas_power_kt,ex_post,2024-12,1351.044,1315.907222864528
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-01,1503.429,1564.1544059745547
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-02,1545.019,1394.9781538451116
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-03,1380.445,1373.385005971851
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-04,1240.976,1222.7663526313609
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-05,1262.676,1115.512270777967
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-06,1063.121,1220.459638844993
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-07,1316.637,1425.8128763066386
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-08,1394.691,1472.8235459639916
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-09,1006.697,1298.2548297673582
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-10,1183.288,1069.7730383354572
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-11,1301.902,1250.3351927302037
-KR,Gradient Boosting,gas_power_kt,ex_post,2025-12,1306.653,1413.8618183906678
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-01,2849.049,2727.3281249293705
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-02,2183.538,2387.866511458763
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-03,1703.591,1805.1708546582618
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-04,1270.463,1413.9679508621427
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-05,1058.013,1083.6881042794264
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-06,908.6,1066.5952515936947
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-07,918.626,1064.897341317244
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-08,878.449,1061.215177736438
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-09,887.683,961.4346138552452
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-10,1121.286,1096.3665621029818
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-11,1865.011,1743.6573970696268
-KR,MLP (16-8),gas_city_kt,ex_ante,2023-12,2664.11,2628.5794536311655
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-01,2803.483,2726.42811592582
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-02,2216.172,2400.4714400937155
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-03,2020.986,1806.2402433101884
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-04,1247.463,1471.1662656225542
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-05,1117.754,1003.4157046315107
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-06,965.801,959.3549403924872
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-07,964.15,897.9591625489468
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-08,915.602,952.0674676317361
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-09,855.056,929.226542995815
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-10,1076.31,1063.0701402128373
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-11,1583.346,1815.5798954995953
-KR,MLP (16-8),gas_city_kt,ex_ante,2024-12,2611.085,2585.2218101352346
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-01,2794.096,2796.5119570740762
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-02,2665.549,2419.484696865045
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-03,1975.46,2032.1580756124542
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-04,1382.978,1421.5187729283516
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-05,1126.962,1044.193883086595
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-06,938.799,941.0333178920376
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-07,933.132,843.36695554088
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-08,890.125,891.6308333804361
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-09,910.326,942.2635855509649
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-10,1070.676,1103.822611678851
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-11,1718.557,1703.4694293126518
-KR,MLP (16-8),gas_city_kt,ex_ante,2025-12,2565.632,2608.3220812342347
-KR,MLP (16-8),gas_city_kt,ex_post,2023-01,2849.049,2781.0855185754544
-KR,MLP (16-8),gas_city_kt,ex_post,2023-02,2183.538,2306.6367820551886
-KR,MLP (16-8),gas_city_kt,ex_post,2023-03,1703.591,1703.7589243165971
-KR,MLP (16-8),gas_city_kt,ex_post,2023-04,1270.463,1382.4770962567854
-KR,MLP (16-8),gas_city_kt,ex_post,2023-05,1058.013,1104.77031522082
-KR,MLP (16-8),gas_city_kt,ex_post,2023-06,908.6,1044.286419986931
-KR,MLP (16-8),gas_city_kt,ex_post,2023-07,918.626,1066.6465037422886
-KR,MLP (16-8),gas_city_kt,ex_post,2023-08,878.449,1079.0219608825614
-KR,MLP (16-8),gas_city_kt,ex_post,2023-09,887.683,986.8371305522032
-KR,MLP (16-8),gas_city_kt,ex_post,2023-10,1121.286,1048.0987821819376
-KR,MLP (16-8),gas_city_kt,ex_post,2023-11,1865.011,1823.8313992546748
-KR,MLP (16-8),gas_city_kt,ex_post,2023-12,2664.11,2538.8235359284226
-KR,MLP (16-8),gas_city_kt,ex_post,2024-01,2803.483,2663.012100685136
-KR,MLP (16-8),gas_city_kt,ex_post,2024-02,2216.172,2331.8102877305755
-KR,MLP (16-8),gas_city_kt,ex_post,2024-03,2020.986,1819.1088568515734
-KR,MLP (16-8),gas_city_kt,ex_post,2024-04,1247.463,1424.9485643530643
-KR,MLP (16-8),gas_city_kt,ex_post,2024-05,1117.754,1006.3173939583925
-KR,MLP (16-8),gas_city_kt,ex_post,2024-06,965.801,969.5775028253362
-KR,MLP (16-8),gas_city_kt,ex_post,2024-07,964.15,933.7866075877807
-KR,MLP (16-8),gas_city_kt,ex_post,2024-08,915.602,976.9035019698462
-KR,MLP (16-8),gas_city_kt,ex_post,2024-09,855.056,973.6819686957782
-KR,MLP (16-8),gas_city_kt,ex_post,2024-10,1076.31,988.4140334876554
-KR,MLP (16-8),gas_city_kt,ex_post,2024-11,1583.346,1707.0862436851444
-KR,MLP (16-8),gas_city_kt,ex_post,2024-12,2611.085,2577.8776828094533
-KR,MLP (16-8),gas_city_kt,ex_post,2025-01,2794.096,2755.1421939707607
-KR,MLP (16-8),gas_city_kt,ex_post,2025-02,2665.549,2546.2010055236296
-KR,MLP (16-8),gas_city_kt,ex_post,2025-03,1975.46,2052.8529147400945
-KR,MLP (16-8),gas_city_kt,ex_post,2025-04,1382.978,1428.235626432604
-KR,MLP (16-8),gas_city_kt,ex_post,2025-05,1126.962,1072.1172727789647
-KR,MLP (16-8),gas_city_kt,ex_post,2025-06,938.799,915.113851680701
-KR,MLP (16-8),gas_city_kt,ex_post,2025-07,933.132,860.396518420171
-KR,MLP (16-8),gas_city_kt,ex_post,2025-08,890.125,890.275850636321
-KR,MLP (16-8),gas_city_kt,ex_post,2025-09,910.326,938.3167841751083
-KR,MLP (16-8),gas_city_kt,ex_post,2025-10,1070.676,1066.5006445731117
-KR,MLP (16-8),gas_city_kt,ex_post,2025-11,1718.557,1687.1794626661292
-KR,MLP (16-8),gas_city_kt,ex_post,2025-12,2565.632,2566.045998273955
-KR,MLP (16-8),gas_kt,ex_ante,2023-01,4630.735,4637.739919597321
-KR,MLP (16-8),gas_kt,ex_ante,2023-02,3938.56,4040.867155402383
-KR,MLP (16-8),gas_kt,ex_ante,2023-03,3142.234,3275.4072839602222
-KR,MLP (16-8),gas_kt,ex_ante,2023-04,2491.457,2604.825096278706
-KR,MLP (16-8),gas_kt,ex_ante,2023-05,2150.129,2238.6690638151667
-KR,MLP (16-8),gas_kt,ex_ante,2023-06,2101.904,2209.6762378217027
-KR,MLP (16-8),gas_kt,ex_ante,2023-07,2282.499,2378.4676478764495
-KR,MLP (16-8),gas_kt,ex_ante,2023-08,2311.495,2391.327090268297
-KR,MLP (16-8),gas_kt,ex_ante,2023-09,2137.276,2236.735574355985
-KR,MLP (16-8),gas_kt,ex_ante,2023-10,2253.258,2436.928357824388
-KR,MLP (16-8),gas_kt,ex_ante,2023-11,3102.344,3258.6944471230645
-KR,MLP (16-8),gas_kt,ex_ante,2023-12,4080.144,4260.155939500912
-KR,MLP (16-8),gas_kt,ex_ante,2024-01,4421.79,4341.200196219986
-KR,MLP (16-8),gas_kt,ex_ante,2024-02,3496.569,3904.700749792285
-KR,MLP (16-8),gas_kt,ex_ante,2024-03,3420.91,3013.947544935006
-KR,MLP (16-8),gas_kt,ex_ante,2024-04,2302.596,2613.726218509938
-KR,MLP (16-8),gas_kt,ex_ante,2024-05,2278.372,2124.761986291051
-KR,MLP (16-8),gas_kt,ex_ante,2024-06,2283.675,2198.3015919743107
-KR,MLP (16-8),gas_kt,ex_ante,2024-07,2435.199,2339.827378654564
-KR,MLP (16-8),gas_kt,ex_ante,2024-08,2558.951,2383.4173375232226
-KR,MLP (16-8),gas_kt,ex_ante,2024-09,2136.978,2243.252410589203
-KR,MLP (16-8),gas_kt,ex_ante,2024-10,2132.601,2218.0668611908814
-KR,MLP (16-8),gas_kt,ex_ante,2024-11,2671.522,2956.363224195872
-KR,MLP (16-8),gas_kt,ex_ante,2024-12,3962.129,3995.5862665960767
-KR,MLP (16-8),gas_kt,ex_ante,2025-01,4297.525,4271.050310988188
-KR,MLP (16-8),gas_kt,ex_ante,2025-02,4210.568,3740.1575916034367
-KR,MLP (16-8),gas_kt,ex_ante,2025-03,3355.905,3308.3182148053884
-KR,MLP (16-8),gas_kt,ex_ante,2025-04,2623.954,2611.434873749567
-KR,MLP (16-8),gas_kt,ex_ante,2025-05,2389.638,2282.071445926079
-KR,MLP (16-8),gas_kt,ex_ante,2025-06,2001.92,2234.247530876043
-KR,MLP (16-8),gas_kt,ex_ante,2025-07,2249.769,2219.3529340971604
-KR,MLP (16-8),gas_kt,ex_ante,2025-08,2284.816,2312.7167794665434
-KR,MLP (16-8),gas_kt,ex_ante,2025-09,1917.023,2126.2953268741994
-KR,MLP (16-8),gas_kt,ex_ante,2025-10,2253.964,2097.848070355246
-KR,MLP (16-8),gas_kt,ex_ante,2025-11,3020.459,2867.4508777699493
-KR,MLP (16-8),gas_kt,ex_ante,2025-12,3872.285,4088.826924966156
-KR,MLP (16-8),gas_kt,ex_post,2023-01,4630.735,4701.006607049462
-KR,MLP (16-8),gas_kt,ex_post,2023-02,3938.56,3928.4928513707077
-KR,MLP (16-8),gas_kt,ex_post,2023-03,3142.234,3191.4169294226763
-KR,MLP (16-8),gas_kt,ex_post,2023-04,2491.457,2535.186093226514
-KR,MLP (16-8),gas_kt,ex_post,2023-05,2150.129,2332.977582965542
-KR,MLP (16-8),gas_kt,ex_post,2023-06,2101.904,2145.288527776488
-KR,MLP (16-8),gas_kt,ex_post,2023-07,2282.499,2358.280393802827
-KR,MLP (16-8),gas_kt,ex_post,2023-08,2311.495,2501.1809165714276
-KR,MLP (16-8),gas_kt,ex_post,2023-09,2137.276,2342.9315499777254
-KR,MLP (16-8),gas_kt,ex_post,2023-10,2253.258,2320.078341164076
-KR,MLP (16-8),gas_kt,ex_post,2023-11,3102.344,3393.7005932273887
-KR,MLP (16-8),gas_kt,ex_post,2023-12,4080.144,4151.5129839354395
-KR,MLP (16-8),gas_kt,ex_post,2024-01,4421.79,4263.162711653652
-KR,MLP (16-8),gas_kt,ex_post,2024-02,3496.569,3809.6182545231277
-KR,MLP (16-8),gas_kt,ex_post,2024-03,3420.91,3022.52163735265
-KR,MLP (16-8),gas_kt,ex_post,2024-04,2302.596,2605.2656085300955
-KR,MLP (16-8),gas_kt,ex_post,2024-05,2278.372,2132.6269762974653
-KR,MLP (16-8),gas_kt,ex_post,2024-06,2283.675,2206.4296166273407
-KR,MLP (16-8),gas_kt,ex_post,2024-07,2435.199,2340.0223619821577
-KR,MLP (16-8),gas_kt,ex_post,2024-08,2558.951,2465.393487497139
-KR,MLP (16-8),gas_kt,ex_post,2024-09,2136.978,2382.6810373910716
-KR,MLP (16-8),gas_kt,ex_post,2024-10,2132.601,2136.9060787739304
-KR,MLP (16-8),gas_kt,ex_post,2024-11,2671.522,2793.5663829655123
-KR,MLP (16-8),gas_kt,ex_post,2024-12,3962.129,3912.8531200570515
-KR,MLP (16-8),gas_kt,ex_post,2025-01,4297.525,4268.542596975568
-KR,MLP (16-8),gas_kt,ex_post,2025-02,4210.568,3908.6934197673363
-KR,MLP (16-8),gas_kt,ex_post,2025-03,3355.905,3323.3378450463215
-KR,MLP (16-8),gas_kt,ex_post,2025-04,2623.954,2619.4400375293326
-KR,MLP (16-8),gas_kt,ex_post,2025-05,2389.638,2271.642968358202
-KR,MLP (16-8),gas_kt,ex_post,2025-06,2001.92,2283.2764172155416
-KR,MLP (16-8),gas_kt,ex_post,2025-07,2249.769,2341.6754830373447
-KR,MLP (16-8),gas_kt,ex_post,2025-08,2284.816,2397.565532368884
-KR,MLP (16-8),gas_kt,ex_post,2025-09,1917.023,2145.6388584570163
-KR,MLP (16-8),gas_kt,ex_post,2025-10,2253.964,2042.842639350715
-KR,MLP (16-8),gas_kt,ex_post,2025-11,3020.459,2848.298992802297
-KR,MLP (16-8),gas_kt,ex_post,2025-12,3872.285,3998.2304975413886
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-01,2849.049,2775.432097559081
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-02,2183.538,2378.500693509569
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-03,1703.591,1942.0957691760595
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-04,1270.463,1407.705950229328
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-05,1058.013,1028.9304411737999
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-06,908.6,968.5354564056566
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-07,918.626,910.0777010048856
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-08,878.449,899.2122277452469
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-09,887.683,893.3180106972253
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-10,1121.286,1163.2905816472694
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-11,1865.011,1743.0424359981175
+KR,Gradient Boosting,gas_city_kt,ex_ante,2023-12,2664.11,2668.294378098446
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-01,2803.483,2744.7268616585843
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-02,2216.172,2252.058288755079
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-03,2020.986,1920.0479337503573
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-04,1247.463,1399.900104843247
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-05,1117.754,1074.7813261805354
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-06,965.801,968.9938957247675
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-07,964.15,923.181586084395
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-08,915.602,925.8171056675203
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-09,855.056,918.0124998775657
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-10,1076.31,1152.5540907690645
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-11,1583.346,1809.9056437875824
+KR,Gradient Boosting,gas_city_kt,ex_ante,2024-12,2611.085,2616.122576998775
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-01,2794.096,2778.046707866199
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-02,2665.549,2275.8664864857533
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-03,1975.46,1985.9562745651292
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-04,1382.978,1407.897606188276
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-05,1126.962,1075.6912919307385
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-06,938.799,968.8861640717741
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-07,933.132,926.7109128080128
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-08,890.125,911.272218675206
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-09,910.326,899.7636134040553
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-10,1070.676,1161.202218860002
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-11,1718.557,1757.8645927627083
+KR,Gradient Boosting,gas_city_kt,ex_ante,2025-12,2565.632,2609.424551678211
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-01,2849.049,2816.659614245347
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-02,2183.538,2336.4752744659686
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-03,1703.591,1770.0382940477546
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-04,1270.463,1395.8631386932686
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-05,1058.013,1033.7088363692842
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-06,908.6,964.7177564033558
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-07,918.626,910.2312854235906
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-08,878.449,902.3120779647257
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-09,887.683,910.1979985559504
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-10,1121.286,1101.6362628172415
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-11,1865.011,1828.5232079993777
+KR,Gradient Boosting,gas_city_kt,ex_post,2023-12,2664.11,2513.8505074746085
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-01,2803.483,2726.9258861625553
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-02,2216.172,2227.4558548975356
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-03,2020.986,1913.528059991729
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-04,1247.463,1171.0479942379884
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-05,1117.754,1128.1752897718695
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-06,965.801,957.0404104729365
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-07,964.15,915.7448033121198
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-08,915.602,937.8785304361197
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-09,855.056,912.8406093927397
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-10,1076.31,1067.9955625397956
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-11,1583.346,1622.1608958904276
+KR,Gradient Boosting,gas_city_kt,ex_post,2024-12,2611.085,2619.4777475732685
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-01,2794.096,2778.7489239170513
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-02,2665.549,2608.470673246137
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-03,1975.46,1987.4247647487762
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-04,1382.978,1407.897606188276
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-05,1126.962,1131.2184907249116
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-06,938.799,968.7519985209989
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-07,933.132,928.2463388418925
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-08,890.125,910.6609276351819
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-09,910.326,889.9371986655397
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-10,1070.676,1162.400550884418
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-11,1718.557,1728.2726608087755
+KR,Gradient Boosting,gas_city_kt,ex_post,2025-12,2565.632,2513.060394154755
+KR,Gradient Boosting,gas_kt,ex_ante,2023-01,4630.735,4620.031542201943
+KR,Gradient Boosting,gas_kt,ex_ante,2023-02,3938.56,3812.9969080374526
+KR,Gradient Boosting,gas_kt,ex_ante,2023-03,3142.234,3773.0782865643937
+KR,Gradient Boosting,gas_kt,ex_ante,2023-04,2491.457,2722.131185264
+KR,Gradient Boosting,gas_kt,ex_ante,2023-05,2150.129,2252.8192105066723
+KR,Gradient Boosting,gas_kt,ex_ante,2023-06,2101.904,2185.4541968932217
+KR,Gradient Boosting,gas_kt,ex_ante,2023-07,2282.499,2159.524115935931
+KR,Gradient Boosting,gas_kt,ex_ante,2023-08,2311.495,2321.397817175428
+KR,Gradient Boosting,gas_kt,ex_ante,2023-09,2137.276,2123.269373931086
+KR,Gradient Boosting,gas_kt,ex_ante,2023-10,2253.258,2259.8435194212393
+KR,Gradient Boosting,gas_kt,ex_ante,2023-11,3102.344,3210.782161696093
+KR,Gradient Boosting,gas_kt,ex_ante,2023-12,4080.144,4242.6413016257375
+KR,Gradient Boosting,gas_kt,ex_ante,2024-01,4421.79,4335.515768200279
+KR,Gradient Boosting,gas_kt,ex_ante,2024-02,3496.569,3660.2312010140536
+KR,Gradient Boosting,gas_kt,ex_ante,2024-03,3420.91,3213.6614293175708
+KR,Gradient Boosting,gas_kt,ex_ante,2024-04,2302.596,2651.865267965978
+KR,Gradient Boosting,gas_kt,ex_ante,2024-05,2278.372,2195.285041198769
+KR,Gradient Boosting,gas_kt,ex_ante,2024-06,2283.675,2219.1174293992894
+KR,Gradient Boosting,gas_kt,ex_ante,2024-07,2435.199,2287.8922445749145
+KR,Gradient Boosting,gas_kt,ex_ante,2024-08,2558.951,2360.4904088342482
+KR,Gradient Boosting,gas_kt,ex_ante,2024-09,2136.978,2235.8282913259463
+KR,Gradient Boosting,gas_kt,ex_ante,2024-10,2132.601,2250.148687457851
+KR,Gradient Boosting,gas_kt,ex_ante,2024-11,2671.522,3054.190850166264
+KR,Gradient Boosting,gas_kt,ex_ante,2024-12,3962.129,4095.3647220243774
+KR,Gradient Boosting,gas_kt,ex_ante,2025-01,4297.525,4330.169882109139
+KR,Gradient Boosting,gas_kt,ex_ante,2025-02,4210.568,3592.3192502163693
+KR,Gradient Boosting,gas_kt,ex_ante,2025-03,3355.905,3441.3958333660216
+KR,Gradient Boosting,gas_kt,ex_ante,2025-04,2623.954,2628.8913473406456
+KR,Gradient Boosting,gas_kt,ex_ante,2025-05,2389.638,2292.092980285228
+KR,Gradient Boosting,gas_kt,ex_ante,2025-06,2001.92,2262.508264995564
+KR,Gradient Boosting,gas_kt,ex_ante,2025-07,2249.769,2112.2863725313164
+KR,Gradient Boosting,gas_kt,ex_ante,2025-08,2284.816,2321.9957346221054
+KR,Gradient Boosting,gas_kt,ex_ante,2025-09,1917.023,2026.4145780188726
+KR,Gradient Boosting,gas_kt,ex_ante,2025-10,2253.964,2060.1970124176455
+KR,Gradient Boosting,gas_kt,ex_ante,2025-11,3020.459,2928.1170664691463
+KR,Gradient Boosting,gas_kt,ex_ante,2025-12,3872.285,4078.906966952469
+KR,Gradient Boosting,gas_kt,ex_post,2023-01,4630.735,4646.295714008462
+KR,Gradient Boosting,gas_kt,ex_post,2023-02,3938.56,3720.0029322153778
+KR,Gradient Boosting,gas_kt,ex_post,2023-03,3142.234,3647.5665799327608
+KR,Gradient Boosting,gas_kt,ex_post,2023-04,2491.457,2712.1011130465067
+KR,Gradient Boosting,gas_kt,ex_post,2023-05,2150.129,2292.629659053307
+KR,Gradient Boosting,gas_kt,ex_post,2023-06,2101.904,2172.7195840786517
+KR,Gradient Boosting,gas_kt,ex_post,2023-07,2282.499,2155.4465736600146
+KR,Gradient Boosting,gas_kt,ex_post,2023-08,2311.495,2346.5239963700387
+KR,Gradient Boosting,gas_kt,ex_post,2023-09,2137.276,2226.8954432994346
+KR,Gradient Boosting,gas_kt,ex_post,2023-10,2253.258,2231.6986793172314
+KR,Gradient Boosting,gas_kt,ex_post,2023-11,3102.344,3280.4697242761877
+KR,Gradient Boosting,gas_kt,ex_post,2023-12,4080.144,4169.583832329333
+KR,Gradient Boosting,gas_kt,ex_post,2024-01,4421.79,4324.1664948715925
+KR,Gradient Boosting,gas_kt,ex_post,2024-02,3496.569,3651.3181484209044
+KR,Gradient Boosting,gas_kt,ex_post,2024-03,3420.91,3205.5496760281676
+KR,Gradient Boosting,gas_kt,ex_post,2024-04,2302.596,2328.5064403984265
+KR,Gradient Boosting,gas_kt,ex_post,2024-05,2278.372,2199.9128877049543
+KR,Gradient Boosting,gas_kt,ex_post,2024-06,2283.675,2214.7863299098008
+KR,Gradient Boosting,gas_kt,ex_post,2024-07,2435.199,2388.4027316431334
+KR,Gradient Boosting,gas_kt,ex_post,2024-08,2558.951,2367.581330517165
+KR,Gradient Boosting,gas_kt,ex_post,2024-09,2136.978,2254.176126907831
+KR,Gradient Boosting,gas_kt,ex_post,2024-10,2132.601,2256.404921731525
+KR,Gradient Boosting,gas_kt,ex_post,2024-11,2671.522,2924.1251406011606
+KR,Gradient Boosting,gas_kt,ex_post,2024-12,3962.129,4089.9045220261205
+KR,Gradient Boosting,gas_kt,ex_post,2025-01,4297.525,4338.919767017046
+KR,Gradient Boosting,gas_kt,ex_post,2025-02,4210.568,4000.2365601988686
+KR,Gradient Boosting,gas_kt,ex_post,2025-03,3355.905,3430.4541621320313
+KR,Gradient Boosting,gas_kt,ex_post,2025-04,2623.954,2628.8913473406456
+KR,Gradient Boosting,gas_kt,ex_post,2025-05,2389.638,2300.3465304906836
+KR,Gradient Boosting,gas_kt,ex_post,2025-06,2001.92,2259.4167440978913
+KR,Gradient Boosting,gas_kt,ex_post,2025-07,2249.769,2373.1918493669627
+KR,Gradient Boosting,gas_kt,ex_post,2025-08,2284.816,2243.106134554728
+KR,Gradient Boosting,gas_kt,ex_post,2025-09,1917.023,2054.122251177619
+KR,Gradient Boosting,gas_kt,ex_post,2025-10,2253.964,2182.0062003240228
+KR,Gradient Boosting,gas_kt,ex_post,2025-11,3020.459,2870.800715021292
+KR,Gradient Boosting,gas_kt,ex_post,2025-12,3872.285,4027.4275960788545
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-01,1781.686,1797.8987411384321
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-02,1755.022,1641.9500635597847
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-03,1438.643,1696.1160023315947
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-04,1220.994,1416.335036087678
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-05,1092.116,1234.1648235461548
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-06,1193.304,1282.2244676599917
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-07,1363.873,1361.1225770791202
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-08,1433.046,1337.8387669511117
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-09,1249.593,1264.7248886551165
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-10,1131.972,1164.658425618376
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-11,1237.333,1409.5790565000166
+KR,Gradient Boosting,gas_power_kt,ex_ante,2023-12,1416.034,1396.3771649720231
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-01,1618.307,1586.8570948189804
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-02,1280.397,1538.7697993580364
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-03,1399.924,1290.68174504876
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-04,1055.133,1225.091587847844
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-05,1160.618,1030.822724205787
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-06,1317.874,1155.0513125342618
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-07,1471.049,1343.1076159232725
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-08,1643.349,1405.7666122831065
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-09,1281.922,1282.9522356893497
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-10,1056.291,1209.3314805394532
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-11,1088.176,1174.2626707955724
+KR,Gradient Boosting,gas_power_kt,ex_ante,2024-12,1351.044,1360.465368660626
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-01,1503.429,1575.6253299225564
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-02,1545.019,1319.0638560159125
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-03,1380.445,1390.0274699396468
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-04,1240.976,1218.0068813739988
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-05,1262.676,1129.5491005321433
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-06,1063.121,1265.3951891879524
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-07,1316.637,1245.4253220444152
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-08,1394.691,1489.1378382189087
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-09,1006.697,1207.082582354656
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-10,1183.288,998.3794497114201
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-11,1301.902,1233.7110741192707
+KR,Gradient Boosting,gas_power_kt,ex_ante,2025-12,1306.653,1464.7040705825243
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-01,1781.686,1801.6631833862714
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-02,1755.022,1633.3101345931273
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-03,1438.643,1696.466089357494
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-04,1220.994,1405.6877326764313
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-05,1092.116,1262.962539786763
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-06,1193.304,1282.019122468101
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-07,1363.873,1357.8777798806343
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-08,1433.046,1428.8840473265914
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-09,1249.593,1308.4935932587382
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-10,1131.972,1163.912910681699
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-11,1237.333,1413.307485972265
+KR,Gradient Boosting,gas_power_kt,ex_post,2023-12,1416.034,1401.484028467013
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-01,1618.307,1576.6666256988387
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-02,1280.397,1525.5142998241877
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-03,1399.924,1304.7821747583869
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-04,1055.133,1204.709706686599
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-05,1160.618,1018.7320656409632
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-06,1317.874,1165.8461293353798
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-07,1471.049,1373.2111432218358
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-08,1643.349,1377.689559668994
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-09,1281.922,1333.6237729857057
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-10,1056.291,1213.6706714595618
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-11,1088.176,1197.6175642171468
+KR,Gradient Boosting,gas_power_kt,ex_post,2024-12,1351.044,1321.422974836159
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-01,1503.429,1571.612558115082
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-02,1545.019,1376.8268860218063
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-03,1380.445,1383.9918960059472
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-04,1240.976,1218.0068813739988
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-05,1262.676,1131.852625807404
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-06,1063.121,1270.2777308246507
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-07,1316.637,1413.0902664220523
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-08,1394.691,1472.6742302336631
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-09,1006.697,1263.0212222031134
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-10,1183.288,1065.611541956463
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-11,1301.902,1224.9961588821507
+KR,Gradient Boosting,gas_power_kt,ex_post,2025-12,1306.653,1419.9044247184718
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-01,2849.049,2845.275035142919
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-02,2183.538,2389.4053591821316
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-03,1703.591,1755.7852152878052
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-04,1270.463,1295.5479868444843
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-05,1058.013,1035.0068196539446
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-06,908.6,962.2563720554568
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-07,918.626,920.8045754422185
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-08,878.449,931.6103511508682
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-09,887.683,918.7690460792112
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-10,1121.286,1087.0254377922242
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-11,1865.011,1656.5806286332486
+KR,MLP (16-8),gas_city_kt,ex_ante,2023-12,2664.11,2564.8308611804323
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-01,2803.483,2691.476883706894
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-02,2216.172,2297.0960508338385
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-03,2020.986,1740.4159799579022
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-04,1247.463,1388.174989615684
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-05,1117.754,1032.4965597561306
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-06,965.801,949.4356162295451
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-07,964.15,902.0702190029895
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-08,915.602,910.8054191559652
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-09,855.056,940.6222910620723
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-10,1076.31,1113.5590899659278
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-11,1583.346,1809.598669874321
+KR,MLP (16-8),gas_city_kt,ex_ante,2024-12,2611.085,2535.3983552713257
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-01,2794.096,2762.2256174273853
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-02,2665.549,2364.9559641356473
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-03,1975.46,1997.1003240037164
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-04,1382.978,1420.5815603991775
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-05,1126.962,1069.6175503253792
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-06,938.799,949.4266728688466
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-07,933.132,878.7653584771363
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-08,890.125,891.1845441278905
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-09,910.326,938.9541627277897
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-10,1070.676,1106.2344977990172
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-11,1718.557,1695.395482611495
+KR,MLP (16-8),gas_city_kt,ex_ante,2025-12,2565.632,2578.697513213555
+KR,MLP (16-8),gas_city_kt,ex_post,2023-01,2849.049,2838.2060025292317
+KR,MLP (16-8),gas_city_kt,ex_post,2023-02,2183.538,2330.8127812384337
+KR,MLP (16-8),gas_city_kt,ex_post,2023-03,1703.591,1647.214010023512
+KR,MLP (16-8),gas_city_kt,ex_post,2023-04,1270.463,1267.9829653867334
+KR,MLP (16-8),gas_city_kt,ex_post,2023-05,1058.013,1047.1658312478698
+KR,MLP (16-8),gas_city_kt,ex_post,2023-06,908.6,955.6569899684789
+KR,MLP (16-8),gas_city_kt,ex_post,2023-07,918.626,922.1956837104974
+KR,MLP (16-8),gas_city_kt,ex_post,2023-08,878.449,944.6357086593434
+KR,MLP (16-8),gas_city_kt,ex_post,2023-09,887.683,938.1962025983954
+KR,MLP (16-8),gas_city_kt,ex_post,2023-10,1121.286,1042.9794821085288
+KR,MLP (16-8),gas_city_kt,ex_post,2023-11,1865.011,1717.4176818131648
+KR,MLP (16-8),gas_city_kt,ex_post,2023-12,2664.11,2499.7072113281088
+KR,MLP (16-8),gas_city_kt,ex_post,2024-01,2803.483,2646.059594364707
+KR,MLP (16-8),gas_city_kt,ex_post,2024-02,2216.172,2233.450901220057
+KR,MLP (16-8),gas_city_kt,ex_post,2024-03,2020.986,1761.0357501266622
+KR,MLP (16-8),gas_city_kt,ex_post,2024-04,1247.463,1352.4580049783276
+KR,MLP (16-8),gas_city_kt,ex_post,2024-05,1117.754,1037.2649532674961
+KR,MLP (16-8),gas_city_kt,ex_post,2024-06,965.801,957.2261778867365
+KR,MLP (16-8),gas_city_kt,ex_post,2024-07,964.15,907.1577696678056
+KR,MLP (16-8),gas_city_kt,ex_post,2024-08,915.602,934.9033386085327
+KR,MLP (16-8),gas_city_kt,ex_post,2024-09,855.056,973.9284775952616
+KR,MLP (16-8),gas_city_kt,ex_post,2024-10,1076.31,1061.9294064458766
+KR,MLP (16-8),gas_city_kt,ex_post,2024-11,1583.346,1718.0829410120411
+KR,MLP (16-8),gas_city_kt,ex_post,2024-12,2611.085,2512.0810170045365
+KR,MLP (16-8),gas_city_kt,ex_post,2025-01,2794.096,2735.1813142406563
+KR,MLP (16-8),gas_city_kt,ex_post,2025-02,2665.549,2470.959385807721
+KR,MLP (16-8),gas_city_kt,ex_post,2025-03,1975.46,2015.8407869939904
+KR,MLP (16-8),gas_city_kt,ex_post,2025-04,1382.978,1427.412784001304
+KR,MLP (16-8),gas_city_kt,ex_post,2025-05,1126.962,1081.906824760988
+KR,MLP (16-8),gas_city_kt,ex_post,2025-06,938.799,944.3701775684737
+KR,MLP (16-8),gas_city_kt,ex_post,2025-07,933.132,892.7214785450285
+KR,MLP (16-8),gas_city_kt,ex_post,2025-08,890.125,896.4161384317438
+KR,MLP (16-8),gas_city_kt,ex_post,2025-09,910.326,934.0814313170656
+KR,MLP (16-8),gas_city_kt,ex_post,2025-10,1070.676,1068.7482492634665
+KR,MLP (16-8),gas_city_kt,ex_post,2025-11,1718.557,1683.1793413833213
+KR,MLP (16-8),gas_city_kt,ex_post,2025-12,2565.632,2542.0145117732127
+KR,MLP (16-8),gas_kt,ex_ante,2023-01,4630.735,4706.056726555946
+KR,MLP (16-8),gas_kt,ex_ante,2023-02,3938.56,4079.7541270090783
+KR,MLP (16-8),gas_kt,ex_ante,2023-03,3142.234,3343.3770033615024
+KR,MLP (16-8),gas_kt,ex_ante,2023-04,2491.457,2502.8629938216886
+KR,MLP (16-8),gas_kt,ex_ante,2023-05,2150.129,2144.8064857041995
+KR,MLP (16-8),gas_kt,ex_ante,2023-06,2101.904,2099.074015797752
+KR,MLP (16-8),gas_kt,ex_ante,2023-07,2282.499,2178.516521638483
+KR,MLP (16-8),gas_kt,ex_ante,2023-08,2311.495,2238.294396324512
+KR,MLP (16-8),gas_kt,ex_ante,2023-09,2137.276,2181.7252090944744
+KR,MLP (16-8),gas_kt,ex_ante,2023-10,2253.258,2383.4350997173974
+KR,MLP (16-8),gas_kt,ex_ante,2023-11,3102.344,3179.8296901403965
+KR,MLP (16-8),gas_kt,ex_ante,2023-12,4080.144,4304.756454235297
+KR,MLP (16-8),gas_kt,ex_ante,2024-01,4421.79,4343.271683746205
+KR,MLP (16-8),gas_kt,ex_ante,2024-02,3496.569,3855.126318746961
+KR,MLP (16-8),gas_kt,ex_ante,2024-03,3420.91,2965.023774555118
+KR,MLP (16-8),gas_kt,ex_ante,2024-04,2302.596,2560.4292765280597
+KR,MLP (16-8),gas_kt,ex_ante,2024-05,2278.372,2151.2058488275698
+KR,MLP (16-8),gas_kt,ex_ante,2024-06,2283.675,2187.038279327232
+KR,MLP (16-8),gas_kt,ex_ante,2024-07,2435.199,2303.015502879429
+KR,MLP (16-8),gas_kt,ex_ante,2024-08,2558.951,2334.567525533233
+KR,MLP (16-8),gas_kt,ex_ante,2024-09,2136.978,2231.940502878973
+KR,MLP (16-8),gas_kt,ex_ante,2024-10,2132.601,2233.3334874210254
+KR,MLP (16-8),gas_kt,ex_ante,2024-11,2671.522,2939.513121612526
+KR,MLP (16-8),gas_kt,ex_ante,2024-12,3962.129,3939.3241793033944
+KR,MLP (16-8),gas_kt,ex_ante,2025-01,4297.525,4188.071551820141
+KR,MLP (16-8),gas_kt,ex_ante,2025-02,4210.568,3658.626270218197
+KR,MLP (16-8),gas_kt,ex_ante,2025-03,3355.905,3311.835833617114
+KR,MLP (16-8),gas_kt,ex_ante,2025-04,2623.954,2622.1240400148927
+KR,MLP (16-8),gas_kt,ex_ante,2025-05,2389.638,2302.97515526491
+KR,MLP (16-8),gas_kt,ex_ante,2025-06,2001.92,2254.908025297938
+KR,MLP (16-8),gas_kt,ex_ante,2025-07,2249.769,2268.115763410201
+KR,MLP (16-8),gas_kt,ex_ante,2025-08,2284.816,2351.554669702557
+KR,MLP (16-8),gas_kt,ex_ante,2025-09,1917.023,2147.267203734175
+KR,MLP (16-8),gas_kt,ex_ante,2025-10,2253.964,2083.973797739166
+KR,MLP (16-8),gas_kt,ex_ante,2025-11,3020.459,2823.9266312552004
+KR,MLP (16-8),gas_kt,ex_ante,2025-12,3872.285,4039.58308036184
+KR,MLP (16-8),gas_kt,ex_post,2023-01,4630.735,4726.015508067749
+KR,MLP (16-8),gas_kt,ex_post,2023-02,3938.56,3989.4154904966576
+KR,MLP (16-8),gas_kt,ex_post,2023-03,3142.234,3251.960078271594
+KR,MLP (16-8),gas_kt,ex_post,2023-04,2491.457,2411.400708811284
+KR,MLP (16-8),gas_kt,ex_post,2023-05,2150.129,2255.6012984614467
+KR,MLP (16-8),gas_kt,ex_post,2023-06,2101.904,2019.0900175767085
+KR,MLP (16-8),gas_kt,ex_post,2023-07,2282.499,2142.9336850385143
+KR,MLP (16-8),gas_kt,ex_post,2023-08,2311.495,2363.390793235977
+KR,MLP (16-8),gas_kt,ex_post,2023-09,2137.276,2305.2552153726574
+KR,MLP (16-8),gas_kt,ex_post,2023-10,2253.258,2277.1347585188337
+KR,MLP (16-8),gas_kt,ex_post,2023-11,3102.344,3292.466914871253
+KR,MLP (16-8),gas_kt,ex_post,2023-12,4080.144,4231.6475612973245
+KR,MLP (16-8),gas_kt,ex_post,2024-01,4421.79,4295.994099294008
+KR,MLP (16-8),gas_kt,ex_post,2024-02,3496.569,3765.0537587196436
+KR,MLP (16-8),gas_kt,ex_post,2024-03,3420.91,2950.1420596765706
+KR,MLP (16-8),gas_kt,ex_post,2024-04,2302.596,2583.4178100397394
+KR,MLP (16-8),gas_kt,ex_post,2024-05,2278.372,2163.2888654128938
+KR,MLP (16-8),gas_kt,ex_post,2024-06,2283.675,2199.717977938486
+KR,MLP (16-8),gas_kt,ex_post,2024-07,2435.199,2278.372665343925
+KR,MLP (16-8),gas_kt,ex_post,2024-08,2558.951,2453.503374326878
+KR,MLP (16-8),gas_kt,ex_post,2024-09,2136.978,2367.159374383321
+KR,MLP (16-8),gas_kt,ex_post,2024-10,2132.601,2178.4067321255498
+KR,MLP (16-8),gas_kt,ex_post,2024-11,2671.522,2798.689554900529
+KR,MLP (16-8),gas_kt,ex_post,2024-12,3962.129,3859.7078059826526
+KR,MLP (16-8),gas_kt,ex_post,2025-01,4297.525,4188.549147133233
+KR,MLP (16-8),gas_kt,ex_post,2025-02,4210.568,3794.4827919395475
+KR,MLP (16-8),gas_kt,ex_post,2025-03,3355.905,3318.5450390589676
+KR,MLP (16-8),gas_kt,ex_post,2025-04,2623.954,2629.920876352663
+KR,MLP (16-8),gas_kt,ex_post,2025-05,2389.638,2283.2392813630468
+KR,MLP (16-8),gas_kt,ex_post,2025-06,2001.92,2328.716380318144
+KR,MLP (16-8),gas_kt,ex_post,2025-07,2249.769,2383.1904748970906
+KR,MLP (16-8),gas_kt,ex_post,2025-08,2284.816,2426.2385074060226
+KR,MLP (16-8),gas_kt,ex_post,2025-09,1917.023,2159.5322233897264
+KR,MLP (16-8),gas_kt,ex_post,2025-10,2253.964,2026.0080480250435
+KR,MLP (16-8),gas_kt,ex_post,2025-11,3020.459,2805.75898238041
+KR,MLP (16-8),gas_kt,ex_post,2025-12,3872.285,3964.753872106172
 KR,MLP (16-8),gas_power_kt,ex_ante,2023-01,1781.686,1904.2599199710153
-KR,MLP (16-8),gas_power_kt,ex_ante,2023-02,1755.022,1663.1228280509536
-KR,MLP (16-8),gas_power_kt,ex_ante,2023-03,1438.643,1525.5868608623452
+KR,MLP (16-8),gas_power_kt,ex_ante,2023-02,1755.022,1663.1228280509538
+KR,MLP (16-8),gas_power_kt,ex_ante,2023-03,1438.643,1525.586860862345
 KR,MLP (16-8),gas_power_kt,ex_ante,2023-04,1220.994,1252.2840029999038
 KR,MLP (16-8),gas_power_kt,ex_ante,2023-05,1092.116,1104.7229694216308
 KR,MLP (16-8),gas_power_kt,ex_ante,2023-06,1193.304,1150.6141322187884
@@ -1236,7 +1236,7 @@ KR,MLP (16-8),gas_power_kt,ex_ante,2023-10,1131.972,1333.6665545199387
 KR,MLP (16-8),gas_power_kt,ex_ante,2023-11,1237.333,1549.7262307985386
 KR,MLP (16-8),gas_power_kt,ex_ante,2023-12,1416.034,1635.8454516632185
 KR,MLP (16-8),gas_power_kt,ex_ante,2024-01,1618.307,1544.3063518916065
-KR,MLP (16-8),gas_power_kt,ex_ante,2024-02,1280.397,1497.0063659253954
+KR,MLP (16-8),gas_power_kt,ex_ante,2024-02,1280.397,1497.0063659253951
 KR,MLP (16-8),gas_power_kt,ex_ante,2024-03,1399.924,1287.988090764161
 KR,MLP (16-8),gas_power_kt,ex_ante,2024-04,1055.133,1199.339009486267
 KR,MLP (16-8),gas_power_kt,ex_ante,2024-05,1160.618,1090.2990795249927
@@ -1246,14 +1246,14 @@ KR,MLP (16-8),gas_power_kt,ex_ante,2024-08,1643.349,1409.5758710575471
 KR,MLP (16-8),gas_power_kt,ex_ante,2024-09,1281.922,1180.8567933282834
 KR,MLP (16-8),gas_power_kt,ex_ante,2024-10,1056.291,1125.3543463095127
 KR,MLP (16-8),gas_power_kt,ex_ante,2024-11,1088.176,1188.3633430680034
-KR,MLP (16-8),gas_power_kt,ex_ante,2024-12,1351.044,1432.9096887721432
+KR,MLP (16-8),gas_power_kt,ex_ante,2024-12,1351.044,1432.909688772143
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-01,1503.429,1429.397889928755
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-02,1545.019,1385.16579880474
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-03,1380.445,1336.7618530991263
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-04,1240.976,1257.8776738690208
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-05,1262.676,1188.123363702212
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-06,1063.121,1256.5708938026808
-KR,MLP (16-8),gas_power_kt,ex_ante,2025-07,1316.637,1348.862962377218
+KR,MLP (16-8),gas_power_kt,ex_ante,2025-07,1316.637,1348.8629623772179
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-08,1394.691,1340.5865719500162
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-09,1006.697,1101.6714024425721
 KR,MLP (16-8),gas_power_kt,ex_ante,2025-10,1183.288,1013.6936184309068
@@ -1265,7 +1265,7 @@ KR,MLP (16-8),gas_power_kt,ex_post,2023-03,1438.643,1552.5466353639404
 KR,MLP (16-8),gas_power_kt,ex_post,2023-04,1220.994,1179.8900080531992
 KR,MLP (16-8),gas_power_kt,ex_post,2023-05,1092.116,1210.5928974634649
 KR,MLP (16-8),gas_power_kt,ex_post,2023-06,1193.304,1088.0800138007571
-KR,MLP (16-8),gas_power_kt,ex_post,2023-07,1363.873,1326.076010089475
+KR,MLP (16-8),gas_power_kt,ex_post,2023-07,1363.873,1326.0760100894747
 KR,MLP (16-8),gas_power_kt,ex_post,2023-08,1433.046,1465.5666989082404
 KR,MLP (16-8),gas_power_kt,ex_post,2023-09,1249.593,1355.8219064077234
 KR,MLP (16-8),gas_power_kt,ex_post,2023-10,1131.972,1260.5330346843734
@@ -1278,815 +1278,815 @@ KR,MLP (16-8),gas_power_kt,ex_post,2024-04,1055.133,1228.4186148111414
 KR,MLP (16-8),gas_power_kt,ex_post,2024-05,1160.618,1094.4698258123499
 KR,MLP (16-8),gas_power_kt,ex_post,2024-06,1317.874,1253.2949863787221
 KR,MLP (16-8),gas_power_kt,ex_post,2024-07,1471.049,1440.5753382027965
-KR,MLP (16-8),gas_power_kt,ex_post,2024-08,1643.349,1465.220048936665
-KR,MLP (16-8),gas_power_kt,ex_post,2024-09,1281.922,1394.6360277305816
+KR,MLP (16-8),gas_power_kt,ex_post,2024-08,1643.349,1465.2200489366649
+KR,MLP (16-8),gas_power_kt,ex_post,2024-09,1281.922,1394.6360277305814
 KR,MLP (16-8),gas_power_kt,ex_post,2024-10,1056.291,1107.1050515817844
 KR,MLP (16-8),gas_power_kt,ex_post,2024-11,1088.176,1191.398866728742
-KR,MLP (16-8),gas_power_kt,ex_post,2024-12,1351.044,1352.0927217016072
+KR,MLP (16-8),gas_power_kt,ex_post,2024-12,1351.044,1352.092721701607
 KR,MLP (16-8),gas_power_kt,ex_post,2025-01,1503.429,1457.5296375991613
 KR,MLP (16-8),gas_power_kt,ex_post,2025-02,1545.019,1427.5367825201167
 KR,MLP (16-8),gas_power_kt,ex_post,2025-03,1380.445,1337.8404340065015
-KR,MLP (16-8),gas_power_kt,ex_post,2025-04,1240.976,1259.5492000067482
+KR,MLP (16-8),gas_power_kt,ex_post,2025-04,1240.976,1259.5492000067484
 KR,MLP (16-8),gas_power_kt,ex_post,2025-05,1262.676,1164.583411442211
 KR,MLP (16-8),gas_power_kt,ex_post,2025-06,1063.121,1325.1946798213023
 KR,MLP (16-8),gas_power_kt,ex_post,2025-07,1316.637,1502.1246816224016
 KR,MLP (16-8),gas_power_kt,ex_post,2025-08,1394.691,1399.1678370481004
 KR,MLP (16-8),gas_power_kt,ex_post,2025-09,1006.697,1163.5438542384559
-KR,MLP (16-8),gas_power_kt,ex_post,2025-10,1183.288,1013.5390012107052
+KR,MLP (16-8),gas_power_kt,ex_post,2025-10,1183.288,1013.5390012107055
 KR,MLP (16-8),gas_power_kt,ex_post,2025-11,1301.902,1198.7217235320768
 KR,MLP (16-8),gas_power_kt,ex_post,2025-12,1306.653,1420.4736862818415
-KR,Ridge,gas_city_kt,ex_ante,2023-01,2849.049,2844.345143872777
-KR,Ridge,gas_city_kt,ex_ante,2023-02,2183.538,2583.5293754054164
-KR,Ridge,gas_city_kt,ex_ante,2023-03,1703.591,1995.8897036612466
-KR,Ridge,gas_city_kt,ex_ante,2023-04,1270.463,1457.6079518270858
-KR,Ridge,gas_city_kt,ex_ante,2023-05,1058.013,1056.0848328882157
-KR,Ridge,gas_city_kt,ex_ante,2023-06,908.6,984.8651191525435
-KR,Ridge,gas_city_kt,ex_ante,2023-07,918.626,967.5561319281553
-KR,Ridge,gas_city_kt,ex_ante,2023-08,878.449,1010.31017777549
-KR,Ridge,gas_city_kt,ex_ante,2023-09,887.683,1066.977796370004
-KR,Ridge,gas_city_kt,ex_ante,2023-10,1121.286,1265.1228836343362
-KR,Ridge,gas_city_kt,ex_ante,2023-11,1865.011,1680.5094330809557
-KR,Ridge,gas_city_kt,ex_ante,2023-12,2664.11,2470.0841899221277
-KR,Ridge,gas_city_kt,ex_ante,2024-01,2803.483,2711.930104918091
-KR,Ridge,gas_city_kt,ex_ante,2024-02,2216.172,2431.3427579819745
-KR,Ridge,gas_city_kt,ex_ante,2024-03,2020.986,1914.9874757494836
-KR,Ridge,gas_city_kt,ex_ante,2024-04,1247.463,1460.0148178624625
-KR,Ridge,gas_city_kt,ex_ante,2024-05,1117.754,1035.4795147397058
-KR,Ridge,gas_city_kt,ex_ante,2024-06,965.801,961.1790230706687
-KR,Ridge,gas_city_kt,ex_ante,2024-07,964.15,960.2364740207469
-KR,Ridge,gas_city_kt,ex_ante,2024-08,915.602,1004.0867134811343
-KR,Ridge,gas_city_kt,ex_ante,2024-09,855.056,1071.7547041125263
-KR,Ridge,gas_city_kt,ex_ante,2024-10,1076.31,1237.4378499617503
-KR,Ridge,gas_city_kt,ex_ante,2024-11,1583.346,1738.3605886763407
-KR,Ridge,gas_city_kt,ex_ante,2024-12,2611.085,2352.7424823381098
-KR,Ridge,gas_city_kt,ex_ante,2025-01,2794.096,2705.6020163145604
-KR,Ridge,gas_city_kt,ex_ante,2025-02,2665.549,2418.040985427719
-KR,Ridge,gas_city_kt,ex_ante,2025-03,1975.46,2084.024457098793
-KR,Ridge,gas_city_kt,ex_ante,2025-04,1382.978,1450.795817168352
-KR,Ridge,gas_city_kt,ex_ante,2025-05,1126.962,1083.9483204757958
-KR,Ridge,gas_city_kt,ex_ante,2025-06,938.799,958.8918625366862
-KR,Ridge,gas_city_kt,ex_ante,2025-07,933.132,958.4366710199105
-KR,Ridge,gas_city_kt,ex_ante,2025-08,890.125,1002.6609277870983
-KR,Ridge,gas_city_kt,ex_ante,2025-09,910.326,1055.5612436464744
-KR,Ridge,gas_city_kt,ex_ante,2025-10,1070.676,1247.2094515203084
-KR,Ridge,gas_city_kt,ex_ante,2025-11,1718.557,1675.328781826383
-KR,Ridge,gas_city_kt,ex_ante,2025-12,2565.632,2399.908517113744
-KR,Ridge,gas_city_kt,ex_post,2023-01,2849.049,2871.4196093324435
-KR,Ridge,gas_city_kt,ex_post,2023-02,2183.538,2528.5971928845474
-KR,Ridge,gas_city_kt,ex_post,2023-03,1703.591,1923.4243218729187
-KR,Ridge,gas_city_kt,ex_post,2023-04,1270.463,1415.7433102416633
-KR,Ridge,gas_city_kt,ex_post,2023-05,1058.013,1085.3805510493698
-KR,Ridge,gas_city_kt,ex_post,2023-06,908.6,966.0339081547776
-KR,Ridge,gas_city_kt,ex_post,2023-07,918.626,956.562203622176
-KR,Ridge,gas_city_kt,ex_post,2023-08,878.449,1040.0253675794959
-KR,Ridge,gas_city_kt,ex_post,2023-09,887.683,1084.4871620486103
-KR,Ridge,gas_city_kt,ex_post,2023-10,1121.286,1217.6023171734714
-KR,Ridge,gas_city_kt,ex_post,2023-11,1865.011,1733.0761440144227
-KR,Ridge,gas_city_kt,ex_post,2023-12,2664.11,2407.745825917797
-KR,Ridge,gas_city_kt,ex_post,2024-01,2803.483,2664.2560974177995
-KR,Ridge,gas_city_kt,ex_post,2024-02,2216.172,2369.8476141305564
-KR,Ridge,gas_city_kt,ex_post,2024-03,2020.986,1939.3800808188978
-KR,Ridge,gas_city_kt,ex_post,2024-04,1247.463,1379.338082263222
-KR,Ridge,gas_city_kt,ex_post,2024-05,1117.754,1047.29168966026
-KR,Ridge,gas_city_kt,ex_post,2024-06,965.801,957.4407453914514
-KR,Ridge,gas_city_kt,ex_post,2024-07,964.15,945.3873505670313
-KR,Ridge,gas_city_kt,ex_post,2024-08,915.602,1033.5843266681436
-KR,Ridge,gas_city_kt,ex_post,2024-09,855.056,1072.3043697352196
-KR,Ridge,gas_city_kt,ex_post,2024-10,1076.31,1181.058416853596
-KR,Ridge,gas_city_kt,ex_post,2024-11,1583.346,1661.749169514546
-KR,Ridge,gas_city_kt,ex_post,2024-12,2611.085,2342.148271370595
-KR,Ridge,gas_city_kt,ex_post,2025-01,2794.096,2678.5800908018846
-KR,Ridge,gas_city_kt,ex_post,2025-02,2665.549,2524.482559991429
-KR,Ridge,gas_city_kt,ex_post,2025-03,1975.46,2090.07711667193
-KR,Ridge,gas_city_kt,ex_post,2025-04,1382.978,1459.684380377101
-KR,Ridge,gas_city_kt,ex_post,2025-05,1126.962,1104.0803398417625
-KR,Ridge,gas_city_kt,ex_post,2025-06,938.799,974.8589177711287
-KR,Ridge,gas_city_kt,ex_post,2025-07,933.132,955.6199927767412
-KR,Ridge,gas_city_kt,ex_post,2025-08,890.125,1012.2295693586536
-KR,Ridge,gas_city_kt,ex_post,2025-09,910.326,1056.415302538393
-KR,Ridge,gas_city_kt,ex_post,2025-10,1070.676,1214.2498706729107
-KR,Ridge,gas_city_kt,ex_post,2025-11,1718.557,1664.8163977804963
-KR,Ridge,gas_city_kt,ex_post,2025-12,2565.632,2359.9485265787994
-KR,Ridge,gas_kt,ex_ante,2023-01,4630.735,4581.594209921726
-KR,Ridge,gas_kt,ex_ante,2023-02,3938.56,4209.529811238829
-KR,Ridge,gas_kt,ex_ante,2023-03,3142.234,3591.836750693884
-KR,Ridge,gas_kt,ex_ante,2023-04,2491.457,2806.2253654945707
-KR,Ridge,gas_kt,ex_ante,2023-05,2150.129,2262.340848245872
-KR,Ridge,gas_kt,ex_ante,2023-06,2101.904,2219.77967637899
-KR,Ridge,gas_kt,ex_ante,2023-07,2282.499,2332.8505074522877
-KR,Ridge,gas_kt,ex_ante,2023-08,2311.495,2383.0119820946275
-KR,Ridge,gas_kt,ex_ante,2023-09,2137.276,2350.8106557988012
-KR,Ridge,gas_kt,ex_ante,2023-10,2253.258,2586.7069279154653
-KR,Ridge,gas_kt,ex_ante,2023-11,3102.344,3123.088145663296
-KR,Ridge,gas_kt,ex_ante,2023-12,4080.144,4184.067107815441
-KR,Ridge,gas_kt,ex_ante,2024-01,4421.79,4349.641105918439
-KR,Ridge,gas_kt,ex_ante,2024-02,3496.569,3998.8643557676983
-KR,Ridge,gas_kt,ex_ante,2024-03,3420.91,3266.066742142656
-KR,Ridge,gas_kt,ex_ante,2024-04,2302.596,2645.7885296335653
-KR,Ridge,gas_kt,ex_ante,2024-05,2278.372,2103.571643005556
-KR,Ridge,gas_kt,ex_ante,2024-06,2283.675,2100.6525602836355
-KR,Ridge,gas_kt,ex_ante,2024-07,2435.199,2297.3571618940678
-KR,Ridge,gas_kt,ex_ante,2024-08,2558.951,2387.653166774168
-KR,Ridge,gas_kt,ex_ante,2024-09,2136.978,2338.2109484978073
-KR,Ridge,gas_kt,ex_ante,2024-10,2132.601,2431.1358535000413
-KR,Ridge,gas_kt,ex_ante,2024-11,2671.522,3055.1251638835147
-KR,Ridge,gas_kt,ex_ante,2024-12,3962.129,3839.5012796929786
-KR,Ridge,gas_kt,ex_ante,2025-01,4297.525,4290.42637840295
-KR,Ridge,gas_kt,ex_ante,2025-02,4210.568,3858.994664397706
-KR,Ridge,gas_kt,ex_ante,2025-03,3355.905,3474.2880256781355
-KR,Ridge,gas_kt,ex_ante,2025-04,2623.954,2651.92785781018
-KR,Ridge,gas_kt,ex_ante,2025-05,2389.638,2221.684715639253
-KR,Ridge,gas_kt,ex_ante,2025-06,2001.92,2150.4585015630537
-KR,Ridge,gas_kt,ex_ante,2025-07,2249.769,2295.6299389395335
-KR,Ridge,gas_kt,ex_ante,2025-08,2284.816,2438.091188318686
-KR,Ridge,gas_kt,ex_ante,2025-09,1917.023,2264.9981176631295
-KR,Ridge,gas_kt,ex_ante,2025-10,2253.964,2333.9631688125205
-KR,Ridge,gas_kt,ex_ante,2025-11,3020.459,2908.856488794768
-KR,Ridge,gas_kt,ex_ante,2025-12,3872.285,3873.5758292541104
-KR,Ridge,gas_kt,ex_post,2023-01,4630.735,4647.5218869225155
-KR,Ridge,gas_kt,ex_post,2023-02,3938.56,4120.713769708779
-KR,Ridge,gas_kt,ex_post,2023-03,3142.234,3538.5766876531784
-KR,Ridge,gas_kt,ex_post,2023-04,2491.457,2726.0243066224725
-KR,Ridge,gas_kt,ex_post,2023-05,2150.129,2354.2253503042602
-KR,Ridge,gas_kt,ex_post,2023-06,2101.904,2168.615271746793
-KR,Ridge,gas_kt,ex_post,2023-07,2282.499,2303.9489108000166
-KR,Ridge,gas_kt,ex_post,2023-08,2311.495,2490.6221926505264
-KR,Ridge,gas_kt,ex_post,2023-09,2137.276,2450.609043135394
-KR,Ridge,gas_kt,ex_post,2023-10,2253.258,2497.8150114971786
-KR,Ridge,gas_kt,ex_post,2023-11,3102.344,3220.203011909751
-KR,Ridge,gas_kt,ex_post,2023-12,4080.144,4084.3074504402775
-KR,Ridge,gas_kt,ex_post,2024-01,4421.79,4274.464124905504
-KR,Ridge,gas_kt,ex_post,2024-02,3496.569,3930.3504232072883
-KR,Ridge,gas_kt,ex_post,2024-03,3420.91,3278.4107144060763
-KR,Ridge,gas_kt,ex_post,2024-04,2302.596,2552.679700305269
-KR,Ridge,gas_kt,ex_post,2024-05,2278.372,2119.8470978976848
-KR,Ridge,gas_kt,ex_post,2024-06,2283.675,2119.406116319583
-KR,Ridge,gas_kt,ex_post,2024-07,2435.199,2281.2422676036776
-KR,Ridge,gas_kt,ex_post,2024-08,2558.951,2552.6591289327794
-KR,Ridge,gas_kt,ex_post,2024-09,2136.978,2472.891676230393
-KR,Ridge,gas_kt,ex_post,2024-10,2132.601,2357.9602796667314
-KR,Ridge,gas_kt,ex_post,2024-11,2671.522,2922.727676128698
-KR,Ridge,gas_kt,ex_post,2024-12,3962.129,3853.5293205665457
-KR,Ridge,gas_kt,ex_post,2025-01,4297.525,4239.8515755325725
-KR,Ridge,gas_kt,ex_post,2025-02,4210.568,4012.188120712036
-KR,Ridge,gas_kt,ex_post,2025-03,3355.905,3497.2872898504856
-KR,Ridge,gas_kt,ex_post,2025-04,2623.954,2664.0121663944833
-KR,Ridge,gas_kt,ex_post,2025-05,2389.638,2235.648922874717
-KR,Ridge,gas_kt,ex_post,2025-06,2001.92,2219.163347781744
-KR,Ridge,gas_kt,ex_post,2025-07,2249.769,2368.482432063739
-KR,Ridge,gas_kt,ex_post,2025-08,2284.816,2509.318247869723
-KR,Ridge,gas_kt,ex_post,2025-09,1917.023,2315.646911526041
-KR,Ridge,gas_kt,ex_post,2025-10,2253.964,2255.4637186649693
-KR,Ridge,gas_kt,ex_post,2025-11,3020.459,2899.5945340916783
-KR,Ridge,gas_kt,ex_post,2025-12,3872.285,3826.776885336676
-KR,Ridge,gas_power_kt,ex_ante,2023-01,1781.686,1781.232108549042
-KR,Ridge,gas_power_kt,ex_ante,2023-02,1755.022,1649.9777859615451
-KR,Ridge,gas_power_kt,ex_ante,2023-03,1438.643,1558.3659158216
-KR,Ridge,gas_power_kt,ex_ante,2023-04,1220.994,1341.1900257141467
-KR,Ridge,gas_power_kt,ex_ante,2023-05,1092.116,1172.007215762641
-KR,Ridge,gas_power_kt,ex_ante,2023-06,1193.304,1202.622666142966
-KR,Ridge,gas_power_kt,ex_ante,2023-07,1363.873,1343.62837980844
-KR,Ridge,gas_power_kt,ex_ante,2023-08,1433.046,1394.4804147500092
-KR,Ridge,gas_power_kt,ex_ante,2023-09,1249.593,1302.5035231143827
-KR,Ridge,gas_power_kt,ex_ante,2023-10,1131.972,1323.344965832524
-KR,Ridge,gas_power_kt,ex_ante,2023-11,1237.333,1425.0039651008328
-KR,Ridge,gas_power_kt,ex_ante,2023-12,1416.034,1649.7677104155332
-KR,Ridge,gas_power_kt,ex_ante,2024-01,1618.307,1648.4072888503501
-KR,Ridge,gas_power_kt,ex_ante,2024-02,1280.397,1593.0416499780815
-KR,Ridge,gas_power_kt,ex_ante,2024-03,1399.924,1363.538730842231
-KR,Ridge,gas_power_kt,ex_ante,2024-04,1055.133,1220.1644318961032
-KR,Ridge,gas_power_kt,ex_ante,2024-05,1160.618,1067.2410252713416
-KR,Ridge,gas_power_kt,ex_ante,2024-06,1317.874,1144.2239091411036
-KR,Ridge,gas_power_kt,ex_ante,2024-07,1471.049,1342.7768052730473
-KR,Ridge,gas_power_kt,ex_ante,2024-08,1643.349,1402.5282244347754
-KR,Ridge,gas_power_kt,ex_ante,2024-09,1281.922,1315.779923688413
-KR,Ridge,gas_power_kt,ex_ante,2024-10,1056.291,1226.6130761709396
-KR,Ridge,gas_power_kt,ex_ante,2024-11,1088.176,1319.1552446059416
-KR,Ridge,gas_power_kt,ex_ante,2024-12,1351.044,1473.076560411059
-KR,Ridge,gas_power_kt,ex_ante,2025-01,1503.429,1595.1276626819963
-KR,Ridge,gas_power_kt,ex_ante,2025-02,1545.019,1495.113873106732
-KR,Ridge,gas_power_kt,ex_ante,2025-03,1380.445,1423.0839132244062
-KR,Ridge,gas_power_kt,ex_ante,2025-04,1240.976,1228.1858475949377
-KR,Ridge,gas_power_kt,ex_ante,2025-05,1262.676,1130.4256899104348
-KR,Ridge,gas_power_kt,ex_ante,2025-06,1063.121,1180.7444780025264
-KR,Ridge,gas_power_kt,ex_ante,2025-07,1316.637,1305.0057574913442
-KR,Ridge,gas_power_kt,ex_ante,2025-08,1394.691,1420.0321023319852
-KR,Ridge,gas_power_kt,ex_ante,2025-09,1006.697,1232.9768834583585
-KR,Ridge,gas_power_kt,ex_ante,2025-10,1183.288,1097.9706017756016
-KR,Ridge,gas_power_kt,ex_ante,2025-11,1301.902,1248.4909566323033
-KR,Ridge,gas_power_kt,ex_ante,2025-12,1306.653,1477.4312469351971
-KR,Ridge,gas_power_kt,ex_post,2023-01,1781.686,1819.4993368651767
-KR,Ridge,gas_power_kt,ex_post,2023-02,1755.022,1614.8930121263186
-KR,Ridge,gas_power_kt,ex_post,2023-03,1438.643,1571.2743487108717
-KR,Ridge,gas_power_kt,ex_post,2023-04,1220.994,1302.3260973803842
-KR,Ridge,gas_power_kt,ex_post,2023-05,1092.116,1235.5688270795206
-KR,Ridge,gas_power_kt,ex_post,2023-06,1193.304,1172.6853813537896
-KR,Ridge,gas_power_kt,ex_post,2023-07,1363.873,1325.9625267104275
-KR,Ridge,gas_power_kt,ex_post,2023-08,1433.046,1475.1182377307512
-KR,Ridge,gas_power_kt,ex_post,2023-09,1249.593,1387.9820076655412
-KR,Ridge,gas_power_kt,ex_post,2023-10,1131.972,1280.2698295841594
-KR,Ridge,gas_power_kt,ex_post,2023-11,1237.333,1471.4238049008306
-KR,Ridge,gas_power_kt,ex_post,2023-12,1416.034,1609.894135776521
-KR,Ridge,gas_power_kt,ex_post,2024-01,1618.307,1619.4029774130822
-KR,Ridge,gas_power_kt,ex_post,2024-02,1280.397,1584.2311997444508
-KR,Ridge,gas_power_kt,ex_post,2024-03,1399.924,1352.5068044465863
-KR,Ridge,gas_power_kt,ex_post,2024-04,1055.133,1205.3962853879277
-KR,Ridge,gas_power_kt,ex_post,2024-05,1160.618,1071.643648576745
-KR,Ridge,gas_power_kt,ex_post,2024-06,1317.874,1168.424451408761
-KR,Ridge,gas_power_kt,ex_post,2024-07,1471.049,1343.5829741209102
-KR,Ridge,gas_power_kt,ex_post,2024-08,1643.349,1549.336977758412
-KR,Ridge,gas_power_kt,ex_post,2024-09,1281.922,1454.697013585529
-KR,Ridge,gas_power_kt,ex_post,2024-10,1056.291,1207.7365650965698
-KR,Ridge,gas_power_kt,ex_post,2024-11,1088.176,1262.8480130818193
-KR,Ridge,gas_power_kt,ex_post,2024-12,1351.044,1495.0091510388454
-KR,Ridge,gas_power_kt,ex_post,2025-01,1503.429,1572.3187139802656
-KR,Ridge,gas_power_kt,ex_post,2025-02,1545.019,1542.625492995039
-KR,Ridge,gas_power_kt,ex_post,2025-03,1380.445,1438.4255594666608
-KR,Ridge,gas_power_kt,ex_post,2025-04,1240.976,1231.4689549206892
-KR,Ridge,gas_power_kt,ex_post,2025-05,1262.676,1126.312087125282
-KR,Ridge,gas_power_kt,ex_post,2025-06,1063.121,1230.6692519980206
-KR,Ridge,gas_power_kt,ex_post,2025-07,1316.637,1380.601654994147
-KR,Ridge,gas_power_kt,ex_post,2025-08,1394.691,1480.3306354980043
-KR,Ridge,gas_power_kt,ex_post,2025-09,1006.697,1282.6734443443436
-KR,Ridge,gas_power_kt,ex_post,2025-10,1183.288,1056.6114095056082
-KR,Ridge,gas_power_kt,ex_post,2025-11,1301.902,1248.882980382276
-KR,Ridge,gas_power_kt,ex_post,2025-12,1306.653,1468.9869045395797
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-01,2849.049,2851.48602257714
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-02,2183.538,2472.230243785479
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-03,1703.591,1876.343414795558
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-04,1270.463,1404.9027829393626
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-05,1058.013,987.7716217187708
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-06,908.6,1004.1266678013862
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-07,918.626,925.2539347836001
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-08,878.449,927.0854214836993
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-09,887.683,897.372598653971
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-10,1121.286,1105.1544901439545
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-11,1865.011,1794.1983087923572
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-12,2664.11,2564.5239027609327
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-01,2803.483,2863.757932623348
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-02,2216.172,2487.1213806824926
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-03,2020.986,1938.3669994224056
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-04,1247.463,1371.4453127982656
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-05,1117.754,1108.467574623834
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-06,965.801,1031.0110613899174
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-07,964.15,970.472574034063
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-08,915.602,960.7368267948433
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-09,855.056,929.0600095745116
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-10,1076.31,1089.3635599983513
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-11,1583.346,1797.890217459369
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-12,2611.085,2536.8549933083245
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-01,2794.096,2789.0801056885393
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-02,2665.549,2428.160774880037
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-03,1975.46,1986.8971892427398
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-04,1382.978,1415.4572673057028
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-05,1126.962,1040.389813517462
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-06,938.799,999.289810635965
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-07,933.132,949.2200090753378
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-08,890.125,932.2971999991005
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-09,910.326,896.9990905804888
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-10,1070.676,1132.7939023308052
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-11,1718.557,1700.9168866450982
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-12,2565.632,2552.4875533010772
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-01,2849.049,2859.3720904127877
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-02,2183.538,2366.2269821638506
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-03,1703.591,1635.41787846241
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-04,1270.463,1340.9489533212231
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-05,1058.013,988.1719039103459
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-06,908.6,1004.2361686128306
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-07,918.626,925.0101481746133
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-08,878.449,926.8709219593272
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-09,887.683,897.3161603786398
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-10,1121.286,1018.1737343423468
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-11,1865.011,1890.0286272533472
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-12,2664.11,2442.9086250627097
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-01,2803.483,2772.158057548137
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-02,2216.172,2318.8665644343155
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-03,2020.986,2031.9319042401028
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-04,1247.463,1155.4221880475955
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-05,1117.754,1128.142123798493
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-06,965.801,1031.0110613899174
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-07,964.15,970.4375361152231
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-08,915.602,958.1996828113818
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-09,855.056,929.0482180767837
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-10,1076.31,956.5922597122363
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-11,1583.346,1663.2196258746415
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-12,2611.085,2478.3513036553013
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-01,2794.096,2753.4146390455885
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-02,2665.549,2648.456157887992
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-03,1975.46,1970.9589174158332
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-04,1382.978,1435.0120300844906
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-05,1126.962,1107.790027087932
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-06,938.799,999.289810635965
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-07,933.132,949.2045504574688
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-08,890.125,932.1954507314806
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-09,910.326,896.9900876405676
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-10,1070.676,1117.5449610247458
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-11,1718.557,1669.6609182348461
-KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-12,2565.632,2452.769661491607
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-01,4630.735,4814.454716413407
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-02,3938.56,4074.8267687486778
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-03,3142.234,3570.672198954761
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-04,2491.457,2639.557563729489
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-05,2150.129,2144.5000113826463
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-06,2101.904,2096.6233620890603
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-07,2282.499,2128.1609076707805
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-08,2311.495,2190.3530305529894
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-09,2137.276,2264.5345697777657
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-10,2253.258,2409.1660702432073
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-11,3102.344,3231.134231570343
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-12,4080.144,4149.082559430079
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-01,4421.79,4356.752636323809
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-02,3496.569,4034.2422504238093
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-03,3420.91,3131.5836589954733
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-04,2302.596,2537.209449378957
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-05,2278.372,2143.9555419006992
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-06,2283.675,2170.824476104043
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-07,2435.199,2294.4271157390003
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-08,2558.951,2388.050397658394
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-09,2136.978,2414.1002862070877
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-10,2132.601,2387.8826055913273
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-11,2671.522,3089.9523954290516
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-12,3962.129,4028.136994229345
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-01,4297.525,4324.041637208866
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-02,4210.568,3748.1263095811137
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-03,3355.905,3361.4357297317447
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-04,2623.954,2620.3546360604523
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-05,2389.638,2188.1476825775453
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-06,2001.92,2246.9265095716473
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-07,2249.769,2079.6580234949065
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-08,2284.816,2271.0186771786266
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-09,1917.023,2178.5866940899245
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-10,2253.964,2182.0844741182677
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-11,3020.459,3000.317149977557
-KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-12,3872.285,4141.343123579147
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-01,4630.735,4825.363619549588
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-02,3938.56,3929.3075481000906
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-03,3142.234,3238.5004328784526
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-04,2491.457,2549.8993796390705
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-05,2150.129,2141.9186972587586
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-06,2101.904,2090.381651973244
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-07,2282.499,2127.2642633454525
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-08,2311.495,2190.547664444731
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-09,2137.276,2264.6108913056137
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-10,2253.258,2287.0080553101634
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-11,3102.344,3365.1684875175974
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-12,4080.144,3978.9031273332894
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-01,4421.79,4231.604227672281
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-02,3496.569,3804.3429401226904
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-03,3420.91,3261.495213528953
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-04,2302.596,2245.4047573092657
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-05,2278.372,2170.8603149783926
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-06,2283.675,2170.824476104043
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-07,2435.199,2296.608303325676
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-08,2558.951,2410.856979739533
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-09,2136.978,2414.1380885041826
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-10,2132.601,2207.823643733631
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-11,2671.522,2907.84719656858
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-12,3962.129,3949.3109995153573
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-01,4297.525,4275.291867343851
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-02,4210.568,4051.059573405531
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-03,3355.905,3340.0597181701924
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-04,2623.954,2646.6854833277725
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-05,2389.638,2279.3138670139415
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-06,2001.92,2246.9265095716473
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-07,2249.769,2079.6305069294212
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-08,2284.816,2271.1481921824425
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-09,1917.023,2178.628518470733
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-10,2253.964,2161.6037125454372
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-11,3020.459,2958.720356497559
-KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-12,3872.285,4006.8556702230317
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-01,1781.686,1922.5372996986002
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-02,1755.022,1615.544032189302
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-03,1438.643,1716.937986784474
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-04,1220.994,1249.3290511986756
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-05,1092.116,1196.409285126314
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-06,1193.304,1135.4193874989971
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-07,1363.873,1229.621291759357
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-08,1433.046,1250.5226754622427
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-09,1249.593,1353.3682061450363
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-10,1131.972,1281.468297271229
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-11,1237.333,1432.0013778433347
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-12,1416.034,1563.4177682593984
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-01,1618.307,1525.206621758268
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-02,1280.397,1585.4298993049317
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-03,1399.924,1247.1506176783093
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-04,1055.133,1182.2724579396543
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-05,1160.618,1029.1991806881106
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-06,1317.874,1147.0482506692986
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-07,1471.049,1296.617538329535
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-08,1643.349,1390.2214837144677
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-09,1281.922,1460.4966297281464
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-10,1056.291,1265.405979354968
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-11,1088.176,1283.5484180444282
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-12,1351.044,1458.7871580003905
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-01,1503.429,1532.3364304513707
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-02,1545.019,1388.8312715619481
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-03,1380.445,1379.779821518913
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-04,1240.976,1179.3178928659363
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-05,1262.676,1153.7117989770622
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-06,1063.121,1242.2342673298872
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-07,1316.637,1142.468444408123
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-08,1394.691,1336.2765378973736
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-09,1006.697,1237.011004513526
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-10,1183.288,1041.7476933866417
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-11,1301.902,1318.1724710216808
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-12,1306.653,1566.2006134998946
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-01,1781.686,1925.4369438685853
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-02,1755.022,1577.2750454549218
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-03,1438.643,1631.2699336304597
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-04,1220.994,1226.1556311033228
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-05,1092.116,1200.7061325566212
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-06,1193.304,1133.528964642314
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-07,1363.873,1229.4905367044028
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-08,1433.046,1250.250745901682
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-09,1249.593,1353.4408543727786
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-10,1131.972,1250.54681738533
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-11,1237.333,1466.5155046903444
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-12,1416.034,1521.7271201491476
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-01,1618.307,1492.7117918756264
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-02,1280.397,1528.0098025139241
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-03,1399.924,1278.8982455318344
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-04,1055.133,1106.4836022018771
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-05,1160.618,1036.1607002933617
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-06,1317.874,1147.0482506692986
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-07,1471.049,1296.437347454707
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-08,1643.349,1388.8024278885155
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-09,1281.922,1460.5315904113534
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-10,1056.291,1220.146065007233
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-11,1088.176,1237.5676911380829
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-12,1351.044,1438.935808113603
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-01,1503.429,1520.6356882833034
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-02,1545.019,1463.311465825297
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-03,1380.445,1374.2615820206527
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-04,1240.976,1185.814278810808
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-05,1262.676,1176.564792713423
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-06,1063.121,1242.2342673298872
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-07,1316.637,1142.3185261884785
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-08,1394.691,1336.2257900520656
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-09,1006.697,1237.0059849030265
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-10,1183.288,1036.672724635854
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-11,1301.902,1307.8704383556214
-KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-12,1306.653,1531.6931369323665
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-01,2849.049,2798.0912533359797
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-02,2183.538,2433.969627248646
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-03,1703.591,1911.4548596696968
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-04,1270.463,1442.2117198641529
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-05,1058.013,1073.5990818663124
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-06,908.6,966.5674584589419
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-07,918.626,903.1587069127926
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-08,878.449,901.3897015950395
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-09,887.683,877.6591895002128
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-10,1121.286,1142.9264190678962
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-11,1865.011,1698.415428989943
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-12,2664.11,2610.840258963251
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-01,2803.483,2823.9659191442033
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-02,2216.172,2382.6424437416113
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-03,2020.986,1856.5130581426072
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-04,1247.463,1383.8086331558554
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-05,1117.754,1110.7564840370972
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-06,965.801,989.959434480994
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-07,964.15,932.0885715903551
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-08,915.602,937.2945748211314
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-09,855.056,918.3350538548079
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-10,1076.31,1158.7951583570969
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-11,1583.346,1731.826964168447
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-12,2611.085,2627.604931922351
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-01,2794.096,2811.615796857761
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-02,2665.549,2389.890039802573
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-03,1975.46,1926.7362140864977
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-04,1382.978,1418.9287706084897
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-05,1126.962,1116.208362879982
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-06,938.799,975.0365886206877
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-07,933.132,921.2031729945353
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-08,890.125,915.4344065955136
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-09,910.326,900.3920787397358
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-10,1070.676,1161.768836435484
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-11,1718.557,1690.1060196141405
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-12,2565.632,2616.2872055313
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-01,2849.049,2847.025355748528
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-02,2183.538,2313.7831650569888
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-03,1703.591,1716.4600997945058
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-04,1270.463,1384.8238857112476
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-05,1058.013,1085.3052101552535
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-06,908.6,965.3511080313865
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-07,918.626,902.8724598645
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-08,878.449,899.1608727034233
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-09,887.683,884.1240157145928
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-10,1121.286,998.0147025782549
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-11,1865.011,1792.725910698982
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-12,2664.11,2468.283046665354
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-01,2803.483,2720.583664901949
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-02,2216.172,2186.7575622494255
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-03,2020.986,1950.6468154695494
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-04,1247.463,1200.148892725916
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-05,1117.754,1126.0654890159067
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-06,965.801,974.4159119213625
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-07,964.15,916.960711939017
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-08,915.602,953.350098594417
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-09,855.056,915.5956987195943
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-10,1076.31,1053.6539752905792
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-11,1583.346,1601.5605558157945
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-12,2611.085,2591.351733173813
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-01,2794.096,2774.38864198742
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-02,2665.549,2650.780637757602
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-03,1975.46,1959.1485638035776
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-04,1382.978,1435.96916927149
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-05,1126.962,1167.9429777676205
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-06,938.799,980.1930966972543
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-07,933.132,921.969278333614
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-08,890.125,914.8878153270002
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-09,910.326,900.3778463000601
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-10,1070.676,1149.37338881451
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-11,1718.557,1659.2922644238815
-KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-12,2565.632,2501.9451375726294
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-01,4630.735,4438.3649307564765
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-02,3938.56,4015.195457235837
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-03,3142.234,3536.60395202037
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-04,2491.457,2838.654821765642
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-05,2150.129,2352.5290376199637
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-06,2101.904,2137.670396609295
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-07,2282.499,2342.264799155951
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-08,2311.495,2345.7589635716145
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-09,2137.276,2228.9778870354176
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-10,2253.258,2356.5306143832236
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-11,3102.344,3213.4904272484127
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-12,4080.144,4285.048076563277
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-01,4421.79,4407.649198535348
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-02,3496.569,3987.6597095844145
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-03,3420.91,3283.6015291780054
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-04,2302.596,2622.093818577913
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-05,2278.372,2215.5923208077493
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-06,2283.675,2163.617599189612
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-07,2435.199,2352.2592235802913
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-08,2558.951,2347.13149698824
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-09,2136.978,2287.528073450024
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-10,2132.601,2345.307505211434
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-11,2671.522,3032.5832541769355
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-12,3962.129,4225.868147248983
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-01,4297.525,4327.734416440433
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-02,4210.568,3795.202358148752
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-03,3355.905,3288.160187974487
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-04,2623.954,2634.0615037965504
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-05,2389.638,2247.885754004702
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-06,2001.92,2224.680170565268
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-07,2249.769,2142.2638963729423
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-08,2284.816,2312.568732995102
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-09,1917.023,2074.8413086802834
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-10,2253.964,2205.9798528745787
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-11,3020.459,3007.1717207818756
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-12,3872.285,4112.627020788376
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-01,4630.735,4466.487415600067
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-02,3938.56,3863.912788634921
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-03,3142.234,3301.4389513787305
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-04,2491.457,2710.684932743977
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-05,2150.129,2421.1986830703445
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-06,2101.904,2231.8381253161124
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-07,2282.499,2331.2931757741003
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-08,2311.495,2353.334945324294
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-09,2137.276,2368.7352496551766
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-10,2253.258,2259.6250623003675
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-11,3102.344,3338.5645719069234
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-12,4080.144,4059.687643603011
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-01,4421.79,4285.207029898073
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-02,3496.569,3751.1024524684067
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-03,3420.91,3422.59101066972
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-04,2302.596,2341.172114869493
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-05,2278.372,2227.771606483237
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-06,2283.675,2166.0904679067944
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-07,2435.199,2394.498834364752
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-08,2558.951,2276.222030612129
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-09,2136.978,2402.5534109381865
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-10,2132.601,2221.33850853791
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-11,2671.522,2863.4663643735935
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-12,3962.129,4102.045523201484
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-01,4297.525,4274.723005011524
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-02,4210.568,4109.158859370502
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-03,3355.905,3278.13352216777
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-04,2623.954,2656.504751241944
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-05,2389.638,2320.0063189973516
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-06,2001.92,2227.259003039473
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-07,2249.769,2262.850770691599
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-08,2284.816,2211.465272028929
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-09,1917.023,2151.1711725437235
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-10,2253.964,2192.0377922416797
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-11,3020.459,2968.212132423615
-KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-12,3872.285,3970.588521349285
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-01,1781.686,1929.290262120225
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-02,1755.022,1720.8892191368764
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-03,1438.643,1700.630674539196
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-04,1220.994,1460.6171707097944
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-05,1092.116,1244.8637457554632
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-06,1193.304,1270.725218810863
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-07,1363.873,1396.08942169079
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-08,1433.046,1394.5633786396847
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-09,1249.593,1272.1480426596127
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-10,1131.972,1254.4592008017323
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-11,1237.333,1459.3379783764956
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-12,1416.034,1596.6087199823132
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-01,1618.307,1666.7485616137058
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-02,1280.397,1563.341667656914
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-03,1399.924,1343.504250904219
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-04,1055.133,1264.2871498047846
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-05,1160.618,979.6934954891118
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-06,1317.874,1156.6796455183323
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-07,1471.049,1319.8127177207898
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-08,1643.349,1439.1745330884683
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-09,1281.922,1230.3957066675216
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-10,1056.291,1245.9188004764737
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-11,1088.176,1282.720378668656
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-12,1351.044,1399.7380404895962
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-01,1503.429,1554.5082412476893
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-02,1545.019,1407.5481871214433
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-03,1380.445,1372.8054534517428
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-04,1240.976,1187.801909983906
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-05,1262.676,1130.7157974230172
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-06,1063.121,1198.9162643200448
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-07,1316.637,1366.3159206194625
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-08,1394.691,1396.189974658189
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-09,1006.697,1166.118576477029
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-10,1183.288,1033.3101195078552
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-11,1301.902,1299.7753845221239
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-12,1306.653,1545.0618888660904
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-01,1781.686,1931.9286224232121
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-02,1755.022,1685.9840685784368
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-03,1438.643,1684.420889230883
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-04,1220.994,1409.021828778444
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-05,1092.116,1295.284554361495
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-06,1193.304,1268.3070024007172
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-07,1363.873,1408.8775086346805
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-08,1433.046,1430.8011537289233
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-09,1249.593,1416.0620067893651
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-10,1131.972,1212.4263575250743
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-11,1237.333,1490.0718563919079
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-12,1416.034,1555.856836725589
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-01,1618.307,1636.6222283956217
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-02,1280.397,1508.1717351053296
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-03,1399.924,1383.9704552483424
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-04,1055.133,1174.375651475591
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-05,1160.618,983.3314767182119
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-06,1317.874,1182.42113088696
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-07,1471.049,1362.8386703448234
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-08,1643.349,1503.7510680247783
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-09,1281.922,1457.5240476626211
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-10,1056.291,1208.051361820246
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-11,1088.176,1248.4478983211206
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-12,1351.044,1381.3041913298414
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-01,1503.429,1549.3647767952832
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-02,1545.019,1470.6176696826105
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-03,1380.445,1381.255746714446
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-04,1240.976,1192.7978054750347
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-05,1262.676,1139.973755480125
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-06,1063.121,1233.158638214433
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-07,1316.637,1477.6526931294884
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-08,1394.691,1374.6368648834955
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-09,1006.697,1300.4256321856694
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-10,1183.288,1036.3136316762145
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-11,1301.902,1291.5431873541318
-KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-12,1306.653,1534.399508070676
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-01,2849.049,2760.307561076134
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-02,2183.538,2370.7791527408285
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-03,1703.591,1882.4694100122163
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-04,1270.463,1373.6102692491638
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-05,1058.013,1069.8348160479154
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-06,908.6,1033.265493113011
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-07,918.626,1016.8160513184066
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-08,878.449,1004.7811483491311
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-09,887.683,990.6403453614308
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-10,1121.286,1136.5144233094322
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-11,1865.011,1671.9506416384895
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-12,2664.11,2533.625222527276
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-01,2803.483,2722.8361147884957
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-02,2216.172,2325.819543476746
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-03,2020.986,1834.3473008428641
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-04,1247.463,1324.007463858097
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-05,1117.754,1051.8113038996353
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-06,965.801,1021.9887264472542
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-07,964.15,1018.664056225822
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-08,915.602,1015.5729544591717
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-09,855.056,1007.1010973923218
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-10,1076.31,1150.426636670765
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-11,1583.346,1696.4574870843755
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-12,2611.085,2562.038583625542
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-01,2794.096,2748.078777555713
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-02,2665.549,2324.206972297081
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-03,1975.46,1847.3804356487774
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-04,1382.978,1310.507492538263
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-05,1126.962,1046.1021474746688
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-06,938.799,1014.221510662245
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-07,933.132,1010.4521730253852
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-08,890.125,1006.7227484701763
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-09,910.326,1001.2563666138979
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-10,1070.676,1146.6303916266868
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-11,1718.557,1692.2779038382878
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-12,2565.632,2547.6573554398346
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-01,2849.049,2770.1378849640205
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-02,2183.538,2249.565986884264
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-03,1703.591,1643.1409673983812
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-04,1270.463,1317.8879487129452
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-05,1058.013,1072.2247596084758
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-06,908.6,1033.9330132226717
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-07,918.626,1016.7313397763121
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-08,878.449,1004.640675236579
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-09,887.683,990.5849087676706
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-10,1121.286,1067.8068268182863
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-11,1865.011,1767.288533840018
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-12,2664.11,2389.4827366911272
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-01,2803.483,2609.7599017796765
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-02,2216.172,2135.774466085313
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-03,2020.986,1931.5701509792907
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-04,1247.463,1142.557515007048
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-05,1117.754,1067.1823779598046
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-06,965.801,1021.9887264472542
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-07,964.15,1018.6676272548331
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-08,915.602,1014.997647939341
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-09,855.056,1007.0941635925827
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-10,1076.31,1044.6016076738545
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-11,1583.346,1565.3694423382647
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-12,2611.085,2491.0122748187305
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-01,2794.096,2703.3451384968967
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-02,2665.549,2586.55948465324
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-03,1975.46,1830.8818506552352
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-04,1382.978,1327.6159495815816
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-05,1126.962,1099.1492048609996
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-06,938.799,1014.221510662245
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-07,933.132,1010.4382953127786
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-08,890.125,1006.6982237854446
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-09,910.326,1001.2515070813589
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-10,1070.676,1134.1906678623782
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-11,1718.557,1661.373017639721
-KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-12,2565.632,2428.2089294760885
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-01,4630.735,4340.068658650033
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-02,3938.56,3897.117150420916
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-03,3142.234,3321.3753510019583
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-04,2491.457,2662.53288879667
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-05,2150.129,2244.403125872656
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-06,2101.904,2184.5016294124152
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-07,2282.499,2174.529005304519
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-08,2311.495,2187.283027728558
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-09,2137.276,2200.593664344369
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-10,2253.258,2414.455739300094
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-11,3102.344,3121.2072614076433
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-12,4080.144,4183.31658388299
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-01,4421.79,4387.382317872529
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-02,3496.569,3899.2578948397245
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-03,3420.91,3269.3027483420237
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-04,2302.596,2605.5639657446886
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-05,2278.372,2225.6293990310905
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-06,2283.675,2182.1893930867786
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-07,2435.199,2188.052082407929
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-08,2558.951,2201.694110175752
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-09,2136.978,2234.857114951889
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-10,2132.601,2441.3922314135407
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-11,2671.522,3145.2989189027426
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-12,3962.129,4189.193802396666
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-01,4297.525,4386.350105760304
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-02,4210.568,3872.0183823888465
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-03,3355.905,3287.161609909001
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-04,2623.954,2600.875809842636
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-05,2389.638,2245.093511007852
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-06,2001.92,2203.2853106512816
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-07,2249.769,2193.1782188907487
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-08,2284.816,2195.9081079539783
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-09,1917.023,2199.9739149077946
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-10,2253.964,2389.7973374069743
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-11,3020.459,3093.4895549362736
-KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-12,3872.285,4126.7789204159135
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-01,4630.735,4351.808045026464
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-02,3938.56,3747.453164524354
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-03,3142.234,3012.6563760747304
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-04,2491.457,2587.664291526662
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-05,2150.129,2249.0197947923584
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-06,2101.904,2185.764485196177
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-07,2282.499,2174.5594362000675
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-08,2311.495,2187.3894831943694
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-09,2137.276,2200.6401073041948
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-10,2253.258,2318.381652376602
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-11,3102.344,3245.1643982219834
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-12,4080.144,4006.1239148664527
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-01,4421.79,4250.802522487718
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-02,3496.569,3664.6037153327998
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-03,3420.91,3391.599632190593
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-04,2302.596,2362.0467765129397
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-05,2278.372,2246.7832800765946
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-06,2283.675,2182.1893930867786
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-07,2435.199,2188.2023343930923
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-08,2558.951,2208.591318989027
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-09,2136.978,2234.8971466057155
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-10,2132.601,2295.883529785297
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-11,2671.522,2977.2192932888165
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-12,3962.129,4104.005931247575
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-01,4297.525,4333.579617544396
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-02,4210.568,4184.571584653776
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-03,3355.905,3266.7001358995667
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-04,2623.954,2623.2354721860115
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-05,2389.638,2316.9651254088285
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-06,2001.92,2203.2853106512816
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-07,2249.769,2193.258757353294
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-08,2284.816,2195.9834615788836
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-09,1917.023,2199.9838687440047
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-10,2253.964,2373.129480509557
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-11,3020.459,3054.7214439506847
-KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-12,3872.285,3985.3896387864106
+KR,Ridge,gas_city_kt,ex_ante,2023-01,2849.049,2792.1688466845517
+KR,Ridge,gas_city_kt,ex_ante,2023-02,2183.538,2450.3111758775167
+KR,Ridge,gas_city_kt,ex_ante,2023-03,1703.591,1944.3452192999296
+KR,Ridge,gas_city_kt,ex_ante,2023-04,1270.463,1374.3827805824176
+KR,Ridge,gas_city_kt,ex_ante,2023-05,1058.013,990.4226393103132
+KR,Ridge,gas_city_kt,ex_ante,2023-06,908.6,953.9904834816097
+KR,Ridge,gas_city_kt,ex_ante,2023-07,918.626,883.4074078156752
+KR,Ridge,gas_city_kt,ex_ante,2023-08,878.449,842.373585574736
+KR,Ridge,gas_city_kt,ex_ante,2023-09,887.683,894.7182701281179
+KR,Ridge,gas_city_kt,ex_ante,2023-10,1121.286,1133.893957793529
+KR,Ridge,gas_city_kt,ex_ante,2023-11,1865.011,1754.7677400554376
+KR,Ridge,gas_city_kt,ex_ante,2023-12,2664.11,2692.71295065329
+KR,Ridge,gas_city_kt,ex_ante,2024-01,2803.483,2790.0007136162358
+KR,Ridge,gas_city_kt,ex_ante,2024-02,2216.172,2374.1200251540163
+KR,Ridge,gas_city_kt,ex_ante,2024-03,2020.986,1914.7870606596578
+KR,Ridge,gas_city_kt,ex_ante,2024-04,1247.463,1337.3415320717654
+KR,Ridge,gas_city_kt,ex_ante,2024-05,1117.754,1052.4909354442304
+KR,Ridge,gas_city_kt,ex_ante,2024-06,965.801,998.2360238669494
+KR,Ridge,gas_city_kt,ex_ante,2024-07,964.15,945.2731507842085
+KR,Ridge,gas_city_kt,ex_ante,2024-08,915.602,894.4649509214129
+KR,Ridge,gas_city_kt,ex_ante,2024-09,855.056,958.1067162065657
+KR,Ridge,gas_city_kt,ex_ante,2024-10,1076.31,1156.787259450653
+KR,Ridge,gas_city_kt,ex_ante,2024-11,1583.346,1841.111254553294
+KR,Ridge,gas_city_kt,ex_ante,2024-12,2611.085,2664.541205991782
+KR,Ridge,gas_city_kt,ex_ante,2025-01,2794.096,2831.153203732335
+KR,Ridge,gas_city_kt,ex_ante,2025-02,2665.549,2402.113694140129
+KR,Ridge,gas_city_kt,ex_ante,2025-03,1975.46,1985.412543413103
+KR,Ridge,gas_city_kt,ex_ante,2025-04,1382.978,1382.153866790333
+KR,Ridge,gas_city_kt,ex_ante,2025-05,1126.962,1079.8969371897485
+KR,Ridge,gas_city_kt,ex_ante,2025-06,938.799,1002.1621415311628
+KR,Ridge,gas_city_kt,ex_ante,2025-07,933.132,975.2319389206723
+KR,Ridge,gas_city_kt,ex_ante,2025-08,890.125,930.7579905792695
+KR,Ridge,gas_city_kt,ex_ante,2025-09,910.326,964.6732783742207
+KR,Ridge,gas_city_kt,ex_ante,2025-10,1070.676,1163.044287988533
+KR,Ridge,gas_city_kt,ex_ante,2025-11,1718.557,1751.6410993584243
+KR,Ridge,gas_city_kt,ex_ante,2025-12,2565.632,2628.7405056202488
+KR,Ridge,gas_city_kt,ex_post,2023-01,2849.049,2814.300756399087
+KR,Ridge,gas_city_kt,ex_post,2023-02,2183.538,2341.659778337482
+KR,Ridge,gas_city_kt,ex_post,2023-03,1703.591,1727.8074932189068
+KR,Ridge,gas_city_kt,ex_post,2023-04,1270.463,1302.622710226315
+KR,Ridge,gas_city_kt,ex_post,2023-05,1058.013,1005.090641094061
+KR,Ridge,gas_city_kt,ex_post,2023-06,908.6,930.4467652913348
+KR,Ridge,gas_city_kt,ex_post,2023-07,918.626,871.3235828435797
+KR,Ridge,gas_city_kt,ex_post,2023-08,878.449,859.4015293991038
+KR,Ridge,gas_city_kt,ex_post,2023-09,887.683,894.3450133755163
+KR,Ridge,gas_city_kt,ex_post,2023-10,1121.286,1038.6375909984158
+KR,Ridge,gas_city_kt,ex_post,2023-11,1865.011,1862.1780486128969
+KR,Ridge,gas_city_kt,ex_post,2023-12,2664.11,2565.0279670884743
+KR,Ridge,gas_city_kt,ex_post,2024-01,2803.483,2694.4429882201193
+KR,Ridge,gas_city_kt,ex_post,2024-02,2216.172,2227.921547222387
+KR,Ridge,gas_city_kt,ex_post,2024-03,2020.986,1982.5513688871897
+KR,Ridge,gas_city_kt,ex_post,2024-04,1247.463,1149.3667236258482
+KR,Ridge,gas_city_kt,ex_post,2024-05,1117.754,1077.4124140300505
+KR,Ridge,gas_city_kt,ex_post,2024-06,965.801,978.5877588132986
+KR,Ridge,gas_city_kt,ex_post,2024-07,964.15,912.758736863424
+KR,Ridge,gas_city_kt,ex_post,2024-08,915.602,896.3373979050126
+KR,Ridge,gas_city_kt,ex_post,2024-09,855.056,913.8674266102926
+KR,Ridge,gas_city_kt,ex_post,2024-10,1076.31,1037.5457954505082
+KR,Ridge,gas_city_kt,ex_post,2024-11,1583.346,1687.3293360572916
+KR,Ridge,gas_city_kt,ex_post,2024-12,2611.085,2637.9237352702935
+KR,Ridge,gas_city_kt,ex_post,2025-01,2794.096,2782.0605952222927
+KR,Ridge,gas_city_kt,ex_post,2025-02,2665.549,2618.276091888725
+KR,Ridge,gas_city_kt,ex_post,2025-03,1975.46,1988.16110245523
+KR,Ridge,gas_city_kt,ex_post,2025-04,1382.978,1400.5889699026975
+KR,Ridge,gas_city_kt,ex_post,2025-05,1126.962,1127.5706353415749
+KR,Ridge,gas_city_kt,ex_post,2025-06,938.799,1016.3465944833811
+KR,Ridge,gas_city_kt,ex_post,2025-07,933.132,945.1245621118001
+KR,Ridge,gas_city_kt,ex_post,2025-08,890.125,929.4183100697528
+KR,Ridge,gas_city_kt,ex_post,2025-09,910.326,952.0487919800782
+KR,Ridge,gas_city_kt,ex_post,2025-10,1070.676,1105.6404502501593
+KR,Ridge,gas_city_kt,ex_post,2025-11,1718.557,1729.2474194376464
+KR,Ridge,gas_city_kt,ex_post,2025-12,2565.632,2546.4204597293133
+KR,Ridge,gas_kt,ex_ante,2023-01,4630.735,4563.723558076124
+KR,Ridge,gas_kt,ex_ante,2023-02,3938.56,4134.635603451265
+KR,Ridge,gas_kt,ex_ante,2023-03,3142.234,3466.9020845681143
+KR,Ridge,gas_kt,ex_ante,2023-04,2491.457,2802.228952742926
+KR,Ridge,gas_kt,ex_ante,2023-05,2150.129,2212.432162673313
+KR,Ridge,gas_kt,ex_ante,2023-06,2101.904,2289.180996932477
+KR,Ridge,gas_kt,ex_ante,2023-07,2282.499,2327.3869584466624
+KR,Ridge,gas_kt,ex_ante,2023-08,2311.495,2300.7851225223017
+KR,Ridge,gas_kt,ex_ante,2023-09,2137.276,2189.83300975913
+KR,Ridge,gas_kt,ex_ante,2023-10,2253.258,2463.293636332159
+KR,Ridge,gas_kt,ex_ante,2023-11,3102.344,3286.3379098258656
+KR,Ridge,gas_kt,ex_ante,2023-12,4080.144,4447.712899021581
+KR,Ridge,gas_kt,ex_ante,2024-01,4421.79,4572.989397337005
+KR,Ridge,gas_kt,ex_ante,2024-02,3496.569,4043.7776429371334
+KR,Ridge,gas_kt,ex_ante,2024-03,3420.91,3379.4097835970388
+KR,Ridge,gas_kt,ex_ante,2024-04,2302.596,2553.1066694840383
+KR,Ridge,gas_kt,ex_ante,2024-05,2278.372,2167.365462438374
+KR,Ridge,gas_kt,ex_ante,2024-06,2283.675,2204.750373794677
+KR,Ridge,gas_kt,ex_ante,2024-07,2435.199,2329.6271406925034
+KR,Ridge,gas_kt,ex_ante,2024-08,2558.951,2281.746571388342
+KR,Ridge,gas_kt,ex_ante,2024-09,2136.978,2181.7552256462573
+KR,Ridge,gas_kt,ex_ante,2024-10,2132.601,2348.7698710256986
+KR,Ridge,gas_kt,ex_ante,2024-11,2671.522,3226.484027329759
+KR,Ridge,gas_kt,ex_ante,2024-12,3962.129,4289.308741154852
+KR,Ridge,gas_kt,ex_ante,2025-01,4297.525,4558.88612877001
+KR,Ridge,gas_kt,ex_ante,2025-02,4210.568,3982.2829991634253
+KR,Ridge,gas_kt,ex_ante,2025-03,3355.905,3412.24570506852
+KR,Ridge,gas_kt,ex_ante,2025-04,2623.954,2613.999143251505
+KR,Ridge,gas_kt,ex_ante,2025-05,2389.638,2199.5025586960705
+KR,Ridge,gas_kt,ex_ante,2025-06,2001.92,2194.8502073929476
+KR,Ridge,gas_kt,ex_ante,2025-07,2249.769,2362.9976487913777
+KR,Ridge,gas_kt,ex_ante,2025-08,2284.816,2360.98610530163
+KR,Ridge,gas_kt,ex_ante,2025-09,1917.023,2151.0585142031937
+KR,Ridge,gas_kt,ex_ante,2025-10,2253.964,2275.0248855148056
+KR,Ridge,gas_kt,ex_ante,2025-11,3020.459,3007.983525228505
+KR,Ridge,gas_kt,ex_ante,2025-12,3872.285,4156.593288747408
+KR,Ridge,gas_kt,ex_post,2023-01,4630.735,4654.56875290245
+KR,Ridge,gas_kt,ex_post,2023-02,3938.56,3941.502689601288
+KR,Ridge,gas_kt,ex_post,2023-03,3142.234,3223.4785193129283
+KR,Ridge,gas_kt,ex_post,2023-04,2491.457,2648.3874124327454
+KR,Ridge,gas_kt,ex_post,2023-05,2150.129,2352.656865417109
+KR,Ridge,gas_kt,ex_post,2023-06,2101.904,2222.630462814768
+KR,Ridge,gas_kt,ex_post,2023-07,2282.499,2285.1368252162665
+KR,Ridge,gas_kt,ex_post,2023-08,2311.495,2438.2918749789983
+KR,Ridge,gas_kt,ex_post,2023-09,2137.276,2303.275042987911
+KR,Ridge,gas_kt,ex_post,2023-10,2253.258,2285.7160587559683
+KR,Ridge,gas_kt,ex_post,2023-11,3102.344,3484.3867658411755
+KR,Ridge,gas_kt,ex_post,2023-12,4080.144,4240.803166312444
+KR,Ridge,gas_kt,ex_post,2024-01,4421.79,4417.542074873145
+KR,Ridge,gas_kt,ex_post,2024-02,3496.569,3852.202648794678
+KR,Ridge,gas_kt,ex_post,2024-03,3420.91,3449.636778473256
+KR,Ridge,gas_kt,ex_post,2024-04,2302.596,2302.366240981446
+KR,Ridge,gas_kt,ex_post,2024-05,2278.372,2203.8753072003547
+KR,Ridge,gas_kt,ex_post,2024-06,2283.675,2209.7566968791543
+KR,Ridge,gas_kt,ex_post,2024-07,2435.199,2290.69762064726
+KR,Ridge,gas_kt,ex_post,2024-08,2558.951,2465.281568263722
+KR,Ridge,gas_kt,ex_post,2024-09,2136.978,2295.0973852920533
+KR,Ridge,gas_kt,ex_post,2024-10,2132.601,2176.335841145349
+KR,Ridge,gas_kt,ex_post,2024-11,2671.522,2965.1873471163003
+KR,Ridge,gas_kt,ex_post,2024-12,3962.129,4284.069035721301
+KR,Ridge,gas_kt,ex_post,2025-01,4297.525,4471.7317142089805
+KR,Ridge,gas_kt,ex_post,2025-02,4210.568,4298.739743452762
+KR,Ridge,gas_kt,ex_post,2025-03,3355.905,3433.532155009571
+KR,Ridge,gas_kt,ex_post,2025-04,2623.954,2639.6008034707825
+KR,Ridge,gas_kt,ex_post,2025-05,2389.638,2250.6485782479112
+KR,Ridge,gas_kt,ex_post,2025-06,2001.92,2270.813107835859
+KR,Ridge,gas_kt,ex_post,2025-07,2249.769,2419.748739798266
+KR,Ridge,gas_kt,ex_post,2025-08,2284.816,2430.555612583738
+KR,Ridge,gas_kt,ex_post,2025-09,1917.023,2194.9509180304567
+KR,Ridge,gas_kt,ex_post,2025-10,2253.964,2157.8921357941244
+KR,Ridge,gas_kt,ex_post,2025-11,3020.459,2982.1991809101046
+KR,Ridge,gas_kt,ex_post,2025-12,3872.285,4049.786957289538
+KR,Ridge,gas_power_kt,ex_ante,2023-01,1781.686,1859.9545517546587
+KR,Ridge,gas_power_kt,ex_ante,2023-02,1755.022,1699.3873815204613
+KR,Ridge,gas_power_kt,ex_ante,2023-03,1438.643,1506.381105053712
+KR,Ridge,gas_power_kt,ex_ante,2023-04,1220.994,1388.833262758564
+KR,Ridge,gas_power_kt,ex_ante,2023-05,1092.116,1184.561098254477
+KR,Ridge,gas_power_kt,ex_ante,2023-06,1193.304,1284.179908781281
+KR,Ridge,gas_power_kt,ex_ante,2023-07,1363.873,1417.0428118020682
+KR,Ridge,gas_power_kt,ex_ante,2023-08,1433.046,1462.858909033342
+KR,Ridge,gas_power_kt,ex_ante,2023-09,1249.593,1304.2613421054168
+KR,Ridge,gas_power_kt,ex_ante,2023-10,1131.972,1311.3645350305558
+KR,Ridge,gas_power_kt,ex_ante,2023-11,1237.333,1450.3259911300245
+KR,Ridge,gas_power_kt,ex_ante,2023-12,1416.034,1725.9111153979497
+KR,Ridge,gas_power_kt,ex_ante,2024-01,1618.307,1746.255995510039
+KR,Ridge,gas_power_kt,ex_ante,2024-02,1280.397,1609.0782163487747
+KR,Ridge,gas_power_kt,ex_ante,2024-03,1399.924,1391.183896360788
+KR,Ridge,gas_power_kt,ex_ante,2024-04,1055.133,1211.29505106553
+KR,Ridge,gas_power_kt,ex_ante,2024-05,1160.618,1105.9432574420484
+KR,Ridge,gas_power_kt,ex_ante,2024-06,1317.874,1216.098001282377
+KR,Ridge,gas_power_kt,ex_ante,2024-07,1471.049,1405.6635445590239
+KR,Ridge,gas_power_kt,ex_ante,2024-08,1643.349,1419.6512607118507
+KR,Ridge,gas_power_kt,ex_ante,2024-09,1281.922,1316.0784795836441
+KR,Ridge,gas_power_kt,ex_ante,2024-10,1056.291,1220.5715942356333
+KR,Ridge,gas_power_kt,ex_ante,2024-11,1088.176,1377.1515384542968
+KR,Ridge,gas_power_kt,ex_ante,2024-12,1351.044,1614.913460831352
+KR,Ridge,gas_power_kt,ex_ante,2025-01,1503.429,1686.2973597907683
+KR,Ridge,gas_power_kt,ex_ante,2025-02,1545.019,1545.8837124218735
+KR,Ridge,gas_power_kt,ex_ante,2025-03,1380.445,1418.4326863606366
+KR,Ridge,gas_power_kt,ex_ante,2025-04,1240.976,1221.6897092884915
+KR,Ridge,gas_power_kt,ex_ante,2025-05,1262.676,1131.846487619493
+KR,Ridge,gas_power_kt,ex_ante,2025-06,1063.121,1217.1592266027615
+KR,Ridge,gas_power_kt,ex_ante,2025-07,1316.637,1341.789435680158
+KR,Ridge,gas_power_kt,ex_ante,2025-08,1394.691,1419.5651474664821
+KR,Ridge,gas_power_kt,ex_ante,2025-09,1006.697,1228.4497730551595
+KR,Ridge,gas_power_kt,ex_ante,2025-10,1183.288,1077.635725143324
+KR,Ridge,gas_power_kt,ex_ante,2025-11,1301.902,1259.7405878075378
+KR,Ridge,gas_power_kt,ex_ante,2025-12,1306.653,1553.1306632121473
+KR,Ridge,gas_power_kt,ex_post,2023-01,1781.686,1921.28751450979
+KR,Ridge,gas_power_kt,ex_post,2023-02,1755.022,1628.1166090365857
+KR,Ridge,gas_power_kt,ex_post,2023-03,1438.643,1488.7291827268039
+KR,Ridge,gas_power_kt,ex_post,2023-04,1220.994,1318.0274416505413
+KR,Ridge,gas_power_kt,ex_post,2023-05,1092.116,1294.989706197698
+KR,Ridge,gas_power_kt,ex_post,2023-06,1193.304,1244.97357503281
+KR,Ridge,gas_power_kt,ex_post,2023-07,1363.873,1389.5511981254836
+KR,Ridge,gas_power_kt,ex_post,2023-08,1433.046,1574.4541045365074
+KR,Ridge,gas_power_kt,ex_post,2023-09,1249.593,1409.3843999868416
+KR,Ridge,gas_power_kt,ex_post,2023-10,1131.972,1237.7786702833514
+KR,Ridge,gas_power_kt,ex_post,2023-11,1237.333,1531.4148904020278
+KR,Ridge,gas_power_kt,ex_post,2023-12,1416.034,1651.6486064088676
+KR,Ridge,gas_power_kt,ex_post,2024-01,1618.307,1692.5351225642462
+KR,Ridge,gas_power_kt,ex_post,2024-02,1280.397,1570.596701199121
+KR,Ridge,gas_power_kt,ex_post,2024-03,1399.924,1391.7940879886476
+KR,Ridge,gas_power_kt,ex_post,2024-04,1055.133,1155.5971509745943
+KR,Ridge,gas_power_kt,ex_post,2024-05,1160.618,1116.8738246143562
+KR,Ridge,gas_power_kt,ex_post,2024-06,1317.874,1237.0233036344478
+KR,Ridge,gas_power_kt,ex_post,2024-07,1471.049,1397.718831766657
+KR,Ridge,gas_power_kt,ex_post,2024-08,1643.349,1589.8782599809463
+KR,Ridge,gas_power_kt,ex_post,2024-09,1281.922,1454.5750482521737
+KR,Ridge,gas_power_kt,ex_post,2024-10,1056.291,1172.534311286762
+KR,Ridge,gas_power_kt,ex_post,2024-11,1088.176,1278.5789478103807
+KR,Ridge,gas_power_kt,ex_post,2024-12,1351.044,1634.1277923077066
+KR,Ridge,gas_power_kt,ex_post,2025-01,1503.429,1651.5817702424083
+KR,Ridge,gas_power_kt,ex_post,2025-02,1545.019,1639.939975492427
+KR,Ridge,gas_power_kt,ex_post,2025-03,1380.445,1434.5821420164616
+KR,Ridge,gas_power_kt,ex_post,2025-04,1240.976,1228.7044857187868
+KR,Ridge,gas_power_kt,ex_post,2025-05,1262.676,1136.878375877477
+KR,Ridge,gas_power_kt,ex_post,2025-06,1063.121,1269.4655267758449
+KR,Ridge,gas_power_kt,ex_post,2025-07,1316.637,1411.141710876676
+KR,Ridge,gas_power_kt,ex_post,2025-08,1394.691,1479.0343823639582
+KR,Ridge,gas_power_kt,ex_post,2025-09,1006.697,1275.1828203556017
+KR,Ridge,gas_power_kt,ex_post,2025-10,1183.288,1024.5495084836466
+KR,Ridge,gas_power_kt,ex_post,2025-11,1301.902,1255.9489235025874
+KR,Ridge,gas_power_kt,ex_post,2025-12,1306.653,1529.080682345932
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-01,2849.049,2854.318380450999
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-02,2183.538,2382.104294057445
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-03,1703.591,1946.5216988521613
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-04,1270.463,1379.2213965971214
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-05,1058.013,994.0219623979322
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-06,908.6,923.472719295446
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-07,918.626,926.1750675583847
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-08,878.449,852.3453995981633
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-09,887.683,845.8035270490203
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-10,1121.286,1159.3353868977083
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-11,1865.011,1792.1799055803885
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2023-12,2664.11,2685.4556909726516
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-01,2803.483,2841.072141656523
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-02,2216.172,2364.9155981024746
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-03,2020.986,1984.3857824624993
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-04,1247.463,1342.444622378319
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-05,1117.754,1130.6009298373033
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-06,965.801,1006.2464023090872
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-07,964.15,983.5882184682412
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-08,915.602,936.2400565224306
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-09,855.056,908.0811024000427
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-10,1076.31,1170.880819956481
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-11,1583.346,1755.3741411118358
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2024-12,2611.085,2702.697737060316
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-01,2794.096,2803.4045523201253
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-02,2665.549,2339.585721425926
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-03,1975.46,1934.9523192392066
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-04,1382.978,1444.464146225071
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-05,1126.962,1048.6929713105255
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-06,938.799,951.2195091899871
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-07,933.132,942.9009535800908
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-08,890.125,927.8318310945348
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-09,910.326,867.0067780482016
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-10,1070.676,1184.9678029956203
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-11,1718.557,1694.5159718715456
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_ante,2025-12,2565.632,2602.4264317111874
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-01,2849.049,2862.4936249074844
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-02,2183.538,2270.459601572261
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-03,1703.591,1691.4561254641192
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-04,1270.463,1311.6276418558632
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-05,1058.013,981.7425253875252
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-06,908.6,911.9991510255866
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-07,918.626,924.6400307051647
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-08,878.449,851.3562018567243
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-09,887.683,845.5694382901007
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-10,1121.286,1068.253711082049
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-11,1865.011,1892.882185376954
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2023-12,2664.11,2557.6720775468166
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-01,2803.483,2745.871827413159
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-02,2216.172,2190.816243419318
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-03,2020.986,2081.474425704204
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-04,1247.463,1120.3916089281931
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-05,1117.754,1150.8195981118417
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-06,965.801,1006.2464023090872
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-07,964.15,982.0367918230885
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-08,915.602,897.2114650486963
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-09,855.056,907.9759005908452
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-10,1076.31,1034.8010094776769
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-11,1583.346,1616.4838557613537
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2024-12,2611.085,2642.2199773416946
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-01,2794.096,2767.2080585866534
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-02,2665.549,2564.4044489686203
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-03,1975.46,1918.4962265357963
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-04,1382.978,1464.5905951843542
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-05,1126.962,1118.0654200601532
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-06,938.799,951.2195091899871
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-07,933.132,941.7858614587623
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-08,890.125,927.1073531145029
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-09,910.326,866.9243976689355
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-10,1070.676,1169.1606994986032
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-11,1718.557,1662.0490528392754
+KR,SARIMAX+HDD·가격,gas_city_kt,ex_post,2025-12,2565.632,2499.280975475626
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-01,4630.735,4801.31007516513
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-02,3938.56,4158.062877331656
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-03,3142.234,3681.435795875402
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-04,2491.457,2692.909000617539
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-05,2150.129,2175.5755405328423
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-06,2101.904,2086.0027250206476
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-07,2282.499,2145.771053464386
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-08,2311.495,2115.463839500692
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-09,2137.276,2221.2464401808325
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-10,2253.258,2485.390345294841
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-11,3102.344,3272.61757635352
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2023-12,4080.144,4208.020583787684
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-01,4421.79,4337.725526892665
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-02,3496.569,3968.2109358264706
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-03,3420.91,3191.513478362033
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-04,2302.596,2450.901090370288
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-05,2278.372,2094.9571147563383
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-06,2283.675,2134.3236801091084
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-07,2435.199,2270.580083675591
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-08,2558.951,2375.021849415403
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-09,2136.978,2420.241681167206
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-10,2132.601,2488.8734067356772
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-11,2671.522,3128.570627477079
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2024-12,3962.129,4083.170714745853
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-01,4297.525,4291.840813956203
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-02,4210.568,3715.072637157776
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-03,3355.905,3306.0677765937303
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-04,2623.954,2584.1694535768925
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-05,2389.638,2182.832510900106
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-06,2001.92,2223.6649385162796
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-07,2249.769,2119.1233366382066
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-08,2284.816,2253.943978046316
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-09,1917.023,2127.1104147398983
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-10,2253.964,2209.668420500906
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-11,3020.459,2976.7073379514904
+KR,SARIMAX+HDD·가격,gas_kt,ex_ante,2025-12,3872.285,4117.828431113323
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-01,4630.735,4812.240099274893
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-02,3938.56,4010.1967293994667
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-03,3142.234,3344.7676614641323
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-04,2491.457,2602.535543793926
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-05,2150.129,2160.4488514603686
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-06,2101.904,2055.591039868242
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-07,2282.499,2143.30801736678
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-08,2311.495,2114.645203165134
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-09,2137.276,2220.864636477865
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-10,2253.258,2362.616430292839
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-11,3102.344,3411.47163697287
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2023-12,4080.144,4038.400921486724
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-01,4421.79,4210.174642156793
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-02,3496.569,3734.3907865891506
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-03,3420.91,3321.5236647657284
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-04,2302.596,2150.300373743956
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-05,2278.372,2122.0583367382014
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-06,2283.675,2134.3236801091084
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-07,2435.199,2268.4504539036834
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-08,2558.951,2320.055070903083
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-09,2136.978,2420.1494305626748
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-10,2132.601,2305.7581133627245
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-11,2671.522,2941.5876616952673
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2024-12,3962.129,4002.285350325386
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-01,4297.525,4243.0326827237595
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-02,4210.568,4016.951412205487
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-03,3355.905,3284.634646848692
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-04,2623.954,2610.94731973154
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-05,2389.638,2274.991012131048
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-06,2001.92,2223.6649385162796
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-07,2249.769,2117.965033214301
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-08,2284.816,2253.227737965697
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-09,1917.023,2127.00805569552
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-10,2253.964,2188.8324146801483
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-11,3020.459,2933.831129320442
+KR,SARIMAX+HDD·가격,gas_kt,ex_post,2025-12,3872.285,3982.3574440556313
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-01,1781.686,1929.086198267386
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-02,1755.022,1630.7032465732634
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-03,1438.643,1723.5857869012425
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-04,1220.994,1267.9758569874139
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-05,1092.116,1188.9870206327325
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-06,1193.304,1128.8495884578165
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-07,1363.873,1220.5407949056762
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-08,1433.046,1239.484589880706
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-09,1249.593,1337.9253775584555
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-10,1131.972,1289.2564321493294
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-11,1237.333,1440.7647584067586
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2023-12,1416.034,1567.0800939892097
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-01,1618.307,1479.2259225423509
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-02,1280.397,1553.745231161983
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-03,1399.924,1253.101479389928
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-04,1055.133,1120.5702306928827
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-05,1160.618,1030.9297387998556
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-06,1317.874,1141.0238269593804
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-07,1471.049,1300.8430029121196
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-08,1643.349,1393.2436621816792
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-09,1281.922,1464.6616904596115
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-10,1056.291,1269.7255305672734
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-11,1088.176,1284.2355181322223
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2024-12,1351.044,1455.6988323129594
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-01,1503.429,1521.1035064063485
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-02,1545.019,1376.8322737666256
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-03,1380.445,1380.7662611907688
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-04,1240.976,1168.0477677813403
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-05,1262.676,1146.885781558685
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-06,1063.121,1251.9716553361702
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-07,1316.637,1131.31284699154
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-08,1394.691,1339.6441617316427
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-09,1006.697,1237.2481481558036
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-10,1183.288,1039.4406203113026
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-11,1301.902,1301.0117682828788
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_ante,2025-12,1306.653,1551.461673324804
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-01,1781.686,1931.9598598997704
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-02,1755.022,1592.1872126866858
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-03,1438.643,1636.8091658151993
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-04,1220.994,1245.2529581067733
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-05,1092.116,1184.542188096211
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-06,1193.304,1123.4732709056632
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-07,1363.873,1220.1300775865961
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-08,1433.046,1239.12936280344
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-09,1249.593,1337.8909276836678
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-10,1131.972,1258.2660412472455
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-11,1237.333,1475.8893951514247
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2023-12,1416.034,1524.7825007009585
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-01,1618.307,1449.2367925397557
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-02,1280.397,1495.2305664296118
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-03,1399.924,1283.7098355251937
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-04,1055.133,1042.418477039802
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-05,1160.618,1038.1584812893666
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-06,1317.874,1141.0238269593804
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-07,1471.049,1301.4718966837286
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-08,1643.349,1392.6555822855241
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-09,1281.922,1464.691542773819
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-10,1056.291,1224.692110596304
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-11,1088.176,1237.707866616869
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2024-12,1351.044,1435.2121467581812
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-01,1503.429,1509.0674926960132
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-02,1545.019,1450.0569102277746
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-03,1380.445,1375.3552235862917
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-04,1240.976,1175.3367419322346
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-05,1262.676,1172.3056084141517
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-06,1063.121,1251.9716553361702
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-07,1316.637,1131.2949756872056
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-08,1394.691,1339.4689404322928
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-09,1006.697,1237.2351765794822
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-10,1183.288,1034.3062534289459
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-11,1301.902,1290.7962348612195
+KR,SARIMAX+HDD·가격,gas_power_kt,ex_post,2025-12,1306.653,1518.7972196241585
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-01,2849.049,2831.7893459540965
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-02,2183.538,2339.259288930926
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-03,1703.591,1904.746374311009
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-04,1270.463,1381.9741789865666
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-05,1058.013,1042.123510060657
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-06,908.6,981.5560438075888
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-07,918.626,910.2682544685201
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-08,878.449,888.0911029117033
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-09,887.683,882.7180932401554
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-10,1121.286,1156.4124058362295
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-11,1865.011,1758.616353217376
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2023-12,2664.11,2650.7418954292975
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-01,2803.483,2931.9558075601926
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-02,2216.172,2358.0613476057297
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-03,2020.986,1924.1818442809906
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-04,1247.463,1366.820953510219
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-05,1117.754,1105.0763401221877
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-06,965.801,963.1306745254343
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-07,964.15,935.3806718605719
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-08,915.602,928.0985968683366
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-09,855.056,919.6754982849773
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-10,1076.31,1176.8349856427537
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-11,1583.346,1780.524915273673
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2024-12,2611.085,2688.689966099973
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-01,2794.096,2907.7887707962773
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-02,2665.549,2383.3091593530453
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-03,1975.46,1935.4009404811588
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-04,1382.978,1368.4342790848727
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-05,1126.962,1088.809662901037
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-06,938.799,989.0174229290654
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-07,933.132,928.2241317676047
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-08,890.125,916.7790040590679
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-09,910.326,904.4359917666959
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-10,1070.676,1162.2694455793944
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-11,1718.557,1738.8702894601063
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_ante,2025-12,2565.632,2644.7488302001375
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-01,2849.049,2842.6523280146794
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-02,2183.538,2225.612907750803
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-03,1703.591,1665.5727369073472
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-04,1270.463,1308.0931167367753
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-05,1058.013,1056.251463181527
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-06,908.6,975.5157936755043
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-07,918.626,907.4722141894671
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-08,878.449,886.5116310544752
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-09,887.683,904.6422215735706
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-10,1121.286,1082.8721309755065
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-11,1865.011,1864.5422039001612
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2023-12,2664.11,2490.512488946022
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-01,2803.483,2769.9836490150246
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-02,2216.172,2190.746488508693
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-03,2020.986,1972.4161314478497
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-04,1247.463,1192.8321434101395
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-05,1117.754,1121.3826252131773
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-06,965.801,963.1306745254343
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-07,964.15,908.420146138755
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-08,915.602,950.0270404164405
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-09,855.056,919.6689032985997
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-10,1076.31,1063.8921013054132
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-11,1583.346,1638.0507438344207
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2024-12,2611.085,2612.30753590991
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-01,2794.096,2868.5676975800993
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-02,2665.549,2661.916681785649
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-03,1975.46,1927.225563321066
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-04,1382.978,1386.6905011714211
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-05,1126.962,1144.8849228736258
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-06,938.799,989.0174229290654
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-07,933.132,928.210228746855
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-08,890.125,916.7614158204019
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-09,910.326,901.8833710989554
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-10,1070.676,1149.0555030527348
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-11,1718.557,1705.542064253123
+KR,하이브리드 (회귀+GBM 잔차),gas_city_kt,ex_post,2025-12,2565.632,2521.523925931801
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-01,4630.735,4566.71198202988
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-02,3938.56,4119.752456484821
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-03,3142.234,3602.8470245094895
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-04,2491.457,2798.672639626117
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-05,2150.129,2274.6410180936246
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-06,2101.904,2217.564942247989
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-07,2282.499,2236.462520868331
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-08,2311.495,2336.653490988979
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-09,2137.276,2198.453458847504
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-10,2253.258,2424.38121640581
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-11,3102.344,3198.4965134895356
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2023-12,4080.144,4335.623896714477
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-01,4421.79,4538.209221114439
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-02,3496.569,3995.908204898848
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-03,3420.91,3275.5985965664545
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-04,2302.596,2563.9818714150124
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-05,2278.372,2110.359021484695
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-06,2283.675,2104.8512045013795
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-07,2435.199,2237.650699955748
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-08,2558.951,2340.820640342185
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-09,2136.978,2188.5357167099774
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-10,2132.601,2364.856845105098
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-11,2671.522,3110.3375296952768
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2024-12,3962.129,4238.999010015717
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-01,4297.525,4390.231197651067
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-02,4210.568,3833.020032185886
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-03,3355.905,3248.8649957829684
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-04,2623.954,2551.877870451508
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-05,2389.638,2198.535548140268
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-06,2001.92,2172.7126071203597
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-07,2249.769,2209.5642554019632
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-08,2284.816,2274.103005610385
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-09,1917.023,2020.8937124946247
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-10,2253.964,2209.4389582096096
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-11,3020.459,2997.712749170262
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_ante,2025-12,3872.285,4175.802259445937
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-01,4630.735,4579.671022877648
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-02,3938.56,3955.577063933604
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-03,3142.234,3322.994211059242
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-04,2491.457,2681.192511175374
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-05,2150.129,2336.7155439631324
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-06,2101.904,2216.6070700292134
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-07,2282.499,2214.0119490623288
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-08,2311.495,2355.4329147625836
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-09,2137.276,2284.0923849552846
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-10,2253.258,2320.908902258729
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-11,3102.344,3340.8663843924555
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2023-12,4080.144,4140.67124594838
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-01,4421.79,4388.150755505142
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-02,3496.569,3740.1191372488015
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-03,3420.91,3408.098423494581
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-04,2302.596,2303.4290699224375
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-05,2278.372,2132.890630787322
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-06,2283.675,2104.8512045013795
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-07,2435.199,2327.6272384821204
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-08,2558.951,2321.515209407291
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-09,2136.978,2298.7153675605045
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-10,2132.601,2209.4219231837083
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-11,2671.522,2928.982541497239
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2024-12,3962.129,4146.186294037031
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-01,4297.525,4332.834179194848
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-02,4210.568,4171.054819501094
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-03,3355.905,3226.926312537983
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-04,2623.954,2575.6576108782397
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-05,2389.638,2274.585439308421
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-06,2001.92,2172.7126071203597
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-07,2249.769,2282.5873268317296
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-08,2284.816,2258.2219901731883
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-09,1917.023,2100.970947367162
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-10,2253.964,2191.771643411112
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-11,3020.459,2956.2677842226476
+KR,하이브리드 (회귀+GBM 잔차),gas_kt,ex_post,2025-12,3872.285,4019.584826091479
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-01,1781.686,1826.5022063051235
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-02,1755.022,1723.6362952218215
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-03,1438.643,1640.8777512576685
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-04,1220.994,1412.4705969504355
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-05,1092.116,1250.2114102347864
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-06,1193.304,1324.737445065436
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-07,1363.873,1404.8728596493604
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-08,1433.046,1440.6386858880471
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-09,1249.593,1255.2414770912544
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-10,1131.972,1244.486349690171
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-11,1237.333,1442.0452239358137
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2023-12,1416.034,1589.6475692888666
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-01,1618.307,1687.2429930931878
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-02,1280.397,1565.5037056723302
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-03,1399.924,1343.6002470588678
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-04,1055.133,1262.2801929560155
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-05,1160.618,1020.0704791374905
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-06,1317.874,1146.854393706209
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-07,1471.049,1335.1063985633127
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-08,1643.349,1420.6362728151848
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-09,1281.922,1271.8014569595548
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-10,1056.291,1269.0618112321301
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-11,1088.176,1327.9084517972287
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2024-12,1351.044,1476.4424235108045
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-01,1503.429,1631.9247630383452
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-02,1545.019,1456.6410306592386
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-03,1380.445,1357.710096438976
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-04,1240.976,1208.5804060658722
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-05,1262.676,1084.5751522308576
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-06,1063.121,1167.831106472126
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-07,1316.637,1289.1956599021357
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-08,1394.691,1400.2773589613555
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-09,1006.697,1184.735760222882
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-10,1183.288,1058.6484970559693
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-11,1301.902,1302.5358596209953
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_ante,2025-12,1306.653,1576.409938454216
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-01,1781.686,1829.1405666081107
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-02,1755.022,1688.7311446633817
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-03,1438.643,1599.3846217002103
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-04,1220.994,1388.5408982250208
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-05,1092.116,1293.4011988866237
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-06,1193.304,1327.7624255041178
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-07,1363.873,1405.4180185126154
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-08,1433.046,1478.6372150414334
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-09,1249.593,1423.0351950496913
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-10,1131.972,1218.9114883686002
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-11,1237.333,1472.779101951226
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2023-12,1416.034,1548.8956860321423
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-01,1618.307,1657.1166598751038
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-02,1280.397,1512.6985788089698
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-03,1399.924,1366.8912390224748
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-04,1055.133,1202.8910637157107
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-05,1160.618,1025.382529446456
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-06,1317.874,1164.546898513858
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-07,1471.049,1386.4292904807517
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-08,1643.349,1443.526028069136
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-09,1281.922,1418.5174956901296
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-10,1056.291,1233.51863867338
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-11,1088.176,1289.6772809574477
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2024-12,1351.044,1441.5625173756446
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-01,1503.429,1640.8777592635074
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-02,1545.019,1519.7105132204056
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-03,1380.445,1336.3111855685045
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-04,1240.976,1213.576301557001
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-05,1262.676,1101.2420291638527
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-06,1063.121,1208.5624773072857
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-07,1316.637,1384.1938002160982
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-08,1394.691,1400.3575135209376
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-09,1006.697,1315.3617580004516
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-10,1183.288,1072.6904722600182
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-11,1301.902,1294.3036624530032
+KR,하이브리드 (회귀+GBM 잔차),gas_power_kt,ex_post,2025-12,1306.653,1545.2174945745394
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-01,2849.049,2776.9857076668354
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-02,2183.538,2345.5375560894095
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-03,1703.591,1820.7763664061335
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-04,1270.463,1284.1255772689688
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-05,1058.013,974.0483893531122
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-06,908.6,944.1586699407562
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-07,918.626,937.5212674260989
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-08,878.449,935.0255498554314
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-09,887.683,928.6592589413724
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-10,1121.286,1090.2414589502862
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-11,1865.011,1671.1960170739649
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2023-12,2664.11,2614.117222752177
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-01,2803.483,2813.7063113612453
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-02,2216.172,2369.25845426807
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-03,2020.986,1832.3693738874126
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-04,1247.463,1283.2940554024617
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-05,1117.754,997.4634737227732
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-06,965.801,968.9855378357013
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-07,964.15,968.7994374141505
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-08,915.602,968.5959483887945
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-09,855.056,965.8500334175226
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-10,1076.31,1121.7010561703871
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-11,1583.346,1710.3103242860955
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2024-12,2611.085,2653.148733208493
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-01,2794.096,2849.0450071564924
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-02,2665.549,2379.0747855688483
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-03,1975.46,1859.0583889281756
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-04,1382.978,1284.2685874167687
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-05,1126.962,1005.9057029805324
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-06,938.799,974.1115460614419
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-07,933.132,972.3633759732403
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-08,890.125,970.54668202539
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-09,910.326,966.8604247342842
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-10,1070.676,1121.8890582863971
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-11,1718.557,1704.5131060672863
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_ante,2025-12,2565.632,2627.1789916292432
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-01,2849.049,2787.7190731732803
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-02,2183.538,2213.395785050031
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-03,1703.591,1563.3682257878493
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-04,1270.463,1225.0679156070478
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-05,1058.013,972.4618804076385
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-06,908.6,941.9921789036797
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-07,918.626,937.2549674748669
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-08,878.449,934.8153092855425
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-09,887.683,928.5992971261414
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-10,1121.286,1017.2010052399056
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-11,1865.011,1774.9142593683202
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2023-12,2664.11,2455.1873754309036
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-01,2803.483,2689.0967030496527
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-02,2216.172,2161.8549649431575
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-03,2020.986,1937.6773444208084
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-04,1247.463,1090.6303772387632
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-05,1117.754,1013.6640006581732
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-06,965.801,968.9855378357013
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-07,964.15,968.8601987028007
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-08,915.602,970.1386348628099
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-09,855.056,965.8524700824806
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-10,1076.31,1009.3558315227588
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-11,1583.346,1568.8369272534392
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2024-12,2611.085,2575.330209687255
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-01,2794.096,2800.0559534905096
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-02,2665.549,2664.4627130535696
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-03,1975.46,1841.3175910686257
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-04,1382.978,1302.428544388342
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-05,1126.962,1061.7244036774605
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-06,938.799,974.1115460614419
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-07,933.132,972.4179434298411
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-08,890.125,970.5846396988053
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-09,910.326,966.8631677337962
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-10,1070.676,1108.7409592134068
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-11,1718.557,1671.4108494547531
+KR,회귀 √Y~HDD+가격,gas_city_kt,ex_post,2025-12,2565.632,2497.658665032157
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-01,4630.735,4359.815988822031
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-02,3938.56,3876.3081607713543
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-03,3142.234,3262.8462864831517
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-04,2491.457,2571.261109866692
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-05,2150.129,2141.778084896186
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-06,2101.904,2088.6188530639056
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-07,2282.499,2088.7818248779763
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-08,2311.495,2111.257322839412
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-09,2137.276,2132.409577841885
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-10,2253.258,2365.0748023708015
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-11,3102.344,3121.575320433906
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2023-12,4080.144,4261.265339031044
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-01,4421.79,4474.071499475109
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-02,3496.569,3942.0130776511137
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-03,3420.91,3268.1856672951426
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-04,2302.596,2563.6349792599294
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-05,2278.372,2167.0581685964794
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-06,2283.675,2124.774327272497
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-07,2435.199,2133.8955833324244
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-08,2558.951,2150.4473676245084
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-09,2136.978,2189.1940497747487
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-10,2132.601,2410.4515389716375
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-11,2671.522,3159.640343075297
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2024-12,3962.129,4275.916368825064
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-01,4297.525,4481.243950163754
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-02,4210.568,3924.8711187215736
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-03,3355.905,3298.995972791706
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-04,2623.954,2573.5226776363334
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-05,2389.638,2201.259939501209
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-06,2001.92,2159.2599109123516
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-07,2249.769,2151.3996111525953
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-08,2284.816,2156.1328138682456
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-09,1917.023,2162.020597802612
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-10,2253.964,2363.2982152535837
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-11,3020.459,3105.953396442195
+KR,회귀 √Y~HDD+가격,gas_kt,ex_ante,2025-12,3872.285,4202.030608682086
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-01,4630.735,4372.3982910222885
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-02,3938.56,3715.8984613073585
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-03,3142.234,2934.3969041285686
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-04,2491.457,2492.187883770627
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-05,2150.129,2142.067896229356
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-06,2101.904,2086.775070924922
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-07,2282.499,2088.6070223565807
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-08,2311.495,2111.2778426551754
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-09,2137.276,2132.447873840561
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-10,2253.258,2263.5981193879597
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-11,3102.344,3254.0123165262203
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2023-12,4080.144,4070.4553225832656
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-01,4421.79,4327.0400761051715
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-02,3496.569,3690.94872764424
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-03,3420.91,3398.480622086224
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-04,2302.596,2306.874881969786
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-05,2278.372,2189.277645662724
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-06,2283.675,2124.774327272497
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-07,2435.199,2134.099936822095
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-08,2558.951,2159.401367837709
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-09,2136.978,2189.2433172682586
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-10,2132.601,2257.1198101678056
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-11,2671.522,2981.080917025428
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2024-12,3962.129,4184.600782537393
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-01,4297.525,4424.689875721239
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-02,4210.568,4258.37247165793
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-03,3355.905,3277.3165586710766
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-04,2623.954,2597.0497429907196
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-05,2389.638,2276.5606005187783
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-06,2001.92,2159.2599109123516
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-07,2249.769,2151.5491955644848
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-08,2284.816,2156.271632624946
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-09,1917.023,2162.038310366369
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-10,2253.964,2345.81013374844
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-11,3020.459,3065.00447117181
+KR,회귀 √Y~HDD+가격,gas_kt,ex_post,2025-12,3872.285,4051.578488395528
 KR,회귀 √Y~HDD+가격,gas_power_kt,ex_ante,2023-01,1781.686,1604.190518053196
 KR,회귀 √Y~HDD+가격,gas_power_kt,ex_ante,2023-02,1755.022,1528.1481451130699
 KR,회귀 √Y~HDD+가격,gas_power_kt,ex_ante,2023-03,1438.643,1426.6796562798354

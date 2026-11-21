@@ -5,7 +5,8 @@ API 키는 저장소 루트의 .env 파일에 둔다 (.gitignore에 포함, 공�
     KOSIS_API_KEY=KOSIS 인증키
 
 실행:
-    python python/fetch_korea.py kogas          # KOGAS만
+    python python/fetch_korea.py kogas          # KOGAS만 (2019년 도시가스용 복원 포함)
+    python python/fetch_korea.py kogas-local    # 저장된 KOGAS 원자료로 다시 계산
     python python/fetch_korea.py kma            # 기상청 (키 필요)
     python python/fetch_korea.py kosis-search 도시가스   # KOSIS 통계표 찾기 (키 필요)
     python python/fetch_korea.py all
@@ -63,21 +64,61 @@ def raw_dir():
 
 
 # ---------------- KOGAS (키 불필요) ----------------
-def fetch_kogas():
-    meta = requests.post(KOGAS_META, data={**KOGAS_PK, "atchFileId": "", "fileDetailSn": "1",
+KOGAS_REGION_PK = {"publicDataPk": "15049902",
+                   "publicDataDetailPk": "uddi:5c47d37f-4af5-451f-aa17-ad3e961aab1b"}   # 지역본부별 용도별 공급량
+
+
+BOM = bytes([0xEF, 0xBB, 0xBF])
+
+
+def kogas_download(pk, name):
+    meta = requests.post(KOGAS_META, data={**pk, "atchFileId": "", "fileDetailSn": "1",
                                            "publicDataTyCode": "PR0051"}, timeout=60).json()
-    atch = meta["atchFileId"]
-    raw = requests.get(KOGAS_URL.format(atch=atch), timeout=60).content
-    text = raw.decode("cp949") if not raw.startswith(b"\xef\xbb\xbf") else raw.decode("utf-8-sig")
-    (raw_dir() / "kogas_monthly_supply.csv").write_text(text, encoding="utf-8")
+    raw = requests.get(KOGAS_URL.format(atch=meta["atchFileId"]), timeout=60).content
+    text = raw.decode("utf-8-sig") if raw.startswith(BOM) else raw.decode("cp949")
+    (raw_dir() / name).write_text(text, encoding="utf-8")
+    return text, meta.get("dataSetFileDetailInfo", {}).get("updtDt", "")
+
+
+def fix_city_2019(city, region_text):
+    """전국 용도별 자료의 2019년 도시가스용 값은 계절 형태가 어긋나 있다(7월이 다른 해의 약 2배, 1월은 약 70%).
+    지역본부별 자료의 2019년 도시가스 합계와 시도별 판매량은 정상 형태라, 지역본부 합계를 '지역본부 합계 / 전국'의
+    달별 비율(2020~2025년, 비율이 중앙값에서 0.02 넘게 벗어난 달 제외)로 나눠 2019년 전국 값을 복원한다."""
+    reg = pd.read_csv(io.StringIO(region_text))
+    reg["month"] = reg["년도"].astype(str) + "-" + reg["월"].astype(str).str.zfill(2)
+    reg = reg.groupby("month")["도시가스 공급량"].sum()
+    ratio = (reg / city).dropna()
+    ok = ratio[(ratio.index >= "2020-01") & ((ratio - ratio.median()).abs() < 0.02)]
+    by_m = ok.groupby(ok.index.str[5:]).mean()
+    months = [m for m in reg.index if m.startswith("2019")]
+    fixed = city.copy()
+    fixed[months] = [reg[m] / by_m[m[5:]] for m in months]
+    print(f"KOGAS 2019 도시가스용 복원: 7월 {city['2019-07']:,.0f} → {fixed['2019-07']:,.0f} 톤 "
+          f"(지역본부 합계 / 달별 비율 {by_m.min():.3f}~{by_m.max():.3f})")
+    return fixed
+
+
+def fetch_kogas(local=False):
+    if local:   # 저장해 둔 원자료로 다시 계산 (data/raw/<최신>/)
+        d = sorted(p.parent for p in RAW.glob("*/kogas_region.csv"))[-1]
+        text = (d / "kogas_monthly_supply.csv").read_text(encoding="utf-8")
+        region_text = (d / "kogas_region.csv").read_text(encoding="utf-8")
+        meta = {}
+    else:
+        text, upd = kogas_download(KOGAS_PK, "kogas_monthly_supply.csv")
+        region_text, _ = kogas_download(KOGAS_REGION_PK, "kogas_region.csv")
+        meta = {"dataSetFileDetailInfo": {"updtDt": upd}}
     df = pd.read_csv(io.StringIO(text), dtype=str)
     df.columns = ["year", "mon", "use", "value"]
     df["month"] = df.year + "-" + df.mon.str.zfill(2)
-    df["value"] = pd.to_numeric(df.value)
+    df["value"] = pd.to_numeric(df.value).astype(float)
     names = {"도시가스": "gas_city_ton", "발전": "gas_power_ton"}
     df["series"] = df["use"].map(names)
     if df.series.isna().any():
         raise ValueError(f"알 수 없는 용도: {df[df.series.isna()].use.unique()}")
+    city = df[df.series == "gas_city_ton"].set_index("month").value
+    fixed = fix_city_2019(city, region_text)
+    df.loc[df.series == "gas_city_ton", "value"] = df.loc[df.series == "gas_city_ton", "month"].map(fixed).values
     total = df.groupby("month", as_index=False).value.sum().assign(series="gas_ton")
     out = pd.concat([df[["series", "month", "value"]], total], ignore_index=True)
     print(f"KOGAS: {out.month.min()}~{out.month.max()}, 용도 {sorted(df['use'].unique())}, "
@@ -234,6 +275,8 @@ def main():
     parts = []
     if what in ("kogas", "all"):
         parts.append(fetch_kogas())
+    if what == "kogas-local":   # 다운로드 없이 저장된 원자료로 (2019 복원 포함) 다시 계산
+        parts.append(fetch_kogas(local=True))
     if what in ("kma", "all"):
         parts.append(fetch_kma())
     if what == "kma-local":   # API 호출 없이 저장된 일자료(data/raw/*/kma_asos_daily.csv 최신)로 다시 계산

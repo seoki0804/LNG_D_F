@@ -89,42 +89,42 @@ NL,ex_post,앙상블 (회귀·ML·Chronos),6.520862259317195,96,0.225,True
 NL,ex_post,하이브리드 (회귀+GBM 잔차),8.30759004717477,96,0.0472,False
 NL,ex_post,회귀 + 위기 변수,9.612324785532453,96,0.0048,False
 NL,ex_post,회귀 √Y~HDD+가격,13.076363779720742,96,0.0,False
-KR,ex_post,Chronos-2 + 공변량,6.588820058800248,72,0.6018,True
-KR,ex_post,Chronos-2 단변량,6.7150474084177585,72,0.5988,True
-KR,ex_post,Gradient Boosting,6.92313326958627,72,0.582,True
-KR,ex_post,Holt-Winters,6.783387622979749,72,0.582,True
-KR,ex_post,Lasso,9.79158153594273,72,0.0,False
-KR,ex_post,LightGBM,7.69131518016837,72,0.3098,True
-KR,ex_post,MLP (16-8),7.9697234319465355,72,0.1764,True
-KR,ex_post,Random Forest,8.969376564712949,72,0.0032,False
-KR,ex_post,Ridge,11.14277681668191,72,0.0,False
-KR,ex_post,Ridge + 위기 변수,10.343913945705017,72,0.0,False
-KR,ex_post,SARIMAX+HDD·가격,5.635305439280501,72,1.0,True
-KR,ex_post,SVR,11.884902150755718,72,0.0016,False
-KR,ex_post,계절 naive,12.03047616679627,72,0.0032,False
-KR,ex_post,단순회귀 Y~HDD,7.101617270483612,72,0.5362,True
-KR,ex_post,앙상블 (회귀·ML·Chronos),6.380855787037368,72,0.6928,True
-KR,ex_post,하이브리드 (회귀+GBM 잔차),6.3233245145243,72,0.6928,True
-KR,ex_post,회귀 + 위기 변수,6.174281293669983,72,0.6928,True
-KR,ex_post,회귀 √Y~HDD+가격,7.2573528095999125,72,0.582,True
-ALL,ex_post,Chronos-2 + 공변량,6.514143395653164,72,0.8342,True
-ALL,ex_post,Chronos-2 단변량,7.546250755982232,72,0.0002,False
-ALL,ex_post,Gradient Boosting,8.169838328926135,72,0.0,False
-ALL,ex_post,Holt-Winters,7.714048566206586,72,0.0002,False
-ALL,ex_post,Lasso,8.846606104696386,72,0.0,False
-ALL,ex_post,LightGBM,7.589187105022459,72,0.0018,False
-ALL,ex_post,MLP (16-8),7.88706927248088,72,0.0012,False
-ALL,ex_post,Random Forest,9.041321934822191,72,0.0,False
-ALL,ex_post,Ridge,8.493278126855104,72,0.0,False
-ALL,ex_post,Ridge + 위기 변수,8.111107736265023,72,0.0058,False
-ALL,ex_post,SARIMAX+HDD·가격,6.3529085183754574,72,1.0,True
-ALL,ex_post,SVR,12.740747810286694,72,0.0058,False
-ALL,ex_post,계절 naive,11.471285933648005,72,0.0,False
-ALL,ex_post,단순회귀 Y~HDD,13.263216158731241,72,0.0,False
-ALL,ex_post,앙상블 (회귀·ML·Chronos),6.548290128688554,72,0.8342,True
-ALL,ex_post,하이브리드 (회귀+GBM 잔차),7.345154872355462,72,0.0006,False
-ALL,ex_post,회귀 + 위기 변수,9.04120018369572,72,0.0002,False
-ALL,ex_post,회귀 √Y~HDD+가격,9.8040988617196,72,0.0,False
+KR,ex_post,Chronos-2 + 공변량,5.904552932850112,72,0.0634,False
+KR,ex_post,Chronos-2 단변량,6.620425992364401,72,0.006,False
+KR,ex_post,Gradient Boosting,4.877580004930923,72,0.927,True
+KR,ex_post,Holt-Winters,6.195536981690359,72,0.129,True
+KR,ex_post,Lasso,6.132876982692829,72,0.1202,True
+KR,ex_post,LightGBM,5.443254657696061,72,0.5836,True
+KR,ex_post,MLP (16-8),6.4026785965828,72,0.0852,False
+KR,ex_post,Random Forest,5.8099767306504235,72,0.0852,False
+KR,ex_post,Ridge,6.530954767665466,72,0.0634,False
+KR,ex_post,Ridge + 위기 변수,6.369904135110153,72,0.0852,False
+KR,ex_post,SARIMAX+HDD·가격,5.515557776689164,72,0.5836,True
+KR,ex_post,SVR,10.605006857008672,72,0.0114,False
+KR,ex_post,계절 naive,9.532514074475142,72,0.0006,False
+KR,ex_post,단순회귀 Y~HDD,7.203051047031135,72,0.1202,True
+KR,ex_post,앙상블 (회귀·ML·Chronos),4.838181193042522,72,1.0,True
+KR,ex_post,하이브리드 (회귀+GBM 잔차),5.782495246395568,72,0.129,True
+KR,ex_post,회귀 + 위기 변수,6.2672759909026645,72,0.129,True
+KR,ex_post,회귀 √Y~HDD+가격,7.381062776316863,72,0.129,True
+ALL,ex_post,Chronos-2 + 공변량,6.400098874661475,72,0.9476,True
+ALL,ex_post,Chronos-2 단변량,7.530480519973338,72,0.0,False
+ALL,ex_post,Gradient Boosting,7.828912784816912,72,0.0,False
+ALL,ex_post,Holt-Winters,7.6160734593250226,72,0.0002,False
+ALL,ex_post,Lasso,8.23682201248807,72,0.0002,False
+ALL,ex_post,LightGBM,7.214510351277072,72,0.0098,False
+ALL,ex_post,MLP (16-8),7.625895133253591,72,0.0014,False
+ALL,ex_post,Random Forest,8.51475529581177,72,0.0,False
+ALL,ex_post,Ridge,7.724641118685698,72,0.0014,False
+ALL,ex_post,Ridge + 위기 변수,7.448772767832545,72,0.0766,False
+ALL,ex_post,SARIMAX+HDD·가격,6.332950574610234,72,0.9476,True
+ALL,ex_post,SVR,12.527431927995517,72,0.0098,False
+ALL,ex_post,계절 naive,11.05495891826115,72,0.0,False
+ALL,ex_post,단순회귀 Y~HDD,13.28012178815583,72,0.0,False
+ALL,ex_post,앙상블 (회귀·ML·Chronos),6.29117769635608,72,1.0,True
+ALL,ex_post,하이브리드 (회귀+GBM 잔차),7.255016661000673,72,0.0048,False
+ALL,ex_post,회귀 + 위기 변수,9.056699299901167,72,0.0002,False
+ALL,ex_post,회귀 √Y~HDD+가격,9.824717189505757,72,0.0,False
 DE,ex_ante,Chronos-2 + 공변량,10.041756236224643,96,0.3536,True
 DE,ex_ante,Chronos-2 단변량,9.911257737995117,96,0.6582,True
 DE,ex_ante,Gradient Boosting,10.830792983350824,96,0.1172,True
@@ -215,39 +215,39 @@ NL,ex_ante,앙상블 (회귀·ML·Chronos),8.470722952598399,96,0.3428,True
 NL,ex_ante,하이브리드 (회귀+GBM 잔차),9.305759049792227,96,0.3428,True
 NL,ex_ante,회귀 + 위기 변수,9.723415829427198,96,0.3428,True
 NL,ex_ante,회귀 √Y~HDD+가격,13.559747345879467,96,0.0144,False
-KR,ex_ante,Chronos-2 + 공변량,6.468896472922129,72,0.856,True
-KR,ex_ante,Chronos-2 단변량,6.7150474084177585,72,0.856,True
-KR,ex_ante,Gradient Boosting,6.897302546499483,72,0.6646,True
-KR,ex_ante,Holt-Winters,6.783387622979749,72,0.856,True
-KR,ex_ante,Lasso,9.451866169172433,72,0.0008,False
-KR,ex_ante,LightGBM,8.005574356274884,72,0.067,False
-KR,ex_ante,MLP (16-8),7.425706606991865,72,0.2164,True
-KR,ex_ante,Random Forest,8.475915638682412,72,0.067,False
-KR,ex_ante,Ridge,10.932468583291483,72,0.0,False
-KR,ex_ante,Ridge + 위기 변수,10.245218200385974,72,0.0,False
-KR,ex_ante,SARIMAX+HDD·가격,6.621785296851112,72,0.856,True
-KR,ex_ante,SVR,9.685435052360019,72,0.0376,False
-KR,ex_ante,계절 naive,12.03047616679627,72,0.017,False
-KR,ex_ante,단순회귀 Y~HDD,7.641904973214265,72,0.2726,True
-KR,ex_ante,앙상블 (회귀·ML·Chronos),6.1185276054061575,72,1.0,True
-KR,ex_ante,하이브리드 (회귀+GBM 잔차),6.598185805048881,72,0.856,True
-KR,ex_ante,회귀 + 위기 변수,6.636447907563902,72,0.856,True
-KR,ex_ante,회귀 √Y~HDD+가격,7.336656194860366,72,0.6848,True
-ALL,ex_ante,Chronos-2 + 공변량,7.406974932072513,72,1.0,True
-ALL,ex_ante,Chronos-2 단변량,7.546250755982232,72,0.6668,True
-ALL,ex_ante,Gradient Boosting,9.630450460386257,72,0.0,False
-ALL,ex_ante,Holt-Winters,7.714048566206586,72,0.5644,True
-ALL,ex_ante,Lasso,10.308568294813686,72,0.0,False
-ALL,ex_ante,LightGBM,9.027081839568543,72,0.0036,False
-ALL,ex_ante,MLP (16-8),8.872070558723891,72,0.0018,False
-ALL,ex_ante,Random Forest,10.084750054079223,72,0.0,False
-ALL,ex_ante,Ridge,9.842856491712702,72,0.0,False
-ALL,ex_ante,Ridge + 위기 변수,9.343702208845482,72,0.001,False
-ALL,ex_ante,SARIMAX+HDD·가격,7.472789108926713,72,0.8208,True
-ALL,ex_ante,SVR,12.293022281413663,72,0.0078,False
-ALL,ex_ante,계절 naive,11.471285933648005,72,0.0,False
-ALL,ex_ante,단순회귀 Y~HDD,15.296055546902124,72,0.0,False
-ALL,ex_ante,앙상블 (회귀·ML·Chronos),7.995700096493802,72,0.3808,True
-ALL,ex_ante,하이브리드 (회귀+GBM 잔차),8.459013510950163,72,0.0734,False
-ALL,ex_ante,회귀 + 위기 변수,9.633838475520916,72,0.0508,False
-ALL,ex_ante,회귀 √Y~HDD+가격,10.97952245216272,72,0.0002,False
+KR,ex_ante,Chronos-2 + 공변량,5.789335541844697,72,0.282,True
+KR,ex_ante,Chronos-2 단변량,6.620425992364401,72,0.0788,False
+KR,ex_ante,Gradient Boosting,6.288479573715512,72,0.2272,True
+KR,ex_ante,Holt-Winters,6.195536981690359,72,0.282,True
+KR,ex_ante,Lasso,6.618102022404219,72,0.0788,False
+KR,ex_ante,LightGBM,6.207985891911363,72,0.282,True
+KR,ex_ante,MLP (16-8),6.430620000752162,72,0.2272,True
+KR,ex_ante,Random Forest,6.409215594447486,72,0.1662,True
+KR,ex_ante,Ridge,6.867051718971538,72,0.0178,False
+KR,ex_ante,Ridge + 위기 변수,6.976172095044826,72,0.0038,False
+KR,ex_ante,SARIMAX+HDD·가격,6.487740424381808,72,0.282,True
+KR,ex_ante,SVR,8.467373812730688,72,0.0138,False
+KR,ex_ante,계절 naive,9.532514074475142,72,0.0124,False
+KR,ex_ante,단순회귀 Y~HDD,8.055871965814124,72,0.0158,False
+KR,ex_ante,앙상블 (회귀·ML·Chronos),5.406713596126313,72,1.0,True
+KR,ex_ante,하이브리드 (회귀+GBM 잔차),6.138740456531849,72,0.2322,True
+KR,ex_ante,회귀 + 위기 변수,6.3396261764530095,72,0.2108,True
+KR,ex_ante,회귀 √Y~HDD+가격,7.394920384619777,72,0.2272,True
+ALL,ex_ante,Chronos-2 + 공변량,7.293714776892941,72,1.0,True
+ALL,ex_ante,Chronos-2 단변량,7.530480519973338,72,0.4954,True
+ALL,ex_ante,Gradient Boosting,9.52897996492226,72,0.0,False
+ALL,ex_ante,Holt-Winters,7.6160734593250226,72,0.4954,True
+ALL,ex_ante,Lasso,9.836274270352316,72,0.0,False
+ALL,ex_ante,LightGBM,8.727483762174622,72,0.0116,False
+ALL,ex_ante,MLP (16-8),8.706222791017275,72,0.0018,False
+ALL,ex_ante,Random Forest,9.740300046706736,72,0.0002,False
+ALL,ex_ante,Ridge,9.165287014326044,72,0.0,False
+ALL,ex_ante,Ridge + 위기 변수,8.798861191288625,72,0.0092,False
+ALL,ex_ante,SARIMAX+HDD·가격,7.450448296848496,72,0.597,True
+ALL,ex_ante,SVR,12.090012074808776,72,0.0116,False
+ALL,ex_ante,계절 naive,11.05495891826115,72,0.0,False
+ALL,ex_ante,단순회귀 Y~HDD,15.365050045668767,72,0.0,False
+ALL,ex_ante,앙상블 (회귀·ML·Chronos),7.8770644282804945,72,0.3492,True
+ALL,ex_ante,하이브리드 (회귀+GBM 잔차),8.382439286197325,72,0.1222,True
+ALL,ex_ante,회귀 + 위기 변수,9.584368187002433,72,0.04,False
+ALL,ex_ante,회귀 √Y~HDD+가격,10.98923315045596,72,0.0002,False
