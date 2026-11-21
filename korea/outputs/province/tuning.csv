@@ -1,0 +1,163 @@
+﻿node,model,params,val_MAPE
+강원,ETS,"{""trend"": ""add"", ""damped"": true}",5.006428835756482
+강원,ETS,"{""trend"": null}",6.505972314174086
+강원,계절 naive,{},8.40825927793391
+강원,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",6.189495612409682
+강원,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",6.64508878213253
+강원,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",5.975936570498997
+강원,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",6.416693911448777
+강원,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",22.567321752717774
+강원,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",30.914967365501045
+경기,ETS,"{""trend"": ""add"", ""damped"": true}",5.867184522833356
+경기,ETS,"{""trend"": null}",6.088099701110669
+경기,계절 naive,{},6.123390298562619
+경기,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",5.014229306938456
+경기,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",6.04321940536728
+경기,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",4.713146004860289
+경기,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",5.756015523757404
+경기,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",7.374754206080177
+경기,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",12.502360138398307
+경남,ETS,"{""trend"": ""add"", ""damped"": true}",5.145516638296949
+경남,ETS,"{""trend"": null}",5.01993490765506
+경남,계절 naive,{},5.840391654154837
+경남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",6.008292346813764
+경남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",8.866193117185757
+경남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",5.430809223395013
+경남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",8.483685182230799
+경남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",9.288557811312737
+경남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",16.381959618629235
+경북,ETS,"{""trend"": ""add"", ""damped"": true}",3.829151033056976
+경북,ETS,"{""trend"": null}",4.1201520466904915
+경북,계절 naive,{},4.839103830366131
+경북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",5.493835011829974
+경북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",12.214628427419896
+경북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",4.878585528592532
+경북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",11.965301800968843
+경북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",7.07996724160878
+경북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",17.489026631435735
+광주,ETS,"{""trend"": ""add"", ""damped"": true}",6.339556736553909
+광주,ETS,"{""trend"": null}",6.315687949932978
+광주,계절 naive,{},6.234478314868068
+광주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",7.266822940987652
+광주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",8.694639783873358
+광주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",7.046460443632414
+광주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",8.163201204569102
+광주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",6.498974824118761
+광주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",10.0191381644722
+대구,ETS,"{""trend"": ""add"", ""damped"": true}",6.834553250886317
+대구,ETS,"{""trend"": null}",6.775479200541082
+대구,계절 naive,{},5.834570029529511
+대구,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",8.125563282272795
+대구,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",9.978849118749896
+대구,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",7.877419318735297
+대구,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",9.493793411802384
+대구,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",7.649670810980614
+대구,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",8.794306857777478
+대전,ETS,"{""trend"": ""add"", ""damped"": true}",5.409372389383162
+대전,ETS,"{""trend"": null}",5.510568656903836
+대전,계절 naive,{},6.480676999528513
+대전,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",7.028504942000678
+대전,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",7.805807341306767
+대전,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",6.700370126971413
+대전,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",7.383511211133872
+대전,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",6.312672299790178
+대전,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",10.604253857478565
+부산,ETS,"{""trend"": ""add"", ""damped"": true}",4.334192242729562
+부산,ETS,"{""trend"": null}",4.276733504821425
+부산,계절 naive,{},5.276665500062281
+부산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",5.54002260271128
+부산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",6.670690515478101
+부산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",5.207660550417574
+부산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",6.128134386238462
+부산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",7.398453229871559
+부산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",12.136935332408935
+서울,ETS,"{""trend"": ""add"", ""damped"": true}",6.98718882412021
+서울,ETS,"{""trend"": null}",6.9287073907653545
+서울,계절 naive,{},6.872469742187246
+서울,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",6.874654042055635
+서울,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",7.984979831434781
+서울,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",6.644552206923719
+서울,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",7.906216246747804
+서울,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",6.339243408896517
+서울,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",7.866326863077099
+세종,ETS,"{""trend"": ""add"", ""damped"": true}",10.72804046869579
+세종,ETS,"{""trend"": null}",10.882182749973758
+세종,계절 naive,{},12.695619067860356
+세종,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",8.88525338055169
+세종,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",8.88525338055169
+세종,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",8.317403824727982
+세종,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",8.317403824727982
+세종,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",14.960247901092455
+세종,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",14.960247901092455
+울산,ETS,"{""trend"": ""add"", ""damped"": true}",18.585764986396523
+울산,ETS,"{""trend"": null}",18.07808835534471
+울산,계절 naive,{},22.13788751672715
+울산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",21.092836318778566
+울산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",23.421480293195973
+울산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",21.115818477037298
+울산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",23.437903370260596
+울산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",15.77427157373365
+울산,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",22.324108165438375
+인천,ETS,"{""trend"": ""add"", ""damped"": true}",5.460235185667346
+인천,ETS,"{""trend"": null}",5.453163704002924
+인천,계절 naive,{},5.882711878920642
+인천,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",5.235842475605999
+인천,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",4.833584020679386
+인천,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",5.059278266894769
+인천,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",4.554530142054005
+인천,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",4.928225459543391
+인천,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",4.580455622064427
+전국,ETS,"{""trend"": ""add"", ""damped"": true}",5.6642016112132865
+전국,ETS,"{""trend"": null}",5.601322125468208
+전국,계절 naive,{},6.816969129050178
+전국,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",5.644210389732191
+전국,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",6.97055748126133
+전국,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",5.56648621224423
+전국,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",6.633093540481285
+전국,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",6.184735193831301
+전국,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",11.72148379421394
+전남,ETS,"{""trend"": ""add"", ""damped"": true}",8.57330283752097
+전남,ETS,"{""trend"": null}",8.524002804395211
+전남,계절 naive,{},10.077220775775514
+전남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",8.558049543847684
+전남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",8.831591321832935
+전남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",8.487604543359767
+전남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",8.745928222855701
+전남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",21.346871144442375
+전남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",31.505531695628903
+전북,ETS,"{""trend"": ""add"", ""damped"": true}",4.636434946191683
+전북,ETS,"{""trend"": null}",4.7992815449097455
+전북,계절 naive,{},5.662449585325429
+전북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",6.395902075589068
+전북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",10.894185325634735
+전북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",6.2164986943409195
+전북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",10.783727677324874
+전북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",10.197906858144847
+전북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",20.14074272498031
+제주,ETS,"{""trend"": ""add"", ""damped"": true}",7.574653354716026
+제주,ETS,"{""trend"": null}",8.146899508205138
+제주,계절 naive,{},8.300153265157952
+제주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",14.969605108697772
+제주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",19.641536331193112
+제주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",15.03745499658213
+제주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",19.6463537627387
+제주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",36.72079135531701
+제주,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",53.35135312828558
+충남,ETS,"{""trend"": ""add"", ""damped"": true}",8.164417489450532
+충남,ETS,"{""trend"": null}",8.43963249912546
+충남,계절 naive,{},8.235677225432081
+충남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",10.741411823006173
+충남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",16.398425415850394
+충남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",10.64839924998308
+충남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",16.048255228921942
+충남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",7.69285649089664
+충남,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",17.82935435587565
+충북,ETS,"{""trend"": ""add"", ""damped"": true}",4.912127848605769
+충북,ETS,"{""trend"": null}",5.572633422420019
+충북,계절 naive,{},6.387947532325917
+충북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": 96}",5.843351841485982
+충북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""trend""], ""recent"": null}",10.520247935814588
+충북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": 96}",5.510734271219287
+충북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1"", ""workdays"", ""trend""], ""recent"": null}",10.217778691902103
+충북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": 96}",17.109720735098023
+충북,회귀 √Y,"{""feats"": [""hdd"", ""hdd_l1"", ""cdd"", ""cdd_l1""], ""recent"": null}",29.51150138701337

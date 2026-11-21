@@ -1,0 +1,361 @@
+﻿series,info,horizon,model,MAPE,in_mcs
+city,ex_ante,h1,Chronos-2,4.98267138151309,True
+city,ex_ante,h1,Chronos-2 + 공변량,4.678086119536484,True
+city,ex_ante,h1,ETS,4.68454071706847,True
+city,ex_ante,h1,LightGBM,4.6909405553497745,True
+city,ex_ante,h1,Ridge,4.581566604269322,True
+city,ex_ante,h1,SARIMAX,4.279268093464382,True
+city,ex_ante,h1,TimesFM 2.5,4.60366695274869,True
+city,ex_ante,h1,계절 naive,6.953388957534972,False
+city,ex_ante,h1,앙상블,4.293623144427251,True
+city,ex_ante,h1,하이브리드 (회귀+LightGBM),4.534470140640994,True
+city,ex_ante,h1,하이브리드 (회귀+Ridge),4.951329372242788,True
+city,ex_ante,h1,회귀 √Y,5.292577894745988,True
+city,ex_ante,h3,Chronos-2,5.127336972358257,True
+city,ex_ante,h3,Chronos-2 + 공변량,5.286138099023222,False
+city,ex_ante,h3,ETS,5.574605748165153,False
+city,ex_ante,h3,LightGBM,4.7589082704137855,True
+city,ex_ante,h3,Ridge,4.962204202368822,True
+city,ex_ante,h3,SARIMAX,4.243446996836739,True
+city,ex_ante,h3,TimesFM 2.5,4.861301398940951,False
+city,ex_ante,h3,계절 naive,6.953388957534972,False
+city,ex_ante,h3,앙상블,4.59021015836763,True
+city,ex_ante,h3,하이브리드 (회귀+LightGBM),5.1474501085933575,True
+city,ex_ante,h3,하이브리드 (회귀+Ridge),4.893699871713377,True
+city,ex_ante,h3,회귀 √Y,5.372697073606704,True
+city,ex_ante,h6,Chronos-2,5.21859929975937,True
+city,ex_ante,h6,Chronos-2 + 공변량,5.054537104737174,True
+city,ex_ante,h6,ETS,5.765308579809469,False
+city,ex_ante,h6,LightGBM,4.614540890453591,True
+city,ex_ante,h6,Ridge,5.1533276134324595,True
+city,ex_ante,h6,SARIMAX,4.679756084814612,True
+city,ex_ante,h6,TimesFM 2.5,4.9223438126062575,True
+city,ex_ante,h6,계절 naive,6.953388957534972,False
+city,ex_ante,h6,앙상블,4.5283285760643315,True
+city,ex_ante,h6,하이브리드 (회귀+LightGBM),4.830629172120122,True
+city,ex_ante,h6,하이브리드 (회귀+Ridge),4.8409703581777395,True
+city,ex_ante,h6,회귀 √Y,5.365473011033157,True
+city,ex_ante,h12,Chronos-2,5.8874472414203805,True
+city,ex_ante,h12,Chronos-2 + 공변량,6.052512712672978,False
+city,ex_ante,h12,ETS,6.1549817958546305,True
+city,ex_ante,h12,LightGBM,4.795398904815581,True
+city,ex_ante,h12,Ridge,5.991323779342536,True
+city,ex_ante,h12,SARIMAX,4.924119067588378,True
+city,ex_ante,h12,TimesFM 2.5,4.983231695626778,True
+city,ex_ante,h12,계절 naive,6.953388957534972,False
+city,ex_ante,h12,앙상블,4.829952653648832,True
+city,ex_ante,h12,하이브리드 (회귀+LightGBM),4.779740351807357,True
+city,ex_ante,h12,하이브리드 (회귀+Ridge),5.305857504179522,True
+city,ex_ante,h12,회귀 √Y,5.6311915738458636,True
+city,ex_ante,all,Chronos-2,5.386230116626747,True
+city,ex_ante,all,Chronos-2 + 공변량,5.206537234304488,True
+city,ex_ante,all,ETS,5.740302260117956,False
+city,ex_ante,all,LightGBM,4.702901951828017,True
+city,ex_ante,all,Ridge,5.250968421584629,True
+city,ex_ante,all,SARIMAX,4.6695913571463885,True
+city,ex_ante,all,TimesFM 2.5,4.97909442704422,True
+city,ex_ante,all,계절 naive,6.953388957534972,False
+city,ex_ante,all,앙상블,4.54069285363867,True
+city,ex_ante,all,하이브리드 (회귀+LightGBM),4.693604292368518,True
+city,ex_ante,all,하이브리드 (회귀+Ridge),4.9608014821476445,True
+city,ex_ante,all,회귀 √Y,5.373532622399196,True
+city,ex_post,h1,Chronos-2,4.98267138151309,False
+city,ex_post,h1,Chronos-2 + 공변량,3.6390931887513087,False
+city,ex_post,h1,ETS,4.68454071706847,False
+city,ex_post,h1,LightGBM,2.836582519728579,True
+city,ex_post,h1,Ridge,3.7681810835959255,False
+city,ex_post,h1,SARIMAX,2.188591033397838,True
+city,ex_post,h1,TimesFM 2.5,4.60366695274869,False
+city,ex_post,h1,계절 naive,6.953388957534972,False
+city,ex_post,h1,앙상블,2.4416725258090235,True
+city,ex_post,h1,하이브리드 (회귀+LightGBM),3.1833524178803585,True
+city,ex_post,h1,하이브리드 (회귀+Ridge),2.9282937180271267,True
+city,ex_post,h1,회귀 √Y,3.974915749845497,False
+city,ex_post,h3,Chronos-2,5.127336972358257,False
+city,ex_post,h3,Chronos-2 + 공변량,3.8655806934182677,False
+city,ex_post,h3,ETS,5.574605748165153,False
+city,ex_post,h3,LightGBM,2.9518911164536252,True
+city,ex_post,h3,Ridge,4.252228873636935,False
+city,ex_post,h3,SARIMAX,2.4627334400740124,True
+city,ex_post,h3,TimesFM 2.5,4.861301398940951,False
+city,ex_post,h3,계절 naive,6.953388957534972,False
+city,ex_post,h3,앙상블,2.55701063725257,True
+city,ex_post,h3,하이브리드 (회귀+LightGBM),2.876996763656821,True
+city,ex_post,h3,하이브리드 (회귀+Ridge),2.9983101764332236,True
+city,ex_post,h3,회귀 √Y,4.252985660213551,False
+city,ex_post,h6,Chronos-2,5.21859929975937,False
+city,ex_post,h6,Chronos-2 + 공변량,4.04340919679232,False
+city,ex_post,h6,ETS,5.765308579809469,False
+city,ex_post,h6,LightGBM,3.084673174334864,True
+city,ex_post,h6,Ridge,4.730476190794636,False
+city,ex_post,h6,SARIMAX,2.7157679306298754,True
+city,ex_post,h6,TimesFM 2.5,4.9223438126062575,False
+city,ex_post,h6,계절 naive,6.953388957534972,False
+city,ex_post,h6,앙상블,2.803931782367689,True
+city,ex_post,h6,하이브리드 (회귀+LightGBM),3.0145190950573846,True
+city,ex_post,h6,하이브리드 (회귀+Ridge),3.0145687798017677,True
+city,ex_post,h6,회귀 √Y,4.487265112841211,False
+city,ex_post,h12,Chronos-2,5.8874472414203805,False
+city,ex_post,h12,Chronos-2 + 공변량,5.551667212479158,False
+city,ex_post,h12,ETS,6.1549817958546305,False
+city,ex_post,h12,LightGBM,3.0738256132494013,True
+city,ex_post,h12,Ridge,5.884532119089988,False
+city,ex_post,h12,SARIMAX,2.90646216142953,True
+city,ex_post,h12,TimesFM 2.5,4.983231695626778,False
+city,ex_post,h12,계절 naive,6.953388957534972,False
+city,ex_post,h12,앙상블,3.3766970291648644,True
+city,ex_post,h12,하이브리드 (회귀+LightGBM),3.4607245261391286,True
+city,ex_post,h12,하이브리드 (회귀+Ridge),3.612768538871711,True
+city,ex_post,h12,회귀 √Y,4.744277717361542,False
+city,ex_post,all,Chronos-2,5.386230116626747,False
+city,ex_post,all,Chronos-2 + 공변량,4.231637484227884,False
+city,ex_post,all,ETS,5.740302260117956,False
+city,ex_post,all,LightGBM,3.014123272750097,True
+city,ex_post,all,Ridge,4.772824154203572,False
+city,ex_post,all,SARIMAX,2.716358045216326,True
+city,ex_post,all,TimesFM 2.5,4.97909442704422,False
+city,ex_post,all,계절 naive,6.953388957534972,False
+city,ex_post,all,앙상블,2.7921657781211766,True
+city,ex_post,all,하이브리드 (회귀+LightGBM),3.103548580914545,True
+city,ex_post,all,하이브리드 (회귀+Ridge),3.148871691154738,True
+city,ex_post,all,회귀 √Y,4.413045960120484,False
+power,ex_ante,h1,Chronos-2,9.68020860616025,True
+power,ex_ante,h1,Chronos-2 + 공변량,9.061459242281346,True
+power,ex_ante,h1,ETS,10.434912882617667,True
+power,ex_ante,h1,LightGBM,9.873041259377878,True
+power,ex_ante,h1,Ridge,11.351111032727419,True
+power,ex_ante,h1,SARIMAX,9.4109972476686,True
+power,ex_ante,h1,TimesFM 2.5,10.16126441105505,True
+power,ex_ante,h1,계절 naive,14.236785432753587,True
+power,ex_ante,h1,앙상블,8.839166473334316,True
+power,ex_ante,h1,하이브리드 (회귀+LightGBM),10.999359213209535,False
+power,ex_ante,h1,하이브리드 (회귀+Ridge),9.799992450360712,True
+power,ex_ante,h1,회귀 √Y,9.511488950440821,True
+power,ex_ante,h3,Chronos-2,12.705918210629891,False
+power,ex_ante,h3,Chronos-2 + 공변량,10.974459272562937,True
+power,ex_ante,h3,ETS,14.132288150158272,True
+power,ex_ante,h3,LightGBM,10.980760086718993,True
+power,ex_ante,h3,Ridge,12.878571658774662,True
+power,ex_ante,h3,SARIMAX,9.539494043457381,True
+power,ex_ante,h3,TimesFM 2.5,12.120674986664689,True
+power,ex_ante,h3,계절 naive,14.236785432753587,True
+power,ex_ante,h3,앙상블,9.8411429565039,True
+power,ex_ante,h3,하이브리드 (회귀+LightGBM),12.788761929918532,False
+power,ex_ante,h3,하이브리드 (회귀+Ridge),10.81279369237846,True
+power,ex_ante,h3,회귀 √Y,10.414969734420618,True
+power,ex_ante,h6,Chronos-2,12.444292149473172,False
+power,ex_ante,h6,Chronos-2 + 공변량,10.266102248774253,True
+power,ex_ante,h6,ETS,16.29970212893609,False
+power,ex_ante,h6,LightGBM,11.301414189384875,True
+power,ex_ante,h6,Ridge,12.289654642143596,True
+power,ex_ante,h6,SARIMAX,10.321023572079548,True
+power,ex_ante,h6,TimesFM 2.5,11.914276181374715,True
+power,ex_ante,h6,계절 naive,14.236785432753587,True
+power,ex_ante,h6,앙상블,9.90297684983054,True
+power,ex_ante,h6,하이브리드 (회귀+LightGBM),12.879231697746551,False
+power,ex_ante,h6,하이브리드 (회귀+Ridge),11.754719282804198,True
+power,ex_ante,h6,회귀 √Y,11.019538438866396,True
+power,ex_ante,h12,Chronos-2,13.048348234881082,True
+power,ex_ante,h12,Chronos-2 + 공변량,10.54396121746492,True
+power,ex_ante,h12,ETS,14.0099277170765,True
+power,ex_ante,h12,LightGBM,11.91219925764918,True
+power,ex_ante,h12,Ridge,11.323883934694651,True
+power,ex_ante,h12,SARIMAX,9.640943617419758,True
+power,ex_ante,h12,TimesFM 2.5,11.932517495115677,True
+power,ex_ante,h12,계절 naive,14.236785432753587,True
+power,ex_ante,h12,앙상블,10.156636714493647,True
+power,ex_ante,h12,하이브리드 (회귀+LightGBM),13.963566193121101,False
+power,ex_ante,h12,하이브리드 (회귀+Ridge),13.854010744060622,False
+power,ex_ante,h12,회귀 √Y,12.859361767937505,False
+power,ex_ante,all,Chronos-2,11.884731050655711,True
+power,ex_ante,all,Chronos-2 + 공변량,10.08225201803747,True
+power,ex_ante,all,ETS,13.904163011363169,False
+power,ex_ante,all,LightGBM,11.101023348245038,True
+power,ex_ante,all,Ridge,11.983888677132823,True
+power,ex_ante,all,SARIMAX,9.71495351220242,True
+power,ex_ante,all,TimesFM 2.5,11.619315086894746,True
+power,ex_ante,all,계절 naive,14.236785432753587,True
+power,ex_ante,all,앙상블,9.64912874056957,True
+power,ex_ante,all,하이브리드 (회귀+LightGBM),12.804938367446509,False
+power,ex_ante,all,하이브리드 (회귀+Ridge),11.612440138196975,True
+power,ex_ante,all,회귀 √Y,10.921239926769536,True
+power,ex_post,h1,Chronos-2,9.68020860616025,False
+power,ex_post,h1,Chronos-2 + 공변량,8.944694977283456,False
+power,ex_post,h1,ETS,10.434912882617667,False
+power,ex_post,h1,LightGBM,9.494603532258822,False
+power,ex_post,h1,Ridge,10.380625608375555,True
+power,ex_post,h1,SARIMAX,6.896796646245454,True
+power,ex_post,h1,TimesFM 2.5,10.16126441105505,False
+power,ex_post,h1,계절 naive,14.236785432753587,False
+power,ex_post,h1,앙상블,7.412099118037661,True
+power,ex_post,h1,하이브리드 (회귀+LightGBM),9.657556448685172,True
+power,ex_post,h1,하이브리드 (회귀+Ridge),8.498749539758881,True
+power,ex_post,h1,회귀 √Y,8.423859607816315,True
+power,ex_post,h3,Chronos-2,12.705918210629891,False
+power,ex_post,h3,Chronos-2 + 공변량,10.880287181188654,True
+power,ex_post,h3,ETS,14.132288150158272,False
+power,ex_post,h3,LightGBM,10.384537058952409,True
+power,ex_post,h3,Ridge,11.91263566624111,True
+power,ex_post,h3,SARIMAX,8.334568107558981,True
+power,ex_post,h3,TimesFM 2.5,12.120674986664689,False
+power,ex_post,h3,계절 naive,14.236785432753587,False
+power,ex_post,h3,앙상블,8.62658236184109,True
+power,ex_post,h3,하이브리드 (회귀+LightGBM),11.851290850322455,False
+power,ex_post,h3,하이브리드 (회귀+Ridge),9.559129023727191,True
+power,ex_post,h3,회귀 √Y,9.203604957250844,True
+power,ex_post,h6,Chronos-2,12.444292149473172,False
+power,ex_post,h6,Chronos-2 + 공변량,9.807746359805384,True
+power,ex_post,h6,ETS,16.29970212893609,False
+power,ex_post,h6,LightGBM,10.815585417572933,True
+power,ex_post,h6,Ridge,11.211858659295002,True
+power,ex_post,h6,SARIMAX,8.895170680378511,True
+power,ex_post,h6,TimesFM 2.5,11.914276181374715,True
+power,ex_post,h6,계절 naive,14.236785432753587,False
+power,ex_post,h6,앙상블,8.822418857254705,True
+power,ex_post,h6,하이브리드 (회귀+LightGBM),12.270397713950459,False
+power,ex_post,h6,하이브리드 (회귀+Ridge),10.60569168645243,True
+power,ex_post,h6,회귀 √Y,9.838461134105609,True
+power,ex_post,h12,Chronos-2,13.048348234881082,False
+power,ex_post,h12,Chronos-2 + 공변량,9.84119771534077,True
+power,ex_post,h12,ETS,14.0099277170765,False
+power,ex_post,h12,LightGBM,11.208452458473312,False
+power,ex_post,h12,Ridge,10.203176293127495,True
+power,ex_post,h12,SARIMAX,8.285309755328537,True
+power,ex_post,h12,TimesFM 2.5,11.932517495115677,False
+power,ex_post,h12,계절 naive,14.236785432753587,False
+power,ex_post,h12,앙상블,8.858561634536537,True
+power,ex_post,h12,하이브리드 (회귀+LightGBM),13.177543155798944,False
+power,ex_post,h12,하이브리드 (회귀+Ridge),13.13227399435134,False
+power,ex_post,h12,회귀 √Y,12.225212902878885,False
+power,ex_post,all,Chronos-2,11.884731050655711,False
+power,ex_post,all,Chronos-2 + 공변량,9.677995343666971,True
+power,ex_post,all,ETS,13.904163011363169,False
+power,ex_post,all,LightGBM,10.683329822026586,False
+power,ex_post,all,Ridge,11.02970620909786,True
+power,ex_post,all,SARIMAX,8.27335570498578,True
+power,ex_post,all,TimesFM 2.5,11.619315086894746,False
+power,ex_post,all,계절 naive,14.236785432753587,False
+power,ex_post,all,앙상블,8.454209565639914,True
+power,ex_post,all,하이브리드 (회귀+LightGBM),12.059889626284741,False
+power,ex_post,all,하이브리드 (회귀+Ridge),10.597614183443719,False
+power,ex_post,all,회귀 √Y,9.938914481276655,True
+total,ex_ante,h1,Chronos-2,6.869461766556699,False
+total,ex_ante,h1,Chronos-2 + 공변량,5.78771552869192,True
+total,ex_ante,h1,ETS,6.318674549897217,True
+total,ex_ante,h1,LightGBM,6.486886874937429,False
+total,ex_ante,h1,Ridge,6.7593859248548345,True
+total,ex_ante,h1,SARIMAX,5.177499967789888,True
+total,ex_ante,h1,TimesFM 2.5,6.658921217035159,False
+total,ex_ante,h1,계절 naive,9.096675181753664,False
+total,ex_ante,h1,앙상블,5.178353052333855,True
+total,ex_ante,h1,하이브리드 (회귀+LightGBM),6.734061389605213,False
+total,ex_ante,h1,하이브리드 (회귀+Ridge),5.3648113095146766,True
+total,ex_ante,h1,회귀 √Y,5.860756797039382,False
+total,ex_ante,h3,Chronos-2,8.726643033265523,False
+total,ex_ante,h3,Chronos-2 + 공변량,7.590564303742556,True
+total,ex_ante,h3,ETS,8.669765304586354,False
+total,ex_ante,h3,LightGBM,6.809742717998152,True
+total,ex_ante,h3,Ridge,7.411109072422787,True
+total,ex_ante,h3,SARIMAX,6.570160963628485,True
+total,ex_ante,h3,TimesFM 2.5,8.056312010293471,False
+total,ex_ante,h3,계절 naive,9.096675181753664,True
+total,ex_ante,h3,앙상블,6.107983882895218,True
+total,ex_ante,h3,하이브리드 (회귀+LightGBM),7.621723774128014,False
+total,ex_ante,h3,하이브리드 (회귀+Ridge),6.226178949463512,True
+total,ex_ante,h3,회귀 √Y,6.2210128048006315,True
+total,ex_ante,h6,Chronos-2,7.714758405452198,True
+total,ex_ante,h6,Chronos-2 + 공변량,7.777994086873259,True
+total,ex_ante,h6,ETS,8.915790130074736,False
+total,ex_ante,h6,LightGBM,6.626227217807491,True
+total,ex_ante,h6,Ridge,7.7050482037722965,True
+total,ex_ante,h6,SARIMAX,6.595718519883707,True
+total,ex_ante,h6,TimesFM 2.5,7.703970515971309,False
+total,ex_ante,h6,계절 naive,9.096675181753664,True
+total,ex_ante,h6,앙상블,5.777692980034301,True
+total,ex_ante,h6,하이브리드 (회귀+LightGBM),7.57771061863495,True
+total,ex_ante,h6,하이브리드 (회귀+Ridge),5.932542105670668,True
+total,ex_ante,h6,회귀 √Y,6.397101028257139,True
+total,ex_ante,h12,Chronos-2,8.269888061587231,True
+total,ex_ante,h12,Chronos-2 + 공변량,7.348159247841895,True
+total,ex_ante,h12,ETS,8.754148652913226,False
+total,ex_ante,h12,LightGBM,7.059184174243112,True
+total,ex_ante,h12,Ridge,7.893806709315341,True
+total,ex_ante,h12,SARIMAX,6.0188879838588685,True
+total,ex_ante,h12,TimesFM 2.5,7.525335459762611,True
+total,ex_ante,h12,계절 naive,9.096675181753664,True
+total,ex_ante,h12,앙상블,6.019721463087416,True
+total,ex_ante,h12,하이브리드 (회귀+LightGBM),7.2553149335955665,True
+total,ex_ante,h12,하이브리드 (회귀+Ridge),7.078968282069255,True
+total,ex_ante,h12,회귀 √Y,7.303115834315234,True
+total,ex_ante,all,Chronos-2,7.756125557586216,True
+total,ex_ante,all,Chronos-2 + 공변량,7.17920541910458,True
+total,ex_ante,all,ETS,8.367363752837564,False
+total,ex_ante,all,LightGBM,6.6934477330554225,True
+total,ex_ante,all,Ridge,7.424784861612606,True
+total,ex_ante,all,SARIMAX,6.295505289432618,True
+total,ex_ante,all,TimesFM 2.5,7.547055799088054,False
+total,ex_ante,all,계절 naive,9.096675181753664,True
+total,ex_ante,all,앙상블,5.747452483599037,True
+total,ex_ante,all,하이브리드 (회귀+LightGBM),6.9463000737327265,False
+total,ex_ante,all,하이브리드 (회귀+Ridge),5.962867942881385,True
+total,ex_ante,all,회귀 √Y,6.46649760442832,True
+total,ex_post,h1,Chronos-2,6.869461766556699,False
+total,ex_post,h1,Chronos-2 + 공변량,4.5446399287155055,False
+total,ex_post,h1,ETS,6.318674549897217,False
+total,ex_post,h1,LightGBM,5.1659864159773905,False
+total,ex_post,h1,Ridge,6.002707104901707,False
+total,ex_post,h1,SARIMAX,3.4065133344042016,True
+total,ex_post,h1,TimesFM 2.5,6.658921217035159,False
+total,ex_post,h1,계절 naive,9.096675181753664,False
+total,ex_post,h1,앙상블,3.7239842583333607,True
+total,ex_post,h1,하이브리드 (회귀+LightGBM),6.076930836889972,False
+total,ex_post,h1,하이브리드 (회귀+Ridge),3.693386517775374,True
+total,ex_post,h1,회귀 √Y,4.385495513786733,False
+total,ex_post,h3,Chronos-2,8.726643033265523,False
+total,ex_post,h3,Chronos-2 + 공변량,6.377810937938716,False
+total,ex_post,h3,ETS,8.669765304586354,False
+total,ex_post,h3,LightGBM,5.366418296866464,True
+total,ex_post,h3,Ridge,6.883276339195138,False
+total,ex_post,h3,SARIMAX,4.864961539574568,True
+total,ex_post,h3,TimesFM 2.5,8.056312010293471,False
+total,ex_post,h3,계절 naive,9.096675181753664,False
+total,ex_post,h3,앙상블,4.615119795190181,True
+total,ex_post,h3,하이브리드 (회귀+LightGBM),7.0000342157810636,False
+total,ex_post,h3,하이브리드 (회귀+Ridge),4.310498355822546,True
+total,ex_post,h3,회귀 √Y,4.894167116397925,True
+total,ex_post,h6,Chronos-2,7.714758405452198,False
+total,ex_post,h6,Chronos-2 + 공변량,6.516210242445675,True
+total,ex_post,h6,ETS,8.915790130074736,False
+total,ex_post,h6,LightGBM,5.336549105165791,True
+total,ex_post,h6,Ridge,6.933240919715727,False
+total,ex_post,h6,SARIMAX,5.01360387549398,True
+total,ex_post,h6,TimesFM 2.5,7.703970515971309,False
+total,ex_post,h6,계절 naive,9.096675181753664,False
+total,ex_post,h6,앙상블,4.315644264994501,True
+total,ex_post,h6,하이브리드 (회귀+LightGBM),6.041550342469481,False
+total,ex_post,h6,하이브리드 (회귀+Ridge),4.155478907491425,True
+total,ex_post,h6,회귀 √Y,5.36350678412439,True
+total,ex_post,h12,Chronos-2,8.269888061587231,False
+total,ex_post,h12,Chronos-2 + 공변량,6.957061867024546,False
+total,ex_post,h12,ETS,8.754148652913226,False
+total,ex_post,h12,LightGBM,5.518784940734226,True
+total,ex_post,h12,Ridge,7.256717760838022,False
+total,ex_post,h12,SARIMAX,4.3942668582397655,True
+total,ex_post,h12,TimesFM 2.5,7.525335459762611,False
+total,ex_post,h12,계절 naive,9.096675181753664,False
+total,ex_post,h12,앙상블,4.3645362138781705,True
+total,ex_post,h12,하이브리드 (회귀+LightGBM),5.21804902490092,True
+total,ex_post,h12,하이브리드 (회귀+Ridge),5.127304802072874,True
+total,ex_post,h12,회귀 √Y,5.477974915120135,True
+total,ex_post,all,Chronos-2,7.756125557586216,False
+total,ex_post,all,Chronos-2 + 공변량,6.083463806902836,False
+total,ex_post,all,ETS,8.367363752837564,False
+total,ex_post,all,LightGBM,5.304972734123039,False
+total,ex_post,all,Ridge,6.793604305569244,False
+total,ex_post,all,SARIMAX,4.576950467912376,True
+total,ex_post,all,TimesFM 2.5,7.547055799088054,False
+total,ex_post,all,계절 naive,9.096675181753664,False
+total,ex_post,all,앙상블,4.157398816794236,True
+total,ex_post,all,하이브리드 (회귀+LightGBM),5.921286720006328,False
+total,ex_post,all,하이브리드 (회귀+Ridge),4.211338552280813,True
+total,ex_post,all,회귀 √Y,5.237628076916509,False

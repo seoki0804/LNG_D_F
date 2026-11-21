@@ -1,0 +1,9 @@
+{
+  "name": "lng-d-f-report",
+  "private": true,
+  "description": "최종 보고서(.docx)와 발표 자료(.pptx) 생성 스크립트",
+  "dependencies": {
+    "docx": "^9.16.0",
+    "pptxgenjs": "^4.0.1"
+  }
+}

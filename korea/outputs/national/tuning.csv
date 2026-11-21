@@ -1,0 +1,169 @@
+﻿series,model,params,val_MAPE,sec
+city,계절 naive,{},6.577057657641774,0.8181688785552979
+city,회귀 √Y,"{""feats"": [""hdd"", ""cdd""]}",6.00453501123405,0.8952295780181885
+city,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""workdays""]}",6.183488439323628,0.8944759368896484
+city,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""log_cpi""]}",5.217017636126586,0.8311247825622559
+city,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""log_cpi"", ""trend""]}",7.418949107122883,1.1429896354675293
+city,SARIMAX,"{""exog"": [""hdd""], ""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",7.113713728966442,22.451189279556274
+city,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",5.874884018509273,31.212823152542114
+city,SARIMAX,"{""exog"": [""hdd""], ""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",5.829262693982308,21.06671643257141
+city,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",5.889324128588087,27.417630672454834
+city,SARIMAX,"{""exog"": [""hdd""], ""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",5.870214716308759,23.11183762550354
+city,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",5.8623435070508565,33.38492727279663
+city,SARIMAX,"{""exog"": [""hdd""], ""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",6.035556938786912,25.39834213256836
+city,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",6.051064731425973,30.78272819519043
+city,SARIMAX,"{""exog"": [""hdd""], ""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",6.4024437074081595,29.40611982345581
+city,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",6.1842708181424255,51.415416955947876
+city,SARIMAX,"{""exog"": [""hdd""], ""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",6.01826826104209,20.641791820526123
+city,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",6.074419579102454,49.52376627922058
+city,ETS,"{""trend"": null}",5.443384405524672,1.9449546337127686
+city,ETS,"{""trend"": ""add""}",5.795786691670361,6.414305686950684
+city,ETS,"{""damped"": true, ""trend"": ""add""}",5.766079369607552,6.281030654907227
+city,Ridge,"{""alpha"": 0.1}",6.54907516489538,20.737358570098877
+city,Ridge,"{""alpha"": 1.0}",6.484737173107515,18.94754910469055
+city,Ridge,"{""alpha"": 10.0}",6.253392438196829,28.78473162651062
+city,Ridge,"{""alpha"": 100.0}",6.389950521264411,15.512025833129883
+city,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 4}",6.1965384312286735,690.5763282775879
+city,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 4}",6.004678046450455,682.9042797088623
+city,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 4}",6.341872713500565,900.0461578369141
+city,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 4}",5.950109340918994,898.0248787403107
+city,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 7}",6.139402780024574,861.6831607818604
+city,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 7}",5.955236886771873,839.4613356590271
+city,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 7}",6.289818615814227,1052.4067776203156
+city,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 7}",5.9585298380204,1016.6099977493286
+city,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 15}",6.476218916897809,444.467894077301
+city,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 15}",5.886180314845794,291.51167368888855
+city,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 15}",6.5598922582337815,694.4909296035767
+city,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 15}",5.9172349772071,548.114382982254
+city,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd""]}",6.498866955053148,18.729211807250977
+city,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd""]}",6.453721733450378,18.85665225982666
+city,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd""]}",6.310203783766212,19.256590127944946
+city,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""workdays""]}",6.827009783625482,19.397143602371216
+city,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""workdays""]}",6.77921885018082,18.82364010810852
+city,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""workdays""]}",6.640563956330209,18.801302671432495
+city,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""log_cpi""]}",5.894328457487649,16.589287281036377
+city,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""log_cpi""]}",5.852759570126257,16.544228553771973
+city,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""log_cpi""]}",5.71719985061117,17.24943447113037
+city,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""log_cpi"", ""trend""]}",6.52225141106287,17.77934432029724
+city,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""log_cpi"", ""trend""]}",6.5316607845480465,17.748944520950317
+city,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""log_cpi"", ""trend""]}",6.6369028160536345,18.828030824661255
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",5.901156905390428,170.97543144226074
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",5.998640994314022,233.62235522270203
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""workdays""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",6.619892296236155,169.82253003120422
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""workdays""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",6.680096954820488,260.50133872032166
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""log_cpi""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",5.516665438215137,148.95408177375793
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""log_cpi""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",5.697093154910115,302.4629316329956
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""log_cpi"", ""trend""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",7.038498086164799,221.13266897201538
+city,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""log_cpi"", ""trend""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",7.225136630535993,291.42913484573364
+power,계절 naive,{},15.367170782925436,0.6082446575164795
+power,회귀 √Y,"{""feats"": [""hdd"", ""cdd""]}",16.377986027893947,0.8544018268585205
+power,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",16.361182668388068,0.8715596199035645
+power,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""]}",13.73045931775935,0.9127676486968994
+power,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",15.963162163480265,1.0590059757232666
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",15.997458437824001,26.524534702301025
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",17.15011437926931,29.63571262359619
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",16.18160117702684,21.465835094451904
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",16.59246791018765,25.181018829345703
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",15.69561701745422,26.565282106399536
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",16.42653660100626,29.220353841781616
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",16.505096409777376,24.746211051940918
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",16.787424033590966,28.65295171737671
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",15.674295350331303,27.686737537384033
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",16.212617187145256,29.741275787353516
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",16.469220664941826,24.449135065078735
+power,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",16.81790544138296,27.892279624938965
+power,ETS,"{""trend"": null}",15.393556275518714,2.24004864692688
+power,ETS,"{""trend"": ""add""}",15.89879392479637,6.879610776901245
+power,ETS,"{""damped"": true, ""trend"": ""add""}",15.603345110996747,7.3656089305877686
+power,Ridge,"{""alpha"": 0.1}",17.32439547666957,17.393912076950073
+power,Ridge,"{""alpha"": 1.0}",17.24951193205397,17.562662601470947
+power,Ridge,"{""alpha"": 10.0}",16.825123009836965,17.392546892166138
+power,Ridge,"{""alpha"": 100.0}",15.794754190477667,17.772836208343506
+power,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 4}",16.274014241345753,91.98604106903076
+power,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 4}",16.360191108159846,92.10273218154907
+power,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 4}",16.427369756653587,150.51154899597168
+power,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 4}",16.61018240412172,143.75267577171326
+power,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 7}",16.134571921414253,104.97912907600403
+power,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 7}",16.88198319659351,92.24581098556519
+power,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 7}",16.228592407613778,199.74894046783447
+power,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 7}",17.207711189416848,185.03362679481506
+power,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 15}",16.703084052758097,169.31613969802856
+power,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 15}",17.354096392026488,114.06147122383118
+power,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 15}",16.72827608717934,455.3410129547119
+power,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 15}",17.71396463071249,278.2863142490387
+power,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd""]}",18.365910407639483,18.884356260299683
+power,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd""]}",18.28065601276196,18.149046421051025
+power,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd""]}",17.848405121490924,17.989791870117188
+power,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",18.442301790309585,18.494709491729736
+power,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",18.350818864358693,17.787790298461914
+power,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",17.942311890524156,17.940728425979614
+power,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""]}",14.882184725028711,18.20984435081482
+power,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""]}",14.83790893827607,18.0498628616333
+power,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""]}",14.485215873032269,17.894111156463623
+power,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",18.04039424737118,17.62691831588745
+power,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",17.94260880673709,18.06923747062683
+power,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",17.51208651644729,17.966211318969727
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",16.722440038823425,77.18330216407776
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",17.165562256141143,114.1695806980133
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",16.870424917190892,74.32931089401245
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",17.482318984852373,117.18305206298828
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",15.788736337342279,75.26348328590393
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",15.862782079275298,195.9883749485016
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",18.04405159296442,157.29225659370422
+power,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",18.29278595869688,198.36381673812866
+total,계절 naive,{},9.96835296719662,0.6792771816253662
+total,회귀 √Y,"{""feats"": [""hdd"", ""cdd""]}",10.098549072537425,0.9476919174194336
+total,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",9.746115010046386,0.9311671257019043
+total,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""]}",8.00878326825075,0.9166028499603271
+total,회귀 √Y,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",9.64621131544794,1.1516060829162598
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",9.263143630594485,27.025363206863403
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",9.560671195770333,27.910932540893555
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",9.904638636335184,20.622809886932373
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",10.08413187935674,24.514759063720703
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",9.641055623805979,26.42967414855957
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 1], ""seasonal"": [1, 0, 0]}",9.705565923931315,29.199364185333252
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",9.983765553115065,24.244524717330933
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [1, 0, 1], ""seasonal"": [0, 1, 1]}",9.935458382191992,26.13139057159424
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",9.872387581808036,25.85269832611084
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",10.084761007216715,30.14554238319397
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd""], ""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",10.000009399486965,22.421867609024048
+total,SARIMAX,"{""exog"": [""hdd"", ""cdd"", ""coal_cap""], ""order"": [2, 0, 0], ""seasonal"": [0, 1, 1]}",10.216991866342763,25.573452949523926
+total,ETS,"{""trend"": null}",8.975653348198833,2.0585267543792725
+total,ETS,"{""trend"": ""add""}",9.206935626276517,6.368816375732422
+total,ETS,"{""damped"": true, ""trend"": ""add""}",9.16183434925047,6.281008005142212
+total,Ridge,"{""alpha"": 0.1}",10.064944597231595,15.386570692062378
+total,Ridge,"{""alpha"": 1.0}",9.996481783399668,15.456820726394653
+total,Ridge,"{""alpha"": 10.0}",9.613430849337377,15.59608244895935
+total,Ridge,"{""alpha"": 100.0}",8.811928983513544,17.70541763305664
+total,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 4}",10.099172163059405,58.80129837989807
+total,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 4}",9.851102389237031,57.94951510429382
+total,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 4}",10.077945261756687,111.31497812271118
+total,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 4}",9.961597582242133,109.21725344657898
+total,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 7}",9.98749341337174,84.0264995098114
+total,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 7}",10.210922442910226,75.02285361289978
+total,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 7}",10.0922974587451,1820.6736719608307
+total,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 7}",10.412071782400062,176.84378170967102
+total,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 15}",10.5678895579281,166.23830938339233
+total,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 15}",10.459384486801161,106.64149188995361
+total,LightGBM,"{""min_child_samples"": 10, ""n_estimators"": 500, ""num_leaves"": 15}",10.598498753268048,2764.9126014709473
+total,LightGBM,"{""min_child_samples"": 30, ""n_estimators"": 500, ""num_leaves"": 15}",10.643303600832917,2718.515650987625
+total,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd""]}",11.04550920070004,16.903130292892456
+total,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd""]}",11.00267820520252,17.403287649154663
+total,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd""]}",10.751665156928267,17.248332977294922
+total,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",10.976465902101225,17.618467330932617
+total,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",10.929276126500541,18.126026153564453
+total,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap""]}",10.65319914258209,18.326778411865234
+total,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""]}",8.21389719477689,17.872019290924072
+total,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""]}",8.22307814699449,17.9355731010437
+total,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""]}",8.25607676328578,17.84625005722046
+total,하이브리드 (회귀+Ridge),"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",10.531601680905267,17.889693021774292
+total,하이브리드 (회귀+Ridge),"{""alpha"": 10.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",10.49768205418201,17.789859533309937
+total,하이브리드 (회귀+Ridge),"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""]}",10.302239989297837,18.42230224609375
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",9.112708478112701,2105.80549287796
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",9.122617614868387,2585.1150023937225
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",9.908004690989545,2365.924482345581
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",9.753947652764994,2585.8557875156403
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",8.601606126453616,2536.742284297943
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",8.881041659603126,958.3620824813843
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",11.118314410953113,518.2400140762329
+total,하이브리드 (회귀+LightGBM),"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""trend""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 7}",11.18898569990267,265.3850393295288
