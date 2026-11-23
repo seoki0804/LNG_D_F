@@ -74,6 +74,10 @@ def main():
     hc = [f"h{h}" for h in range(1, 13)] + ["h1-3", "h4-6", "h7-12", "all"]
     N["nat"] = {f"{s_}|{m}|{i}|{w}": {k: r(v) for k, v in zip(hc, row)}
                 for s_, m, i, w, row in zip(sa.series, sa.model, sa["info"], sa.window, sa[hc].values.tolist())}
+    # 기온 정보 몫 = (사전 − 사후) / 사전, 1~12개월 평균. 반올림 전 MAPE로 계산해 그림 5와 같은 값이 되게 한다
+    ev = sa[sa.window == "eval"].set_index(["series", "model", "info"])["all"]
+    N["weather_share"] = {f"{s_}|{m}": r(100 * (ev[(s_, m, "ex_ante")] - ev[(s_, m, "ex_post")]) / ev[(s_, m, "ex_ante")], 1)
+                          for s_, m, i in ev.index if i == "ex_ante" and (s_, m, "ex_post") in ev.index}
     mcs = pd.read_csv(NAT / "mcs.csv")
     N["mcs"] = {f"{s_}|{i}|{h}": g[g.in_mcs].model.tolist() for (s_, i, h), g in mcs.groupby(["series", "info", "horizon"])}
     dm = pd.read_csv(NAT / "dm.csv")

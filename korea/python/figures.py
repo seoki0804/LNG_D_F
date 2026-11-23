@@ -24,9 +24,9 @@ INK, INK2, MUTED, GRID, BASE = "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c
 C = {"reg": "#2a78d6", "sarimax": "#eb6834", "ml": "#1baf7a", "chronos": "#eda100", "ens": "#e87ba4", "bench": MUTED}
 BLUES = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]
 SEQ = LinearSegmentedColormap.from_list("seq_blue", BLUES)
-EN = {"계절 naive": "Seasonal naïve", "회귀 √Y": "Regression (√Y)", "SARIMAX": "SARIMAX", "ETS": "ETS",
-      "Ridge": "Ridge (direct)", "LightGBM": "LightGBM (direct)", "하이브리드 (회귀+Ridge)": "Hybrid (regression + Ridge)",
-      "하이브리드 (회귀+LightGBM)": "Hybrid (regression + LightGBM)", "Chronos-2": "Chronos-2 (univariate)",
+EN = {"계절 naive": "Seasonal Naive", "회귀 √Y": "OLS (√Y)", "SARIMAX": "SARIMAX", "ETS": "ETS",
+      "Ridge": "Ridge (direct)", "LightGBM": "LightGBM (direct)", "하이브리드 (회귀+Ridge)": "Hybrid (OLS + Ridge)",
+      "하이브리드 (회귀+LightGBM)": "Hybrid (OLS + LightGBM)", "Chronos-2": "Chronos-2 (univariate)",
       "Chronos-2 + 공변량": "Chronos-2 (covariates)", "TimesFM 2.5": "TimesFM 2.5", "앙상블": "Ensemble"}
 SERIES_EN = {"total": "Total", "city": "City gas", "power": "Power generation"}
 PROV_EN = {"서울": "Seoul", "인천": "Incheon", "경기": "Gyeonggi", "강원": "Gangwon", "충남": "Chungnam", "세종": "Sejong",
@@ -221,7 +221,7 @@ def fig5():
     s = pd.read_csv(NAT / "summary_all.csv")
     s = s[s.window == "eval"]
     hcols = [f"h{h}" for h in range(1, 13)]
-    fig, axes = plt.subplots(1, 2, figsize=(W2, 2.4), gridspec_kw={"wspace": 0.25})
+    fig, axes = plt.subplots(1, 2, figsize=(W2, 2.2), gridspec_kw={"wspace": 0.25})
     for ax, ser in zip(axes, ["city", "power"]):
         m = "앙상블"
         ante = s[(s.series == ser) & (s.model == m) & (s["info"] == "ex_ante")][hcols].values[0]
@@ -235,14 +235,14 @@ def fig5():
         ax.text(0.97, 0.06, f"Weather share of error: {(a_all - p_all) / a_all * 100:.0f}%\n"
                 f"({a_all:.1f}% → {p_all:.1f}%, horizons 1–12)",
                 transform=ax.transAxes, ha="right", va="bottom", fontsize=6.8, color=INK2)
-        ax.set_title(f"{SERIES_EN[ser]}: ensemble", fontsize=8.5)
+        ax.set_title(f"{SERIES_EN[ser]}: Ensemble", fontsize=8.5)
         ax.set_xticks([1, 3, 6, 9, 12])
         ax.set_xlabel("Horizon (months ahead)")
         ax.set_ylim(0, None)
         ax.grid(axis="x", visible=False)
     axes[0].set_ylabel("MAPE (%)")
     h, l = axes[0].get_legend_handles_labels()
-    fig.legend(h, l, loc="lower center", ncol=2, bbox_to_anchor=(0.5, -0.1))
+    fig.legend(h, l, loc="lower center", ncol=2, bbox_to_anchor=(0.5, -0.17))
     save(fig, "fig5_weather_value")
 
 

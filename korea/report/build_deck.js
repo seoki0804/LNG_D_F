@@ -112,7 +112,7 @@ const ranked = (s, k = "all", i = "ex_ante", w = "eval") =>
 const best = (s, k = "all", i = "ex_ante", w = "eval") => ranked(s, k, i, w)[0];
 const mcs = (s, h = "all", i = "ex_ante") => N.mcs[`${s}|${i}|${h}`] || [];
 const prov = (m, me, lv) => (N.prov[`${m}|${me}|${lv}`] || {}).all;
-const share = (s, m) => 100 * (nat(s, m) - nat(s, m, "all", "ex_post")) / nat(s, m);
+const share = (s, m) => N.weather_share[`${s}|${m}`];   // 반올림 전 MAPE로 계산한 값 (그림 5와 같음)
 const R = N.reg, D = N.data, PS = N.province_sens_range, SIX = N.six || {};
 const cb = best("city"), pb = best("power"), tb = best("total");
 
@@ -202,7 +202,7 @@ bullets(s, ["예측 시점마다 다시 추정해 1~12개월 앞을 한 번에 �
             "설정·차수는 2020~2022 검증 구간에서만 선택",
             "사전예측 = 평년 기온 · 사후예측 = 실제 기온",
             "DM 검정 + 모델 신뢰집합(MCS), 누수 자동 점검"], { x: 8.75, y: 1.45, w: 4.0, h: 4.6 }, 14);
-caption(s, "모델: 계절 naive · 회귀 √Y · SARIMAX · ETS · Ridge/LightGBM(직접 다기간) · 하이브리드 · Chronos-2 · TimesFM 2.5 · 앙상블", 6.2);
+caption(s, "모델: Seasonal Naive · OLS(√Y) · SARIMAX · ETS · Ridge/LightGBM(직접 다기간) · Hybrid(OLS+ML) · Chronos-2 · TimesFM 2.5 · Ensemble", 6.2);
 s.addNotes("평가 방법입니다. 예측 시점마다 그때까지의 자료로 모델을 다시 추정해서 다음 12개월을 한 번에 예측합니다. 목표월이 2023년부터 2025년인 예측만 모아서, 1개월 앞이든 12개월 앞이든 같은 36개월로 비교했습니다. 모든 모델의 설정은 그 이전 검증 구간에서만 골랐습니다. 실제 예측처럼 미래 기온 자리에 평년값을 넣는 사전예측을 기본으로 하고, 실제 기온을 넣는 사후예측과 비교해 기온 정보의 가치를 따로 봤습니다.");
 
 // ---------------- 6. 회귀 ----------------
@@ -232,12 +232,12 @@ s.addNotes(`지역별로 보면, 기온이 같은 만큼 내려갈 때 늘어나
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
 s.addText("1~12개월 앞: 발전용이 도시가스용보다 두 배 어렵다", { placeholder: "title" });
 figure(s, FIG("fig4_horizon.png"), { x: MX, y: 1.3, w: W - 2 * MX, h: 4.75 }, "Fig 4 horizon");
-caption(s, `1~12개월 평균 사전예측 MAPE 최저: 도시가스용 ${nm(cb[0])} ${f1(cb[1])}% · 발전용 ${nm(pb[0])} ${f1(pb[1])}% · 합계 ${nm(tb[0])} ${f1(tb[1])}% (계절 naive ${f1(nat("city", "계절 naive"))} / ${f1(nat("power", "계절 naive"))} / ${f1(nat("total", "계절 naive"))}%)`, 6.25);
-s.addNotes(`예측 시계별 오차입니다. 가로축이 몇 개월 앞인지, 세로축이 오차율입니다. 도시가스용은 가장 좋은 모델이 평균 ${f1(cb[1])}%, 발전용은 ${f1(pb[1])}%로 발전용이 두 배가량 어렵습니다. 점선인 계절 naive, 즉 작년 같은 달 값과 비교하면 도시가스용에서는 대부분의 모델이 크게 낫지만, 발전용에서는 개선 폭이 작습니다. 시계가 길어지면 오차가 조금씩 커지지만, 평년 기온을 쓰는 한 12개월 앞도 1개월 앞과 크게 다르지 않습니다.`);
+caption(s, `1~12개월 평균 사전예측 MAPE 최저: 도시가스용 ${nm(cb[0])} ${f1(cb[1])}% · 발전용 ${nm(pb[0])} ${f1(pb[1])}% · 합계 ${nm(tb[0])} ${f1(tb[1])}% (Seasonal Naive ${f1(nat("city", "계절 naive"))} / ${f1(nat("power", "계절 naive"))} / ${f1(nat("total", "계절 naive"))}%)`, 6.25);
+s.addNotes(`예측 시계별 오차입니다. 가로축이 몇 개월 앞인지, 세로축이 오차율입니다. 도시가스용은 가장 좋은 모델이 평균 ${f1(cb[1])}%, 발전용은 ${f1(pb[1])}%로 발전용이 두 배가량 어렵습니다. 점선인 Seasonal Naive, 즉 작년 같은 달 값과 비교하면 도시가스용에서는 대부분의 모델이 크게 낫지만, 발전용에서는 개선 폭이 작습니다. 시계가 길어지면 오차가 조금씩 커지지만, 평년 기온을 쓰는 한 12개월 앞도 1개월 앞과 크게 다르지 않습니다.`);
 
 // ---------------- 9. MCS 표 ----------------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
-s.addText("앙상블이 평균 1위, 그러나 통계적으로 최고 모델은 하나가 아니다", { placeholder: "title" });
+s.addText("Ensemble이 평균 1위, 그러나 통계적으로 최고 모델은 하나가 아니다", { placeholder: "title" });
 const SER = [["city", "도시가스용"], ["power", "발전용"], ["total", "합계"]];
 const th = [{ text: "", options: head }, ...SER.map(([, n]) => ({ text: n, options: { ...head, align: "center" } }))];
 const cell = (t) => ({ text: t, options: { fontSize: 13, align: "center", valign: "middle" } });
@@ -252,7 +252,7 @@ const rows = [th,
 s.addTable(rows, { x: MX, y: 1.45, w: W - 2 * MX, colW: [2.6, 3.17, 3.17, 3.19], rowH: [0.5, 0.6, 0.6, 0.6, 0.6, 1.4],
   border: { type: "solid", pt: 0.75, color: "D0D4DE" }, color: HEX.dk1, objectName: "mcs table" });
 caption(s, "MCS = 최고 모델과 통계적으로 구별되지 않는 모델 집합 (범위 통계량, 정상 부트스트랩 5,000회, 손실 APE)", 6.45);
-s.addNotes(`통계적으로 보면 결론은 조심스럽습니다. 평균으로는 미리 정한 앙상블이 세 계열 모두 가장 정확했지만, 1개월 앞과 12개월 앞의 최고 모델은 용도마다 다릅니다. 최고 모델과 통계적으로 구별되지 않는 모델 집합에는 12개 중 ${mcs("city").length}개, ${mcs("power").length}개, ${mcs("total").length}개가 남습니다.${mcs("power").includes("계절 naive") ? " 특히 발전용은 작년 같은 달 값을 그대로 쓰는 계절 naive조차 빠지지 않습니다." : ""} 36개월로는 상위 모델끼리의 작은 차이를 가릴 수 없다는 뜻이고, 그래서 한 모델을 고르기보다 서로 다른 원리의 모델을 함께 쓰는 쪽을 권합니다.`);
+s.addNotes(`통계적으로 보면 결론은 조심스럽습니다. 평균으로는 미리 정한 Ensemble이 세 계열 모두 가장 정확했지만, 1개월 앞과 12개월 앞의 최고 모델은 용도마다 다릅니다. 최고 모델과 통계적으로 구별되지 않는 모델 집합에는 12개 중 ${mcs("city").length}개, ${mcs("power").length}개, ${mcs("total").length}개가 남습니다.${mcs("power").includes("계절 naive") ? " 특히 발전용은 작년 같은 달 값을 그대로 쓰는 Seasonal Naive조차 빠지지 않습니다." : ""} 36개월로는 상위 모델끼리의 작은 차이를 가릴 수 없다는 뜻이고, 그래서 한 모델을 고르기보다 서로 다른 원리의 모델을 함께 쓰는 쪽을 권합니다.`);
 
 // ---------------- 10. 기온의 가치 ----------------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
@@ -260,7 +260,7 @@ s.addText("기온을 알면 도시가스용 오차는 크게 준다, 발전용�
 figure(s, FIG("fig5_weather_value.png"), { x: MX, y: 1.3, w: 8.6, h: 4.9 }, "Fig 5 weather");
 stat(s, `${f0(share("city", "앙상블"))}%`, "도시가스용 오차 중\n기온 불확실성 몫", 9.5, 1.6, 3.25, HEX.accent1);
 stat(s, `${f0(share("power", "앙상블"))}%`, "발전용 오차 중\n기온 불확실성 몫", 9.5, 3.35, 3.25, HEX.accent2);
-caption(s, "앙상블 기준, 사전예측(평년 기온) − 사후예측(실제 기온) MAPE의 비중, 1~12개월 평균", 6.45);
+caption(s, "Ensemble 기준, 사전예측(평년 기온) − 사후예측(실제 기온) MAPE의 비중, 1~12개월 평균", 6.45);
 s.addNotes(`실제 기온을 미리 안다고 가정한 사후예측과 비교해 보았습니다. 도시가스용은 오차의 약 ${f0(share("city", "앙상블"))}%가 기온을 몰라서 생긴 것으로, 기온 전망을 개선하면 그만큼 줄일 수 있습니다. 반면 발전용은 ${f0(share("power", "앙상블"))}%에 그쳐, 기온보다 전력 공급 측 정보가 필요합니다. 용도마다 다른 정보에 투자해야 한다는 실무적 시사점입니다.`);
 
 // ---------------- 11. 계층 ----------------
@@ -289,7 +289,7 @@ bullets(s, [
   "독일·이탈리아·프랑스·스페인·네덜란드에 같은 모델·같은 평가 절차(1개월 앞, 2023~2025)를 적용",
   "유럽은 2022년 위기로 수요 수준이 바뀌어 기준 회귀가 크게 틀림 · 한국은 공급 충격이 없어 회귀도 정확",
 ], { x: MX, y: 5.75, w: W - 2 * MX, h: 1.1 }, 14);
-s.addNotes(`같은 모델과 같은 평가 절차를 유럽 5개국에도 적용했습니다. 한국의 난방 민감도는 HDD 10당 ${SIX.r5 ? f1(SIX.r5.KR.hdd10_post) : "–"}%로 프랑스나 독일보다 낮습니다. 유럽은 2022년 에너지 위기로 수요 수준 자체가 바뀌어 위기를 반영하지 않은 회귀가 크게 틀렸지만, 한국은 그런 공급 충격이 없어 단순한 회귀도 여섯 나라 중 가장 정확했습니다. 어느 나라에서든 튜닝한 SARIMAX와 앙상블이 최고 모델과 구별되지 않았다는 점은 한국 결과와 같습니다.`);
+s.addNotes(`같은 모델과 같은 평가 절차를 유럽 5개국에도 적용했습니다. 한국의 난방 민감도는 HDD 10당 ${SIX.r5 ? f1(SIX.r5.KR.hdd10_post) : "–"}%로 프랑스나 독일보다 낮습니다. 유럽은 2022년 에너지 위기로 수요 수준 자체가 바뀌어 위기를 반영하지 않은 회귀가 크게 틀렸지만, 한국은 그런 공급 충격이 없어 단순한 회귀도 여섯 나라 중 가장 정확했습니다. 어느 나라에서든 튜닝한 SARIMAX와 Ensemble이 최고 모델과 구별되지 않았다는 점은 한국 결과와 같습니다.`);
 
 // ---------------- 14. 결론 ----------------
 pres.addSection({ title: "결론" });

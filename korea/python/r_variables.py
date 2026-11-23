@@ -95,7 +95,7 @@ def main():
         name = "기본 설정" if r.var == "기본" else CANDS[r.var]
         ok = "✓" if (r.var != "기본" and r.val_gain > 0.1) else ""
         L.append(f"| {SERIES[r.series]} | {r.model} | {name} | {r.val:.2f} | {r.eval:.2f} | "
-                 f"{'' if r.var == '기본' else f'{r.eval_gain:+.2f}'} | {'' if r.dm_p is None else f'{r.dm_p:.3f}'} | {ok} |")
+                 f"{'' if r.var == '기본' else f'{r.eval_gain:+.2f}'} | {'' if pd.isna(r.dm_p) else f'{r.dm_p:.3f}'} | {ok} |")
     L += ["", f"검증 기준으로 채택된 조합: {len(adopted)}개"]
     for r in adopted.itertuples():
         L.append(f"- {SERIES[r.series]} {r.model} + {CANDS[r.var]}: 검증 {r.val_gain:+.2f}%p, 평가 {r.eval_gain:+.2f}%p")
