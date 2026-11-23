@@ -1,5 +1,5 @@
 // 한국 연구 최종 보고서(논문 형식, .docx). 수치는 numbers.json(python/report_numbers.py)에서 읽는다.
-// 실행: korea/ 에서  node report/build_report.js   → report/한국_천연가스_수요예측_보고서.docx
+// 실행: korea/ 에서  node report/build_report.js   → report/한국_LNG_수요예측_보고서.docx
 const fs = require("fs");
 const path = require("path");
 const K = require("./docx_kit");
@@ -15,9 +15,9 @@ const pv = (x) => (x < 0.001 ? "p < 0.001" : `p = ${x.toFixed(3)}`);
 
 // ---------------- 수치 도우미 ----------------
 const SER = { total: "합계", city: "도시가스용", power: "발전용" };
-const NM = { "계절 naive": "계절 naive", "회귀 √Y": "회귀 √Y", SARIMAX: "SARIMAX", ETS: "ETS", Ridge: "Ridge(직접)",
-  LightGBM: "LightGBM(직접)", "하이브리드 (회귀+Ridge)": "하이브리드(회귀+Ridge)", "하이브리드 (회귀+LightGBM)": "하이브리드(회귀+LightGBM)",
-  "Chronos-2": "Chronos-2(단변량)", "Chronos-2 + 공변량": "Chronos-2(공변량)", "TimesFM 2.5": "TimesFM 2.5", 앙상블: "앙상블" };
+const NM = { "계절 naive": "Seasonal Naive", "회귀 √Y": "OLS(√Y)", SARIMAX: "SARIMAX", ETS: "ETS", Ridge: "Ridge(직접)",
+  LightGBM: "LightGBM(직접)", "하이브리드 (회귀+Ridge)": "Hybrid(OLS+Ridge)", "하이브리드 (회귀+LightGBM)": "Hybrid(OLS+LightGBM)",
+  "Chronos-2": "Chronos-2(단변량)", "Chronos-2 + 공변량": "Chronos-2(공변량)", "TimesFM 2.5": "TimesFM 2.5", 앙상블: "Ensemble" };
 const nm = (m) => NM[m] || m;
 const nat = (s, m, k = "all", i = "ex_ante", w = "eval") => (N.nat[`${s}|${m}|${i}|${w}`] || {})[k];
 const MODELS = Object.keys(NM);
@@ -41,10 +41,10 @@ const add = (...xs) => xs.flat().forEach((x) => children.push(x));
 
 // ---------------- 표지 ----------------
 add(
-  new Paragraph({ style: "Title", children: [new TextRun("한국 천연가스 수요의 용도별·지역별 다기간 예측:")] }),
+  new Paragraph({ style: "Title", children: [new TextRun("한국 LNG 수요의 용도별·지역별 예측:")] }),
   new Paragraph({ style: "Title", children: [new TextRun("회귀분석, 기계학습, 시계열 파운데이션 모델의 비교")] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 240 }, children: [new TextRun({ text:
-    "Multi-horizon forecasting of natural gas demand in Korea by use and region: regression, machine learning and time-series foundation models",
+    "Forecasting LNG demand in Korea by use and region: regression, machine learning and time-series foundation models",
     italics: true, size: 19, color: "52514E" })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 60 }, children: [new TextRun({ text: "안형석, 양의창, 권기범", size: 21 })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 360 }, children: [new TextRun({ text: "수요예측 수업 최종 보고서 · 2026년 11월", size: 19, color: "52514E" })] }),
@@ -209,14 +209,15 @@ add(
 );
 
 // ---------------- 부록 ----------------
-const lk = N.leakage;
+const lk = N.leakage, VR = N.vars;
 add(
   H1("부록"),
+  ...(VR ? [P(`**추가 변수 점검.** 석탄 가격(FRED), LNG/석탄 가격비, 계통한계가격(SMP), 전력거래량, 산업생산을 튜닝한 OLS(√Y)·Hybrid(OLS+Ridge)·SARIMAX 설정에 하나씩 더하고, 검증 구간(목표월 2020~2022년)에서 MAPE가 0.1%p 넘게 줄면 채택하는 규칙을 적용하였다. 이 규칙으로 고른 ${VR.n_adopted}개 조합은 평가 구간(2023~2025년)에서 평균 ${f2(-VR.avg_eval_gain)}%p 나빠졌고, 좋아진 ${VR.n_eval_better}개 가운데 DM 검정으로 유의한 개선은 ${VR.n_sig_better_adopted}개, 유의하게 나빠진 것은 ${VR.n_sig_worse_adopted}개였다. 검증 구간이 2022년 에너지 가격 급등기와 겹쳐 가격 변수가 우연히 좋아 보였고, 실제 예측에서는 미래 가격을 모르므로 예측 시점 값으로 둘 수밖에 없기 때문으로 보인다. 그래서 본문 결과는 기본 설정을 유지하였다. 발전용 예측에 가장 필요한 월별 원전·석탄 발전량은 공개 월별 통계가 없어 시험하지 못했다.`)] : []),
   P(`**누수 점검.** 세 예측 시점(2022년 6월, 2023년 11월, 2025년 3월)에서 예측 시점 이후의 수요·기온·가격을 10배로 바꿔도 사전예측이 바뀌지 않는지 모든 학습 모델에 대해 확인하였다${lk ? `(${lk.n}건 중 ${lk.ok}건 통과)` : ""}. 실제 기온을 쓰도록 설계한 사후예측은 값이 바뀌어, 점검이 변화를 잡아낼 수 있음도 확인하였다.`),
   ...FIG(fig("figA1_diagnostics.png"), "그림 A1. 도시가스용 √Y ~ HDD 회귀의 잔차 진단. (a) 잔차 대 적합값, (b) 정규 Q–Q, (c) 시간에 따른 잔차(자기상관)."),
 );
 
-build(children, path.join(__dirname, "한국_천연가스_수요예측_보고서.docx"), {
-  creator: "안형석, 양의창, 권기범", title: "한국 천연가스 수요의 용도별·지역별 다기간 예측",
-  description: "수요예측 수업 최종 보고서", runningHead: "한국 천연가스 수요예측 · 안형석, 양의창, 권기범",
-}).then(() => console.log("저장: report/한국_천연가스_수요예측_보고서.docx"));
+build(children, path.join(__dirname, "한국_LNG_수요예측_보고서.docx"), {
+  creator: "안형석, 양의창, 권기범", title: "한국 LNG 수요의 용도별·지역별 예측",
+  description: "수요예측 수업 최종 보고서", runningHead: "한국 LNG 수요예측 · 안형석, 양의창, 권기범",
+}).then(() => console.log("저장: report/한국_LNG_수요예측_보고서.docx"));

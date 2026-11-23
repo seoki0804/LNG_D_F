@@ -19,7 +19,7 @@ EVAL = ("2023-01", "2025-12")      # 평가 목표월 (모든 h 공통 36개월)
 HOLD = ("2026-01", "2026-09")      # 표본 외 (모델·설정 고정 후 한 번)
 
 WEATHER = {"hdd": "hdd_clim", "cdd": "cdd_clim"}
-FLAT = ["cpi_city_gas", "ip", "lng_usd", "elec_twh"]          # 예측 시점 값을 그대로 둔다
+FLAT = ["cpi_city_gas", "ip", "lng_usd", "elec_twh", "smp", "coal_usd"]          # 예측 시점 값을 그대로 둔다
 KNOWN = ["days", "workdays", "seollal", "chuseok", "coal_cap"]  # 달력·정책: 미리 안다
 
 

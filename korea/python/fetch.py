@@ -150,10 +150,15 @@ def fetch_kosis():
                     startPrdDe="2001", endPrdDe=str(dt.date.today().year)))
     df.to_csv(raw_dir() / "kosis_elec_traded.csv", index=False, encoding="utf-8")
     print(f"KOSIS 전력거래량: {df.PRD_DE.min()}~{df.PRD_DE.max()}년, {len(df)}행")
+    # 연도별 월별 평균 계통한계가격 SMP (전력거래소, 원/kWh): 같은 형식
+    df = kosis(dict(orgId="388", tblId="TX_38804_A012", itmId="16388AAX0", objL1="ALL", prdSe="Y",
+                    startPrdDe="2001", endPrdDe=str(dt.date.today().year)))
+    df.to_csv(raw_dir() / "kosis_smp.csv", index=False, encoding="utf-8")
+    print(f"KOSIS SMP: {df.PRD_DE.min()}~{df.PRD_DE.max()}년, {len(df)}행")
 
 
 def fetch_fred():
-    for sid in ("PNGASJPUSDM",):          # 아시아 LNG 가격 (USD/MMBtu)
+    for sid in ("PNGASJPUSDM", "PCOALAUUSDM"):   # 아시아 LNG 가격 (USD/MMBtu), 호주 석탄 가격 (USD/t)
         text = requests.get(FRED.format(sid=sid), timeout=60).text
         (raw_dir() / f"fred_{sid}.csv").write_text(text, encoding="utf-8")
         print(f"FRED {sid}: {len(text.splitlines()) - 1}개월")

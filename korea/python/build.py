@@ -124,6 +124,19 @@ def electricity():
     return pd.DataFrame({"month": e.month, "elec_twh": pd.to_numeric(e.DT, errors="coerce") / 1000})   # GWh → TWh ("-" = 미공표)
 
 
+def smp():
+    k = pd.read_csv(latest("kosis_smp.csv"), dtype={"PRD_DE": str})
+    k = k[k.C1_NM.str.endswith("월")].copy()
+    k["month"] = k.PRD_DE + "-" + k.C1_NM.str.replace("월", "").str.zfill(2)
+    return pd.DataFrame({"month": k.month, "smp": pd.to_numeric(k.DT, errors="coerce")})   # 원/kWh
+
+
+def coal_price():
+    f = pd.read_csv(latest("fred_PCOALAUUSDM.csv"))
+    f.columns = ["date", "coal_usd"]
+    return pd.DataFrame({"month": f.date.str[:7], "coal_usd": pd.to_numeric(f.coal_usd, errors="coerce")})   # USD/t
+
+
 def lng_price():
     f = pd.read_csv(latest("fred_PNGASJPUSDM.csv"))
     f.columns = ["date", "lng_usd"]
@@ -160,7 +173,7 @@ def main():
     months = pd.period_range("2006-01", pd.Period(nat.month.max(), "M") + 12, freq="M").astype(str)   # +12: 예측 입력
     df = pd.DataFrame({"month": months})
     for part in (nat, nat_w, kosis_monthly("cpi_city_gas"), kosis_monthly("ip"), lng_price(), electricity(),
-                 calendar(months)):
+                 smp(), coal_price(), calendar(months)):
         df = df.merge(part, on="month", how="left")
     df["coal_cap"] = ((df.month >= "2019-12") & df.month.str[5:].isin(["12", "01", "02", "03"])).astype(int)
     df.to_csv(PROCESSED / "national.csv", index=False, encoding="utf-8")

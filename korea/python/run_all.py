@@ -22,6 +22,7 @@ STEPS = [
     ("r_national", [RSCRIPT, "R/01_national_regression.R"]),
     ("r_province", [RSCRIPT, "R/02_province_panel.R"]),
     ("national", [PY, "python/run_national.py"]),
+    ("variables", [PY, "python/r_variables.py"]),
     ("fm_national", [str(FM_PY), "python/foundation_mh.py"]),
     ("fm_province", [str(FM_PY), "python/foundation_mh.py", "--province"]),
     ("province", [PY, "python/run_province.py"]),

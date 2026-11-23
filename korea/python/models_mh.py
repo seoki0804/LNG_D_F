@@ -36,8 +36,11 @@ def design(frame, feats):
             X[f] = np.sin(2 * np.pi * m / 12)
         elif f == "mcos":
             X[f] = np.cos(2 * np.pi * m / 12)
+        elif f == "log_ratio":   # LNG/석탄 가격비 (발전 연료 전환)
+            X[f] = np.log(frame["lng_usd"] / frame["coal_usd"])
         elif f.startswith("log_"):
-            X[f] = np.log(frame[{"log_cpi": "cpi_city_gas", "log_lng": "lng_usd", "log_ip": "ip"}[f]])
+            X[f] = np.log(frame[{"log_cpi": "cpi_city_gas", "log_lng": "lng_usd", "log_ip": "ip", "log_coal": "coal_usd",
+                                 "log_smp": "smp"}[f]])
         else:
             X[f] = frame[f]
     return X

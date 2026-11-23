@@ -83,6 +83,19 @@ def main():
     ps = pd.read_csv(PROV / "summary.csv")
     N["prov"] = {f"{m}|{me}|{lv}": {k: r(v) for k, v in zip(hc, row)}
                  for m, me, lv, row in zip(ps.model, ps.method, ps.level, ps[hc].values.tolist())}
+    # ---- 추가 변수 점검 (r_variables.py → variables.md 표)
+    vf = NAT / "variables.md"
+    if vf.exists():
+        rows = [l.split("|")[1:-1] for l in vf.read_text(encoding="utf-8").splitlines()
+                if l.startswith("| ") and "검증 MAPE" not in l and "---" not in l]
+        rows = [[c.strip() for c in r] for r in rows]
+        adopted = [r for r in rows if r[7] == "✓"]
+        gains = [float(r[5]) for r in adopted]
+        sig_better = [r for r in rows if r[5] and r[6] not in ("", "nan") and float(r[5]) > 0 and float(r[6]) < 0.05]
+        N["vars"] = {"n_adopted": len(adopted), "avg_eval_gain": r(sum(gains) / len(gains), 2) if gains else None,
+                     "n_eval_better": sum(g > 0 for g in gains),
+                     "n_sig_better_adopted": sum(1 for x in adopted if float(x[5]) > 0 and float(x[6]) < 0.05),
+                     "n_sig_worse_adopted": sum(1 for x in adopted if float(x[5]) < 0 and float(x[6]) < 0.05)}
     # ---- 누수
     lk = (OUTPUTS / "leakage_check.md").read_text(encoding="utf-8") if (OUTPUTS / "leakage_check.md").exists() else ""
     m = re.search(r"(\d+)건 중 통과 (\d+)건", lk)

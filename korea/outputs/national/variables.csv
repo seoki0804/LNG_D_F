@@ -1,0 +1,103 @@
+﻿series,model,var,window,MAPE
+power,회귀 √Y,기본,val,13.730459317759347
+power,회귀 √Y,기본,eval,10.921239926769536
+power,회귀 √Y,log_coal,val,13.691813751837925
+power,회귀 √Y,log_coal,eval,11.305951524479902
+power,회귀 √Y,log_ratio,val,13.691813751837769
+power,회귀 √Y,log_ratio,eval,11.305951524479779
+power,회귀 √Y,log_smp,val,14.175323230461588
+power,회귀 √Y,log_smp,eval,10.363496424433832
+power,회귀 √Y,elec_twh,val,14.582948339111253
+power,회귀 √Y,elec_twh,eval,11.766610232092262
+power,회귀 √Y,log_ip,val,13.076311046223427
+power,회귀 √Y,log_ip,eval,10.63797440096573
+power,하이브리드 (회귀+Ridge),기본,val,14.485215873032269
+power,하이브리드 (회귀+Ridge),기본,eval,11.612440138196975
+power,하이브리드 (회귀+Ridge),log_coal,val,14.366054548766122
+power,하이브리드 (회귀+Ridge),log_coal,eval,11.997159892508913
+power,하이브리드 (회귀+Ridge),log_ratio,val,14.366054548766716
+power,하이브리드 (회귀+Ridge),log_ratio,eval,11.99715989250859
+power,하이브리드 (회귀+Ridge),log_smp,val,14.902259777454068
+power,하이브리드 (회귀+Ridge),log_smp,eval,10.993196379485186
+power,하이브리드 (회귀+Ridge),elec_twh,val,15.35589124304253
+power,하이브리드 (회귀+Ridge),elec_twh,eval,12.363942020864235
+power,하이브리드 (회귀+Ridge),log_ip,val,14.165342434367801
+power,하이브리드 (회귀+Ridge),log_ip,eval,11.254973710039284
+power,SARIMAX,기본,val,15.674295350331303
+power,SARIMAX,기본,eval,9.714953512202419
+power,SARIMAX,log_coal,val,19.194432409821275
+power,SARIMAX,log_coal,eval,3400.941835920509
+power,SARIMAX,log_smp,val,16.331125854243094
+power,SARIMAX,log_smp,eval,15.42952403186582
+power,SARIMAX,elec_twh,val,22.643512997600695
+power,SARIMAX,elec_twh,eval,26.36580933054849
+power,SARIMAX,log_ip,val,20.763644900984264
+power,SARIMAX,log_ip,eval,11.759646923219266
+total,회귀 √Y,기본,val,8.00878326825075
+total,회귀 √Y,기본,eval,6.466497604428319
+total,회귀 √Y,log_coal,val,7.039514445169842
+total,회귀 √Y,log_coal,eval,6.721089236873626
+total,회귀 √Y,log_ratio,val,8.198555034286095
+total,회귀 √Y,log_ratio,eval,6.384412774755235
+total,회귀 √Y,log_smp,val,7.52521871989339
+total,회귀 √Y,log_smp,eval,6.184551746673831
+total,회귀 √Y,elec_twh,val,8.633822990060931
+total,회귀 √Y,elec_twh,eval,10.55090920732649
+total,회귀 √Y,log_ip,val,7.235875778206649
+total,회귀 √Y,log_ip,eval,6.68642768133774
+total,하이브리드 (회귀+Ridge),기본,val,8.21389719477689
+total,하이브리드 (회귀+Ridge),기본,eval,5.962867942881385
+total,하이브리드 (회귀+Ridge),log_coal,val,7.268318787616261
+total,하이브리드 (회귀+Ridge),log_coal,eval,6.877986757251303
+total,하이브리드 (회귀+Ridge),log_ratio,val,8.114592181672887
+total,하이브리드 (회귀+Ridge),log_ratio,eval,5.784278838105613
+total,하이브리드 (회귀+Ridge),log_smp,val,7.859590080732114
+total,하이브리드 (회귀+Ridge),log_smp,eval,6.304809582771271
+total,하이브리드 (회귀+Ridge),elec_twh,val,9.308656637860462
+total,하이브리드 (회귀+Ridge),elec_twh,eval,11.332118939492183
+total,하이브리드 (회귀+Ridge),log_ip,val,7.8844678521450815
+total,하이브리드 (회귀+Ridge),log_ip,eval,6.581537981642169
+total,SARIMAX,기본,val,9.263143630594485
+total,SARIMAX,기본,eval,6.295505289432617
+total,SARIMAX,log_coal,val,12.093042579899228
+total,SARIMAX,log_coal,eval,2290.9402964389506
+total,SARIMAX,log_smp,val,9.656578125303055
+total,SARIMAX,log_smp,eval,9.842582298356648
+total,SARIMAX,elec_twh,val,15.272256646662818
+total,SARIMAX,elec_twh,eval,17.08048687089563
+total,SARIMAX,log_ip,val,13.775406404311205
+total,SARIMAX,log_ip,eval,6.959878133652064
+city,회귀 √Y,기본,val,5.217017636126586
+city,회귀 √Y,기본,eval,5.373532622399197
+city,회귀 √Y,log_coal,val,5.281600307958685
+city,회귀 √Y,log_coal,eval,6.041670976114536
+city,회귀 √Y,log_ratio,val,6.070746470045621
+city,회귀 √Y,log_ratio,eval,5.410796031345465
+city,회귀 √Y,log_smp,val,6.161482161854245
+city,회귀 √Y,log_smp,eval,5.9787959734100395
+city,회귀 √Y,elec_twh,val,7.907010456672162
+city,회귀 √Y,elec_twh,eval,8.939201058830077
+city,회귀 √Y,log_ip,val,6.0953456670441355
+city,회귀 √Y,log_ip,eval,6.540780935223687
+city,하이브리드 (회귀+Ridge),기본,val,5.71719985061117
+city,하이브리드 (회귀+Ridge),기본,eval,4.960801482147644
+city,하이브리드 (회귀+Ridge),log_coal,val,5.646053628739817
+city,하이브리드 (회귀+Ridge),log_coal,eval,5.510586985970047
+city,하이브리드 (회귀+Ridge),log_ratio,val,6.353770557334278
+city,하이브리드 (회귀+Ridge),log_ratio,eval,4.968293932918947
+city,하이브리드 (회귀+Ridge),log_smp,val,5.9635985818906185
+city,하이브리드 (회귀+Ridge),log_smp,eval,5.526904906556283
+city,하이브리드 (회귀+Ridge),elec_twh,val,8.252531325702444
+city,하이브리드 (회귀+Ridge),elec_twh,eval,9.150609845565315
+city,하이브리드 (회귀+Ridge),log_ip,val,6.319711093598873
+city,하이브리드 (회귀+Ridge),log_ip,eval,5.9370122803283
+city,SARIMAX,기본,val,5.829262693982308
+city,SARIMAX,기본,eval,4.669591357146387
+city,SARIMAX,log_coal,val,5.315830679013311
+city,SARIMAX,log_coal,eval,5.101062601604076
+city,SARIMAX,log_smp,val,5.4729303469402115
+city,SARIMAX,log_smp,eval,4.635537771258314
+city,SARIMAX,elec_twh,val,8.586171988298803
+city,SARIMAX,elec_twh,eval,6.257480240759553
+city,SARIMAX,log_ip,val,5.391378293990223
+city,SARIMAX,log_ip,eval,5.087446914843566

@@ -3623,6 +3623,13 @@
    "all": 7.3
   }
  },
+ "vars": {
+  "n_adopted": 13,
+  "avg_eval_gain": -0.23,
+  "n_eval_better": 4,
+  "n_sig_better_adopted": 0,
+  "n_sig_worse_adopted": 4
+ },
  "leakage": {
   "n": 72,
   "ok": 72

@@ -1,5 +1,5 @@
 // 한국 연구 학술대회 발표 자료(.pptx) + 발표 스크립트(슬라이드 노트). 수치는 numbers.json에서 읽는다.
-// 실행: korea/ 에서  node report/build_deck.js   → report/한국_천연가스_수요예측_발표.pptx
+// 실행: korea/ 에서  node report/build_deck.js   → report/한국_LNG_수요예측_발표.pptx
 const fs = require("fs");
 const os = require("os");
 const path = require("path");
@@ -26,7 +26,7 @@ const applyTheme = THEME_TOOL && fs.existsSync(THEME_TOOL) ? require(THEME_TOOL)
 const ROOT = path.resolve(__dirname, "..");
 const FIG = (n) => path.join(ROOT, "outputs", "figures", n);
 const N = JSON.parse(fs.readFileSync(path.join(__dirname, "numbers.json"), "utf8"));
-const OUT = path.join(__dirname, "한국_천연가스_수요예측_발표.pptx");
+const OUT = path.join(__dirname, "한국_LNG_수요예측_발표.pptx");
 
 const THEME = {
   name: "Gas Demand Navy",
@@ -40,7 +40,7 @@ const W = 13.333, H = 7.5, MX = 0.6;
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE";
 pres.author = "안형석, 양의창, 권기범";
-pres.title = "한국 천연가스 수요의 용도별·지역별 다기간 예측";
+pres.title = "한국 LNG 수요의 용도별·지역별 예측";
 pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
 const C = pres.SchemeColor;
 
@@ -60,7 +60,7 @@ pres.defineSlideMaster({
   objects: [
     { placeholder: { options: { name: "title", type: "title", x: MX, y: 0.35, w: W - 2 * MX, h: 0.85, fontSize: 28, bold: true,
         color: C.text2, valign: "middle", align: "left" }, text: "" } },
-    { text: { text: "한국 천연가스 수요예측 · 안형석, 양의창, 권기범", options: { x: MX, y: H - 0.42, w: 6, h: 0.3, fontSize: 10,
+    { text: { text: "한국 LNG 수요예측 · 안형석, 양의창, 권기범", options: { x: MX, y: H - 0.42, w: 6, h: 0.3, fontSize: 10,
         color: HEX.accent6 } } },
   ],
   slideNumber: { x: W - MX - 0.6, y: H - 0.42, w: 0.6, h: 0.3, fontSize: 10, color: HEX.accent6, align: "right" },
@@ -102,9 +102,9 @@ function caption(slide, text, y) {
 // ---------------- 수치 도우미 (report_numbers.py → numbers.json) ----------------
 const f0 = (x) => Number(x).toFixed(0), f1 = (x) => Number(x).toFixed(1), f2 = (x) => Number(x).toFixed(2);
 const pv = (x) => (x < 0.001 ? "p < 0.001" : `p = ${x.toFixed(3)}`);
-const NM = { "계절 naive": "계절 naive", "회귀 √Y": "회귀 √Y", SARIMAX: "SARIMAX", ETS: "ETS", Ridge: "Ridge",
-  LightGBM: "LightGBM", "하이브리드 (회귀+Ridge)": "하이브리드(Ridge)", "하이브리드 (회귀+LightGBM)": "하이브리드(LGBM)",
-  "Chronos-2": "Chronos-2", "Chronos-2 + 공변량": "Chronos-2(공변량)", "TimesFM 2.5": "TimesFM 2.5", 앙상블: "앙상블" };
+const NM = { "계절 naive": "Seasonal Naive", "회귀 √Y": "OLS(√Y)", SARIMAX: "SARIMAX", ETS: "ETS", Ridge: "Ridge",
+  LightGBM: "LightGBM", "하이브리드 (회귀+Ridge)": "Hybrid(Ridge)", "하이브리드 (회귀+LightGBM)": "Hybrid(LGBM)",
+  "Chronos-2": "Chronos-2", "Chronos-2 + 공변량": "Chronos-2(공변량)", "TimesFM 2.5": "TimesFM 2.5", 앙상블: "Ensemble" };
 const nm = (m) => NM[m] || m;
 const nat = (s, m, k = "all", i = "ex_ante", w = "eval") => (N.nat[`${s}|${m}|${i}|${w}`] || {})[k];
 const ranked = (s, k = "all", i = "ex_ante", w = "eval") =>
@@ -119,7 +119,7 @@ const cb = best("city"), pb = best("power"), tb = best("total");
 // ---------------- 1. 표지 ----------------
 pres.addSection({ title: "도입" });
 let s = pres.addSlide({ masterName: "TITLE_DARK", sectionTitle: "도입" });
-s.addText("한국 천연가스 수요의\n용도별·지역별 다기간 예측", { placeholder: "title" });
+s.addText("한국 LNG 수요의\n용도별·지역별 예측", { placeholder: "title" });
 s.addText("회귀분석 · 기계학습 · 시계열 파운데이션 모델의 비교\n안형석, 양의창, 권기범 · 2026년 11월", { placeholder: "body" });
 s.addNotes("안녕하십니까. 저희는 한국의 천연가스 수요를 도시가스용과 발전용, 그리고 17개 시도로 나눠 1개월부터 12개월 앞까지 예측하고, 회귀분석과 기계학습, 시계열 파운데이션 모델을 같은 조건에서 비교한 결과를 발표하겠습니다.");
 
@@ -319,7 +319,7 @@ s.addText("한계와 향후 과제", { placeholder: "title" });
 const lim = [
   ["평가 기간", "전국 용도별 자료는 2016년부터, 평가 36개월. 2019년은 복원값"],
   ["지역 자료", "시도 판매량은 2023년 정의 변경으로 2022년까지, 주택·산업 용도 구분은 월별 비공개"],
-  ["발전용 요인", "원전·석탄 발전량의 월별 공개 자료 부재 → 확보 시 발전용 개선 여지"],
+  ["발전용 요인", "SMP·석탄 가격·산업생산·전력거래량은 평가 구간 개선 없음. 월별 원전·석탄 발전량 자료 확보가 관건"],
   ["기온 시나리오", "평년값 하나만 사용 → 기상청 장기예보·앙상블 시나리오로 확장"],
 ];
 lim.forEach(([h, t], i) => {
@@ -341,4 +341,4 @@ s.addNotes("들어 주셔서 감사합니다. 모든 자료와 코드는 공개 
 
 pres.writeFile({ fileName: OUT })
   .then(() => applyTheme(OUT, THEME))
-  .then(() => console.log("저장: report/한국_천연가스_수요예측_발표.pptx"));
+  .then(() => console.log("저장: report/한국_LNG_수요예측_발표.pptx"));
