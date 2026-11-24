@@ -211,9 +211,26 @@ def shap_lgbm():
     return pd.DataFrame(rows)
 
 
+def by_month(p):
+    """달력월별 오차: MAPE와 평균 백분율 오차(편향, + = 과대예측). 사전·사후예측, 평가 구간과 2026년."""
+    g = p.assign(cm=pd.to_datetime(p.month).dt.month, pe=(p.pred - p.actual) / p.actual * 100)
+    out = g.groupby(["series", "model", "info", "window", "cm"]).agg(
+        MAPE=("pe", lambda x: x.abs().mean()), bias=("pe", "mean"), n=("pe", "size")).reset_index()
+    return out
+
+
+def hold_summer(df):
+    """2026년 6~9월 실제 수요·냉방도일을 직전 해들과 비교 (발전용 여름 과소예측 설명용)."""
+    d = df.assign(y=df.month.str[:4].astype(int), cm=df.month.str[5:7].astype(int))
+    d = d[d.cm.between(6, 9) & d.y.between(2022, 2026)]
+    return d[["month", "y", "cm", "city", "power", "total", "cdd", "tmean"]]
+
+
 def main():
     df = pd.read_csv(PROCESSED / "national.csv")
     p = pd.read_csv(D / "all_predictions.csv")
+    by_month(p).to_csv(D / "error_month.csv", index=False, encoding="utf-8-sig")
+    hold_summer(df).to_csv(D / "summer_2022_2026.csv", index=False, encoding="utf-8-sig")
 
     met = point_metrics(p, df)
     met.to_csv(D / "metrics.csv", index=False, encoding="utf-8-sig")

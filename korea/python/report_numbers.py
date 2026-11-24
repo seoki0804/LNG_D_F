@@ -130,6 +130,16 @@ def main():
         rp = pd.read_csv(NAT / "repro_check.csv")
         rp = rp[~rp.model.str.contains("LightGBM")]      # LightGBM은 튜닝 때 시드 1개, 최종은 시드 3개 평균
         N["repro"] = {"n": len(rp), "maxdiff": r((rp.val_MAPE_now - rp.val_MAPE_tuning).abs().max(), 4)}
+    # ---- 달력월별 오차와 2026년 여름 (paper_metrics.py)
+    if (NAT / "error_month.csv").exists():
+        em = pd.read_csv(NAT / "error_month.csv")
+        N["err_month"] = {f"{s_}|{m}|{i}|{w}|{c}": {"MAPE": r(a, 2), "bias": r(b, 2)}
+                          for s_, m, i, w, c, a, b in zip(em.series, em.model, em["info"], em.window, em.cm, em.MAPE, em.bias)}
+        dd = d[d.power.notna() & (d.month.str[5:] == "12")]
+        N["power_dec"] = {m[:4]: r(v, 0) for m, v in zip(dd.month, dd.power)}
+        su = pd.read_csv(NAT / "summer_2022_2026.csv")
+        N["summer"] = {f"{y}|{c}": {"power": r(pw, 0), "city": r(ct, 0), "cdd": r(cd, 0)}
+                       for y, c, pw, ct, cd in zip(su.y, su.cm, su.power, su.city, su.cdd)}
     # ---- 누수
     lk = (OUTPUTS / "leakage_check.md").read_text(encoding="utf-8") if (OUTPUTS / "leakage_check.md").exists() else ""
     m = re.search(r"(\d+)건 중 통과 (\d+)건", lk)

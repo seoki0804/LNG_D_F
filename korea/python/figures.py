@@ -502,8 +502,29 @@ def fig12():
     save(fig, "fig12_shap")
 
 
+# ---------------- Fig 13: 달력월별 오차와 편향 ----------------
+def fig13():
+    em = pd.read_csv(NAT / "error_month.csv")
+    e = em[(em.model == "앙상블") & (em["info"] == "ex_ante") & (em.window == "eval")]
+    fig, axes = plt.subplots(1, 2, figsize=(W2, 2.3), gridspec_kw={"wspace": 0.25})
+    x = np.arange(1, 13)
+    w = 0.38
+    for k, (ser, col) in enumerate([("city", INK), ("power", BLUES[3])]):
+        r = e[e.series == ser].set_index("cm").reindex(x)
+        axes[0].bar(x + (k - 0.5) * w, r.MAPE, width=w, color=col, label=SERIES_EN[ser])
+        axes[1].bar(x + (k - 0.5) * w, r.bias, width=w, color=col)
+    axes[0].set_title("(a) MAPE by target month (%)", fontsize=8.5)
+    axes[1].set_title("(b) Mean percentage error (%; + = over-forecast)", fontsize=8.5)
+    axes[1].axhline(0, color=INK2, lw=0.7)
+    for a in axes:
+        a.set_xticks(x, ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"])
+        a.grid(axis="x", visible=False)
+    axes[0].legend(loc="upper left")
+    save(fig, "fig13_error_month")
+
+
 ALL = {"fig1": fig1, "fig2": fig2, "fig3": fig3, "fig4": fig4, "fig5": fig5, "fig6": fig6, "fig7": fig7,
-       "fig8": fig8, "fig9": fig9, "fig10": fig10, "fig11": fig11, "fig12": fig12, "figA1": figA1}
+       "fig8": fig8, "fig9": fig9, "fig10": fig10, "fig11": fig11, "fig12": fig12, "fig13": fig13, "figA1": figA1}
 
 if __name__ == "__main__":
     for k in (sys.argv[1:] or ALL):

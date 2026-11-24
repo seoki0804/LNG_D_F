@@ -6109,6 +6109,6170 @@
   "n": 18,
   "maxdiff": 0.0
  },
+ "err_month": {
+  "city|Chronos-2|ex_ante|eval|1": {
+   "MAPE": 1.59,
+   "bias": -0.72
+  },
+  "city|Chronos-2|ex_ante|eval|2": {
+   "MAPE": 8.26,
+   "bias": 0.1
+  },
+  "city|Chronos-2|ex_ante|eval|3": {
+   "MAPE": 8.74,
+   "bias": 1.92
+  },
+  "city|Chronos-2|ex_ante|eval|4": {
+   "MAPE": 8.41,
+   "bias": 8.03
+  },
+  "city|Chronos-2|ex_ante|eval|5": {
+   "MAPE": 6.17,
+   "bias": -3.21
+  },
+  "city|Chronos-2|ex_ante|eval|6": {
+   "MAPE": 4.28,
+   "bias": 1.06
+  },
+  "city|Chronos-2|ex_ante|eval|7": {
+   "MAPE": 3.21,
+   "bias": -1.22
+  },
+  "city|Chronos-2|ex_ante|eval|8": {
+   "MAPE": 2.48,
+   "bias": 0.19
+  },
+  "city|Chronos-2|ex_ante|eval|9": {
+   "MAPE": 2.98,
+   "bias": 2.32
+  },
+  "city|Chronos-2|ex_ante|eval|10": {
+   "MAPE": 7.35,
+   "bias": 6.96
+  },
+  "city|Chronos-2|ex_ante|eval|11": {
+   "MAPE": 8.24,
+   "bias": 2.78
+  },
+  "city|Chronos-2|ex_ante|eval|12": {
+   "MAPE": 2.93,
+   "bias": 0.61
+  },
+  "city|Chronos-2|ex_ante|hold|1": {
+   "MAPE": 7.24,
+   "bias": -7.24
+  },
+  "city|Chronos-2|ex_ante|hold|2": {
+   "MAPE": 7.6,
+   "bias": 7.6
+  },
+  "city|Chronos-2|ex_ante|hold|3": {
+   "MAPE": 1.77,
+   "bias": 1.53
+  },
+  "city|Chronos-2|ex_ante|hold|4": {
+   "MAPE": 4.91,
+   "bias": 4.91
+  },
+  "city|Chronos-2|ex_ante|hold|5": {
+   "MAPE": 7.18,
+   "bias": -7.18
+  },
+  "city|Chronos-2|ex_ante|hold|6": {
+   "MAPE": 8.22,
+   "bias": -8.22
+  },
+  "city|Chronos-2|ex_ante|hold|7": {
+   "MAPE": 7.33,
+   "bias": -7.33
+  },
+  "city|Chronos-2|ex_ante|hold|8": {
+   "MAPE": 4.29,
+   "bias": -4.29
+  },
+  "city|Chronos-2|ex_ante|hold|9": {
+   "MAPE": 4.42,
+   "bias": -4.42
+  },
+  "city|Chronos-2|ex_post|eval|1": {
+   "MAPE": 1.59,
+   "bias": -0.72
+  },
+  "city|Chronos-2|ex_post|eval|2": {
+   "MAPE": 8.26,
+   "bias": 0.1
+  },
+  "city|Chronos-2|ex_post|eval|3": {
+   "MAPE": 8.74,
+   "bias": 1.92
+  },
+  "city|Chronos-2|ex_post|eval|4": {
+   "MAPE": 8.41,
+   "bias": 8.03
+  },
+  "city|Chronos-2|ex_post|eval|5": {
+   "MAPE": 6.17,
+   "bias": -3.21
+  },
+  "city|Chronos-2|ex_post|eval|6": {
+   "MAPE": 4.28,
+   "bias": 1.06
+  },
+  "city|Chronos-2|ex_post|eval|7": {
+   "MAPE": 3.21,
+   "bias": -1.22
+  },
+  "city|Chronos-2|ex_post|eval|8": {
+   "MAPE": 2.48,
+   "bias": 0.19
+  },
+  "city|Chronos-2|ex_post|eval|9": {
+   "MAPE": 2.98,
+   "bias": 2.32
+  },
+  "city|Chronos-2|ex_post|eval|10": {
+   "MAPE": 7.35,
+   "bias": 6.96
+  },
+  "city|Chronos-2|ex_post|eval|11": {
+   "MAPE": 8.24,
+   "bias": 2.78
+  },
+  "city|Chronos-2|ex_post|eval|12": {
+   "MAPE": 2.93,
+   "bias": 0.61
+  },
+  "city|Chronos-2|ex_post|hold|1": {
+   "MAPE": 7.24,
+   "bias": -7.24
+  },
+  "city|Chronos-2|ex_post|hold|2": {
+   "MAPE": 7.6,
+   "bias": 7.6
+  },
+  "city|Chronos-2|ex_post|hold|3": {
+   "MAPE": 1.77,
+   "bias": 1.53
+  },
+  "city|Chronos-2|ex_post|hold|4": {
+   "MAPE": 4.91,
+   "bias": 4.91
+  },
+  "city|Chronos-2|ex_post|hold|5": {
+   "MAPE": 7.18,
+   "bias": -7.18
+  },
+  "city|Chronos-2|ex_post|hold|6": {
+   "MAPE": 8.22,
+   "bias": -8.22
+  },
+  "city|Chronos-2|ex_post|hold|7": {
+   "MAPE": 7.33,
+   "bias": -7.33
+  },
+  "city|Chronos-2|ex_post|hold|8": {
+   "MAPE": 4.29,
+   "bias": -4.29
+  },
+  "city|Chronos-2|ex_post|hold|9": {
+   "MAPE": 4.42,
+   "bias": -4.42
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|1": {
+   "MAPE": 2.03,
+   "bias": 0.39
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|2": {
+   "MAPE": 8.31,
+   "bias": 0.1
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|3": {
+   "MAPE": 8.86,
+   "bias": 2.04
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|4": {
+   "MAPE": 6.84,
+   "bias": 5.42
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|5": {
+   "MAPE": 5.19,
+   "bias": -2.72
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|6": {
+   "MAPE": 4.48,
+   "bias": 2.17
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|7": {
+   "MAPE": 3.1,
+   "bias": -0.44
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|8": {
+   "MAPE": 2.9,
+   "bias": 0.43
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|9": {
+   "MAPE": 3.54,
+   "bias": 3.11
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|10": {
+   "MAPE": 7.23,
+   "bias": 7.18
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|11": {
+   "MAPE": 7.39,
+   "bias": 3.4
+  },
+  "city|Chronos-2 + 공변량|ex_ante|eval|12": {
+   "MAPE": 2.61,
+   "bias": 2.03
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|1": {
+   "MAPE": 7.67,
+   "bias": -7.67
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|2": {
+   "MAPE": 5.49,
+   "bias": 5.49
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|3": {
+   "MAPE": 2.03,
+   "bias": 0.25
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|4": {
+   "MAPE": 3.03,
+   "bias": 2.4
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|5": {
+   "MAPE": 7.72,
+   "bias": -7.72
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|6": {
+   "MAPE": 7.21,
+   "bias": -7.21
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|7": {
+   "MAPE": 5.47,
+   "bias": -5.47
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|8": {
+   "MAPE": 2.79,
+   "bias": -2.23
+  },
+  "city|Chronos-2 + 공변량|ex_ante|hold|9": {
+   "MAPE": 2.83,
+   "bias": -2.46
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|1": {
+   "MAPE": 2.78,
+   "bias": -1.28
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|2": {
+   "MAPE": 5.72,
+   "bias": -1.32
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|3": {
+   "MAPE": 5.2,
+   "bias": -0.31
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|4": {
+   "MAPE": 7.62,
+   "bias": -1.16
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|5": {
+   "MAPE": 4.45,
+   "bias": 0.27
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|6": {
+   "MAPE": 4.68,
+   "bias": 1.52
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|7": {
+   "MAPE": 3.55,
+   "bias": -1.57
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|8": {
+   "MAPE": 3.82,
+   "bias": -1.11
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|9": {
+   "MAPE": 2.78,
+   "bias": 0.65
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|10": {
+   "MAPE": 4.53,
+   "bias": -0.65
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|11": {
+   "MAPE": 3.3,
+   "bias": 0.9
+  },
+  "city|Chronos-2 + 공변량|ex_post|eval|12": {
+   "MAPE": 2.35,
+   "bias": -1.23
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|1": {
+   "MAPE": 4.06,
+   "bias": -4.06
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|2": {
+   "MAPE": 2.06,
+   "bias": 1.44
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|3": {
+   "MAPE": 1.92,
+   "bias": 1.1
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|4": {
+   "MAPE": 2.93,
+   "bias": -2.58
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|5": {
+   "MAPE": 9.23,
+   "bias": -9.23
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|6": {
+   "MAPE": 8.15,
+   "bias": -8.15
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|7": {
+   "MAPE": 7.1,
+   "bias": -7.1
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|8": {
+   "MAPE": 3.41,
+   "bias": -3.41
+  },
+  "city|Chronos-2 + 공변량|ex_post|hold|9": {
+   "MAPE": 2.64,
+   "bias": -2.64
+  },
+  "city|ETS|ex_ante|eval|1": {
+   "MAPE": 2.74,
+   "bias": 0.53
+  },
+  "city|ETS|ex_ante|eval|2": {
+   "MAPE": 9.88,
+   "bias": 0.4
+  },
+  "city|ETS|ex_ante|eval|3": {
+   "MAPE": 9.97,
+   "bias": 2.35
+  },
+  "city|ETS|ex_ante|eval|4": {
+   "MAPE": 7.66,
+   "bias": 5.87
+  },
+  "city|ETS|ex_ante|eval|5": {
+   "MAPE": 5.3,
+   "bias": -2.52
+  },
+  "city|ETS|ex_ante|eval|6": {
+   "MAPE": 4.2,
+   "bias": -0.01
+  },
+  "city|ETS|ex_ante|eval|7": {
+   "MAPE": 3.76,
+   "bias": -0.66
+  },
+  "city|ETS|ex_ante|eval|8": {
+   "MAPE": 3.65,
+   "bias": -2.23
+  },
+  "city|ETS|ex_ante|eval|9": {
+   "MAPE": 3.25,
+   "bias": 0.47
+  },
+  "city|ETS|ex_ante|eval|10": {
+   "MAPE": 7.86,
+   "bias": 7.86
+  },
+  "city|ETS|ex_ante|eval|11": {
+   "MAPE": 7.59,
+   "bias": 2.8
+  },
+  "city|ETS|ex_ante|eval|12": {
+   "MAPE": 3.02,
+   "bias": 1.18
+  },
+  "city|ETS|ex_ante|hold|1": {
+   "MAPE": 8.02,
+   "bias": -8.02
+  },
+  "city|ETS|ex_ante|hold|2": {
+   "MAPE": 4.81,
+   "bias": 4.81
+  },
+  "city|ETS|ex_ante|hold|3": {
+   "MAPE": 1.26,
+   "bias": -0.6
+  },
+  "city|ETS|ex_ante|hold|4": {
+   "MAPE": 2.0,
+   "bias": 1.67
+  },
+  "city|ETS|ex_ante|hold|5": {
+   "MAPE": 7.85,
+   "bias": -7.85
+  },
+  "city|ETS|ex_ante|hold|6": {
+   "MAPE": 10.11,
+   "bias": -10.11
+  },
+  "city|ETS|ex_ante|hold|7": {
+   "MAPE": 7.27,
+   "bias": -7.27
+  },
+  "city|ETS|ex_ante|hold|8": {
+   "MAPE": 6.0,
+   "bias": -6.0
+  },
+  "city|ETS|ex_ante|hold|9": {
+   "MAPE": 4.9,
+   "bias": -4.9
+  },
+  "city|ETS|ex_post|eval|1": {
+   "MAPE": 2.74,
+   "bias": 0.53
+  },
+  "city|ETS|ex_post|eval|2": {
+   "MAPE": 9.88,
+   "bias": 0.4
+  },
+  "city|ETS|ex_post|eval|3": {
+   "MAPE": 9.97,
+   "bias": 2.35
+  },
+  "city|ETS|ex_post|eval|4": {
+   "MAPE": 7.66,
+   "bias": 5.87
+  },
+  "city|ETS|ex_post|eval|5": {
+   "MAPE": 5.3,
+   "bias": -2.52
+  },
+  "city|ETS|ex_post|eval|6": {
+   "MAPE": 4.2,
+   "bias": -0.01
+  },
+  "city|ETS|ex_post|eval|7": {
+   "MAPE": 3.76,
+   "bias": -0.66
+  },
+  "city|ETS|ex_post|eval|8": {
+   "MAPE": 3.65,
+   "bias": -2.23
+  },
+  "city|ETS|ex_post|eval|9": {
+   "MAPE": 3.25,
+   "bias": 0.47
+  },
+  "city|ETS|ex_post|eval|10": {
+   "MAPE": 7.86,
+   "bias": 7.86
+  },
+  "city|ETS|ex_post|eval|11": {
+   "MAPE": 7.59,
+   "bias": 2.8
+  },
+  "city|ETS|ex_post|eval|12": {
+   "MAPE": 3.02,
+   "bias": 1.18
+  },
+  "city|ETS|ex_post|hold|1": {
+   "MAPE": 8.02,
+   "bias": -8.02
+  },
+  "city|ETS|ex_post|hold|2": {
+   "MAPE": 4.81,
+   "bias": 4.81
+  },
+  "city|ETS|ex_post|hold|3": {
+   "MAPE": 1.26,
+   "bias": -0.6
+  },
+  "city|ETS|ex_post|hold|4": {
+   "MAPE": 2.0,
+   "bias": 1.67
+  },
+  "city|ETS|ex_post|hold|5": {
+   "MAPE": 7.85,
+   "bias": -7.85
+  },
+  "city|ETS|ex_post|hold|6": {
+   "MAPE": 10.11,
+   "bias": -10.11
+  },
+  "city|ETS|ex_post|hold|7": {
+   "MAPE": 7.27,
+   "bias": -7.27
+  },
+  "city|ETS|ex_post|hold|8": {
+   "MAPE": 6.0,
+   "bias": -6.0
+  },
+  "city|ETS|ex_post|hold|9": {
+   "MAPE": 4.9,
+   "bias": -4.9
+  },
+  "city|LightGBM|ex_ante|eval|1": {
+   "MAPE": 1.84,
+   "bias": 1.74
+  },
+  "city|LightGBM|ex_ante|eval|2": {
+   "MAPE": 7.5,
+   "bias": -3.0
+  },
+  "city|LightGBM|ex_ante|eval|3": {
+   "MAPE": 6.87,
+   "bias": 4.49
+  },
+  "city|LightGBM|ex_ante|eval|4": {
+   "MAPE": 7.53,
+   "bias": 7.52
+  },
+  "city|LightGBM|ex_ante|eval|5": {
+   "MAPE": 6.91,
+   "bias": -6.91
+  },
+  "city|LightGBM|ex_ante|eval|6": {
+   "MAPE": 1.33,
+   "bias": -0.14
+  },
+  "city|LightGBM|ex_ante|eval|7": {
+   "MAPE": 1.63,
+   "bias": -0.61
+  },
+  "city|LightGBM|ex_ante|eval|8": {
+   "MAPE": 1.85,
+   "bias": -0.46
+  },
+  "city|LightGBM|ex_ante|eval|9": {
+   "MAPE": 5.12,
+   "bias": 3.23
+  },
+  "city|LightGBM|ex_ante|eval|10": {
+   "MAPE": 5.11,
+   "bias": 5.11
+  },
+  "city|LightGBM|ex_ante|eval|11": {
+   "MAPE": 8.3,
+   "bias": 2.79
+  },
+  "city|LightGBM|ex_ante|eval|12": {
+   "MAPE": 2.46,
+   "bias": 2.46
+  },
+  "city|LightGBM|ex_ante|hold|1": {
+   "MAPE": 7.81,
+   "bias": -7.81
+  },
+  "city|LightGBM|ex_ante|hold|2": {
+   "MAPE": 0.38,
+   "bias": 0.38
+  },
+  "city|LightGBM|ex_ante|hold|3": {
+   "MAPE": 0.51,
+   "bias": -0.51
+  },
+  "city|LightGBM|ex_ante|hold|4": {
+   "MAPE": 1.4,
+   "bias": 1.4
+  },
+  "city|LightGBM|ex_ante|hold|5": {
+   "MAPE": 5.82,
+   "bias": -5.82
+  },
+  "city|LightGBM|ex_ante|hold|6": {
+   "MAPE": 10.48,
+   "bias": -10.48
+  },
+  "city|LightGBM|ex_ante|hold|7": {
+   "MAPE": 5.65,
+   "bias": -5.65
+  },
+  "city|LightGBM|ex_ante|hold|8": {
+   "MAPE": 6.92,
+   "bias": -6.92
+  },
+  "city|LightGBM|ex_ante|hold|9": {
+   "MAPE": 4.49,
+   "bias": -4.3
+  },
+  "city|LightGBM|ex_post|eval|1": {
+   "MAPE": 2.2,
+   "bias": 0.11
+  },
+  "city|LightGBM|ex_post|eval|2": {
+   "MAPE": 3.15,
+   "bias": 0.45
+  },
+  "city|LightGBM|ex_post|eval|3": {
+   "MAPE": 4.57,
+   "bias": -0.09
+  },
+  "city|LightGBM|ex_post|eval|4": {
+   "MAPE": 4.86,
+   "bias": 1.6
+  },
+  "city|LightGBM|ex_post|eval|5": {
+   "MAPE": 1.98,
+   "bias": -1.98
+  },
+  "city|LightGBM|ex_post|eval|6": {
+   "MAPE": 1.13,
+   "bias": -0.43
+  },
+  "city|LightGBM|ex_post|eval|7": {
+   "MAPE": 2.16,
+   "bias": -0.14
+  },
+  "city|LightGBM|ex_post|eval|8": {
+   "MAPE": 2.5,
+   "bias": 0.7
+  },
+  "city|LightGBM|ex_post|eval|9": {
+   "MAPE": 3.28,
+   "bias": 0.69
+  },
+  "city|LightGBM|ex_post|eval|10": {
+   "MAPE": 1.95,
+   "bias": 1.75
+  },
+  "city|LightGBM|ex_post|eval|11": {
+   "MAPE": 4.73,
+   "bias": -1.26
+  },
+  "city|LightGBM|ex_post|eval|12": {
+   "MAPE": 3.66,
+   "bias": -0.24
+  },
+  "city|LightGBM|ex_post|hold|1": {
+   "MAPE": 2.2,
+   "bias": -2.2
+  },
+  "city|LightGBM|ex_post|hold|2": {
+   "MAPE": 1.18,
+   "bias": -1.18
+  },
+  "city|LightGBM|ex_post|hold|3": {
+   "MAPE": 2.29,
+   "bias": 2.29
+  },
+  "city|LightGBM|ex_post|hold|4": {
+   "MAPE": 3.28,
+   "bias": -3.28
+  },
+  "city|LightGBM|ex_post|hold|5": {
+   "MAPE": 10.78,
+   "bias": -10.78
+  },
+  "city|LightGBM|ex_post|hold|6": {
+   "MAPE": 10.48,
+   "bias": -10.48
+  },
+  "city|LightGBM|ex_post|hold|7": {
+   "MAPE": 5.38,
+   "bias": -5.38
+  },
+  "city|LightGBM|ex_post|hold|8": {
+   "MAPE": 4.87,
+   "bias": -4.87
+  },
+  "city|LightGBM|ex_post|hold|9": {
+   "MAPE": 2.76,
+   "bias": -2.36
+  },
+  "city|Ridge|ex_ante|eval|1": {
+   "MAPE": 2.93,
+   "bias": -1.96
+  },
+  "city|Ridge|ex_ante|eval|2": {
+   "MAPE": 7.73,
+   "bias": -0.06
+  },
+  "city|Ridge|ex_ante|eval|3": {
+   "MAPE": 10.12,
+   "bias": -1.51
+  },
+  "city|Ridge|ex_ante|eval|4": {
+   "MAPE": 3.61,
+   "bias": 2.12
+  },
+  "city|Ridge|ex_ante|eval|5": {
+   "MAPE": 6.94,
+   "bias": -6.75
+  },
+  "city|Ridge|ex_ante|eval|6": {
+   "MAPE": 4.2,
+   "bias": -3.48
+  },
+  "city|Ridge|ex_ante|eval|7": {
+   "MAPE": 5.01,
+   "bias": -5.01
+  },
+  "city|Ridge|ex_ante|eval|8": {
+   "MAPE": 2.49,
+   "bias": -2.24
+  },
+  "city|Ridge|ex_ante|eval|9": {
+   "MAPE": 3.78,
+   "bias": 2.64
+  },
+  "city|Ridge|ex_ante|eval|10": {
+   "MAPE": 4.0,
+   "bias": 1.91
+  },
+  "city|Ridge|ex_ante|eval|11": {
+   "MAPE": 8.45,
+   "bias": -4.06
+  },
+  "city|Ridge|ex_ante|eval|12": {
+   "MAPE": 3.74,
+   "bias": -3.0
+  },
+  "city|Ridge|ex_ante|hold|1": {
+   "MAPE": 6.48,
+   "bias": -6.48
+  },
+  "city|Ridge|ex_ante|hold|2": {
+   "MAPE": 5.63,
+   "bias": 5.63
+  },
+  "city|Ridge|ex_ante|hold|3": {
+   "MAPE": 1.48,
+   "bias": -1.48
+  },
+  "city|Ridge|ex_ante|hold|4": {
+   "MAPE": 2.63,
+   "bias": 2.63
+  },
+  "city|Ridge|ex_ante|hold|5": {
+   "MAPE": 10.83,
+   "bias": -10.83
+  },
+  "city|Ridge|ex_ante|hold|6": {
+   "MAPE": 9.27,
+   "bias": -9.27
+  },
+  "city|Ridge|ex_ante|hold|7": {
+   "MAPE": 8.76,
+   "bias": -8.76
+  },
+  "city|Ridge|ex_ante|hold|8": {
+   "MAPE": 5.97,
+   "bias": -5.97
+  },
+  "city|Ridge|ex_ante|hold|9": {
+   "MAPE": 0.88,
+   "bias": -0.88
+  },
+  "city|Ridge|ex_post|eval|1": {
+   "MAPE": 4.54,
+   "bias": -3.52
+  },
+  "city|Ridge|ex_post|eval|2": {
+   "MAPE": 5.52,
+   "bias": -1.19
+  },
+  "city|Ridge|ex_post|eval|3": {
+   "MAPE": 6.82,
+   "bias": -3.97
+  },
+  "city|Ridge|ex_post|eval|4": {
+   "MAPE": 3.25,
+   "bias": -1.31
+  },
+  "city|Ridge|ex_post|eval|5": {
+   "MAPE": 5.89,
+   "bias": -5.72
+  },
+  "city|Ridge|ex_post|eval|6": {
+   "MAPE": 4.24,
+   "bias": -3.52
+  },
+  "city|Ridge|ex_post|eval|7": {
+   "MAPE": 5.1,
+   "bias": -5.1
+  },
+  "city|Ridge|ex_post|eval|8": {
+   "MAPE": 2.58,
+   "bias": -2.35
+  },
+  "city|Ridge|ex_post|eval|9": {
+   "MAPE": 3.65,
+   "bias": 2.51
+  },
+  "city|Ridge|ex_post|eval|10": {
+   "MAPE": 2.93,
+   "bias": -1.62
+  },
+  "city|Ridge|ex_post|eval|11": {
+   "MAPE": 6.25,
+   "bias": -5.68
+  },
+  "city|Ridge|ex_post|eval|12": {
+   "MAPE": 6.49,
+   "bias": -6.49
+  },
+  "city|Ridge|ex_post|hold|1": {
+   "MAPE": 0.68,
+   "bias": -0.68
+  },
+  "city|Ridge|ex_post|hold|2": {
+   "MAPE": 0.67,
+   "bias": 0.67
+  },
+  "city|Ridge|ex_post|hold|3": {
+   "MAPE": 1.09,
+   "bias": -1.09
+  },
+  "city|Ridge|ex_post|hold|4": {
+   "MAPE": 0.77,
+   "bias": -0.77
+  },
+  "city|Ridge|ex_post|hold|5": {
+   "MAPE": 11.44,
+   "bias": -11.44
+  },
+  "city|Ridge|ex_post|hold|6": {
+   "MAPE": 9.29,
+   "bias": -9.29
+  },
+  "city|Ridge|ex_post|hold|7": {
+   "MAPE": 8.97,
+   "bias": -8.97
+  },
+  "city|Ridge|ex_post|hold|8": {
+   "MAPE": 6.15,
+   "bias": -6.15
+  },
+  "city|Ridge|ex_post|hold|9": {
+   "MAPE": 0.83,
+   "bias": -0.83
+  },
+  "city|SARIMAX|ex_ante|eval|1": {
+   "MAPE": 1.67,
+   "bias": 1.42
+  },
+  "city|SARIMAX|ex_ante|eval|2": {
+   "MAPE": 9.48,
+   "bias": 1.18
+  },
+  "city|SARIMAX|ex_ante|eval|3": {
+   "MAPE": 7.67,
+   "bias": 4.12
+  },
+  "city|SARIMAX|ex_ante|eval|4": {
+   "MAPE": 7.86,
+   "bias": 7.16
+  },
+  "city|SARIMAX|ex_ante|eval|5": {
+   "MAPE": 3.47,
+   "bias": -1.69
+  },
+  "city|SARIMAX|ex_ante|eval|6": {
+   "MAPE": 2.36,
+   "bias": 0.93
+  },
+  "city|SARIMAX|ex_ante|eval|7": {
+   "MAPE": 1.75,
+   "bias": 0.32
+  },
+  "city|SARIMAX|ex_ante|eval|8": {
+   "MAPE": 1.63,
+   "bias": -1.25
+  },
+  "city|SARIMAX|ex_ante|eval|9": {
+   "MAPE": 2.98,
+   "bias": 1.46
+  },
+  "city|SARIMAX|ex_ante|eval|10": {
+   "MAPE": 8.33,
+   "bias": 8.33
+  },
+  "city|SARIMAX|ex_ante|eval|11": {
+   "MAPE": 6.73,
+   "bias": 2.92
+  },
+  "city|SARIMAX|ex_ante|eval|12": {
+   "MAPE": 2.09,
+   "bias": 1.75
+  },
+  "city|SARIMAX|ex_ante|hold|1": {
+   "MAPE": 7.76,
+   "bias": -7.76
+  },
+  "city|SARIMAX|ex_ante|hold|2": {
+   "MAPE": 4.58,
+   "bias": 4.58
+  },
+  "city|SARIMAX|ex_ante|hold|3": {
+   "MAPE": 0.8,
+   "bias": -0.71
+  },
+  "city|SARIMAX|ex_ante|hold|4": {
+   "MAPE": 1.62,
+   "bias": 1.62
+  },
+  "city|SARIMAX|ex_ante|hold|5": {
+   "MAPE": 7.67,
+   "bias": -7.67
+  },
+  "city|SARIMAX|ex_ante|hold|6": {
+   "MAPE": 9.49,
+   "bias": -9.49
+  },
+  "city|SARIMAX|ex_ante|hold|7": {
+   "MAPE": 6.52,
+   "bias": -6.34
+  },
+  "city|SARIMAX|ex_ante|hold|8": {
+   "MAPE": 5.33,
+   "bias": -5.22
+  },
+  "city|SARIMAX|ex_ante|hold|9": {
+   "MAPE": 4.46,
+   "bias": -4.43
+  },
+  "city|SARIMAX|ex_post|eval|1": {
+   "MAPE": 2.28,
+   "bias": -0.69
+  },
+  "city|SARIMAX|ex_post|eval|2": {
+   "MAPE": 3.64,
+   "bias": -0.62
+  },
+  "city|SARIMAX|ex_post|eval|3": {
+   "MAPE": 3.13,
+   "bias": 0.77
+  },
+  "city|SARIMAX|ex_post|eval|4": {
+   "MAPE": 3.47,
+   "bias": 2.34
+  },
+  "city|SARIMAX|ex_post|eval|5": {
+   "MAPE": 2.11,
+   "bias": -0.33
+  },
+  "city|SARIMAX|ex_post|eval|6": {
+   "MAPE": 2.36,
+   "bias": 0.93
+  },
+  "city|SARIMAX|ex_post|eval|7": {
+   "MAPE": 1.75,
+   "bias": 0.32
+  },
+  "city|SARIMAX|ex_post|eval|8": {
+   "MAPE": 1.63,
+   "bias": -1.25
+  },
+  "city|SARIMAX|ex_post|eval|9": {
+   "MAPE": 2.98,
+   "bias": 1.44
+  },
+  "city|SARIMAX|ex_post|eval|10": {
+   "MAPE": 3.67,
+   "bias": 3.54
+  },
+  "city|SARIMAX|ex_post|eval|11": {
+   "MAPE": 2.46,
+   "bias": 0.87
+  },
+  "city|SARIMAX|ex_post|eval|12": {
+   "MAPE": 3.11,
+   "bias": -2.96
+  },
+  "city|SARIMAX|ex_post|hold|1": {
+   "MAPE": 0.74,
+   "bias": -0.53
+  },
+  "city|SARIMAX|ex_post|hold|2": {
+   "MAPE": 1.53,
+   "bias": -1.53
+  },
+  "city|SARIMAX|ex_post|hold|3": {
+   "MAPE": 0.49,
+   "bias": -0.22
+  },
+  "city|SARIMAX|ex_post|hold|4": {
+   "MAPE": 2.58,
+   "bias": -2.58
+  },
+  "city|SARIMAX|ex_post|hold|5": {
+   "MAPE": 8.44,
+   "bias": -8.44
+  },
+  "city|SARIMAX|ex_post|hold|6": {
+   "MAPE": 9.49,
+   "bias": -9.49
+  },
+  "city|SARIMAX|ex_post|hold|7": {
+   "MAPE": 6.52,
+   "bias": -6.34
+  },
+  "city|SARIMAX|ex_post|hold|8": {
+   "MAPE": 5.33,
+   "bias": -5.22
+  },
+  "city|SARIMAX|ex_post|hold|9": {
+   "MAPE": 4.48,
+   "bias": -4.45
+  },
+  "city|TimesFM 2.5|ex_ante|eval|1": {
+   "MAPE": 1.69,
+   "bias": 0.65
+  },
+  "city|TimesFM 2.5|ex_ante|eval|2": {
+   "MAPE": 9.57,
+   "bias": 1.61
+  },
+  "city|TimesFM 2.5|ex_ante|eval|3": {
+   "MAPE": 8.16,
+   "bias": 0.49
+  },
+  "city|TimesFM 2.5|ex_ante|eval|4": {
+   "MAPE": 8.04,
+   "bias": 7.9
+  },
+  "city|TimesFM 2.5|ex_ante|eval|5": {
+   "MAPE": 2.89,
+   "bias": -1.37
+  },
+  "city|TimesFM 2.5|ex_ante|eval|6": {
+   "MAPE": 3.07,
+   "bias": 1.32
+  },
+  "city|TimesFM 2.5|ex_ante|eval|7": {
+   "MAPE": 2.22,
+   "bias": -0.79
+  },
+  "city|TimesFM 2.5|ex_ante|eval|8": {
+   "MAPE": 1.73,
+   "bias": -0.81
+  },
+  "city|TimesFM 2.5|ex_ante|eval|9": {
+   "MAPE": 3.78,
+   "bias": 3.08
+  },
+  "city|TimesFM 2.5|ex_ante|eval|10": {
+   "MAPE": 9.32,
+   "bias": 9.32
+  },
+  "city|TimesFM 2.5|ex_ante|eval|11": {
+   "MAPE": 7.11,
+   "bias": 4.23
+  },
+  "city|TimesFM 2.5|ex_ante|eval|12": {
+   "MAPE": 2.15,
+   "bias": 0.82
+  },
+  "city|TimesFM 2.5|ex_ante|hold|1": {
+   "MAPE": 8.5,
+   "bias": -8.5
+  },
+  "city|TimesFM 2.5|ex_ante|hold|2": {
+   "MAPE": 5.58,
+   "bias": 5.58
+  },
+  "city|TimesFM 2.5|ex_ante|hold|3": {
+   "MAPE": 2.12,
+   "bias": -1.94
+  },
+  "city|TimesFM 2.5|ex_ante|hold|4": {
+   "MAPE": 3.57,
+   "bias": 3.57
+  },
+  "city|TimesFM 2.5|ex_ante|hold|5": {
+   "MAPE": 8.52,
+   "bias": -8.52
+  },
+  "city|TimesFM 2.5|ex_ante|hold|6": {
+   "MAPE": 10.95,
+   "bias": -10.95
+  },
+  "city|TimesFM 2.5|ex_ante|hold|7": {
+   "MAPE": 8.2,
+   "bias": -8.2
+  },
+  "city|TimesFM 2.5|ex_ante|hold|8": {
+   "MAPE": 5.35,
+   "bias": -5.35
+  },
+  "city|TimesFM 2.5|ex_ante|hold|9": {
+   "MAPE": 2.77,
+   "bias": -2.69
+  },
+  "city|TimesFM 2.5|ex_post|eval|1": {
+   "MAPE": 1.69,
+   "bias": 0.65
+  },
+  "city|TimesFM 2.5|ex_post|eval|2": {
+   "MAPE": 9.57,
+   "bias": 1.61
+  },
+  "city|TimesFM 2.5|ex_post|eval|3": {
+   "MAPE": 8.16,
+   "bias": 0.49
+  },
+  "city|TimesFM 2.5|ex_post|eval|4": {
+   "MAPE": 8.04,
+   "bias": 7.9
+  },
+  "city|TimesFM 2.5|ex_post|eval|5": {
+   "MAPE": 2.89,
+   "bias": -1.37
+  },
+  "city|TimesFM 2.5|ex_post|eval|6": {
+   "MAPE": 3.07,
+   "bias": 1.32
+  },
+  "city|TimesFM 2.5|ex_post|eval|7": {
+   "MAPE": 2.22,
+   "bias": -0.79
+  },
+  "city|TimesFM 2.5|ex_post|eval|8": {
+   "MAPE": 1.73,
+   "bias": -0.81
+  },
+  "city|TimesFM 2.5|ex_post|eval|9": {
+   "MAPE": 3.78,
+   "bias": 3.08
+  },
+  "city|TimesFM 2.5|ex_post|eval|10": {
+   "MAPE": 9.32,
+   "bias": 9.32
+  },
+  "city|TimesFM 2.5|ex_post|eval|11": {
+   "MAPE": 7.11,
+   "bias": 4.23
+  },
+  "city|TimesFM 2.5|ex_post|eval|12": {
+   "MAPE": 2.15,
+   "bias": 0.82
+  },
+  "city|TimesFM 2.5|ex_post|hold|1": {
+   "MAPE": 8.5,
+   "bias": -8.5
+  },
+  "city|TimesFM 2.5|ex_post|hold|2": {
+   "MAPE": 5.58,
+   "bias": 5.58
+  },
+  "city|TimesFM 2.5|ex_post|hold|3": {
+   "MAPE": 2.12,
+   "bias": -1.94
+  },
+  "city|TimesFM 2.5|ex_post|hold|4": {
+   "MAPE": 3.57,
+   "bias": 3.57
+  },
+  "city|TimesFM 2.5|ex_post|hold|5": {
+   "MAPE": 8.52,
+   "bias": -8.52
+  },
+  "city|TimesFM 2.5|ex_post|hold|6": {
+   "MAPE": 10.95,
+   "bias": -10.95
+  },
+  "city|TimesFM 2.5|ex_post|hold|7": {
+   "MAPE": 8.2,
+   "bias": -8.2
+  },
+  "city|TimesFM 2.5|ex_post|hold|8": {
+   "MAPE": 5.35,
+   "bias": -5.35
+  },
+  "city|TimesFM 2.5|ex_post|hold|9": {
+   "MAPE": 2.77,
+   "bias": -2.69
+  },
+  "city|계절 naive|ex_ante|eval|1": {
+   "MAPE": 2.24,
+   "bias": 2.24
+  },
+  "city|계절 naive|ex_ante|eval|2": {
+   "MAPE": 12.47,
+   "bias": 0.25
+  },
+  "city|계절 naive|ex_ante|eval|3": {
+   "MAPE": 12.88,
+   "bias": 2.41
+  },
+  "city|계절 naive|ex_ante|eval|4": {
+   "MAPE": 7.67,
+   "bias": 1.14
+  },
+  "city|계절 naive|ex_ante|eval|5": {
+   "MAPE": 4.18,
+   "bias": 0.07
+  },
+  "city|계절 naive|ex_ante|eval|6": {
+   "MAPE": 6.81,
+   "bias": 2.86
+  },
+  "city|계절 naive|ex_ante|eval|7": {
+   "MAPE": 6.1,
+   "bias": 2.95
+  },
+  "city|계절 naive|ex_ante|eval|8": {
+   "MAPE": 3.98,
+   "bias": 1.28
+  },
+  "city|계절 naive|ex_ante|eval|9": {
+   "MAPE": 3.87,
+   "bias": -0.17
+  },
+  "city|계절 naive|ex_ante|eval|10": {
+   "MAPE": 4.7,
+   "bias": 4.7
+  },
+  "city|계절 naive|ex_ante|eval|11": {
+   "MAPE": 13.38,
+   "bias": -1.52
+  },
+  "city|계절 naive|ex_ante|eval|12": {
+   "MAPE": 5.15,
+   "bias": 5.15
+  },
+  "city|계절 naive|ex_ante|hold|1": {
+   "MAPE": 9.11,
+   "bias": -9.11
+  },
+  "city|계절 naive|ex_ante|hold|2": {
+   "MAPE": 17.93,
+   "bias": 17.93
+  },
+  "city|계절 naive|ex_ante|hold|3": {
+   "MAPE": 1.26,
+   "bias": 1.26
+  },
+  "city|계절 naive|ex_ante|hold|4": {
+   "MAPE": 2.93,
+   "bias": 2.93
+  },
+  "city|계절 naive|ex_ante|hold|5": {
+   "MAPE": 4.1,
+   "bias": -4.1
+  },
+  "city|계절 naive|ex_ante|hold|6": {
+   "MAPE": 10.28,
+   "bias": -10.28
+  },
+  "city|계절 naive|ex_ante|hold|7": {
+   "MAPE": 7.91,
+   "bias": -7.91
+  },
+  "city|계절 naive|ex_ante|hold|8": {
+   "MAPE": 5.91,
+   "bias": -5.91
+  },
+  "city|계절 naive|ex_ante|hold|9": {
+   "MAPE": 4.11,
+   "bias": -4.11
+  },
+  "city|계절 naive|ex_post|eval|1": {
+   "MAPE": 2.24,
+   "bias": 2.24
+  },
+  "city|계절 naive|ex_post|eval|2": {
+   "MAPE": 12.47,
+   "bias": 0.25
+  },
+  "city|계절 naive|ex_post|eval|3": {
+   "MAPE": 12.88,
+   "bias": 2.41
+  },
+  "city|계절 naive|ex_post|eval|4": {
+   "MAPE": 7.67,
+   "bias": 1.14
+  },
+  "city|계절 naive|ex_post|eval|5": {
+   "MAPE": 4.18,
+   "bias": 0.07
+  },
+  "city|계절 naive|ex_post|eval|6": {
+   "MAPE": 6.81,
+   "bias": 2.86
+  },
+  "city|계절 naive|ex_post|eval|7": {
+   "MAPE": 6.1,
+   "bias": 2.95
+  },
+  "city|계절 naive|ex_post|eval|8": {
+   "MAPE": 3.98,
+   "bias": 1.28
+  },
+  "city|계절 naive|ex_post|eval|9": {
+   "MAPE": 3.87,
+   "bias": -0.17
+  },
+  "city|계절 naive|ex_post|eval|10": {
+   "MAPE": 4.7,
+   "bias": 4.7
+  },
+  "city|계절 naive|ex_post|eval|11": {
+   "MAPE": 13.38,
+   "bias": -1.52
+  },
+  "city|계절 naive|ex_post|eval|12": {
+   "MAPE": 5.15,
+   "bias": 5.15
+  },
+  "city|계절 naive|ex_post|hold|1": {
+   "MAPE": 9.11,
+   "bias": -9.11
+  },
+  "city|계절 naive|ex_post|hold|2": {
+   "MAPE": 17.93,
+   "bias": 17.93
+  },
+  "city|계절 naive|ex_post|hold|3": {
+   "MAPE": 1.26,
+   "bias": 1.26
+  },
+  "city|계절 naive|ex_post|hold|4": {
+   "MAPE": 2.93,
+   "bias": 2.93
+  },
+  "city|계절 naive|ex_post|hold|5": {
+   "MAPE": 4.1,
+   "bias": -4.1
+  },
+  "city|계절 naive|ex_post|hold|6": {
+   "MAPE": 10.28,
+   "bias": -10.28
+  },
+  "city|계절 naive|ex_post|hold|7": {
+   "MAPE": 7.91,
+   "bias": -7.91
+  },
+  "city|계절 naive|ex_post|hold|8": {
+   "MAPE": 5.91,
+   "bias": -5.91
+  },
+  "city|계절 naive|ex_post|hold|9": {
+   "MAPE": 4.11,
+   "bias": -4.11
+  },
+  "city|앙상블|ex_ante|eval|1": {
+   "MAPE": 1.12,
+   "bias": 0.62
+  },
+  "city|앙상블|ex_ante|eval|2": {
+   "MAPE": 8.24,
+   "bias": -0.38
+  },
+  "city|앙상블|ex_ante|eval|3": {
+   "MAPE": 7.59,
+   "bias": 2.12
+  },
+  "city|앙상블|ex_ante|eval|4": {
+   "MAPE": 6.11,
+   "bias": 5.18
+  },
+  "city|앙상블|ex_ante|eval|5": {
+   "MAPE": 5.16,
+   "bias": -5.11
+  },
+  "city|앙상블|ex_ante|eval|6": {
+   "MAPE": 2.57,
+   "bias": 0.93
+  },
+  "city|앙상블|ex_ante|eval|7": {
+   "MAPE": 1.87,
+   "bias": -1.37
+  },
+  "city|앙상블|ex_ante|eval|8": {
+   "MAPE": 1.54,
+   "bias": -0.59
+  },
+  "city|앙상블|ex_ante|eval|9": {
+   "MAPE": 3.98,
+   "bias": 3.96
+  },
+  "city|앙상블|ex_ante|eval|10": {
+   "MAPE": 7.01,
+   "bias": 7.01
+  },
+  "city|앙상블|ex_ante|eval|11": {
+   "MAPE": 7.38,
+   "bias": 2.71
+  },
+  "city|앙상블|ex_ante|eval|12": {
+   "MAPE": 1.91,
+   "bias": 1.64
+  },
+  "city|앙상블|ex_ante|hold|1": {
+   "MAPE": 7.72,
+   "bias": -7.72
+  },
+  "city|앙상블|ex_ante|hold|2": {
+   "MAPE": 4.23,
+   "bias": 4.23
+  },
+  "city|앙상블|ex_ante|hold|3": {
+   "MAPE": 1.2,
+   "bias": -1.2
+  },
+  "city|앙상블|ex_ante|hold|4": {
+   "MAPE": 1.02,
+   "bias": 0.97
+  },
+  "city|앙상블|ex_ante|hold|5": {
+   "MAPE": 8.19,
+   "bias": -8.19
+  },
+  "city|앙상블|ex_ante|hold|6": {
+   "MAPE": 8.54,
+   "bias": -8.54
+  },
+  "city|앙상블|ex_ante|hold|7": {
+   "MAPE": 6.71,
+   "bias": -6.71
+  },
+  "city|앙상블|ex_ante|hold|8": {
+   "MAPE": 4.63,
+   "bias": -4.63
+  },
+  "city|앙상블|ex_ante|hold|9": {
+   "MAPE": 2.54,
+   "bias": -2.07
+  },
+  "city|앙상블|ex_post|eval|1": {
+   "MAPE": 2.18,
+   "bias": -1.23
+  },
+  "city|앙상블|ex_post|eval|2": {
+   "MAPE": 3.63,
+   "bias": -0.8
+  },
+  "city|앙상블|ex_post|eval|3": {
+   "MAPE": 3.72,
+   "bias": -1.39
+  },
+  "city|앙상블|ex_post|eval|4": {
+   "MAPE": 4.69,
+   "bias": -0.75
+  },
+  "city|앙상블|ex_post|eval|5": {
+   "MAPE": 2.39,
+   "bias": -2.27
+  },
+  "city|앙상블|ex_post|eval|6": {
+   "MAPE": 2.53,
+   "bias": 0.47
+  },
+  "city|앙상블|ex_post|eval|7": {
+   "MAPE": 2.14,
+   "bias": -1.93
+  },
+  "city|앙상블|ex_post|eval|8": {
+   "MAPE": 2.1,
+   "bias": -1.28
+  },
+  "city|앙상블|ex_post|eval|9": {
+   "MAPE": 2.06,
+   "bias": 1.89
+  },
+  "city|앙상블|ex_post|eval|10": {
+   "MAPE": 2.64,
+   "bias": 1.26
+  },
+  "city|앙상블|ex_post|eval|11": {
+   "MAPE": 3.04,
+   "bias": -0.07
+  },
+  "city|앙상블|ex_post|eval|12": {
+   "MAPE": 2.38,
+   "bias": -2.18
+  },
+  "city|앙상블|ex_post|hold|1": {
+   "MAPE": 1.93,
+   "bias": -1.93
+  },
+  "city|앙상블|ex_post|hold|2": {
+   "MAPE": 0.47,
+   "bias": -0.32
+  },
+  "city|앙상블|ex_post|hold|3": {
+   "MAPE": 0.48,
+   "bias": -0.03
+  },
+  "city|앙상블|ex_post|hold|4": {
+   "MAPE": 3.91,
+   "bias": -3.91
+  },
+  "city|앙상블|ex_post|hold|5": {
+   "MAPE": 10.34,
+   "bias": -10.34
+  },
+  "city|앙상블|ex_post|hold|6": {
+   "MAPE": 8.82,
+   "bias": -8.82
+  },
+  "city|앙상블|ex_post|hold|7": {
+   "MAPE": 7.48,
+   "bias": -7.48
+  },
+  "city|앙상블|ex_post|hold|8": {
+   "MAPE": 4.78,
+   "bias": -4.78
+  },
+  "city|앙상블|ex_post|hold|9": {
+   "MAPE": 1.84,
+   "bias": -1.52
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|1": {
+   "MAPE": 1.59,
+   "bias": 0.95
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|2": {
+   "MAPE": 8.8,
+   "bias": 2.1
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|3": {
+   "MAPE": 5.53,
+   "bias": 1.32
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|4": {
+   "MAPE": 5.2,
+   "bias": 4.82
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|5": {
+   "MAPE": 4.38,
+   "bias": -4.38
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|6": {
+   "MAPE": 4.56,
+   "bias": 3.81
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|7": {
+   "MAPE": 2.66,
+   "bias": -2.09
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|8": {
+   "MAPE": 2.07,
+   "bias": -1.75
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|9": {
+   "MAPE": 3.18,
+   "bias": 2.51
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|10": {
+   "MAPE": 8.0,
+   "bias": 7.85
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|11": {
+   "MAPE": 7.78,
+   "bias": 3.36
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|eval|12": {
+   "MAPE": 2.6,
+   "bias": 2.03
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|1": {
+   "MAPE": 5.29,
+   "bias": -5.29
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|2": {
+   "MAPE": 7.44,
+   "bias": 7.44
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|3": {
+   "MAPE": 0.38,
+   "bias": 0.33
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|4": {
+   "MAPE": 2.87,
+   "bias": 2.87
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|5": {
+   "MAPE": 6.4,
+   "bias": -6.4
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|6": {
+   "MAPE": 5.71,
+   "bias": -5.71
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|7": {
+   "MAPE": 6.47,
+   "bias": -6.47
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|8": {
+   "MAPE": 3.79,
+   "bias": -3.79
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_ante|hold|9": {
+   "MAPE": 2.56,
+   "bias": -2.56
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|1": {
+   "MAPE": 2.42,
+   "bias": -1.08
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|2": {
+   "MAPE": 2.44,
+   "bias": 0.33
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|3": {
+   "MAPE": 2.69,
+   "bias": -2.67
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|4": {
+   "MAPE": 3.56,
+   "bias": -1.88
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|5": {
+   "MAPE": 2.84,
+   "bias": -1.01
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|6": {
+   "MAPE": 4.05,
+   "bias": 2.23
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|7": {
+   "MAPE": 3.71,
+   "bias": -3.71
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|8": {
+   "MAPE": 4.11,
+   "bias": -4.11
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|9": {
+   "MAPE": 2.03,
+   "bias": -1.08
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|10": {
+   "MAPE": 3.82,
+   "bias": 0.78
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|11": {
+   "MAPE": 2.22,
+   "bias": 0.53
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|eval|12": {
+   "MAPE": 3.35,
+   "bias": -2.57
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|1": {
+   "MAPE": 1.66,
+   "bias": 1.66
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|2": {
+   "MAPE": 2.34,
+   "bias": 0.79
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|3": {
+   "MAPE": 0.91,
+   "bias": 0.91
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|4": {
+   "MAPE": 2.4,
+   "bias": -2.4
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|5": {
+   "MAPE": 7.91,
+   "bias": -7.91
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|6": {
+   "MAPE": 5.87,
+   "bias": -5.87
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|7": {
+   "MAPE": 8.25,
+   "bias": -8.25
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|8": {
+   "MAPE": 5.29,
+   "bias": -5.29
+  },
+  "city|하이브리드 (회귀+LightGBM)|ex_post|hold|9": {
+   "MAPE": 3.01,
+   "bias": -3.01
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|1": {
+   "MAPE": 1.97,
+   "bias": 1.57
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|2": {
+   "MAPE": 8.98,
+   "bias": 3.51
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|3": {
+   "MAPE": 7.11,
+   "bias": 2.78
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|4": {
+   "MAPE": 5.52,
+   "bias": 5.28
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|5": {
+   "MAPE": 5.02,
+   "bias": -5.02
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|6": {
+   "MAPE": 4.07,
+   "bias": 3.46
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|7": {
+   "MAPE": 2.4,
+   "bias": -2.38
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|8": {
+   "MAPE": 1.88,
+   "bias": -0.57
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|9": {
+   "MAPE": 6.6,
+   "bias": 6.6
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|10": {
+   "MAPE": 6.88,
+   "bias": 6.88
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|11": {
+   "MAPE": 6.61,
+   "bias": 1.47
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|eval|12": {
+   "MAPE": 2.49,
+   "bias": 1.68
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|1": {
+   "MAPE": 5.9,
+   "bias": -5.9
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|2": {
+   "MAPE": 9.82,
+   "bias": 9.82
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|3": {
+   "MAPE": 0.41,
+   "bias": 0.41
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|4": {
+   "MAPE": 2.2,
+   "bias": 2.2
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|5": {
+   "MAPE": 8.59,
+   "bias": -8.59
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|6": {
+   "MAPE": 5.31,
+   "bias": -5.31
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|7": {
+   "MAPE": 8.29,
+   "bias": -8.29
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|8": {
+   "MAPE": 4.58,
+   "bias": -4.58
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_ante|hold|9": {
+   "MAPE": 1.01,
+   "bias": 1.01
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|1": {
+   "MAPE": 2.38,
+   "bias": -0.46
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|2": {
+   "MAPE": 2.82,
+   "bias": 1.56
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|3": {
+   "MAPE": 1.8,
+   "bias": -1.2
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|4": {
+   "MAPE": 4.4,
+   "bias": -1.33
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|5": {
+   "MAPE": 3.03,
+   "bias": -2.88
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|6": {
+   "MAPE": 3.93,
+   "bias": 2.54
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|7": {
+   "MAPE": 3.98,
+   "bias": -3.98
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|8": {
+   "MAPE": 2.97,
+   "bias": -2.94
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|9": {
+   "MAPE": 3.47,
+   "bias": 3.39
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|10": {
+   "MAPE": 4.27,
+   "bias": -0.09
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|11": {
+   "MAPE": 1.75,
+   "bias": -1.04
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|eval|12": {
+   "MAPE": 2.99,
+   "bias": -2.99
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|1": {
+   "MAPE": 0.91,
+   "bias": 0.91
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|2": {
+   "MAPE": 3.15,
+   "bias": 3.15
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|3": {
+   "MAPE": 0.97,
+   "bias": 0.97
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|4": {
+   "MAPE": 3.67,
+   "bias": -3.67
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|5": {
+   "MAPE": 9.99,
+   "bias": -9.99
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|6": {
+   "MAPE": 5.48,
+   "bias": -5.48
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|7": {
+   "MAPE": 10.03,
+   "bias": -10.03
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|8": {
+   "MAPE": 6.06,
+   "bias": -6.06
+  },
+  "city|하이브리드 (회귀+Ridge)|ex_post|hold|9": {
+   "MAPE": 1.47,
+   "bias": 1.47
+  },
+  "city|회귀 √Y|ex_ante|eval|1": {
+   "MAPE": 1.79,
+   "bias": -1.08
+  },
+  "city|회귀 √Y|ex_ante|eval|2": {
+   "MAPE": 7.75,
+   "bias": 0.22
+  },
+  "city|회귀 √Y|ex_ante|eval|3": {
+   "MAPE": 7.73,
+   "bias": -2.17
+  },
+  "city|회귀 √Y|ex_ante|eval|4": {
+   "MAPE": 3.76,
+   "bias": 0.61
+  },
+  "city|회귀 √Y|ex_ante|eval|5": {
+   "MAPE": 9.12,
+   "bias": -9.12
+  },
+  "city|회귀 √Y|ex_ante|eval|6": {
+   "MAPE": 2.43,
+   "bias": 0.77
+  },
+  "city|회귀 √Y|ex_ante|eval|7": {
+   "MAPE": 4.76,
+   "bias": -4.76
+  },
+  "city|회귀 √Y|ex_ante|eval|8": {
+   "MAPE": 2.19,
+   "bias": -1.07
+  },
+  "city|회귀 √Y|ex_ante|eval|9": {
+   "MAPE": 8.03,
+   "bias": 8.03
+  },
+  "city|회귀 √Y|ex_ante|eval|10": {
+   "MAPE": 7.51,
+   "bias": 7.42
+  },
+  "city|회귀 √Y|ex_ante|eval|11": {
+   "MAPE": 7.25,
+   "bias": 1.74
+  },
+  "city|회귀 √Y|ex_ante|eval|12": {
+   "MAPE": 2.17,
+   "bias": 0.34
+  },
+  "city|회귀 √Y|ex_ante|hold|1": {
+   "MAPE": 7.63,
+   "bias": -7.63
+  },
+  "city|회귀 √Y|ex_ante|hold|2": {
+   "MAPE": 6.47,
+   "bias": 6.47
+  },
+  "city|회귀 √Y|ex_ante|hold|3": {
+   "MAPE": 3.84,
+   "bias": -3.84
+  },
+  "city|회귀 √Y|ex_ante|hold|4": {
+   "MAPE": 1.53,
+   "bias": -1.53
+  },
+  "city|회귀 √Y|ex_ante|hold|5": {
+   "MAPE": 11.57,
+   "bias": -11.57
+  },
+  "city|회귀 √Y|ex_ante|hold|6": {
+   "MAPE": 7.0,
+   "bias": -7.0
+  },
+  "city|회귀 √Y|ex_ante|hold|7": {
+   "MAPE": 9.37,
+   "bias": -9.37
+  },
+  "city|회귀 √Y|ex_ante|hold|8": {
+   "MAPE": 4.13,
+   "bias": -4.13
+  },
+  "city|회귀 √Y|ex_ante|hold|9": {
+   "MAPE": 2.92,
+   "bias": 2.92
+  },
+  "city|회귀 √Y|ex_post|eval|1": {
+   "MAPE": 3.3,
+   "bias": -3.07
+  },
+  "city|회귀 √Y|ex_post|eval|2": {
+   "MAPE": 2.77,
+   "bias": -1.7
+  },
+  "city|회귀 √Y|ex_post|eval|3": {
+   "MAPE": 5.94,
+   "bias": -5.94
+  },
+  "city|회귀 √Y|ex_post|eval|4": {
+   "MAPE": 5.91,
+   "bias": -5.76
+  },
+  "city|회귀 √Y|ex_post|eval|5": {
+   "MAPE": 7.05,
+   "bias": -7.05
+  },
+  "city|회귀 √Y|ex_post|eval|6": {
+   "MAPE": 2.45,
+   "bias": -0.13
+  },
+  "city|회귀 √Y|ex_post|eval|7": {
+   "MAPE": 6.33,
+   "bias": -6.33
+  },
+  "city|회귀 √Y|ex_post|eval|8": {
+   "MAPE": 3.46,
+   "bias": -3.43
+  },
+  "city|회귀 √Y|ex_post|eval|9": {
+   "MAPE": 4.85,
+   "bias": 4.78
+  },
+  "city|회귀 √Y|ex_post|eval|10": {
+   "MAPE": 4.56,
+   "bias": 0.4
+  },
+  "city|회귀 √Y|ex_post|eval|11": {
+   "MAPE": 2.06,
+   "bias": -0.79
+  },
+  "city|회귀 √Y|ex_post|eval|12": {
+   "MAPE": 4.28,
+   "bias": -4.28
+  },
+  "city|회귀 √Y|ex_post|hold|1": {
+   "MAPE": 0.93,
+   "bias": -0.93
+  },
+  "city|회귀 √Y|ex_post|hold|2": {
+   "MAPE": 0.1,
+   "bias": -0.0
+  },
+  "city|회귀 √Y|ex_post|hold|3": {
+   "MAPE": 3.3,
+   "bias": -3.3
+  },
+  "city|회귀 √Y|ex_post|hold|4": {
+   "MAPE": 7.19,
+   "bias": -7.19
+  },
+  "city|회귀 √Y|ex_post|hold|5": {
+   "MAPE": 12.92,
+   "bias": -12.92
+  },
+  "city|회귀 √Y|ex_post|hold|6": {
+   "MAPE": 7.16,
+   "bias": -7.16
+  },
+  "city|회귀 √Y|ex_post|hold|7": {
+   "MAPE": 11.09,
+   "bias": -11.09
+  },
+  "city|회귀 √Y|ex_post|hold|8": {
+   "MAPE": 5.63,
+   "bias": -5.63
+  },
+  "city|회귀 √Y|ex_post|hold|9": {
+   "MAPE": 3.38,
+   "bias": 3.38
+  },
+  "power|Chronos-2|ex_ante|eval|1": {
+   "MAPE": 6.89,
+   "bias": 5.89
+  },
+  "power|Chronos-2|ex_ante|eval|2": {
+   "MAPE": 12.38,
+   "bias": 2.42
+  },
+  "power|Chronos-2|ex_ante|eval|3": {
+   "MAPE": 7.61,
+   "bias": 7.18
+  },
+  "power|Chronos-2|ex_ante|eval|4": {
+   "MAPE": 11.77,
+   "bias": 7.71
+  },
+  "power|Chronos-2|ex_ante|eval|5": {
+   "MAPE": 11.65,
+   "bias": 1.82
+  },
+  "power|Chronos-2|ex_ante|eval|6": {
+   "MAPE": 13.66,
+   "bias": 7.59
+  },
+  "power|Chronos-2|ex_ante|eval|7": {
+   "MAPE": 7.59,
+   "bias": 2.33
+  },
+  "power|Chronos-2|ex_ante|eval|8": {
+   "MAPE": 9.27,
+   "bias": -6.82
+  },
+  "power|Chronos-2|ex_ante|eval|9": {
+   "MAPE": 11.66,
+   "bias": 5.28
+  },
+  "power|Chronos-2|ex_ante|eval|10": {
+   "MAPE": 11.65,
+   "bias": 10.91
+  },
+  "power|Chronos-2|ex_ante|eval|11": {
+   "MAPE": 17.4,
+   "bias": 17.34
+  },
+  "power|Chronos-2|ex_ante|eval|12": {
+   "MAPE": 21.08,
+   "bias": 21.08
+  },
+  "power|Chronos-2|ex_ante|hold|1": {
+   "MAPE": 12.11,
+   "bias": -12.11
+  },
+  "power|Chronos-2|ex_ante|hold|2": {
+   "MAPE": 2.47,
+   "bias": 0.74
+  },
+  "power|Chronos-2|ex_ante|hold|3": {
+   "MAPE": 10.4,
+   "bias": -10.4
+  },
+  "power|Chronos-2|ex_ante|hold|4": {
+   "MAPE": 9.08,
+   "bias": -9.08
+  },
+  "power|Chronos-2|ex_ante|hold|5": {
+   "MAPE": 3.81,
+   "bias": -3.33
+  },
+  "power|Chronos-2|ex_ante|hold|6": {
+   "MAPE": 7.95,
+   "bias": 7.95
+  },
+  "power|Chronos-2|ex_ante|hold|7": {
+   "MAPE": 28.81,
+   "bias": -28.81
+  },
+  "power|Chronos-2|ex_ante|hold|8": {
+   "MAPE": 27.09,
+   "bias": -27.09
+  },
+  "power|Chronos-2|ex_ante|hold|9": {
+   "MAPE": 14.79,
+   "bias": -14.39
+  },
+  "power|Chronos-2|ex_post|eval|1": {
+   "MAPE": 6.89,
+   "bias": 5.89
+  },
+  "power|Chronos-2|ex_post|eval|2": {
+   "MAPE": 12.38,
+   "bias": 2.42
+  },
+  "power|Chronos-2|ex_post|eval|3": {
+   "MAPE": 7.61,
+   "bias": 7.18
+  },
+  "power|Chronos-2|ex_post|eval|4": {
+   "MAPE": 11.77,
+   "bias": 7.71
+  },
+  "power|Chronos-2|ex_post|eval|5": {
+   "MAPE": 11.65,
+   "bias": 1.82
+  },
+  "power|Chronos-2|ex_post|eval|6": {
+   "MAPE": 13.66,
+   "bias": 7.59
+  },
+  "power|Chronos-2|ex_post|eval|7": {
+   "MAPE": 7.59,
+   "bias": 2.33
+  },
+  "power|Chronos-2|ex_post|eval|8": {
+   "MAPE": 9.27,
+   "bias": -6.82
+  },
+  "power|Chronos-2|ex_post|eval|9": {
+   "MAPE": 11.66,
+   "bias": 5.28
+  },
+  "power|Chronos-2|ex_post|eval|10": {
+   "MAPE": 11.65,
+   "bias": 10.91
+  },
+  "power|Chronos-2|ex_post|eval|11": {
+   "MAPE": 17.4,
+   "bias": 17.34
+  },
+  "power|Chronos-2|ex_post|eval|12": {
+   "MAPE": 21.08,
+   "bias": 21.08
+  },
+  "power|Chronos-2|ex_post|hold|1": {
+   "MAPE": 12.11,
+   "bias": -12.11
+  },
+  "power|Chronos-2|ex_post|hold|2": {
+   "MAPE": 2.47,
+   "bias": 0.74
+  },
+  "power|Chronos-2|ex_post|hold|3": {
+   "MAPE": 10.4,
+   "bias": -10.4
+  },
+  "power|Chronos-2|ex_post|hold|4": {
+   "MAPE": 9.08,
+   "bias": -9.08
+  },
+  "power|Chronos-2|ex_post|hold|5": {
+   "MAPE": 3.81,
+   "bias": -3.33
+  },
+  "power|Chronos-2|ex_post|hold|6": {
+   "MAPE": 7.95,
+   "bias": 7.95
+  },
+  "power|Chronos-2|ex_post|hold|7": {
+   "MAPE": 28.81,
+   "bias": -28.81
+  },
+  "power|Chronos-2|ex_post|hold|8": {
+   "MAPE": 27.09,
+   "bias": -27.09
+  },
+  "power|Chronos-2|ex_post|hold|9": {
+   "MAPE": 14.79,
+   "bias": -14.39
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|1": {
+   "MAPE": 5.88,
+   "bias": 3.05
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|2": {
+   "MAPE": 12.07,
+   "bias": -2.29
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|3": {
+   "MAPE": 3.16,
+   "bias": 1.71
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|4": {
+   "MAPE": 7.63,
+   "bias": -1.74
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|5": {
+   "MAPE": 10.35,
+   "bias": -7.34
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|6": {
+   "MAPE": 10.21,
+   "bias": 0.27
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|7": {
+   "MAPE": 5.6,
+   "bias": -1.85
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|8": {
+   "MAPE": 10.49,
+   "bias": -10.25
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|9": {
+   "MAPE": 12.79,
+   "bias": -0.94
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|10": {
+   "MAPE": 7.78,
+   "bias": 5.52
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|11": {
+   "MAPE": 14.49,
+   "bias": 14.43
+  },
+  "power|Chronos-2 + 공변량|ex_ante|eval|12": {
+   "MAPE": 20.54,
+   "bias": 20.54
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|1": {
+   "MAPE": 13.78,
+   "bias": -13.78
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|2": {
+   "MAPE": 4.23,
+   "bias": -3.96
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|3": {
+   "MAPE": 11.62,
+   "bias": -11.62
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|4": {
+   "MAPE": 12.02,
+   "bias": -12.02
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|5": {
+   "MAPE": 11.91,
+   "bias": -11.91
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|6": {
+   "MAPE": 3.56,
+   "bias": 2.83
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|7": {
+   "MAPE": 31.16,
+   "bias": -31.16
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|8": {
+   "MAPE": 29.73,
+   "bias": -29.73
+  },
+  "power|Chronos-2 + 공변량|ex_ante|hold|9": {
+   "MAPE": 18.84,
+   "bias": -18.84
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|1": {
+   "MAPE": 5.93,
+   "bias": 3.1
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|2": {
+   "MAPE": 11.74,
+   "bias": -2.63
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|3": {
+   "MAPE": 3.31,
+   "bias": 1.17
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|4": {
+   "MAPE": 6.89,
+   "bias": -2.88
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|5": {
+   "MAPE": 10.44,
+   "bias": -7.41
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|6": {
+   "MAPE": 10.0,
+   "bias": 0.99
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|7": {
+   "MAPE": 5.6,
+   "bias": -0.74
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|8": {
+   "MAPE": 9.19,
+   "bias": -8.8
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|9": {
+   "MAPE": 11.03,
+   "bias": 1.32
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|10": {
+   "MAPE": 7.11,
+   "bias": 4.62
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|11": {
+   "MAPE": 14.62,
+   "bias": 14.56
+  },
+  "power|Chronos-2 + 공변량|ex_post|eval|12": {
+   "MAPE": 20.28,
+   "bias": 20.28
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|1": {
+   "MAPE": 13.22,
+   "bias": -13.22
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|2": {
+   "MAPE": 4.41,
+   "bias": -4.14
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|3": {
+   "MAPE": 11.56,
+   "bias": -11.56
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|4": {
+   "MAPE": 12.18,
+   "bias": -12.18
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|5": {
+   "MAPE": 12.02,
+   "bias": -12.02
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|6": {
+   "MAPE": 3.29,
+   "bias": 2.51
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|7": {
+   "MAPE": 31.29,
+   "bias": -31.29
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|8": {
+   "MAPE": 29.77,
+   "bias": -29.77
+  },
+  "power|Chronos-2 + 공변량|ex_post|hold|9": {
+   "MAPE": 18.88,
+   "bias": -18.88
+  },
+  "power|ETS|ex_ante|eval|1": {
+   "MAPE": 13.66,
+   "bias": 11.81
+  },
+  "power|ETS|ex_ante|eval|2": {
+   "MAPE": 11.78,
+   "bias": 2.22
+  },
+  "power|ETS|ex_ante|eval|3": {
+   "MAPE": 13.63,
+   "bias": 9.83
+  },
+  "power|ETS|ex_ante|eval|4": {
+   "MAPE": 9.63,
+   "bias": 0.8
+  },
+  "power|ETS|ex_ante|eval|5": {
+   "MAPE": 13.22,
+   "bias": -7.85
+  },
+  "power|ETS|ex_ante|eval|6": {
+   "MAPE": 13.6,
+   "bias": 3.17
+  },
+  "power|ETS|ex_ante|eval|7": {
+   "MAPE": 10.35,
+   "bias": 1.09
+  },
+  "power|ETS|ex_ante|eval|8": {
+   "MAPE": 11.01,
+   "bias": -6.15
+  },
+  "power|ETS|ex_ante|eval|9": {
+   "MAPE": 10.66,
+   "bias": -2.04
+  },
+  "power|ETS|ex_ante|eval|10": {
+   "MAPE": 11.5,
+   "bias": 6.44
+  },
+  "power|ETS|ex_ante|eval|11": {
+   "MAPE": 21.89,
+   "bias": 20.02
+  },
+  "power|ETS|ex_ante|eval|12": {
+   "MAPE": 25.91,
+   "bias": 25.91
+  },
+  "power|ETS|ex_ante|hold|1": {
+   "MAPE": 11.93,
+   "bias": -10.96
+  },
+  "power|ETS|ex_ante|hold|2": {
+   "MAPE": 5.58,
+   "bias": -2.36
+  },
+  "power|ETS|ex_ante|hold|3": {
+   "MAPE": 11.17,
+   "bias": -10.32
+  },
+  "power|ETS|ex_ante|hold|4": {
+   "MAPE": 14.62,
+   "bias": -14.62
+  },
+  "power|ETS|ex_ante|hold|5": {
+   "MAPE": 11.75,
+   "bias": -11.4
+  },
+  "power|ETS|ex_ante|hold|6": {
+   "MAPE": 5.98,
+   "bias": 2.83
+  },
+  "power|ETS|ex_ante|hold|7": {
+   "MAPE": 29.48,
+   "bias": -29.48
+  },
+  "power|ETS|ex_ante|hold|8": {
+   "MAPE": 26.23,
+   "bias": -26.23
+  },
+  "power|ETS|ex_ante|hold|9": {
+   "MAPE": 19.14,
+   "bias": -18.59
+  },
+  "power|ETS|ex_post|eval|1": {
+   "MAPE": 13.66,
+   "bias": 11.81
+  },
+  "power|ETS|ex_post|eval|2": {
+   "MAPE": 11.78,
+   "bias": 2.22
+  },
+  "power|ETS|ex_post|eval|3": {
+   "MAPE": 13.63,
+   "bias": 9.83
+  },
+  "power|ETS|ex_post|eval|4": {
+   "MAPE": 9.63,
+   "bias": 0.8
+  },
+  "power|ETS|ex_post|eval|5": {
+   "MAPE": 13.22,
+   "bias": -7.85
+  },
+  "power|ETS|ex_post|eval|6": {
+   "MAPE": 13.6,
+   "bias": 3.17
+  },
+  "power|ETS|ex_post|eval|7": {
+   "MAPE": 10.35,
+   "bias": 1.09
+  },
+  "power|ETS|ex_post|eval|8": {
+   "MAPE": 11.01,
+   "bias": -6.15
+  },
+  "power|ETS|ex_post|eval|9": {
+   "MAPE": 10.66,
+   "bias": -2.04
+  },
+  "power|ETS|ex_post|eval|10": {
+   "MAPE": 11.5,
+   "bias": 6.44
+  },
+  "power|ETS|ex_post|eval|11": {
+   "MAPE": 21.89,
+   "bias": 20.02
+  },
+  "power|ETS|ex_post|eval|12": {
+   "MAPE": 25.91,
+   "bias": 25.91
+  },
+  "power|ETS|ex_post|hold|1": {
+   "MAPE": 11.93,
+   "bias": -10.96
+  },
+  "power|ETS|ex_post|hold|2": {
+   "MAPE": 5.58,
+   "bias": -2.36
+  },
+  "power|ETS|ex_post|hold|3": {
+   "MAPE": 11.17,
+   "bias": -10.32
+  },
+  "power|ETS|ex_post|hold|4": {
+   "MAPE": 14.62,
+   "bias": -14.62
+  },
+  "power|ETS|ex_post|hold|5": {
+   "MAPE": 11.75,
+   "bias": -11.4
+  },
+  "power|ETS|ex_post|hold|6": {
+   "MAPE": 5.98,
+   "bias": 2.83
+  },
+  "power|ETS|ex_post|hold|7": {
+   "MAPE": 29.48,
+   "bias": -29.48
+  },
+  "power|ETS|ex_post|hold|8": {
+   "MAPE": 26.23,
+   "bias": -26.23
+  },
+  "power|ETS|ex_post|hold|9": {
+   "MAPE": 19.14,
+   "bias": -18.59
+  },
+  "power|LightGBM|ex_ante|eval|1": {
+   "MAPE": 8.13,
+   "bias": 6.82
+  },
+  "power|LightGBM|ex_ante|eval|2": {
+   "MAPE": 14.42,
+   "bias": 2.18
+  },
+  "power|LightGBM|ex_ante|eval|3": {
+   "MAPE": 4.84,
+   "bias": 4.04
+  },
+  "power|LightGBM|ex_ante|eval|4": {
+   "MAPE": 5.2,
+   "bias": -4.23
+  },
+  "power|LightGBM|ex_ante|eval|5": {
+   "MAPE": 14.5,
+   "bias": -8.0
+  },
+  "power|LightGBM|ex_ante|eval|6": {
+   "MAPE": 15.26,
+   "bias": -0.16
+  },
+  "power|LightGBM|ex_ante|eval|7": {
+   "MAPE": 9.45,
+   "bias": -0.51
+  },
+  "power|LightGBM|ex_ante|eval|8": {
+   "MAPE": 11.55,
+   "bias": -7.76
+  },
+  "power|LightGBM|ex_ante|eval|9": {
+   "MAPE": 13.17,
+   "bias": -0.13
+  },
+  "power|LightGBM|ex_ante|eval|10": {
+   "MAPE": 8.74,
+   "bias": 0.33
+  },
+  "power|LightGBM|ex_ante|eval|11": {
+   "MAPE": 13.19,
+   "bias": 7.77
+  },
+  "power|LightGBM|ex_ante|eval|12": {
+   "MAPE": 14.76,
+   "bias": 14.76
+  },
+  "power|LightGBM|ex_ante|hold|1": {
+   "MAPE": 9.76,
+   "bias": -9.76
+  },
+  "power|LightGBM|ex_ante|hold|2": {
+   "MAPE": 9.36,
+   "bias": -9.36
+  },
+  "power|LightGBM|ex_ante|hold|3": {
+   "MAPE": 13.69,
+   "bias": -13.69
+  },
+  "power|LightGBM|ex_ante|hold|4": {
+   "MAPE": 13.85,
+   "bias": -13.85
+  },
+  "power|LightGBM|ex_ante|hold|5": {
+   "MAPE": 2.22,
+   "bias": -1.44
+  },
+  "power|LightGBM|ex_ante|hold|6": {
+   "MAPE": 1.8,
+   "bias": -1.68
+  },
+  "power|LightGBM|ex_ante|hold|7": {
+   "MAPE": 34.3,
+   "bias": -34.3
+  },
+  "power|LightGBM|ex_ante|hold|8": {
+   "MAPE": 29.78,
+   "bias": -29.78
+  },
+  "power|LightGBM|ex_ante|hold|9": {
+   "MAPE": 27.77,
+   "bias": -27.77
+  },
+  "power|LightGBM|ex_post|eval|1": {
+   "MAPE": 5.97,
+   "bias": 4.64
+  },
+  "power|LightGBM|ex_post|eval|2": {
+   "MAPE": 11.6,
+   "bias": 2.43
+  },
+  "power|LightGBM|ex_post|eval|3": {
+   "MAPE": 5.17,
+   "bias": 4.48
+  },
+  "power|LightGBM|ex_post|eval|4": {
+   "MAPE": 8.63,
+   "bias": -7.47
+  },
+  "power|LightGBM|ex_post|eval|5": {
+   "MAPE": 13.21,
+   "bias": -6.75
+  },
+  "power|LightGBM|ex_post|eval|6": {
+   "MAPE": 15.17,
+   "bias": 3.18
+  },
+  "power|LightGBM|ex_post|eval|7": {
+   "MAPE": 12.54,
+   "bias": 3.34
+  },
+  "power|LightGBM|ex_post|eval|8": {
+   "MAPE": 8.36,
+   "bias": -4.38
+  },
+  "power|LightGBM|ex_post|eval|9": {
+   "MAPE": 13.03,
+   "bias": 9.29
+  },
+  "power|LightGBM|ex_post|eval|10": {
+   "MAPE": 8.85,
+   "bias": -8.29
+  },
+  "power|LightGBM|ex_post|eval|11": {
+   "MAPE": 13.93,
+   "bias": 8.46
+  },
+  "power|LightGBM|ex_post|eval|12": {
+   "MAPE": 11.74,
+   "bias": 11.74
+  },
+  "power|LightGBM|ex_post|hold|1": {
+   "MAPE": 3.99,
+   "bias": -3.99
+  },
+  "power|LightGBM|ex_post|hold|2": {
+   "MAPE": 13.97,
+   "bias": -13.97
+  },
+  "power|LightGBM|ex_post|hold|3": {
+   "MAPE": 13.31,
+   "bias": -13.31
+  },
+  "power|LightGBM|ex_post|hold|4": {
+   "MAPE": 13.78,
+   "bias": -13.78
+  },
+  "power|LightGBM|ex_post|hold|5": {
+   "MAPE": 4.6,
+   "bias": -4.12
+  },
+  "power|LightGBM|ex_post|hold|6": {
+   "MAPE": 1.8,
+   "bias": -1.68
+  },
+  "power|LightGBM|ex_post|hold|7": {
+   "MAPE": 31.75,
+   "bias": -31.75
+  },
+  "power|LightGBM|ex_post|hold|8": {
+   "MAPE": 29.79,
+   "bias": -29.79
+  },
+  "power|LightGBM|ex_post|hold|9": {
+   "MAPE": 27.11,
+   "bias": -27.11
+  },
+  "power|Ridge|ex_ante|eval|1": {
+   "MAPE": 6.21,
+   "bias": -5.33
+  },
+  "power|Ridge|ex_ante|eval|2": {
+   "MAPE": 12.64,
+   "bias": -5.04
+  },
+  "power|Ridge|ex_ante|eval|3": {
+   "MAPE": 6.3,
+   "bias": -5.51
+  },
+  "power|Ridge|ex_ante|eval|4": {
+   "MAPE": 9.57,
+   "bias": -6.05
+  },
+  "power|Ridge|ex_ante|eval|5": {
+   "MAPE": 14.05,
+   "bias": -14.05
+  },
+  "power|Ridge|ex_ante|eval|6": {
+   "MAPE": 15.21,
+   "bias": -15.19
+  },
+  "power|Ridge|ex_ante|eval|7": {
+   "MAPE": 12.79,
+   "bias": -12.73
+  },
+  "power|Ridge|ex_ante|eval|8": {
+   "MAPE": 17.24,
+   "bias": -17.24
+  },
+  "power|Ridge|ex_ante|eval|9": {
+   "MAPE": 18.94,
+   "bias": -11.34
+  },
+  "power|Ridge|ex_ante|eval|10": {
+   "MAPE": 8.85,
+   "bias": -5.99
+  },
+  "power|Ridge|ex_ante|eval|11": {
+   "MAPE": 8.87,
+   "bias": 3.06
+  },
+  "power|Ridge|ex_ante|eval|12": {
+   "MAPE": 13.14,
+   "bias": 12.83
+  },
+  "power|Ridge|ex_ante|hold|1": {
+   "MAPE": 15.06,
+   "bias": -15.06
+  },
+  "power|Ridge|ex_ante|hold|2": {
+   "MAPE": 4.74,
+   "bias": -4.74
+  },
+  "power|Ridge|ex_ante|hold|3": {
+   "MAPE": 13.8,
+   "bias": -13.8
+  },
+  "power|Ridge|ex_ante|hold|4": {
+   "MAPE": 11.33,
+   "bias": -11.33
+  },
+  "power|Ridge|ex_ante|hold|5": {
+   "MAPE": 12.49,
+   "bias": -12.49
+  },
+  "power|Ridge|ex_ante|hold|6": {
+   "MAPE": 4.12,
+   "bias": -4.12
+  },
+  "power|Ridge|ex_ante|hold|7": {
+   "MAPE": 32.51,
+   "bias": -32.51
+  },
+  "power|Ridge|ex_ante|hold|8": {
+   "MAPE": 31.94,
+   "bias": -31.94
+  },
+  "power|Ridge|ex_ante|hold|9": {
+   "MAPE": 24.67,
+   "bias": -24.67
+  },
+  "power|Ridge|ex_post|eval|1": {
+   "MAPE": 6.37,
+   "bias": -5.89
+  },
+  "power|Ridge|ex_post|eval|2": {
+   "MAPE": 11.35,
+   "bias": -5.44
+  },
+  "power|Ridge|ex_post|eval|3": {
+   "MAPE": 6.67,
+   "bias": -6.31
+  },
+  "power|Ridge|ex_post|eval|4": {
+   "MAPE": 8.91,
+   "bias": -7.27
+  },
+  "power|Ridge|ex_post|eval|5": {
+   "MAPE": 13.8,
+   "bias": -13.8
+  },
+  "power|Ridge|ex_post|eval|6": {
+   "MAPE": 14.35,
+   "bias": -13.34
+  },
+  "power|Ridge|ex_post|eval|7": {
+   "MAPE": 13.54,
+   "bias": -8.93
+  },
+  "power|Ridge|ex_post|eval|8": {
+   "MAPE": 12.59,
+   "bias": -12.59
+  },
+  "power|Ridge|ex_post|eval|9": {
+   "MAPE": 15.79,
+   "bias": -5.23
+  },
+  "power|Ridge|ex_post|eval|10": {
+   "MAPE": 8.63,
+   "bias": -7.26
+  },
+  "power|Ridge|ex_post|eval|11": {
+   "MAPE": 8.45,
+   "bias": 2.49
+  },
+  "power|Ridge|ex_post|eval|12": {
+   "MAPE": 11.91,
+   "bias": 11.41
+  },
+  "power|Ridge|ex_post|hold|1": {
+   "MAPE": 13.31,
+   "bias": -13.31
+  },
+  "power|Ridge|ex_post|hold|2": {
+   "MAPE": 6.28,
+   "bias": -6.28
+  },
+  "power|Ridge|ex_post|hold|3": {
+   "MAPE": 13.68,
+   "bias": -13.68
+  },
+  "power|Ridge|ex_post|hold|4": {
+   "MAPE": 12.35,
+   "bias": -12.35
+  },
+  "power|Ridge|ex_post|hold|5": {
+   "MAPE": 12.13,
+   "bias": -12.13
+  },
+  "power|Ridge|ex_post|hold|6": {
+   "MAPE": 3.69,
+   "bias": -3.69
+  },
+  "power|Ridge|ex_post|hold|7": {
+   "MAPE": 29.24,
+   "bias": -29.24
+  },
+  "power|Ridge|ex_post|hold|8": {
+   "MAPE": 29.25,
+   "bias": -29.25
+  },
+  "power|Ridge|ex_post|hold|9": {
+   "MAPE": 25.62,
+   "bias": -25.62
+  },
+  "power|SARIMAX|ex_ante|eval|1": {
+   "MAPE": 9.59,
+   "bias": 9.22
+  },
+  "power|SARIMAX|ex_ante|eval|2": {
+   "MAPE": 13.2,
+   "bias": 5.99
+  },
+  "power|SARIMAX|ex_ante|eval|3": {
+   "MAPE": 3.41,
+   "bias": 2.26
+  },
+  "power|SARIMAX|ex_ante|eval|4": {
+   "MAPE": 6.65,
+   "bias": 2.16
+  },
+  "power|SARIMAX|ex_ante|eval|5": {
+   "MAPE": 8.17,
+   "bias": -6.48
+  },
+  "power|SARIMAX|ex_ante|eval|6": {
+   "MAPE": 9.28,
+   "bias": -3.32
+  },
+  "power|SARIMAX|ex_ante|eval|7": {
+   "MAPE": 5.2,
+   "bias": -3.0
+  },
+  "power|SARIMAX|ex_ante|eval|8": {
+   "MAPE": 8.39,
+   "bias": -7.61
+  },
+  "power|SARIMAX|ex_ante|eval|9": {
+   "MAPE": 11.05,
+   "bias": -6.06
+  },
+  "power|SARIMAX|ex_ante|eval|10": {
+   "MAPE": 5.63,
+   "bias": 1.18
+  },
+  "power|SARIMAX|ex_ante|eval|11": {
+   "MAPE": 12.84,
+   "bias": 12.06
+  },
+  "power|SARIMAX|ex_ante|eval|12": {
+   "MAPE": 23.17,
+   "bias": 23.17
+  },
+  "power|SARIMAX|ex_ante|hold|1": {
+   "MAPE": 8.31,
+   "bias": -8.31
+  },
+  "power|SARIMAX|ex_ante|hold|2": {
+   "MAPE": 6.38,
+   "bias": 5.75
+  },
+  "power|SARIMAX|ex_ante|hold|3": {
+   "MAPE": 12.64,
+   "bias": -12.64
+  },
+  "power|SARIMAX|ex_ante|hold|4": {
+   "MAPE": 9.31,
+   "bias": -9.03
+  },
+  "power|SARIMAX|ex_ante|hold|5": {
+   "MAPE": 6.05,
+   "bias": -6.01
+  },
+  "power|SARIMAX|ex_ante|hold|6": {
+   "MAPE": 5.22,
+   "bias": -5.22
+  },
+  "power|SARIMAX|ex_ante|hold|7": {
+   "MAPE": 32.94,
+   "bias": -32.94
+  },
+  "power|SARIMAX|ex_ante|hold|8": {
+   "MAPE": 26.14,
+   "bias": -26.14
+  },
+  "power|SARIMAX|ex_ante|hold|9": {
+   "MAPE": 27.4,
+   "bias": -27.4
+  },
+  "power|SARIMAX|ex_post|eval|1": {
+   "MAPE": 8.3,
+   "bias": 7.68
+  },
+  "power|SARIMAX|ex_post|eval|2": {
+   "MAPE": 12.89,
+   "bias": 4.77
+  },
+  "power|SARIMAX|ex_post|eval|3": {
+   "MAPE": 3.15,
+   "bias": 0.19
+  },
+  "power|SARIMAX|ex_post|eval|4": {
+   "MAPE": 4.49,
+   "bias": -1.03
+  },
+  "power|SARIMAX|ex_post|eval|5": {
+   "MAPE": 7.3,
+   "bias": -5.79
+  },
+  "power|SARIMAX|ex_post|eval|6": {
+   "MAPE": 9.04,
+   "bias": -0.49
+  },
+  "power|SARIMAX|ex_post|eval|7": {
+   "MAPE": 7.28,
+   "bias": 2.41
+  },
+  "power|SARIMAX|ex_post|eval|8": {
+   "MAPE": 4.89,
+   "bias": -0.52
+  },
+  "power|SARIMAX|ex_post|eval|9": {
+   "MAPE": 6.7,
+   "bias": 3.09
+  },
+  "power|SARIMAX|ex_post|eval|10": {
+   "MAPE": 3.77,
+   "bias": -1.96
+  },
+  "power|SARIMAX|ex_post|eval|11": {
+   "MAPE": 12.12,
+   "bias": 10.77
+  },
+  "power|SARIMAX|ex_post|eval|12": {
+   "MAPE": 19.36,
+   "bias": 19.36
+  },
+  "power|SARIMAX|ex_post|hold|1": {
+   "MAPE": 3.85,
+   "bias": -3.63
+  },
+  "power|SARIMAX|ex_post|hold|2": {
+   "MAPE": 3.05,
+   "bias": 1.59
+  },
+  "power|SARIMAX|ex_post|hold|3": {
+   "MAPE": 12.35,
+   "bias": -12.35
+  },
+  "power|SARIMAX|ex_post|hold|4": {
+   "MAPE": 11.6,
+   "bias": -11.6
+  },
+  "power|SARIMAX|ex_post|hold|5": {
+   "MAPE": 5.79,
+   "bias": -5.7
+  },
+  "power|SARIMAX|ex_post|hold|6": {
+   "MAPE": 4.62,
+   "bias": -4.62
+  },
+  "power|SARIMAX|ex_post|hold|7": {
+   "MAPE": 28.16,
+   "bias": -28.16
+  },
+  "power|SARIMAX|ex_post|hold|8": {
+   "MAPE": 22.11,
+   "bias": -21.8
+  },
+  "power|SARIMAX|ex_post|hold|9": {
+   "MAPE": 28.77,
+   "bias": -28.77
+  },
+  "power|TimesFM 2.5|ex_ante|eval|1": {
+   "MAPE": 6.47,
+   "bias": 4.52
+  },
+  "power|TimesFM 2.5|ex_ante|eval|2": {
+   "MAPE": 12.24,
+   "bias": 2.32
+  },
+  "power|TimesFM 2.5|ex_ante|eval|3": {
+   "MAPE": 6.49,
+   "bias": 4.85
+  },
+  "power|TimesFM 2.5|ex_ante|eval|4": {
+   "MAPE": 10.37,
+   "bias": 7.28
+  },
+  "power|TimesFM 2.5|ex_ante|eval|5": {
+   "MAPE": 11.46,
+   "bias": 0.27
+  },
+  "power|TimesFM 2.5|ex_ante|eval|6": {
+   "MAPE": 13.9,
+   "bias": 6.73
+  },
+  "power|TimesFM 2.5|ex_ante|eval|7": {
+   "MAPE": 7.96,
+   "bias": 1.04
+  },
+  "power|TimesFM 2.5|ex_ante|eval|8": {
+   "MAPE": 8.69,
+   "bias": -7.04
+  },
+  "power|TimesFM 2.5|ex_ante|eval|9": {
+   "MAPE": 11.84,
+   "bias": 4.95
+  },
+  "power|TimesFM 2.5|ex_ante|eval|10": {
+   "MAPE": 11.76,
+   "bias": 10.64
+  },
+  "power|TimesFM 2.5|ex_ante|eval|11": {
+   "MAPE": 18.59,
+   "bias": 18.07
+  },
+  "power|TimesFM 2.5|ex_ante|eval|12": {
+   "MAPE": 19.66,
+   "bias": 19.66
+  },
+  "power|TimesFM 2.5|ex_ante|hold|1": {
+   "MAPE": 15.71,
+   "bias": -15.71
+  },
+  "power|TimesFM 2.5|ex_ante|hold|2": {
+   "MAPE": 2.91,
+   "bias": -2.16
+  },
+  "power|TimesFM 2.5|ex_ante|hold|3": {
+   "MAPE": 12.05,
+   "bias": -12.05
+  },
+  "power|TimesFM 2.5|ex_ante|hold|4": {
+   "MAPE": 8.94,
+   "bias": -8.94
+  },
+  "power|TimesFM 2.5|ex_ante|hold|5": {
+   "MAPE": 5.73,
+   "bias": -5.29
+  },
+  "power|TimesFM 2.5|ex_ante|hold|6": {
+   "MAPE": 6.66,
+   "bias": 6.66
+  },
+  "power|TimesFM 2.5|ex_ante|hold|7": {
+   "MAPE": 28.99,
+   "bias": -28.99
+  },
+  "power|TimesFM 2.5|ex_ante|hold|8": {
+   "MAPE": 27.75,
+   "bias": -27.75
+  },
+  "power|TimesFM 2.5|ex_ante|hold|9": {
+   "MAPE": 16.49,
+   "bias": -14.92
+  },
+  "power|TimesFM 2.5|ex_post|eval|1": {
+   "MAPE": 6.47,
+   "bias": 4.52
+  },
+  "power|TimesFM 2.5|ex_post|eval|2": {
+   "MAPE": 12.24,
+   "bias": 2.32
+  },
+  "power|TimesFM 2.5|ex_post|eval|3": {
+   "MAPE": 6.49,
+   "bias": 4.85
+  },
+  "power|TimesFM 2.5|ex_post|eval|4": {
+   "MAPE": 10.37,
+   "bias": 7.28
+  },
+  "power|TimesFM 2.5|ex_post|eval|5": {
+   "MAPE": 11.46,
+   "bias": 0.27
+  },
+  "power|TimesFM 2.5|ex_post|eval|6": {
+   "MAPE": 13.9,
+   "bias": 6.73
+  },
+  "power|TimesFM 2.5|ex_post|eval|7": {
+   "MAPE": 7.96,
+   "bias": 1.04
+  },
+  "power|TimesFM 2.5|ex_post|eval|8": {
+   "MAPE": 8.69,
+   "bias": -7.04
+  },
+  "power|TimesFM 2.5|ex_post|eval|9": {
+   "MAPE": 11.84,
+   "bias": 4.95
+  },
+  "power|TimesFM 2.5|ex_post|eval|10": {
+   "MAPE": 11.76,
+   "bias": 10.64
+  },
+  "power|TimesFM 2.5|ex_post|eval|11": {
+   "MAPE": 18.59,
+   "bias": 18.07
+  },
+  "power|TimesFM 2.5|ex_post|eval|12": {
+   "MAPE": 19.66,
+   "bias": 19.66
+  },
+  "power|TimesFM 2.5|ex_post|hold|1": {
+   "MAPE": 15.71,
+   "bias": -15.71
+  },
+  "power|TimesFM 2.5|ex_post|hold|2": {
+   "MAPE": 2.91,
+   "bias": -2.16
+  },
+  "power|TimesFM 2.5|ex_post|hold|3": {
+   "MAPE": 12.05,
+   "bias": -12.05
+  },
+  "power|TimesFM 2.5|ex_post|hold|4": {
+   "MAPE": 8.94,
+   "bias": -8.94
+  },
+  "power|TimesFM 2.5|ex_post|hold|5": {
+   "MAPE": 5.73,
+   "bias": -5.29
+  },
+  "power|TimesFM 2.5|ex_post|hold|6": {
+   "MAPE": 6.66,
+   "bias": 6.66
+  },
+  "power|TimesFM 2.5|ex_post|hold|7": {
+   "MAPE": 28.99,
+   "bias": -28.99
+  },
+  "power|TimesFM 2.5|ex_post|hold|8": {
+   "MAPE": 27.75,
+   "bias": -27.75
+  },
+  "power|TimesFM 2.5|ex_post|hold|9": {
+   "MAPE": 16.49,
+   "bias": -14.92
+  },
+  "power|계절 naive|ex_ante|eval|1": {
+   "MAPE": 7.73,
+   "bias": 4.09
+  },
+  "power|계절 naive|ex_ante|eval|2": {
+   "MAPE": 21.42,
+   "bias": 3.29
+  },
+  "power|계절 naive|ex_ante|eval|3": {
+   "MAPE": 10.02,
+   "bias": 10.02
+  },
+  "power|계절 naive|ex_ante|eval|4": {
+   "MAPE": 12.48,
+   "bias": 2.49
+  },
+  "power|계절 naive|ex_ante|eval|5": {
+   "MAPE": 14.04,
+   "bias": 4.71
+  },
+  "power|계절 naive|ex_ante|eval|6": {
+   "MAPE": 18.89,
+   "bias": 12.59
+  },
+  "power|계절 naive|ex_ante|eval|7": {
+   "MAPE": 11.65,
+   "bias": 6.8
+  },
+  "power|계절 naive|ex_ante|eval|8": {
+   "MAPE": 11.63,
+   "bias": 0.26
+  },
+  "power|계절 naive|ex_ante|eval|9": {
+   "MAPE": 12.37,
+   "bias": 10.69
+  },
+  "power|계절 naive|ex_ante|eval|10": {
+   "MAPE": 13.13,
+   "bias": 5.97
+  },
+  "power|계절 naive|ex_ante|eval|11": {
+   "MAPE": 20.14,
+   "bias": 9.2
+  },
+  "power|계절 naive|ex_ante|eval|12": {
+   "MAPE": 17.34,
+   "bias": 17.34
+  },
+  "power|계절 naive|ex_ante|hold|1": {
+   "MAPE": 18.91,
+   "bias": -18.91
+  },
+  "power|계절 naive|ex_ante|hold|2": {
+   "MAPE": 4.45,
+   "bias": 4.45
+  },
+  "power|계절 naive|ex_ante|hold|3": {
+   "MAPE": 13.47,
+   "bias": -13.47
+  },
+  "power|계절 naive|ex_ante|hold|4": {
+   "MAPE": 6.06,
+   "bias": -6.06
+  },
+  "power|계절 naive|ex_ante|hold|5": {
+   "MAPE": 5.42,
+   "bias": 5.42
+  },
+  "power|계절 naive|ex_ante|hold|6": {
+   "MAPE": 6.45,
+   "bias": -6.45
+  },
+  "power|계절 naive|ex_ante|hold|7": {
+   "MAPE": 31.73,
+   "bias": -31.73
+  },
+  "power|계절 naive|ex_ante|hold|8": {
+   "MAPE": 27.35,
+   "bias": -27.35
+  },
+  "power|계절 naive|ex_ante|hold|9": {
+   "MAPE": 30.67,
+   "bias": -30.67
+  },
+  "power|계절 naive|ex_post|eval|1": {
+   "MAPE": 7.73,
+   "bias": 4.09
+  },
+  "power|계절 naive|ex_post|eval|2": {
+   "MAPE": 21.42,
+   "bias": 3.29
+  },
+  "power|계절 naive|ex_post|eval|3": {
+   "MAPE": 10.02,
+   "bias": 10.02
+  },
+  "power|계절 naive|ex_post|eval|4": {
+   "MAPE": 12.48,
+   "bias": 2.49
+  },
+  "power|계절 naive|ex_post|eval|5": {
+   "MAPE": 14.04,
+   "bias": 4.71
+  },
+  "power|계절 naive|ex_post|eval|6": {
+   "MAPE": 18.89,
+   "bias": 12.59
+  },
+  "power|계절 naive|ex_post|eval|7": {
+   "MAPE": 11.65,
+   "bias": 6.8
+  },
+  "power|계절 naive|ex_post|eval|8": {
+   "MAPE": 11.63,
+   "bias": 0.26
+  },
+  "power|계절 naive|ex_post|eval|9": {
+   "MAPE": 12.37,
+   "bias": 10.69
+  },
+  "power|계절 naive|ex_post|eval|10": {
+   "MAPE": 13.13,
+   "bias": 5.97
+  },
+  "power|계절 naive|ex_post|eval|11": {
+   "MAPE": 20.14,
+   "bias": 9.2
+  },
+  "power|계절 naive|ex_post|eval|12": {
+   "MAPE": 17.34,
+   "bias": 17.34
+  },
+  "power|계절 naive|ex_post|hold|1": {
+   "MAPE": 18.91,
+   "bias": -18.91
+  },
+  "power|계절 naive|ex_post|hold|2": {
+   "MAPE": 4.45,
+   "bias": 4.45
+  },
+  "power|계절 naive|ex_post|hold|3": {
+   "MAPE": 13.47,
+   "bias": -13.47
+  },
+  "power|계절 naive|ex_post|hold|4": {
+   "MAPE": 6.06,
+   "bias": -6.06
+  },
+  "power|계절 naive|ex_post|hold|5": {
+   "MAPE": 5.42,
+   "bias": 5.42
+  },
+  "power|계절 naive|ex_post|hold|6": {
+   "MAPE": 6.45,
+   "bias": -6.45
+  },
+  "power|계절 naive|ex_post|hold|7": {
+   "MAPE": 31.73,
+   "bias": -31.73
+  },
+  "power|계절 naive|ex_post|hold|8": {
+   "MAPE": 27.35,
+   "bias": -27.35
+  },
+  "power|계절 naive|ex_post|hold|9": {
+   "MAPE": 30.67,
+   "bias": -30.67
+  },
+  "power|앙상블|ex_ante|eval|1": {
+   "MAPE": 7.56,
+   "bias": 7.51
+  },
+  "power|앙상블|ex_ante|eval|2": {
+   "MAPE": 11.58,
+   "bias": 4.37
+  },
+  "power|앙상블|ex_ante|eval|3": {
+   "MAPE": 4.59,
+   "bias": 4.28
+  },
+  "power|앙상블|ex_ante|eval|4": {
+   "MAPE": 5.66,
+   "bias": 1.05
+  },
+  "power|앙상블|ex_ante|eval|5": {
+   "MAPE": 10.38,
+   "bias": -5.58
+  },
+  "power|앙상블|ex_ante|eval|6": {
+   "MAPE": 10.41,
+   "bias": -0.5
+  },
+  "power|앙상블|ex_ante|eval|7": {
+   "MAPE": 6.14,
+   "bias": -1.17
+  },
+  "power|앙상블|ex_ante|eval|8": {
+   "MAPE": 8.58,
+   "bias": -7.35
+  },
+  "power|앙상블|ex_ante|eval|9": {
+   "MAPE": 11.96,
+   "bias": -1.9
+  },
+  "power|앙상블|ex_ante|eval|10": {
+   "MAPE": 5.99,
+   "bias": 3.17
+  },
+  "power|앙상블|ex_ante|eval|11": {
+   "MAPE": 12.35,
+   "bias": 11.73
+  },
+  "power|앙상블|ex_ante|eval|12": {
+   "MAPE": 20.6,
+   "bias": 20.6
+  },
+  "power|앙상블|ex_ante|hold|1": {
+   "MAPE": 10.29,
+   "bias": -10.29
+  },
+  "power|앙상블|ex_ante|hold|2": {
+   "MAPE": 1.43,
+   "bias": -0.45
+  },
+  "power|앙상블|ex_ante|hold|3": {
+   "MAPE": 12.31,
+   "bias": -12.31
+  },
+  "power|앙상블|ex_ante|hold|4": {
+   "MAPE": 10.98,
+   "bias": -10.98
+  },
+  "power|앙상블|ex_ante|hold|5": {
+   "MAPE": 6.47,
+   "bias": -6.47
+  },
+  "power|앙상블|ex_ante|hold|6": {
+   "MAPE": 1.63,
+   "bias": -0.26
+  },
+  "power|앙상블|ex_ante|hold|7": {
+   "MAPE": 31.75,
+   "bias": -31.75
+  },
+  "power|앙상블|ex_ante|hold|8": {
+   "MAPE": 27.75,
+   "bias": -27.75
+  },
+  "power|앙상블|ex_ante|hold|9": {
+   "MAPE": 23.08,
+   "bias": -23.08
+  },
+  "power|앙상블|ex_post|eval|1": {
+   "MAPE": 6.46,
+   "bias": 6.36
+  },
+  "power|앙상블|ex_post|eval|2": {
+   "MAPE": 10.36,
+   "bias": 3.84
+  },
+  "power|앙상블|ex_post|eval|3": {
+   "MAPE": 3.69,
+   "bias": 3.38
+  },
+  "power|앙상블|ex_post|eval|4": {
+   "MAPE": 3.31,
+   "bias": -1.46
+  },
+  "power|앙상블|ex_post|eval|5": {
+   "MAPE": 9.68,
+   "bias": -4.98
+  },
+  "power|앙상블|ex_post|eval|6": {
+   "MAPE": 10.4,
+   "bias": 1.86
+  },
+  "power|앙상블|ex_post|eval|7": {
+   "MAPE": 8.3,
+   "bias": 2.54
+  },
+  "power|앙상블|ex_post|eval|8": {
+   "MAPE": 6.25,
+   "bias": -2.94
+  },
+  "power|앙상블|ex_post|eval|9": {
+   "MAPE": 8.72,
+   "bias": 5.38
+  },
+  "power|앙상블|ex_post|eval|10": {
+   "MAPE": 3.74,
+   "bias": -0.62
+  },
+  "power|앙상블|ex_post|eval|11": {
+   "MAPE": 12.31,
+   "bias": 11.36
+  },
+  "power|앙상블|ex_post|eval|12": {
+   "MAPE": 18.24,
+   "bias": 18.24
+  },
+  "power|앙상블|ex_post|hold|1": {
+   "MAPE": 6.85,
+   "bias": -6.85
+  },
+  "power|앙상블|ex_post|hold|2": {
+   "MAPE": 3.41,
+   "bias": -3.34
+  },
+  "power|앙상블|ex_post|hold|3": {
+   "MAPE": 12.08,
+   "bias": -12.08
+  },
+  "power|앙상블|ex_post|hold|4": {
+   "MAPE": 12.1,
+   "bias": -12.1
+  },
+  "power|앙상블|ex_post|hold|5": {
+   "MAPE": 7.01,
+   "bias": -7.01
+  },
+  "power|앙상블|ex_post|hold|6": {
+   "MAPE": 1.49,
+   "bias": -0.05
+  },
+  "power|앙상블|ex_post|hold|7": {
+   "MAPE": 29.07,
+   "bias": -29.07
+  },
+  "power|앙상블|ex_post|hold|8": {
+   "MAPE": 25.94,
+   "bias": -25.94
+  },
+  "power|앙상블|ex_post|hold|9": {
+   "MAPE": 23.56,
+   "bias": -23.56
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|1": {
+   "MAPE": 12.22,
+   "bias": 12.22
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|2": {
+   "MAPE": 13.85,
+   "bias": 13.79
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|3": {
+   "MAPE": 15.83,
+   "bias": 15.83
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|4": {
+   "MAPE": 12.01,
+   "bias": 11.97
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|5": {
+   "MAPE": 7.41,
+   "bias": -0.45
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|6": {
+   "MAPE": 9.14,
+   "bias": -0.84
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|7": {
+   "MAPE": 10.47,
+   "bias": 5.01
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|8": {
+   "MAPE": 9.28,
+   "bias": -4.42
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|9": {
+   "MAPE": 12.53,
+   "bias": -8.14
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|10": {
+   "MAPE": 5.85,
+   "bias": 1.82
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|11": {
+   "MAPE": 18.71,
+   "bias": 18.71
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|eval|12": {
+   "MAPE": 26.36,
+   "bias": 26.36
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|1": {
+   "MAPE": 15.13,
+   "bias": -15.13
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|2": {
+   "MAPE": 8.25,
+   "bias": 8.25
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|3": {
+   "MAPE": 6.76,
+   "bias": -6.76
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|4": {
+   "MAPE": 7.75,
+   "bias": -7.64
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|5": {
+   "MAPE": 7.71,
+   "bias": -7.68
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|6": {
+   "MAPE": 2.94,
+   "bias": 2.37
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|7": {
+   "MAPE": 27.04,
+   "bias": -27.04
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|8": {
+   "MAPE": 25.37,
+   "bias": -25.37
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_ante|hold|9": {
+   "MAPE": 26.45,
+   "bias": -26.45
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|1": {
+   "MAPE": 11.41,
+   "bias": 11.41
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|2": {
+   "MAPE": 13.47,
+   "bias": 13.4
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|3": {
+   "MAPE": 16.41,
+   "bias": 16.41
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|4": {
+   "MAPE": 8.06,
+   "bias": 8.05
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|5": {
+   "MAPE": 9.5,
+   "bias": 1.65
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|6": {
+   "MAPE": 9.19,
+   "bias": 5.85
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|7": {
+   "MAPE": 13.3,
+   "bias": 9.69
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|8": {
+   "MAPE": 7.86,
+   "bias": 1.26
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|9": {
+   "MAPE": 9.75,
+   "bias": 8.83
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|10": {
+   "MAPE": 5.25,
+   "bias": -3.03
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|11": {
+   "MAPE": 17.13,
+   "bias": 17.13
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|eval|12": {
+   "MAPE": 23.39,
+   "bias": 23.39
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|1": {
+   "MAPE": 9.34,
+   "bias": -9.34
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|2": {
+   "MAPE": 6.09,
+   "bias": 6.09
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|3": {
+   "MAPE": 6.56,
+   "bias": -6.56
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|4": {
+   "MAPE": 9.47,
+   "bias": -9.47
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|5": {
+   "MAPE": 7.4,
+   "bias": -7.2
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|6": {
+   "MAPE": 3.15,
+   "bias": 2.88
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|7": {
+   "MAPE": 23.41,
+   "bias": -23.41
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|8": {
+   "MAPE": 22.4,
+   "bias": -22.4
+  },
+  "power|하이브리드 (회귀+LightGBM)|ex_post|hold|9": {
+   "MAPE": 22.37,
+   "bias": -22.37
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|1": {
+   "MAPE": 12.07,
+   "bias": 12.07
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|2": {
+   "MAPE": 14.23,
+   "bias": 14.23
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|3": {
+   "MAPE": 11.45,
+   "bias": 11.45
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|4": {
+   "MAPE": 12.67,
+   "bias": 12.65
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|5": {
+   "MAPE": 8.75,
+   "bias": 2.23
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|6": {
+   "MAPE": 11.02,
+   "bias": 2.78
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|7": {
+   "MAPE": 7.39,
+   "bias": 1.49
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|8": {
+   "MAPE": 8.51,
+   "bias": -3.81
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|9": {
+   "MAPE": 11.56,
+   "bias": -1.76
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|10": {
+   "MAPE": 6.02,
+   "bias": 4.29
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|11": {
+   "MAPE": 12.25,
+   "bias": 12.25
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|eval|12": {
+   "MAPE": 23.43,
+   "bias": 23.43
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|1": {
+   "MAPE": 8.65,
+   "bias": -8.65
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|2": {
+   "MAPE": 7.68,
+   "bias": 7.68
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|3": {
+   "MAPE": 9.05,
+   "bias": -9.05
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|4": {
+   "MAPE": 5.68,
+   "bias": -5.42
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|5": {
+   "MAPE": 4.38,
+   "bias": -3.8
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|6": {
+   "MAPE": 6.59,
+   "bias": 6.59
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|7": {
+   "MAPE": 27.48,
+   "bias": -27.48
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|8": {
+   "MAPE": 25.8,
+   "bias": -25.8
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_ante|hold|9": {
+   "MAPE": 19.23,
+   "bias": -19.23
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|1": {
+   "MAPE": 11.13,
+   "bias": 11.13
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|2": {
+   "MAPE": 13.54,
+   "bias": 13.49
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|3": {
+   "MAPE": 10.02,
+   "bias": 10.02
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|4": {
+   "MAPE": 10.13,
+   "bias": 10.13
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|5": {
+   "MAPE": 8.01,
+   "bias": 2.77
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|6": {
+   "MAPE": 11.15,
+   "bias": 5.39
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|7": {
+   "MAPE": 9.83,
+   "bias": 5.98
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|8": {
+   "MAPE": 7.33,
+   "bias": 1.9
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|9": {
+   "MAPE": 9.11,
+   "bias": 6.44
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|10": {
+   "MAPE": 4.65,
+   "bias": 1.84
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|11": {
+   "MAPE": 11.2,
+   "bias": 11.19
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|eval|12": {
+   "MAPE": 21.06,
+   "bias": 21.06
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|1": {
+   "MAPE": 5.8,
+   "bias": -5.8
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|2": {
+   "MAPE": 4.95,
+   "bias": 4.95
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|3": {
+   "MAPE": 8.86,
+   "bias": -8.86
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|4": {
+   "MAPE": 7.34,
+   "bias": -7.34
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|5": {
+   "MAPE": 4.18,
+   "bias": -3.5
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|6": {
+   "MAPE": 7.12,
+   "bias": 7.12
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|7": {
+   "MAPE": 23.88,
+   "bias": -23.88
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|8": {
+   "MAPE": 22.86,
+   "bias": -22.86
+  },
+  "power|하이브리드 (회귀+Ridge)|ex_post|hold|9": {
+   "MAPE": 20.38,
+   "bias": -20.38
+  },
+  "power|회귀 √Y|ex_ante|eval|1": {
+   "MAPE": 10.94,
+   "bias": 10.94
+  },
+  "power|회귀 √Y|ex_ante|eval|2": {
+   "MAPE": 11.66,
+   "bias": 11.59
+  },
+  "power|회귀 √Y|ex_ante|eval|3": {
+   "MAPE": 9.1,
+   "bias": 9.1
+  },
+  "power|회귀 √Y|ex_ante|eval|4": {
+   "MAPE": 9.3,
+   "bias": 7.99
+  },
+  "power|회귀 √Y|ex_ante|eval|5": {
+   "MAPE": 9.6,
+   "bias": -0.49
+  },
+  "power|회귀 √Y|ex_ante|eval|6": {
+   "MAPE": 10.53,
+   "bias": 1.21
+  },
+  "power|회귀 √Y|ex_ante|eval|7": {
+   "MAPE": 7.12,
+   "bias": 0.69
+  },
+  "power|회귀 √Y|ex_ante|eval|8": {
+   "MAPE": 8.44,
+   "bias": -3.79
+  },
+  "power|회귀 √Y|ex_ante|eval|9": {
+   "MAPE": 11.43,
+   "bias": -0.49
+  },
+  "power|회귀 √Y|ex_ante|eval|10": {
+   "MAPE": 6.32,
+   "bias": 5.63
+  },
+  "power|회귀 √Y|ex_ante|eval|11": {
+   "MAPE": 12.68,
+   "bias": 12.68
+  },
+  "power|회귀 √Y|ex_ante|eval|12": {
+   "MAPE": 23.92,
+   "bias": 23.92
+  },
+  "power|회귀 √Y|ex_ante|hold|1": {
+   "MAPE": 9.31,
+   "bias": -9.31
+  },
+  "power|회귀 √Y|ex_ante|hold|2": {
+   "MAPE": 5.77,
+   "bias": 5.77
+  },
+  "power|회귀 √Y|ex_ante|hold|3": {
+   "MAPE": 11.31,
+   "bias": -11.31
+  },
+  "power|회귀 √Y|ex_ante|hold|4": {
+   "MAPE": 9.03,
+   "bias": -9.03
+  },
+  "power|회귀 √Y|ex_ante|hold|5": {
+   "MAPE": 6.56,
+   "bias": -6.5
+  },
+  "power|회귀 √Y|ex_ante|hold|6": {
+   "MAPE": 3.11,
+   "bias": 3.05
+  },
+  "power|회귀 √Y|ex_ante|hold|7": {
+   "MAPE": 28.61,
+   "bias": -28.61
+  },
+  "power|회귀 √Y|ex_ante|hold|8": {
+   "MAPE": 25.36,
+   "bias": -25.36
+  },
+  "power|회귀 √Y|ex_ante|hold|9": {
+   "MAPE": 18.31,
+   "bias": -18.31
+  },
+  "power|회귀 √Y|ex_post|eval|1": {
+   "MAPE": 10.01,
+   "bias": 10.01
+  },
+  "power|회귀 √Y|ex_post|eval|2": {
+   "MAPE": 11.16,
+   "bias": 10.79
+  },
+  "power|회귀 √Y|ex_post|eval|3": {
+   "MAPE": 7.68,
+   "bias": 7.68
+  },
+  "power|회귀 √Y|ex_post|eval|4": {
+   "MAPE": 6.53,
+   "bias": 5.53
+  },
+  "power|회귀 √Y|ex_post|eval|5": {
+   "MAPE": 8.91,
+   "bias": 0.02
+  },
+  "power|회귀 √Y|ex_post|eval|6": {
+   "MAPE": 10.66,
+   "bias": 3.78
+  },
+  "power|회귀 √Y|ex_post|eval|7": {
+   "MAPE": 9.52,
+   "bias": 5.15
+  },
+  "power|회귀 √Y|ex_post|eval|8": {
+   "MAPE": 7.22,
+   "bias": 1.95
+  },
+  "power|회귀 √Y|ex_post|eval|9": {
+   "MAPE": 9.73,
+   "bias": 7.83
+  },
+  "power|회귀 √Y|ex_post|eval|10": {
+   "MAPE": 4.6,
+   "bias": 3.16
+  },
+  "power|회귀 √Y|ex_post|eval|11": {
+   "MAPE": 11.67,
+   "bias": 11.67
+  },
+  "power|회귀 √Y|ex_post|eval|12": {
+   "MAPE": 21.56,
+   "bias": 21.56
+  },
+  "power|회귀 √Y|ex_post|hold|1": {
+   "MAPE": 6.57,
+   "bias": -6.57
+  },
+  "power|회귀 √Y|ex_post|hold|2": {
+   "MAPE": 3.16,
+   "bias": 3.16
+  },
+  "power|회귀 √Y|ex_post|hold|3": {
+   "MAPE": 11.12,
+   "bias": -11.12
+  },
+  "power|회귀 √Y|ex_post|hold|4": {
+   "MAPE": 10.84,
+   "bias": -10.84
+  },
+  "power|회귀 √Y|ex_post|hold|5": {
+   "MAPE": 6.3,
+   "bias": -6.19
+  },
+  "power|회귀 √Y|ex_post|hold|6": {
+   "MAPE": 3.57,
+   "bias": 3.57
+  },
+  "power|회귀 √Y|ex_post|hold|7": {
+   "MAPE": 25.06,
+   "bias": -25.06
+  },
+  "power|회귀 √Y|ex_post|hold|8": {
+   "MAPE": 22.4,
+   "bias": -22.4
+  },
+  "power|회귀 √Y|ex_post|hold|9": {
+   "MAPE": 19.47,
+   "bias": -19.47
+  },
+  "total|Chronos-2|ex_ante|eval|1": {
+   "MAPE": 3.96,
+   "bias": 2.61
+  },
+  "total|Chronos-2|ex_ante|eval|2": {
+   "MAPE": 7.04,
+   "bias": 1.78
+  },
+  "total|Chronos-2|ex_ante|eval|3": {
+   "MAPE": 7.02,
+   "bias": 5.77
+  },
+  "total|Chronos-2|ex_ante|eval|4": {
+   "MAPE": 9.34,
+   "bias": 8.16
+  },
+  "total|Chronos-2|ex_ante|eval|5": {
+   "MAPE": 5.37,
+   "bias": -0.44
+  },
+  "total|Chronos-2|ex_ante|eval|6": {
+   "MAPE": 9.31,
+   "bias": 5.87
+  },
+  "total|Chronos-2|ex_ante|eval|7": {
+   "MAPE": 6.27,
+   "bias": 2.22
+  },
+  "total|Chronos-2|ex_ante|eval|8": {
+   "MAPE": 6.39,
+   "bias": -3.13
+  },
+  "total|Chronos-2|ex_ante|eval|9": {
+   "MAPE": 7.94,
+   "bias": 3.99
+  },
+  "total|Chronos-2|ex_ante|eval|10": {
+   "MAPE": 10.69,
+   "bias": 10.68
+  },
+  "total|Chronos-2|ex_ante|eval|11": {
+   "MAPE": 10.52,
+   "bias": 10.48
+  },
+  "total|Chronos-2|ex_ante|eval|12": {
+   "MAPE": 9.24,
+   "bias": 9.24
+  },
+  "total|Chronos-2|ex_ante|hold|1": {
+   "MAPE": 7.46,
+   "bias": -7.46
+  },
+  "total|Chronos-2|ex_ante|hold|2": {
+   "MAPE": 7.4,
+   "bias": 7.4
+  },
+  "total|Chronos-2|ex_ante|hold|3": {
+   "MAPE": 1.69,
+   "bias": -1.09
+  },
+  "total|Chronos-2|ex_ante|hold|4": {
+   "MAPE": 2.2,
+   "bias": -1.2
+  },
+  "total|Chronos-2|ex_ante|hold|5": {
+   "MAPE": 4.05,
+   "bias": -3.75
+  },
+  "total|Chronos-2|ex_ante|hold|6": {
+   "MAPE": 2.91,
+   "bias": 2.48
+  },
+  "total|Chronos-2|ex_ante|hold|7": {
+   "MAPE": 20.17,
+   "bias": -20.17
+  },
+  "total|Chronos-2|ex_ante|hold|8": {
+   "MAPE": 19.71,
+   "bias": -19.71
+  },
+  "total|Chronos-2|ex_ante|hold|9": {
+   "MAPE": 12.17,
+   "bias": -12.17
+  },
+  "total|Chronos-2|ex_post|eval|1": {
+   "MAPE": 3.96,
+   "bias": 2.61
+  },
+  "total|Chronos-2|ex_post|eval|2": {
+   "MAPE": 7.04,
+   "bias": 1.78
+  },
+  "total|Chronos-2|ex_post|eval|3": {
+   "MAPE": 7.02,
+   "bias": 5.77
+  },
+  "total|Chronos-2|ex_post|eval|4": {
+   "MAPE": 9.34,
+   "bias": 8.16
+  },
+  "total|Chronos-2|ex_post|eval|5": {
+   "MAPE": 5.37,
+   "bias": -0.44
+  },
+  "total|Chronos-2|ex_post|eval|6": {
+   "MAPE": 9.31,
+   "bias": 5.87
+  },
+  "total|Chronos-2|ex_post|eval|7": {
+   "MAPE": 6.27,
+   "bias": 2.22
+  },
+  "total|Chronos-2|ex_post|eval|8": {
+   "MAPE": 6.39,
+   "bias": -3.13
+  },
+  "total|Chronos-2|ex_post|eval|9": {
+   "MAPE": 7.94,
+   "bias": 3.99
+  },
+  "total|Chronos-2|ex_post|eval|10": {
+   "MAPE": 10.69,
+   "bias": 10.68
+  },
+  "total|Chronos-2|ex_post|eval|11": {
+   "MAPE": 10.52,
+   "bias": 10.48
+  },
+  "total|Chronos-2|ex_post|eval|12": {
+   "MAPE": 9.24,
+   "bias": 9.24
+  },
+  "total|Chronos-2|ex_post|hold|1": {
+   "MAPE": 7.46,
+   "bias": -7.46
+  },
+  "total|Chronos-2|ex_post|hold|2": {
+   "MAPE": 7.4,
+   "bias": 7.4
+  },
+  "total|Chronos-2|ex_post|hold|3": {
+   "MAPE": 1.69,
+   "bias": -1.09
+  },
+  "total|Chronos-2|ex_post|hold|4": {
+   "MAPE": 2.2,
+   "bias": -1.2
+  },
+  "total|Chronos-2|ex_post|hold|5": {
+   "MAPE": 4.05,
+   "bias": -3.75
+  },
+  "total|Chronos-2|ex_post|hold|6": {
+   "MAPE": 2.91,
+   "bias": 2.48
+  },
+  "total|Chronos-2|ex_post|hold|7": {
+   "MAPE": 20.17,
+   "bias": -20.17
+  },
+  "total|Chronos-2|ex_post|hold|8": {
+   "MAPE": 19.71,
+   "bias": -19.71
+  },
+  "total|Chronos-2|ex_post|hold|9": {
+   "MAPE": 12.17,
+   "bias": -12.17
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|1": {
+   "MAPE": 2.76,
+   "bias": 2.35
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|2": {
+   "MAPE": 6.96,
+   "bias": 0.17
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|3": {
+   "MAPE": 6.46,
+   "bias": 3.51
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|4": {
+   "MAPE": 6.84,
+   "bias": 3.64
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|5": {
+   "MAPE": 9.13,
+   "bias": -2.32
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|6": {
+   "MAPE": 9.77,
+   "bias": 3.86
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|7": {
+   "MAPE": 6.22,
+   "bias": -0.2
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|8": {
+   "MAPE": 7.51,
+   "bias": -5.05
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|9": {
+   "MAPE": 5.9,
+   "bias": 1.45
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|10": {
+   "MAPE": 7.55,
+   "bias": 7.55
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|11": {
+   "MAPE": 8.78,
+   "bias": 8.61
+  },
+  "total|Chronos-2 + 공변량|ex_ante|eval|12": {
+   "MAPE": 8.27,
+   "bias": 8.27
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|1": {
+   "MAPE": 9.49,
+   "bias": -9.49
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|2": {
+   "MAPE": 2.66,
+   "bias": 2.44
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|3": {
+   "MAPE": 4.38,
+   "bias": -4.3
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|4": {
+   "MAPE": 5.5,
+   "bias": -5.5
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|5": {
+   "MAPE": 7.31,
+   "bias": -7.31
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|6": {
+   "MAPE": 2.31,
+   "bias": -0.61
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|7": {
+   "MAPE": 21.99,
+   "bias": -21.99
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|8": {
+   "MAPE": 20.86,
+   "bias": -20.86
+  },
+  "total|Chronos-2 + 공변량|ex_ante|hold|9": {
+   "MAPE": 12.86,
+   "bias": -12.86
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|1": {
+   "MAPE": 2.45,
+   "bias": 1.49
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|2": {
+   "MAPE": 3.11,
+   "bias": -0.72
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|3": {
+   "MAPE": 3.94,
+   "bias": 1.93
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|4": {
+   "MAPE": 6.17,
+   "bias": -0.59
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|5": {
+   "MAPE": 7.64,
+   "bias": -0.8
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|6": {
+   "MAPE": 10.15,
+   "bias": 5.18
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|7": {
+   "MAPE": 7.5,
+   "bias": 1.78
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|8": {
+   "MAPE": 7.17,
+   "bias": -3.08
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|9": {
+   "MAPE": 7.12,
+   "bias": 4.65
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|10": {
+   "MAPE": 4.05,
+   "bias": 3.05
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|11": {
+   "MAPE": 7.76,
+   "bias": 7.29
+  },
+  "total|Chronos-2 + 공변량|ex_post|eval|12": {
+   "MAPE": 5.96,
+   "bias": 5.96
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|1": {
+   "MAPE": 6.23,
+   "bias": -6.23
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|2": {
+   "MAPE": 1.63,
+   "bias": -1.02
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|3": {
+   "MAPE": 3.85,
+   "bias": -3.65
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|4": {
+   "MAPE": 8.2,
+   "bias": -8.2
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|5": {
+   "MAPE": 7.77,
+   "bias": -7.77
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|6": {
+   "MAPE": 2.08,
+   "bias": -1.04
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|7": {
+   "MAPE": 22.2,
+   "bias": -22.2
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|8": {
+   "MAPE": 21.2,
+   "bias": -21.2
+  },
+  "total|Chronos-2 + 공변량|ex_post|hold|9": {
+   "MAPE": 13.42,
+   "bias": -13.42
+  },
+  "total|ETS|ex_ante|eval|1": {
+   "MAPE": 6.32,
+   "bias": 5.57
+  },
+  "total|ETS|ex_ante|eval|2": {
+   "MAPE": 8.99,
+   "bias": 1.57
+  },
+  "total|ETS|ex_ante|eval|3": {
+   "MAPE": 9.58,
+   "bias": 6.11
+  },
+  "total|ETS|ex_ante|eval|4": {
+   "MAPE": 8.33,
+   "bias": 4.43
+  },
+  "total|ETS|ex_ante|eval|5": {
+   "MAPE": 8.93,
+   "bias": -4.8
+  },
+  "total|ETS|ex_ante|eval|6": {
+   "MAPE": 8.57,
+   "bias": 1.52
+  },
+  "total|ETS|ex_ante|eval|7": {
+   "MAPE": 6.56,
+   "bias": 0.18
+  },
+  "total|ETS|ex_ante|eval|8": {
+   "MAPE": 7.54,
+   "bias": -5.15
+  },
+  "total|ETS|ex_ante|eval|9": {
+   "MAPE": 5.94,
+   "bias": -1.11
+  },
+  "total|ETS|ex_ante|eval|10": {
+   "MAPE": 8.31,
+   "bias": 7.41
+  },
+  "total|ETS|ex_ante|eval|11": {
+   "MAPE": 11.0,
+   "bias": 10.26
+  },
+  "total|ETS|ex_ante|eval|12": {
+   "MAPE": 10.31,
+   "bias": 10.21
+  },
+  "total|ETS|ex_ante|hold|1": {
+   "MAPE": 9.12,
+   "bias": -9.12
+  },
+  "total|ETS|ex_ante|hold|2": {
+   "MAPE": 3.42,
+   "bias": 2.09
+  },
+  "total|ETS|ex_ante|hold|3": {
+   "MAPE": 5.46,
+   "bias": -5.0
+  },
+  "total|ETS|ex_ante|hold|4": {
+   "MAPE": 6.49,
+   "bias": -6.29
+  },
+  "total|ETS|ex_ante|hold|5": {
+   "MAPE": 9.7,
+   "bias": -9.7
+  },
+  "total|ETS|ex_ante|hold|6": {
+   "MAPE": 4.34,
+   "bias": -3.62
+  },
+  "total|ETS|ex_ante|hold|7": {
+   "MAPE": 22.0,
+   "bias": -22.0
+  },
+  "total|ETS|ex_ante|hold|8": {
+   "MAPE": 19.94,
+   "bias": -19.94
+  },
+  "total|ETS|ex_ante|hold|9": {
+   "MAPE": 13.53,
+   "bias": -13.09
+  },
+  "total|ETS|ex_post|eval|1": {
+   "MAPE": 6.32,
+   "bias": 5.57
+  },
+  "total|ETS|ex_post|eval|2": {
+   "MAPE": 8.99,
+   "bias": 1.57
+  },
+  "total|ETS|ex_post|eval|3": {
+   "MAPE": 9.58,
+   "bias": 6.11
+  },
+  "total|ETS|ex_post|eval|4": {
+   "MAPE": 8.33,
+   "bias": 4.43
+  },
+  "total|ETS|ex_post|eval|5": {
+   "MAPE": 8.93,
+   "bias": -4.8
+  },
+  "total|ETS|ex_post|eval|6": {
+   "MAPE": 8.57,
+   "bias": 1.52
+  },
+  "total|ETS|ex_post|eval|7": {
+   "MAPE": 6.56,
+   "bias": 0.18
+  },
+  "total|ETS|ex_post|eval|8": {
+   "MAPE": 7.54,
+   "bias": -5.15
+  },
+  "total|ETS|ex_post|eval|9": {
+   "MAPE": 5.94,
+   "bias": -1.11
+  },
+  "total|ETS|ex_post|eval|10": {
+   "MAPE": 8.31,
+   "bias": 7.41
+  },
+  "total|ETS|ex_post|eval|11": {
+   "MAPE": 11.0,
+   "bias": 10.26
+  },
+  "total|ETS|ex_post|eval|12": {
+   "MAPE": 10.31,
+   "bias": 10.21
+  },
+  "total|ETS|ex_post|hold|1": {
+   "MAPE": 9.12,
+   "bias": -9.12
+  },
+  "total|ETS|ex_post|hold|2": {
+   "MAPE": 3.42,
+   "bias": 2.09
+  },
+  "total|ETS|ex_post|hold|3": {
+   "MAPE": 5.46,
+   "bias": -5.0
+  },
+  "total|ETS|ex_post|hold|4": {
+   "MAPE": 6.49,
+   "bias": -6.29
+  },
+  "total|ETS|ex_post|hold|5": {
+   "MAPE": 9.7,
+   "bias": -9.7
+  },
+  "total|ETS|ex_post|hold|6": {
+   "MAPE": 4.34,
+   "bias": -3.62
+  },
+  "total|ETS|ex_post|hold|7": {
+   "MAPE": 22.0,
+   "bias": -22.0
+  },
+  "total|ETS|ex_post|hold|8": {
+   "MAPE": 19.94,
+   "bias": -19.94
+  },
+  "total|ETS|ex_post|hold|9": {
+   "MAPE": 13.53,
+   "bias": -13.09
+  },
+  "total|LightGBM|ex_ante|eval|1": {
+   "MAPE": 3.7,
+   "bias": 3.7
+  },
+  "total|LightGBM|ex_ante|eval|2": {
+   "MAPE": 8.35,
+   "bias": -3.83
+  },
+  "total|LightGBM|ex_ante|eval|3": {
+   "MAPE": 7.55,
+   "bias": 6.33
+  },
+  "total|LightGBM|ex_ante|eval|4": {
+   "MAPE": 4.69,
+   "bias": 3.35
+  },
+  "total|LightGBM|ex_ante|eval|5": {
+   "MAPE": 9.08,
+   "bias": -8.5
+  },
+  "total|LightGBM|ex_ante|eval|6": {
+   "MAPE": 7.05,
+   "bias": -1.18
+  },
+  "total|LightGBM|ex_ante|eval|7": {
+   "MAPE": 4.81,
+   "bias": -3.53
+  },
+  "total|LightGBM|ex_ante|eval|8": {
+   "MAPE": 7.28,
+   "bias": -5.64
+  },
+  "total|LightGBM|ex_ante|eval|9": {
+   "MAPE": 7.02,
+   "bias": -2.9
+  },
+  "total|LightGBM|ex_ante|eval|10": {
+   "MAPE": 5.45,
+   "bias": 1.98
+  },
+  "total|LightGBM|ex_ante|eval|11": {
+   "MAPE": 8.18,
+   "bias": 5.25
+  },
+  "total|LightGBM|ex_ante|eval|12": {
+   "MAPE": 7.17,
+   "bias": 7.17
+  },
+  "total|LightGBM|ex_ante|hold|1": {
+   "MAPE": 6.48,
+   "bias": -6.48
+  },
+  "total|LightGBM|ex_ante|hold|2": {
+   "MAPE": 1.07,
+   "bias": 1.07
+  },
+  "total|LightGBM|ex_ante|hold|3": {
+   "MAPE": 3.56,
+   "bias": -3.56
+  },
+  "total|LightGBM|ex_ante|hold|4": {
+   "MAPE": 3.5,
+   "bias": -3.5
+  },
+  "total|LightGBM|ex_ante|hold|5": {
+   "MAPE": 4.76,
+   "bias": -4.76
+  },
+  "total|LightGBM|ex_ante|hold|6": {
+   "MAPE": 6.34,
+   "bias": -6.34
+  },
+  "total|LightGBM|ex_ante|hold|7": {
+   "MAPE": 24.85,
+   "bias": -24.85
+  },
+  "total|LightGBM|ex_ante|hold|8": {
+   "MAPE": 19.08,
+   "bias": -19.08
+  },
+  "total|LightGBM|ex_ante|hold|9": {
+   "MAPE": 16.19,
+   "bias": -16.19
+  },
+  "total|LightGBM|ex_post|eval|1": {
+   "MAPE": 1.59,
+   "bias": 0.85
+  },
+  "total|LightGBM|ex_post|eval|2": {
+   "MAPE": 4.63,
+   "bias": -0.7
+  },
+  "total|LightGBM|ex_post|eval|3": {
+   "MAPE": 6.56,
+   "bias": 4.42
+  },
+  "total|LightGBM|ex_post|eval|4": {
+   "MAPE": 1.63,
+   "bias": 0.27
+  },
+  "total|LightGBM|ex_post|eval|5": {
+   "MAPE": 6.48,
+   "bias": -5.95
+  },
+  "total|LightGBM|ex_post|eval|6": {
+   "MAPE": 7.47,
+   "bias": 1.28
+  },
+  "total|LightGBM|ex_post|eval|7": {
+   "MAPE": 6.59,
+   "bias": -1.5
+  },
+  "total|LightGBM|ex_post|eval|8": {
+   "MAPE": 5.12,
+   "bias": -2.61
+  },
+  "total|LightGBM|ex_post|eval|9": {
+   "MAPE": 6.67,
+   "bias": 1.17
+  },
+  "total|LightGBM|ex_post|eval|10": {
+   "MAPE": 4.07,
+   "bias": -2.12
+  },
+  "total|LightGBM|ex_post|eval|11": {
+   "MAPE": 7.34,
+   "bias": 5.97
+  },
+  "total|LightGBM|ex_post|eval|12": {
+   "MAPE": 5.5,
+   "bias": 5.5
+  },
+  "total|LightGBM|ex_post|hold|1": {
+   "MAPE": 2.77,
+   "bias": -2.77
+  },
+  "total|LightGBM|ex_post|hold|2": {
+   "MAPE": 0.7,
+   "bias": -0.59
+  },
+  "total|LightGBM|ex_post|hold|3": {
+   "MAPE": 1.15,
+   "bias": -1.15
+  },
+  "total|LightGBM|ex_post|hold|4": {
+   "MAPE": 4.66,
+   "bias": -4.66
+  },
+  "total|LightGBM|ex_post|hold|5": {
+   "MAPE": 10.0,
+   "bias": -10.0
+  },
+  "total|LightGBM|ex_post|hold|6": {
+   "MAPE": 6.34,
+   "bias": -6.34
+  },
+  "total|LightGBM|ex_post|hold|7": {
+   "MAPE": 22.64,
+   "bias": -22.64
+  },
+  "total|LightGBM|ex_post|hold|8": {
+   "MAPE": 18.31,
+   "bias": -18.31
+  },
+  "total|LightGBM|ex_post|hold|9": {
+   "MAPE": 15.57,
+   "bias": -15.57
+  },
+  "total|Ridge|ex_ante|eval|1": {
+   "MAPE": 6.27,
+   "bias": -6.07
+  },
+  "total|Ridge|ex_ante|eval|2": {
+   "MAPE": 7.52,
+   "bias": -4.19
+  },
+  "total|Ridge|ex_ante|eval|3": {
+   "MAPE": 6.77,
+   "bias": -2.34
+  },
+  "total|Ridge|ex_ante|eval|4": {
+   "MAPE": 5.41,
+   "bias": -2.22
+  },
+  "total|Ridge|ex_ante|eval|5": {
+   "MAPE": 9.35,
+   "bias": -8.98
+  },
+  "total|Ridge|ex_ante|eval|6": {
+   "MAPE": 8.42,
+   "bias": -7.94
+  },
+  "total|Ridge|ex_ante|eval|7": {
+   "MAPE": 8.54,
+   "bias": -8.53
+  },
+  "total|Ridge|ex_ante|eval|8": {
+   "MAPE": 10.51,
+   "bias": -10.51
+  },
+  "total|Ridge|ex_ante|eval|9": {
+   "MAPE": 10.15,
+   "bias": -3.71
+  },
+  "total|Ridge|ex_ante|eval|10": {
+   "MAPE": 4.48,
+   "bias": -0.94
+  },
+  "total|Ridge|ex_ante|eval|11": {
+   "MAPE": 8.46,
+   "bias": -2.33
+  },
+  "total|Ridge|ex_ante|eval|12": {
+   "MAPE": 3.22,
+   "bias": 0.62
+  },
+  "total|Ridge|ex_ante|hold|1": {
+   "MAPE": 12.48,
+   "bias": -12.48
+  },
+  "total|Ridge|ex_ante|hold|2": {
+   "MAPE": 1.65,
+   "bias": 1.65
+  },
+  "total|Ridge|ex_ante|hold|3": {
+   "MAPE": 6.0,
+   "bias": -6.0
+  },
+  "total|Ridge|ex_ante|hold|4": {
+   "MAPE": 4.18,
+   "bias": -4.18
+  },
+  "total|Ridge|ex_ante|hold|5": {
+   "MAPE": 9.93,
+   "bias": -9.93
+  },
+  "total|Ridge|ex_ante|hold|6": {
+   "MAPE": 6.77,
+   "bias": -6.77
+  },
+  "total|Ridge|ex_ante|hold|7": {
+   "MAPE": 24.53,
+   "bias": -24.53
+  },
+  "total|Ridge|ex_ante|hold|8": {
+   "MAPE": 22.96,
+   "bias": -22.96
+  },
+  "total|Ridge|ex_ante|hold|9": {
+   "MAPE": 15.24,
+   "bias": -15.24
+  },
+  "total|Ridge|ex_post|eval|1": {
+   "MAPE": 7.11,
+   "bias": -6.89
+  },
+  "total|Ridge|ex_post|eval|2": {
+   "MAPE": 6.05,
+   "bias": -4.82
+  },
+  "total|Ridge|ex_post|eval|3": {
+   "MAPE": 5.91,
+   "bias": -3.65
+  },
+  "total|Ridge|ex_post|eval|4": {
+   "MAPE": 4.84,
+   "bias": -4.09
+  },
+  "total|Ridge|ex_post|eval|5": {
+   "MAPE": 8.84,
+   "bias": -8.48
+  },
+  "total|Ridge|ex_post|eval|6": {
+   "MAPE": 8.39,
+   "bias": -7.04
+  },
+  "total|Ridge|ex_post|eval|7": {
+   "MAPE": 9.02,
+   "bias": -6.75
+  },
+  "total|Ridge|ex_post|eval|8": {
+   "MAPE": 8.46,
+   "bias": -8.22
+  },
+  "total|Ridge|ex_post|eval|9": {
+   "MAPE": 8.48,
+   "bias": -0.67
+  },
+  "total|Ridge|ex_post|eval|10": {
+   "MAPE": 4.15,
+   "bias": -2.87
+  },
+  "total|Ridge|ex_post|eval|11": {
+   "MAPE": 7.16,
+   "bias": -3.21
+  },
+  "total|Ridge|ex_post|eval|12": {
+   "MAPE": 3.12,
+   "bias": -1.37
+  },
+  "total|Ridge|ex_post|hold|1": {
+   "MAPE": 9.56,
+   "bias": -9.56
+  },
+  "total|Ridge|ex_post|hold|2": {
+   "MAPE": 0.98,
+   "bias": -0.98
+  },
+  "total|Ridge|ex_post|hold|3": {
+   "MAPE": 5.8,
+   "bias": -5.8
+  },
+  "total|Ridge|ex_post|hold|4": {
+   "MAPE": 5.94,
+   "bias": -5.94
+  },
+  "total|Ridge|ex_post|hold|5": {
+   "MAPE": 10.0,
+   "bias": -10.0
+  },
+  "total|Ridge|ex_post|hold|6": {
+   "MAPE": 6.57,
+   "bias": -6.57
+  },
+  "total|Ridge|ex_post|hold|7": {
+   "MAPE": 22.85,
+   "bias": -22.85
+  },
+  "total|Ridge|ex_post|hold|8": {
+   "MAPE": 21.55,
+   "bias": -21.55
+  },
+  "total|Ridge|ex_post|hold|9": {
+   "MAPE": 15.75,
+   "bias": -15.75
+  },
+  "total|SARIMAX|ex_ante|eval|1": {
+   "MAPE": 4.79,
+   "bias": 4.79
+  },
+  "total|SARIMAX|ex_ante|eval|2": {
+   "MAPE": 8.38,
+   "bias": 2.84
+  },
+  "total|SARIMAX|ex_ante|eval|3": {
+   "MAPE": 6.86,
+   "bias": 1.03
+  },
+  "total|SARIMAX|ex_ante|eval|4": {
+   "MAPE": 6.95,
+   "bias": 3.24
+  },
+  "total|SARIMAX|ex_ante|eval|5": {
+   "MAPE": 7.69,
+   "bias": -3.77
+  },
+  "total|SARIMAX|ex_ante|eval|6": {
+   "MAPE": 6.99,
+   "bias": 2.05
+  },
+  "total|SARIMAX|ex_ante|eval|7": {
+   "MAPE": 4.44,
+   "bias": 0.73
+  },
+  "total|SARIMAX|ex_ante|eval|8": {
+   "MAPE": 4.61,
+   "bias": -1.66
+  },
+  "total|SARIMAX|ex_ante|eval|9": {
+   "MAPE": 3.63,
+   "bias": 2.02
+  },
+  "total|SARIMAX|ex_ante|eval|10": {
+   "MAPE": 6.02,
+   "bias": 5.32
+  },
+  "total|SARIMAX|ex_ante|eval|11": {
+   "MAPE": 6.63,
+   "bias": 5.32
+  },
+  "total|SARIMAX|ex_ante|eval|12": {
+   "MAPE": 8.54,
+   "bias": 8.54
+  },
+  "total|SARIMAX|ex_ante|hold|1": {
+   "MAPE": 8.44,
+   "bias": -8.44
+  },
+  "total|SARIMAX|ex_ante|hold|2": {
+   "MAPE": 4.19,
+   "bias": 4.19
+  },
+  "total|SARIMAX|ex_ante|hold|3": {
+   "MAPE": 9.38,
+   "bias": -9.38
+  },
+  "total|SARIMAX|ex_ante|hold|4": {
+   "MAPE": 6.21,
+   "bias": -6.13
+  },
+  "total|SARIMAX|ex_ante|hold|5": {
+   "MAPE": 7.92,
+   "bias": -7.92
+  },
+  "total|SARIMAX|ex_ante|hold|6": {
+   "MAPE": 4.04,
+   "bias": -3.32
+  },
+  "total|SARIMAX|ex_ante|hold|7": {
+   "MAPE": 21.59,
+   "bias": -21.59
+  },
+  "total|SARIMAX|ex_ante|hold|8": {
+   "MAPE": 16.48,
+   "bias": -16.48
+  },
+  "total|SARIMAX|ex_ante|hold|9": {
+   "MAPE": 11.27,
+   "bias": -11.27
+  },
+  "total|SARIMAX|ex_post|eval|1": {
+   "MAPE": 3.17,
+   "bias": 2.73
+  },
+  "total|SARIMAX|ex_post|eval|2": {
+   "MAPE": 3.36,
+   "bias": 1.13
+  },
+  "total|SARIMAX|ex_post|eval|3": {
+   "MAPE": 3.1,
+   "bias": -2.05
+  },
+  "total|SARIMAX|ex_post|eval|4": {
+   "MAPE": 3.48,
+   "bias": -1.26
+  },
+  "total|SARIMAX|ex_post|eval|5": {
+   "MAPE": 6.4,
+   "bias": -2.64
+  },
+  "total|SARIMAX|ex_post|eval|6": {
+   "MAPE": 7.02,
+   "bias": 3.45
+  },
+  "total|SARIMAX|ex_post|eval|7": {
+   "MAPE": 5.63,
+   "bias": 3.23
+  },
+  "total|SARIMAX|ex_post|eval|8": {
+   "MAPE": 3.7,
+   "bias": 1.92
+  },
+  "total|SARIMAX|ex_post|eval|9": {
+   "MAPE": 6.82,
+   "bias": 6.82
+  },
+  "total|SARIMAX|ex_post|eval|10": {
+   "MAPE": 2.34,
+   "bias": 0.79
+  },
+  "total|SARIMAX|ex_post|eval|11": {
+   "MAPE": 5.83,
+   "bias": 3.46
+  },
+  "total|SARIMAX|ex_post|eval|12": {
+   "MAPE": 4.09,
+   "bias": 3.82
+  },
+  "total|SARIMAX|ex_post|hold|1": {
+   "MAPE": 1.96,
+   "bias": -1.81
+  },
+  "total|SARIMAX|ex_post|hold|2": {
+   "MAPE": 1.55,
+   "bias": -1.46
+  },
+  "total|SARIMAX|ex_post|hold|3": {
+   "MAPE": 8.97,
+   "bias": -8.97
+  },
+  "total|SARIMAX|ex_post|hold|4": {
+   "MAPE": 9.74,
+   "bias": -9.74
+  },
+  "total|SARIMAX|ex_post|hold|5": {
+   "MAPE": 8.29,
+   "bias": -8.29
+  },
+  "total|SARIMAX|ex_post|hold|6": {
+   "MAPE": 3.88,
+   "bias": -3.07
+  },
+  "total|SARIMAX|ex_post|hold|7": {
+   "MAPE": 19.37,
+   "bias": -19.37
+  },
+  "total|SARIMAX|ex_post|hold|8": {
+   "MAPE": 14.56,
+   "bias": -14.53
+  },
+  "total|SARIMAX|ex_post|hold|9": {
+   "MAPE": 11.96,
+   "bias": -11.96
+  },
+  "total|TimesFM 2.5|ex_ante|eval|1": {
+   "MAPE": 3.81,
+   "bias": 3.24
+  },
+  "total|TimesFM 2.5|ex_ante|eval|2": {
+   "MAPE": 8.21,
+   "bias": 2.55
+  },
+  "total|TimesFM 2.5|ex_ante|eval|3": {
+   "MAPE": 5.84,
+   "bias": 3.37
+  },
+  "total|TimesFM 2.5|ex_ante|eval|4": {
+   "MAPE": 8.0,
+   "bias": 7.29
+  },
+  "total|TimesFM 2.5|ex_ante|eval|5": {
+   "MAPE": 5.71,
+   "bias": -2.55
+  },
+  "total|TimesFM 2.5|ex_ante|eval|6": {
+   "MAPE": 9.03,
+   "bias": 3.07
+  },
+  "total|TimesFM 2.5|ex_ante|eval|7": {
+   "MAPE": 5.77,
+   "bias": -0.03
+  },
+  "total|TimesFM 2.5|ex_ante|eval|8": {
+   "MAPE": 6.99,
+   "bias": -5.06
+  },
+  "total|TimesFM 2.5|ex_ante|eval|9": {
+   "MAPE": 6.46,
+   "bias": 3.48
+  },
+  "total|TimesFM 2.5|ex_ante|eval|10": {
+   "MAPE": 10.42,
+   "bias": 10.32
+  },
+  "total|TimesFM 2.5|ex_ante|eval|11": {
+   "MAPE": 11.38,
+   "bias": 11.36
+  },
+  "total|TimesFM 2.5|ex_ante|eval|12": {
+   "MAPE": 8.96,
+   "bias": 8.96
+  },
+  "total|TimesFM 2.5|ex_ante|hold|1": {
+   "MAPE": 9.69,
+   "bias": -9.69
+  },
+  "total|TimesFM 2.5|ex_ante|hold|2": {
+   "MAPE": 4.75,
+   "bias": 4.75
+  },
+  "total|TimesFM 2.5|ex_ante|hold|3": {
+   "MAPE": 4.96,
+   "bias": -4.96
+  },
+  "total|TimesFM 2.5|ex_ante|hold|4": {
+   "MAPE": 1.99,
+   "bias": -1.87
+  },
+  "total|TimesFM 2.5|ex_ante|hold|5": {
+   "MAPE": 7.66,
+   "bias": -7.66
+  },
+  "total|TimesFM 2.5|ex_ante|hold|6": {
+   "MAPE": 2.72,
+   "bias": -2.35
+  },
+  "total|TimesFM 2.5|ex_ante|hold|7": {
+   "MAPE": 22.27,
+   "bias": -22.27
+  },
+  "total|TimesFM 2.5|ex_ante|hold|8": {
+   "MAPE": 20.64,
+   "bias": -20.64
+  },
+  "total|TimesFM 2.5|ex_ante|hold|9": {
+   "MAPE": 11.25,
+   "bias": -11.23
+  },
+  "total|TimesFM 2.5|ex_post|eval|1": {
+   "MAPE": 3.81,
+   "bias": 3.24
+  },
+  "total|TimesFM 2.5|ex_post|eval|2": {
+   "MAPE": 8.21,
+   "bias": 2.55
+  },
+  "total|TimesFM 2.5|ex_post|eval|3": {
+   "MAPE": 5.84,
+   "bias": 3.37
+  },
+  "total|TimesFM 2.5|ex_post|eval|4": {
+   "MAPE": 8.0,
+   "bias": 7.29
+  },
+  "total|TimesFM 2.5|ex_post|eval|5": {
+   "MAPE": 5.71,
+   "bias": -2.55
+  },
+  "total|TimesFM 2.5|ex_post|eval|6": {
+   "MAPE": 9.03,
+   "bias": 3.07
+  },
+  "total|TimesFM 2.5|ex_post|eval|7": {
+   "MAPE": 5.77,
+   "bias": -0.03
+  },
+  "total|TimesFM 2.5|ex_post|eval|8": {
+   "MAPE": 6.99,
+   "bias": -5.06
+  },
+  "total|TimesFM 2.5|ex_post|eval|9": {
+   "MAPE": 6.46,
+   "bias": 3.48
+  },
+  "total|TimesFM 2.5|ex_post|eval|10": {
+   "MAPE": 10.42,
+   "bias": 10.32
+  },
+  "total|TimesFM 2.5|ex_post|eval|11": {
+   "MAPE": 11.38,
+   "bias": 11.36
+  },
+  "total|TimesFM 2.5|ex_post|eval|12": {
+   "MAPE": 8.96,
+   "bias": 8.96
+  },
+  "total|TimesFM 2.5|ex_post|hold|1": {
+   "MAPE": 9.69,
+   "bias": -9.69
+  },
+  "total|TimesFM 2.5|ex_post|hold|2": {
+   "MAPE": 4.75,
+   "bias": 4.75
+  },
+  "total|TimesFM 2.5|ex_post|hold|3": {
+   "MAPE": 4.96,
+   "bias": -4.96
+  },
+  "total|TimesFM 2.5|ex_post|hold|4": {
+   "MAPE": 1.99,
+   "bias": -1.87
+  },
+  "total|TimesFM 2.5|ex_post|hold|5": {
+   "MAPE": 7.66,
+   "bias": -7.66
+  },
+  "total|TimesFM 2.5|ex_post|hold|6": {
+   "MAPE": 2.72,
+   "bias": -2.35
+  },
+  "total|TimesFM 2.5|ex_post|hold|7": {
+   "MAPE": 22.27,
+   "bias": -22.27
+  },
+  "total|TimesFM 2.5|ex_post|hold|8": {
+   "MAPE": 20.64,
+   "bias": -20.64
+  },
+  "total|TimesFM 2.5|ex_post|hold|9": {
+   "MAPE": 11.25,
+   "bias": -11.23
+  },
+  "total|계절 naive|ex_ante|eval|1": {
+   "MAPE": 2.82,
+   "bias": 2.82
+  },
+  "total|계절 naive|ex_ante|eval|2": {
+   "MAPE": 11.9,
+   "bias": 0.59
+  },
+  "total|계절 naive|ex_ante|eval|3": {
+   "MAPE": 11.04,
+   "bias": 5.61
+  },
+  "total|계절 naive|ex_ante|eval|4": {
+   "MAPE": 9.85,
+   "bias": 1.68
+  },
+  "total|계절 naive|ex_ante|eval|5": {
+   "MAPE": 9.24,
+   "bias": 2.38
+  },
+  "total|계절 naive|ex_ante|eval|6": {
+   "MAPE": 13.42,
+   "bias": 8.12
+  },
+  "total|계절 naive|ex_ante|eval|7": {
+   "MAPE": 9.39,
+   "bias": 5.21
+  },
+  "total|계절 naive|ex_ante|eval|8": {
+   "MAPE": 7.47,
+   "bias": 0.53
+  },
+  "total|계절 naive|ex_ante|eval|9": {
+   "MAPE": 5.48,
+   "bias": 5.48
+  },
+  "total|계절 naive|ex_ante|eval|10": {
+   "MAPE": 8.84,
+   "bias": 5.25
+  },
+  "total|계절 naive|ex_ante|eval|11": {
+   "MAPE": 10.35,
+   "bias": 2.65
+  },
+  "total|계절 naive|ex_ante|eval|12": {
+   "MAPE": 9.37,
+   "bias": 9.37
+  },
+  "total|계절 naive|ex_ante|hold|1": {
+   "MAPE": 12.8,
+   "bias": -12.8
+  },
+  "total|계절 naive|ex_ante|hold|2": {
+   "MAPE": 12.6,
+   "bias": 12.6
+  },
+  "total|계절 naive|ex_ante|hold|3": {
+   "MAPE": 5.37,
+   "bias": -5.37
+  },
+  "total|계절 naive|ex_ante|hold|4": {
+   "MAPE": 1.53,
+   "bias": -1.53
+  },
+  "total|계절 naive|ex_ante|hold|5": {
+   "MAPE": 0.7,
+   "bias": 0.7
+  },
+  "total|계절 naive|ex_ante|hold|6": {
+   "MAPE": 8.28,
+   "bias": -8.28
+  },
+  "total|계절 naive|ex_ante|hold|7": {
+   "MAPE": 23.53,
+   "bias": -23.53
+  },
+  "total|계절 naive|ex_ante|hold|8": {
+   "MAPE": 20.27,
+   "bias": -20.27
+  },
+  "total|계절 naive|ex_ante|hold|9": {
+   "MAPE": 20.17,
+   "bias": -20.17
+  },
+  "total|계절 naive|ex_post|eval|1": {
+   "MAPE": 2.82,
+   "bias": 2.82
+  },
+  "total|계절 naive|ex_post|eval|2": {
+   "MAPE": 11.9,
+   "bias": 0.59
+  },
+  "total|계절 naive|ex_post|eval|3": {
+   "MAPE": 11.04,
+   "bias": 5.61
+  },
+  "total|계절 naive|ex_post|eval|4": {
+   "MAPE": 9.85,
+   "bias": 1.68
+  },
+  "total|계절 naive|ex_post|eval|5": {
+   "MAPE": 9.24,
+   "bias": 2.38
+  },
+  "total|계절 naive|ex_post|eval|6": {
+   "MAPE": 13.42,
+   "bias": 8.12
+  },
+  "total|계절 naive|ex_post|eval|7": {
+   "MAPE": 9.39,
+   "bias": 5.21
+  },
+  "total|계절 naive|ex_post|eval|8": {
+   "MAPE": 7.47,
+   "bias": 0.53
+  },
+  "total|계절 naive|ex_post|eval|9": {
+   "MAPE": 5.48,
+   "bias": 5.48
+  },
+  "total|계절 naive|ex_post|eval|10": {
+   "MAPE": 8.84,
+   "bias": 5.25
+  },
+  "total|계절 naive|ex_post|eval|11": {
+   "MAPE": 10.35,
+   "bias": 2.65
+  },
+  "total|계절 naive|ex_post|eval|12": {
+   "MAPE": 9.37,
+   "bias": 9.37
+  },
+  "total|계절 naive|ex_post|hold|1": {
+   "MAPE": 12.8,
+   "bias": -12.8
+  },
+  "total|계절 naive|ex_post|hold|2": {
+   "MAPE": 12.6,
+   "bias": 12.6
+  },
+  "total|계절 naive|ex_post|hold|3": {
+   "MAPE": 5.37,
+   "bias": -5.37
+  },
+  "total|계절 naive|ex_post|hold|4": {
+   "MAPE": 1.53,
+   "bias": -1.53
+  },
+  "total|계절 naive|ex_post|hold|5": {
+   "MAPE": 0.7,
+   "bias": 0.7
+  },
+  "total|계절 naive|ex_post|hold|6": {
+   "MAPE": 8.28,
+   "bias": -8.28
+  },
+  "total|계절 naive|ex_post|hold|7": {
+   "MAPE": 23.53,
+   "bias": -23.53
+  },
+  "total|계절 naive|ex_post|hold|8": {
+   "MAPE": 20.27,
+   "bias": -20.27
+  },
+  "total|계절 naive|ex_post|hold|9": {
+   "MAPE": 20.17,
+   "bias": -20.17
+  },
+  "total|앙상블|ex_ante|eval|1": {
+   "MAPE": 3.4,
+   "bias": 3.31
+  },
+  "total|앙상블|ex_ante|eval|2": {
+   "MAPE": 7.08,
+   "bias": 0.68
+  },
+  "total|앙상블|ex_ante|eval|3": {
+   "MAPE": 5.18,
+   "bias": 3.15
+  },
+  "total|앙상블|ex_ante|eval|4": {
+   "MAPE": 5.16,
+   "bias": 2.18
+  },
+  "total|앙상블|ex_ante|eval|5": {
+   "MAPE": 7.68,
+   "bias": -6.35
+  },
+  "total|앙상블|ex_ante|eval|6": {
+   "MAPE": 6.48,
+   "bias": -0.07
+  },
+  "total|앙상블|ex_ante|eval|7": {
+   "MAPE": 3.9,
+   "bias": -2.29
+  },
+  "total|앙상블|ex_ante|eval|8": {
+   "MAPE": 5.61,
+   "bias": -4.81
+  },
+  "total|앙상블|ex_ante|eval|9": {
+   "MAPE": 5.33,
+   "bias": -0.35
+  },
+  "total|앙상블|ex_ante|eval|10": {
+   "MAPE": 4.63,
+   "bias": 4.28
+  },
+  "total|앙상블|ex_ante|eval|11": {
+   "MAPE": 6.19,
+   "bias": 5.48
+  },
+  "total|앙상블|ex_ante|eval|12": {
+   "MAPE": 8.34,
+   "bias": 8.34
+  },
+  "total|앙상블|ex_ante|hold|1": {
+   "MAPE": 8.1,
+   "bias": -8.1
+  },
+  "total|앙상블|ex_ante|hold|2": {
+   "MAPE": 3.75,
+   "bias": 3.75
+  },
+  "total|앙상블|ex_ante|hold|3": {
+   "MAPE": 5.66,
+   "bias": -5.66
+  },
+  "total|앙상블|ex_ante|hold|4": {
+   "MAPE": 5.82,
+   "bias": -5.82
+  },
+  "total|앙상블|ex_ante|hold|5": {
+   "MAPE": 8.05,
+   "bias": -8.05
+  },
+  "total|앙상블|ex_ante|hold|6": {
+   "MAPE": 3.84,
+   "bias": -3.84
+  },
+  "total|앙상블|ex_ante|hold|7": {
+   "MAPE": 23.11,
+   "bias": -23.11
+  },
+  "total|앙상블|ex_ante|hold|8": {
+   "MAPE": 19.24,
+   "bias": -19.24
+  },
+  "total|앙상블|ex_ante|hold|9": {
+   "MAPE": 13.47,
+   "bias": -13.47
+  },
+  "total|앙상블|ex_post|eval|1": {
+   "MAPE": 1.97,
+   "bias": 1.47
+  },
+  "total|앙상블|ex_post|eval|2": {
+   "MAPE": 3.34,
+   "bias": 0.45
+  },
+  "total|앙상블|ex_post|eval|3": {
+   "MAPE": 2.31,
+   "bias": 0.85
+  },
+  "total|앙상블|ex_post|eval|4": {
+   "MAPE": 3.05,
+   "bias": -1.9
+  },
+  "total|앙상블|ex_post|eval|5": {
+   "MAPE": 6.02,
+   "bias": -4.74
+  },
+  "total|앙상블|ex_post|eval|6": {
+   "MAPE": 6.68,
+   "bias": 1.52
+  },
+  "total|앙상블|ex_post|eval|7": {
+   "MAPE": 5.1,
+   "bias": -0.15
+  },
+  "total|앙상블|ex_post|eval|8": {
+   "MAPE": 4.45,
+   "bias": -1.97
+  },
+  "total|앙상블|ex_post|eval|9": {
+   "MAPE": 4.56,
+   "bias": 3.63
+  },
+  "total|앙상블|ex_post|eval|10": {
+   "MAPE": 1.67,
+   "bias": -0.19
+  },
+  "total|앙상블|ex_post|eval|11": {
+   "MAPE": 5.53,
+   "bias": 4.41
+  },
+  "total|앙상블|ex_post|eval|12": {
+   "MAPE": 5.22,
+   "bias": 5.22
+  },
+  "total|앙상블|ex_post|hold|1": {
+   "MAPE": 3.46,
+   "bias": -3.46
+  },
+  "total|앙상블|ex_post|hold|2": {
+   "MAPE": 0.51,
+   "bias": -0.14
+  },
+  "total|앙상블|ex_post|hold|3": {
+   "MAPE": 4.7,
+   "bias": -4.7
+  },
+  "total|앙상블|ex_post|hold|4": {
+   "MAPE": 8.61,
+   "bias": -8.61
+  },
+  "total|앙상블|ex_post|hold|5": {
+   "MAPE": 9.68,
+   "bias": -9.68
+  },
+  "total|앙상블|ex_post|hold|6": {
+   "MAPE": 3.83,
+   "bias": -3.83
+  },
+  "total|앙상블|ex_post|hold|7": {
+   "MAPE": 21.6,
+   "bias": -21.6
+  },
+  "total|앙상블|ex_post|hold|8": {
+   "MAPE": 18.26,
+   "bias": -18.26
+  },
+  "total|앙상블|ex_post|hold|9": {
+   "MAPE": 13.77,
+   "bias": -13.77
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|1": {
+   "MAPE": 4.8,
+   "bias": 2.31
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|2": {
+   "MAPE": 7.22,
+   "bias": 1.47
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|3": {
+   "MAPE": 4.53,
+   "bias": 3.35
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|4": {
+   "MAPE": 6.73,
+   "bias": 0.58
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|5": {
+   "MAPE": 9.84,
+   "bias": -8.66
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|6": {
+   "MAPE": 7.99,
+   "bias": -1.51
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|7": {
+   "MAPE": 6.96,
+   "bias": -1.2
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|8": {
+   "MAPE": 6.75,
+   "bias": -4.89
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|9": {
+   "MAPE": 4.29,
+   "bias": -1.56
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|10": {
+   "MAPE": 6.48,
+   "bias": 6.12
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|11": {
+   "MAPE": 8.23,
+   "bias": 7.98
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|eval|12": {
+   "MAPE": 9.54,
+   "bias": 8.26
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|1": {
+   "MAPE": 4.44,
+   "bias": -4.44
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|2": {
+   "MAPE": 3.65,
+   "bias": 3.65
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|3": {
+   "MAPE": 3.85,
+   "bias": -3.85
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|4": {
+   "MAPE": 6.2,
+   "bias": -6.2
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|5": {
+   "MAPE": 6.41,
+   "bias": -6.41
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|6": {
+   "MAPE": 6.62,
+   "bias": -6.62
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|7": {
+   "MAPE": 23.71,
+   "bias": -23.71
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|8": {
+   "MAPE": 22.96,
+   "bias": -22.96
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_ante|hold|9": {
+   "MAPE": 19.19,
+   "bias": -19.19
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|1": {
+   "MAPE": 3.74,
+   "bias": 0.69
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|2": {
+   "MAPE": 4.66,
+   "bias": 0.29
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|3": {
+   "MAPE": 3.56,
+   "bias": 1.32
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|4": {
+   "MAPE": 6.23,
+   "bias": -4.44
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|5": {
+   "MAPE": 7.6,
+   "bias": -6.19
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|6": {
+   "MAPE": 8.62,
+   "bias": 1.13
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|7": {
+   "MAPE": 7.63,
+   "bias": 0.91
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|8": {
+   "MAPE": 5.52,
+   "bias": -2.1
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|9": {
+   "MAPE": 5.76,
+   "bias": 4.98
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|10": {
+   "MAPE": 3.88,
+   "bias": 1.0
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|11": {
+   "MAPE": 7.11,
+   "bias": 6.13
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|eval|12": {
+   "MAPE": 6.74,
+   "bias": 4.25
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|1": {
+   "MAPE": 3.23,
+   "bias": 3.23
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|2": {
+   "MAPE": 1.3,
+   "bias": -1.05
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|3": {
+   "MAPE": 3.36,
+   "bias": -3.36
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|4": {
+   "MAPE": 9.97,
+   "bias": -9.97
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|5": {
+   "MAPE": 9.41,
+   "bias": -9.41
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|6": {
+   "MAPE": 6.4,
+   "bias": -6.4
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|7": {
+   "MAPE": 21.88,
+   "bias": -21.88
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|8": {
+   "MAPE": 21.47,
+   "bias": -21.47
+  },
+  "total|하이브리드 (회귀+LightGBM)|ex_post|hold|9": {
+   "MAPE": 16.91,
+   "bias": -16.91
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|1": {
+   "MAPE": 4.39,
+   "bias": 3.32
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|2": {
+   "MAPE": 8.1,
+   "bias": 5.49
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|3": {
+   "MAPE": 3.57,
+   "bias": 3.04
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|4": {
+   "MAPE": 5.18,
+   "bias": 3.07
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|5": {
+   "MAPE": 7.88,
+   "bias": -7.88
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|6": {
+   "MAPE": 6.31,
+   "bias": -2.87
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|7": {
+   "MAPE": 5.36,
+   "bias": -4.94
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|8": {
+   "MAPE": 6.25,
+   "bias": -5.96
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|9": {
+   "MAPE": 5.87,
+   "bias": -0.84
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|10": {
+   "MAPE": 4.09,
+   "bias": 3.91
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|11": {
+   "MAPE": 6.07,
+   "bias": 5.34
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|eval|12": {
+   "MAPE": 8.49,
+   "bias": 8.49
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|1": {
+   "MAPE": 8.37,
+   "bias": -8.37
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|2": {
+   "MAPE": 7.44,
+   "bias": 7.44
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|3": {
+   "MAPE": 5.32,
+   "bias": -5.32
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|4": {
+   "MAPE": 4.77,
+   "bias": -4.77
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|5": {
+   "MAPE": 9.96,
+   "bias": -9.96
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|6": {
+   "MAPE": 3.07,
+   "bias": -3.07
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|7": {
+   "MAPE": 23.24,
+   "bias": -23.24
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|8": {
+   "MAPE": 20.27,
+   "bias": -20.27
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_ante|hold|9": {
+   "MAPE": 12.97,
+   "bias": -12.97
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|1": {
+   "MAPE": 2.83,
+   "bias": 1.78
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|2": {
+   "MAPE": 4.98,
+   "bias": 4.16
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|3": {
+   "MAPE": 2.11,
+   "bias": 0.46
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|4": {
+   "MAPE": 1.79,
+   "bias": -1.57
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|5": {
+   "MAPE": 6.58,
+   "bias": -6.58
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|6": {
+   "MAPE": 6.17,
+   "bias": -1.69
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|7": {
+   "MAPE": 5.71,
+   "bias": -2.87
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|8": {
+   "MAPE": 4.6,
+   "bias": -3.18
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|9": {
+   "MAPE": 5.34,
+   "bias": 3.06
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|10": {
+   "MAPE": 1.54,
+   "bias": -0.88
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|11": {
+   "MAPE": 4.07,
+   "bias": 3.43
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|eval|12": {
+   "MAPE": 4.81,
+   "bias": 4.81
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|1": {
+   "MAPE": 3.37,
+   "bias": -3.37
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|2": {
+   "MAPE": 2.59,
+   "bias": 2.59
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|3": {
+   "MAPE": 4.94,
+   "bias": -4.94
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|4": {
+   "MAPE": 8.63,
+   "bias": -8.63
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|5": {
+   "MAPE": 10.44,
+   "bias": -10.44
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|6": {
+   "MAPE": 2.84,
+   "bias": -2.84
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|7": {
+   "MAPE": 21.4,
+   "bias": -21.4
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|8": {
+   "MAPE": 18.72,
+   "bias": -18.72
+  },
+  "total|하이브리드 (회귀+Ridge)|ex_post|hold|9": {
+   "MAPE": 13.57,
+   "bias": -13.57
+  },
+  "total|회귀 √Y|ex_ante|eval|1": {
+   "MAPE": 4.8,
+   "bias": 2.38
+  },
+  "total|회귀 √Y|ex_ante|eval|2": {
+   "MAPE": 7.84,
+   "bias": 3.54
+  },
+  "total|회귀 √Y|ex_ante|eval|3": {
+   "MAPE": 2.39,
+   "bias": 1.73
+  },
+  "total|회귀 √Y|ex_ante|eval|4": {
+   "MAPE": 5.87,
+   "bias": -1.5
+  },
+  "total|회귀 √Y|ex_ante|eval|5": {
+   "MAPE": 10.81,
+   "bias": -10.81
+  },
+  "total|회귀 √Y|ex_ante|eval|6": {
+   "MAPE": 7.26,
+   "bias": -4.99
+  },
+  "total|회귀 √Y|ex_ante|eval|7": {
+   "MAPE": 6.18,
+   "bias": -6.18
+  },
+  "total|회귀 √Y|ex_ante|eval|8": {
+   "MAPE": 6.95,
+   "bias": -6.9
+  },
+  "total|회귀 √Y|ex_ante|eval|9": {
+   "MAPE": 6.99,
+   "bias": -1.96
+  },
+  "total|회귀 √Y|ex_ante|eval|10": {
+   "MAPE": 3.28,
+   "bias": 2.26
+  },
+  "total|회귀 √Y|ex_ante|eval|11": {
+   "MAPE": 5.87,
+   "bias": 2.76
+  },
+  "total|회귀 √Y|ex_ante|eval|12": {
+   "MAPE": 9.36,
+   "bias": 9.36
+  },
+  "total|회귀 √Y|ex_ante|hold|1": {
+   "MAPE": 7.98,
+   "bias": -7.98
+  },
+  "total|회귀 √Y|ex_ante|hold|2": {
+   "MAPE": 7.28,
+   "bias": 7.28
+  },
+  "total|회귀 √Y|ex_ante|hold|3": {
+   "MAPE": 5.41,
+   "bias": -5.41
+  },
+  "total|회귀 √Y|ex_ante|hold|4": {
+   "MAPE": 8.16,
+   "bias": -8.16
+  },
+  "total|회귀 √Y|ex_ante|hold|5": {
+   "MAPE": 12.19,
+   "bias": -12.19
+  },
+  "total|회귀 √Y|ex_ante|hold|6": {
+   "MAPE": 5.1,
+   "bias": -5.1
+  },
+  "total|회귀 √Y|ex_ante|hold|7": {
+   "MAPE": 24.02,
+   "bias": -24.02
+  },
+  "total|회귀 √Y|ex_ante|hold|8": {
+   "MAPE": 20.56,
+   "bias": -20.56
+  },
+  "total|회귀 √Y|ex_ante|hold|9": {
+   "MAPE": 13.54,
+   "bias": -13.54
+  },
+  "total|회귀 √Y|ex_post|eval|1": {
+   "MAPE": 3.33,
+   "bias": 0.81
+  },
+  "total|회귀 √Y|ex_post|eval|2": {
+   "MAPE": 5.15,
+   "bias": 2.1
+  },
+  "total|회귀 √Y|ex_post|eval|3": {
+   "MAPE": 2.53,
+   "bias": -0.91
+  },
+  "total|회귀 √Y|ex_post|eval|4": {
+   "MAPE": 6.04,
+   "bias": -6.04
+  },
+  "total|회귀 √Y|ex_post|eval|5": {
+   "MAPE": 9.56,
+   "bias": -9.56
+  },
+  "total|회귀 √Y|ex_post|eval|6": {
+   "MAPE": 7.12,
+   "bias": -3.84
+  },
+  "total|회귀 √Y|ex_post|eval|7": {
+   "MAPE": 6.47,
+   "bias": -4.12
+  },
+  "total|회귀 √Y|ex_post|eval|8": {
+   "MAPE": 5.63,
+   "bias": -4.13
+  },
+  "total|회귀 √Y|ex_post|eval|9": {
+   "MAPE": 5.85,
+   "bias": 1.9
+  },
+  "total|회귀 √Y|ex_post|eval|10": {
+   "MAPE": 2.48,
+   "bias": -2.48
+  },
+  "total|회귀 √Y|ex_post|eval|11": {
+   "MAPE": 3.06,
+   "bias": 0.93
+  },
+  "total|회귀 √Y|ex_post|eval|12": {
+   "MAPE": 5.62,
+   "bias": 5.62
+  },
+  "total|회귀 √Y|ex_post|hold|1": {
+   "MAPE": 3.03,
+   "bias": -3.03
+  },
+  "total|회귀 √Y|ex_post|hold|2": {
+   "MAPE": 2.5,
+   "bias": 2.5
+  },
+  "total|회귀 √Y|ex_post|hold|3": {
+   "MAPE": 5.03,
+   "bias": -5.03
+  },
+  "total|회귀 √Y|ex_post|hold|4": {
+   "MAPE": 11.83,
+   "bias": -11.83
+  },
+  "total|회귀 √Y|ex_post|hold|5": {
+   "MAPE": 12.66,
+   "bias": -12.66
+  },
+  "total|회귀 √Y|ex_post|hold|6": {
+   "MAPE": 4.88,
+   "bias": -4.88
+  },
+  "total|회귀 √Y|ex_post|hold|7": {
+   "MAPE": 22.2,
+   "bias": -22.2
+  },
+  "total|회귀 √Y|ex_post|hold|8": {
+   "MAPE": 19.02,
+   "bias": -19.02
+  },
+  "total|회귀 √Y|ex_post|hold|9": {
+   "MAPE": 14.13,
+   "bias": -14.13
+  }
+ },
+ "power_dec": {
+  "2016": 1502.0,
+  "2017": 1789.0,
+  "2018": 1570.0,
+  "2019": 1724.0,
+  "2020": 1802.0,
+  "2021": 1563.0,
+  "2022": 2036.0,
+  "2023": 1416.0,
+  "2024": 1351.0,
+  "2025": 1307.0
+ },
+ "summer": {
+  "2022|6": {
+   "power": 1471.0,
+   "city": 1014.0,
+   "cdd": 58.0
+  },
+  "2022|7": {
+   "power": 1581.0,
+   "city": 1013.0,
+   "cdd": 170.0
+  },
+  "2022|8": {
+   "power": 1372.0,
+   "city": 923.0,
+   "cdd": 142.0
+  },
+  "2022|9": {
+   "power": 1340.0,
+   "city": 903.0,
+   "cdd": 32.0
+  },
+  "2023|6": {
+   "power": 1193.0,
+   "city": 909.0,
+   "cdd": 38.0
+  },
+  "2023|7": {
+   "power": 1364.0,
+   "city": 919.0,
+   "cdd": 150.0
+  },
+  "2023|8": {
+   "power": 1433.0,
+   "city": 878.0,
+   "cdd": 177.0
+  },
+  "2023|9": {
+   "power": 1250.0,
+   "city": 888.0,
+   "cdd": 57.0
+  },
+  "2024|6": {
+   "power": 1318.0,
+   "city": 966.0,
+   "cdd": 59.0
+  },
+  "2024|7": {
+   "power": 1471.0,
+   "city": 964.0,
+   "cdd": 161.0
+  },
+  "2024|8": {
+   "power": 1643.0,
+   "city": 916.0,
+   "cdd": 236.0
+  },
+  "2024|9": {
+   "power": 1282.0,
+   "city": 855.0,
+   "cdd": 121.0
+  },
+  "2025|6": {
+   "power": 1063.0,
+   "city": 939.0,
+   "cdd": 57.0
+  },
+  "2025|7": {
+   "power": 1317.0,
+   "city": 933.0,
+   "cdd": 203.0
+  },
+  "2025|8": {
+   "power": 1395.0,
+   "city": 890.0,
+   "cdd": 208.0
+  },
+  "2025|9": {
+   "power": 1007.0,
+   "city": 910.0,
+   "cdd": 60.0
+  },
+  "2026|6": {
+   "power": 1136.0,
+   "city": 1046.0,
+   "cdd": 42.0
+  },
+  "2026|7": {
+   "power": 1929.0,
+   "city": 1013.0,
+   "cdd": 189.0
+  },
+  "2026|8": {
+   "power": 1920.0,
+   "city": 946.0,
+   "cdd": 208.0
+  },
+  "2026|9": {
+   "power": 1452.0,
+   "city": 949.0,
+   "cdd": 27.0
+  }
+ },
  "leakage": {
   "n": 72,
   "ok": 72

@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const K = require("./docx_kit");
+const { jo, ym } = require("./text_kit");
 const { P, H1, H2, BUL, NUM, EQ, FIG, TABLE, build, Paragraph, TextRun, AlignmentType } = K;
 
 const ROOT = path.resolve(__dirname, "..");
@@ -34,6 +35,9 @@ const ML = ["Ridge", "LightGBM", "하이브리드 (회귀+Ridge)", "하이브리
 const bestML = ML.map((m) => [m, (nat("total", m) + nat("city", m) + nat("power", m)) / 3]).sort((a, b) => a[1] - b[1])[0][0];
 const share = (s, m) => N.weather_share[`${s}|${m}`];   // 반올림 전 MAPE로 계산한 값 (그림 5와 같음)
 const holdRank = (s) => ranked(s, "all", "ex_ante", "hold");
+const em = (sr, i, w, c, k = "bias", m = "앙상블") => ((N.err_month || {})[`${sr}|${m}|${i}|${w}|${c}`] || {})[k];
+const su = (y, c, k) => ((N.summer || {})[`${y}|${c}`] || {})[k];
+const comma = (x) => Math.round(x).toLocaleString("en-US");
 const met = (s, m, k, i = "ex_ante", w = "eval") => ((N.metrics || {})[`${s}|${m}|${i}|${w}`] || {})[k];
 const itv = (s, m, me) => (N.intervals || {})[`${s}|${m}|${me}`] || {};
 const abl = (v, s, w = "eval") => (N.ablation || {})[`${v}|${s}|ex_ante|${w}`];
@@ -68,28 +72,36 @@ add(
 
 // ---------------- 요약 ----------------
 const tb = best("total"), cb = best("city"), pb = best("power");
+const sameBest = cb[0] === pb[0] && pb[0] === tb[0];
 add(
   H2("요약"),
-  P(`한국 천연가스 수요를 도시가스용과 발전용, 그리고 17개 시도로 나눠 1~12개월 앞을 예측하였다. 회귀분석으로 수요 구조를 추론한 뒤, 통계 시계열·기계학습·시계열 파운데이션 모델을 같은 롤링 평가 틀에서 비교하였다. 도시가스용 수요는 수요가중 난방도일(HDD) 하나로 변동의 ${f1(R.r2_simple * 100)}%가 설명되었지만, 발전용은 기온으로 ${f0(R.r2_power_weather * 100)}%만 설명되었다. 2023~2025년 목표월에 대한 1~12개월 앞 사전예측(평년 기온 사용)의 평균 MAPE는 도시가스용 ${f1(cb[1])}%(${nm(cb[0])}), 발전용 ${f1(pb[1])}%(${nm(pb[0])}), 합계 ${f1(tb[1])}%(${nm(tb[0])})로, 발전용이 도시가스용보다 두 배가량 어려웠다. MAE·RMSE·MASE·평균 순위로 보아도 같은 모델이 가장 정확했지만 상위 모델 간 차이는 통계적으로 뚜렷하지 않았고, 검증 구간 오차로 만든 80% 예측구간은 평가 구간에서 ${f0(itv("total", "앙상블", "conformal").cov)}%를 포함해 보수적이었다. 실제 기온을 미리 안다고 가정하면 도시가스용 오차는 ${f0(share("city", "앙상블"))}% 줄어들어, 도시가스용 오차의 상당 부분이 기온 예보로 줄일 수 있는 몫이었다. 시도별 난방 민감도는 HDD 10 증가당 판매량 ${f1(N.province_sens_range.min)}%(${N.province_sens_range.min_prov})에서 ${f1(N.province_sens_range.max)}%(${N.province_sens_range.max_prov})까지 유의하게 달랐고, 시도 예측을 합쳐 전국을 맞추는 계층 예측은 기본 모델이 약할 때만 전국 예측을 개선하였다. 같은 모델을 유럽 5개국에 적용한 결과와 비교하면 한국은 난방 민감도가 낮고 1개월 앞 예측이 가장 쉬운 나라에 속했다.`),
+  P(`한국 천연가스 수요를 도시가스용과 발전용, 그리고 17개 시도로 나눠 1~12개월 앞을 예측하였다. 회귀분석으로 수요 구조를 추론한 뒤, 통계 시계열·기계학습·시계열 파운데이션 모델을 같은 롤링 평가 틀에서 비교하였다. 도시가스용 수요는 수요가중 난방도일(HDD) 하나로 변동의 ${f1(R.r2_simple * 100)}%가 설명되었지만, 발전용은 기온으로 ${f0(R.r2_power_weather * 100)}%만 설명되었다. 2023~2025년 목표월에 대한 1~12개월 앞 사전예측(평년 기온 사용)의 평균 MAPE는 ${sameBest ? `${nm(cb[0])} 기준 도시가스용 ${f1(cb[1])}%, 발전용 ${f1(pb[1])}%, 합계 ${f1(tb[1])}%` : `도시가스용 ${f1(cb[1])}%(${nm(cb[0])}), 발전용 ${f1(pb[1])}%(${nm(pb[0])}), 합계 ${f1(tb[1])}%(${nm(tb[0])})`}로, 발전용이 도시가스용보다 두 배가량 어려웠다. MAE·RMSE·MASE·평균 순위로 보아도 같은 모델이 가장 정확했지만 상위 모델 간 차이는 통계적으로 뚜렷하지 않았고, 검증 구간 오차로 만든 80% 예측구간은 평가 구간에서 ${f0(itv("total", "앙상블", "conformal").cov)}%를 포함해 보수적이었다. 실제 기온을 미리 안다고 가정하면 도시가스용 오차는 ${f0(share("city", "앙상블"))}% 줄어들어, 도시가스용 오차의 상당 부분이 기온 예보로 줄일 수 있는 몫이었다. 달력월별로는 도시가스용 오차가 환절기에, 발전용 오차가 겨울철 과대예측에 몰렸다. 2026년 표본 외 구간에서는 기온으로 설명되지 않는 7~8월 발전용 수요 급증을 모든 모델이 약 30% 낮게 예측하였다. 시도별 난방 민감도는 HDD 10 증가당 판매량 ${f1(N.province_sens_range.min)}%(${N.province_sens_range.min_prov})에서 ${f1(N.province_sens_range.max)}%(${N.province_sens_range.max_prov})까지 유의하게 달랐고, 시도 예측을 합쳐 전국을 맞추는 계층 예측은 기본 모델이 약할 때만 전국 예측을 개선하였다. 같은 모델을 유럽 5개국에 적용한 결과와 비교하면 한국은 난방 민감도가 낮고 1개월 앞 예측이 가장 쉬운 나라에 속했다.`),
   P("**주제어**: 천연가스 수요예측, 다기간 예측, 난방도일, 계층 예측, 모델 신뢰집합, 시계열 파운데이션 모델, 예측구간"),
 );
 
 // ---------------- 1. 서론 ----------------
 add(
   H1("1. 서론"),
-  P(`한국은 천연가스를 거의 모두 LNG로 수입하므로, 몇 달 앞의 수요를 보고 도입 물량과 저장 계획을 정해야 한다. 월별 수요는 성격이 다른 두 부분으로 이루어진다. 도시가스용은 난방 때문에 겨울에 몰려 연중 최대월이 최소월의 약 ${f1(D.city_peak_ratio)}배에 이르고, 발전용은 전력수급과 연료 가격에 따라 움직여 계절 진폭이 ${f1(D.power_peak_ratio)}배로 작다. 2025년 공급량은 도시가스용 ${f0(D.city_2025)}만 톤, 발전용 ${f0(D.power_2025)}만 톤이었다.`),
-  P("기존 연구는 주로 하루~1개월 앞 예측을 다뤘고(박진수 외, 2013; Tian et al., 2023), 수급계획에 필요한 몇 달 앞 예측에서 어떤 모델이 나은지, 그리고 그 오차 가운데 얼마가 기온 불확실성 때문인지는 잘 알려져 있지 않다. 최근에는 학습 없이 바로 쓰는 시계열 파운데이션 모델(Chronos-2, TimesFM)이 나왔지만, 작은 월별 에너지 자료에서의 성능은 검증이 부족하다. 이 연구는 다음 질문에 답한다."),
+  P(`한국은 천연가스를 거의 모두 LNG로 수입하므로, 몇 달 앞의 수요를 보고 도입 물량과 저장 계획을 정해야 한다. 월별 수요는 성격이 다른 두 부분으로 이루어진다. 도시가스용은 난방 때문에 겨울에 몰려 연중 최대월이 최소월의 약 ${f1(D.city_peak_ratio)}배에 이르고, 발전용은 전력수급과 연료 가격에 따라 움직여 계절 진폭이 ${f1(D.power_peak_ratio)}배로 작다. 2025년 공급량은 도시가스용 약 ${comma(D.city_2025 * 100)}만 톤, 발전용 약 ${comma(D.power_2025 * 100)}만 톤이었다.`),
+  H2("1.1 선행연구"),
+  P("가스 수요와 기온의 관계는 난방도일(HDD)을 설명변수로 한 회귀가 표준적인 방법이다(Sarak & Satman, 2003). Soldo(2012)는 1949~2010년의 가스 수요예측 연구를 정리하였고, Liu et al.(2021)은 단기 예측에는 기온·날씨·날짜 유형이, 장기 예측에는 생산·인구·경제 변수가 주로 쓰이며 예측 기간에 따라 적합한 모형이 다르다고 정리하였다. Tian et al.(2023)은 여러 예측 전략과 기법을 같은 자료에서 비교하였다."),
+  P("국내 연구는 주로 일별 도시가스 수요의 단기 예측을 다뤘다(박진수 외, 2013; 이근철·한정희, 2015). 최용옥·박혜성(2020)은 기상청의 10일 기온 예측을 반영하면 평년기온을 쓸 때보다 일별 수요의 예측 오차가 5배 가까이 줄어든다고 보고하였다. 이성로(2017)는 전국 수요를 수도권과 지방으로 나눠 따로 예측한 뒤 합산하면 전국 단위 모형보다 정확하다고 보고하였다."),
+  P("최근에는 대규모 시계열로 사전학습해 추가 학습 없이 예측하는 시계열 파운데이션 모델이 나왔다(Ansari et al., 2024; Das et al., 2024). 이들 연구는 여러 벤치마크에서 학습한 모델과 견줄 만한 정확도를 보고했지만, 작은 월별 에너지 자료에서의 검증은 아직 드물다. 한편 서로 다른 예측을 평균하는 결합 예측은 단일 모델보다 안정적인 경우가 많다고 알려져 있다(Bates & Granger, 1969; Wang et al., 2023)."),
+  P("이처럼 기존 연구는 주로 하루~1개월 앞의 도시가스 수요를 다뤘다. 수급계획에 필요한 몇 달 앞 예측에서 용도별로 어떤 모델이 나은지, 그 오차 가운데 얼마가 기온 불확실성 때문인지는 잘 알려져 있지 않다."),
+  H2("1.2 연구 질문과 기여"),
+  P("이 연구는 다음 다섯 가지 질문에 답한다."),
   NUM("도시가스용과 발전용 수요는 무엇으로 설명되는가? 회귀 가정은 어디서 깨지는가?"),
   NUM("시도마다 난방 민감도는 얼마나 다르고, 시간에 따라 변했는가?"),
   NUM("1~12개월 앞 예측에서 어떤 모델이 정확하며, 예측 시계가 길어지면 순위가 바뀌는가?"),
   NUM("기온을 미리 안다면 오차는 얼마나 줄어드는가?"),
   NUM("시도별로 나눠 예측해 합치면 전국 예측이 좋아지는가? 한국의 결과는 다른 나라와 비교해 어떤가?"),
+  P("기여는 세 가지다. 첫째, 공개 통계만으로 용도별·지역별 1~12개월 앞 예측 체계를 구성하고, 그 과정에서 원자료의 오류와 정의 변경을 찾아 보정하였다. 둘째, 통계 모형·기계학습·파운데이션 모델 12개를 같은 롤링 평가와 유의성 검정으로 비교하였다. 셋째, 평년 기온을 쓴 사전예측과 실제 기온을 쓴 사후예측을 비교해, 예측 오차 가운데 기온 불확실성의 몫을 용도별로 분리하였다."),
 );
 
 // ---------------- 2. 자료 ----------------
 add(
   H1("2. 자료"),
-  P(`분석 단위는 월이다. 전국 수요는 한국가스공사의 용도별 월 공급량(도시가스용·발전용, 천 톤)으로 ${D.start}부터 ${D.end}까지 ${D.n}개월이다. 지역 수요는 같은 기관의 시도별 도시가스 판매량(17개 시도, 백만 ㎥)을 쓴다. 자료는 2026년 11월 21일에 받았다.`),
+  P(`분석 단위는 월이다. 전국 수요는 한국가스공사의 용도별 월 공급량(도시가스용·발전용, 천 톤)으로 ${ym(D.start)}부터 ${ym(D.end)}까지 ${D.n}개월이다. 지역 수요는 같은 기관의 시도별 도시가스 판매량(17개 시도, 백만 ㎥)을 쓴다. 자료는 2026년 11월 21일에 받았다.`),
   ...TABLE([
     ["자료", "출처", "기간", "쓰임"],
     ["용도별 월 공급량 (도시가스용·발전용)", "한국가스공사 (공공데이터포털)", "2016.01~2026.09", "전국 예측·회귀"],
@@ -100,7 +112,7 @@ add(
     ["아시아 LNG 가격", "FRED (PNGASJPUSDM)", "1992~2026", "발전용 회귀·예측"],
   ], [0.36, 0.26, 0.2, 0.18], "표 1. 자료", { alignLeft: [1] }),
   P(`난방도일(HDD)은 일평균기온이 15°C 이하인 날의 (18 − 기온)을, 냉방도일(CDD)은 24°C 이상인 날의 (기온 − 21)을 월별로 합한 값이다(Eurostat 방식). 넓은 도는 관측소 2~3곳을 평균했고, 전국 HDD는 2016~2018년 시도별 도시가스 판매 비중으로 가중한 수요가중 HDD다. 평년값은 직전 10년 같은 달의 평균이다.`),
-  P(`자료 점검에서 세 가지를 고쳤다. 첫째, 전국 용도별 자료의 2019년 도시가스용 값은 계절 형태가 어긋나 있었다(7월 ${f0(D.fix2019.before)}천 톤, 다른 해 약 900천 톤). 같은 기관의 지역본부별 공급량 합계와 시도별 판매량은 정상 형태여서, 지역본부 합계를 '지역본부 합계 ÷ 전국'의 달별 비율로 나눠 복원하였다(7월 ${f0(D.fix2019.after)}천 톤). 둘째, 시도별 판매량은 2023년 1월부터 모든 시도가 약 25% 낮아지는데 같은 기간 전국 공급량은 그대로여서 정의 변경으로 보고 2022년까지만 썼다. 셋째, 지역본부별 발전용 공급량은 전국 값과 정의가 맞지 않아 지역 × 용도 분석에는 쓰지 않았다.`),
+  P(`자료 점검에서 세 가지를 고쳤다. 첫째, 전국 용도별 자료의 2019년 도시가스용 값은 계절 형태가 어긋나 있었다(7월 ${comma(D.fix2019.before)}천 톤, 다른 해 약 900천 톤). 같은 기관의 지역본부별 공급량 합계와 시도별 판매량은 정상 형태여서, 지역본부 합계를 '지역본부 합계 ÷ 전국'의 달별 비율로 나눠 복원하였다(7월 ${f0(D.fix2019.after)}천 톤). 둘째, 시도별 판매량은 2023년 1월부터 모든 시도가 약 25% 낮아지는데 같은 기간 전국 공급량은 그대로여서 정의 변경으로 보고 2022년까지만 썼다. 셋째, 지역본부별 발전용 공급량은 전국 값과 정의가 맞지 않아 지역 × 용도 분석에는 쓰지 않았다.`),
   ...FIG(fig("fig1_data.png"), "그림 1. (a) 용도별 월 공급량(음영: 평가 목표월 2023~2025, 표본 외 2026년 1~9월), (b) 도시가스용과 수요가중 HDD의 관계(선: √Y ~ HDD 적합)."),
 );
 
@@ -116,7 +128,7 @@ add(
   P("예측 모델은 네 묶음이다. **통계 모형**: 1년 전 같은 달을 그대로 쓰는 Seasonal Naive(기준), 제곱근 변환 회귀 OLS(√Y), 외생변수를 둔 SARIMAX, 지수평활(ETS). **기계학습**: 예측 시계 h를 입력으로 넣어 모든 (예측 시점, h) 쌍을 한 모델로 학습하는 직접 다기간 Ridge·LightGBM, 그리고 회귀가 기온 효과를 잡고 기계학습이 회귀의 비율 잔차를 보정하는 Hybrid(OLS+Ridge, OLS+LightGBM). **파운데이션 모델**: Chronos-2(Amazon, 2025)와 TimesFM 2.5(Das et al., 2024)를 학습 없이 쓰며, Chronos-2는 기온·달력·요금을 공변량으로 넣는 방식도 본다. **Ensemble**: 평가 전에 정한 구성(OLS(√Y), SARIMAX, LightGBM, Chronos-2 공변량)의 단순 평균이다."),
   H2("3.3 평가 설계"),
   P("예측 시점 T마다 그때까지의 자료로 모델을 다시 추정해 T+1~T+12를 예측한다. 목표월이 2023년 1월~2025년 12월인 예측만 모아, 모든 예측 시계가 같은 36개 목표월로 비교되게 했다. 하이퍼파라미터와 차수·형태(SARIMAX 차수, ETS 추세, 회귀 변수 구성 포함)는 목표월 2020~2022년의 검증 구간에서만 골라 고정하였다. 2026년 1~9월은 모든 설정을 고정한 뒤 한 번만 보는 표본 외 구간이다."),
-  P("정보 조건은 두 가지다. **사전예측**은 실제 예측과 같이 미래 기온에 평년값을, 요금·가격에 예측 시점 값을 넣는다. **사후예측**은 기온만 실제값을 넣는다. 두 조건의 오차 차이가 완벽한 기온 예보가 줄일 수 있는 몫이다. 주 지표는 MAPE이며, 다른 연구와 비교할 수 있도록 MAE·RMSE·sMAPE·MASE(Hyndman & Koehler, 2006; 척도는 2016~2022년 계절 차분의 평균 절대오차)·Seasonal Naive 대비 상대 MAE·평균 순위를 함께 보고한다. MAPE의 신뢰구간은 목표월 단위 블록 부트스트랩으로 구한다. 모델 간 차이는 예측 시계마다 Diebold-Mariano 검정(HLN 보정; Harvey et al., 1997), 모델 신뢰집합(MCS, 90%; Hansen et al., 2011), 평균 순위의 Friedman 검정과 Nemenyi 임계차(Demšar, 2006)로 판단한다. 예측구간은 검증 구간의 예측 오차로 시계마다 만든 80% split conformal 구간(Stankeviciute et al., 2021)과 파운데이션 모델 자체의 분위수 구간을, 적중률과 구간 점수(Gneiting & Raftery, 2007)로 평가한다. 미래 입력은 수요 열 없이 만들어 넘기며, 예측 시점 이후 자료를 10배로 바꿔도 사전예측이 그대로인지 자동으로 점검하였다(부록)."),
+  P("정보 조건은 두 가지다. **사전예측**은 실제 예측과 같이 미래 기온에 평년값을, 요금·가격에 예측 시점 값을 넣는다. **사후예측**은 기온만 실제값을 넣는다. 두 조건의 오차 차이가 완벽한 기온 예보가 줄일 수 있는 몫이다. 주 지표는 MAPE이며, 다른 연구와 비교할 수 있도록 MAE, RMSE, sMAPE, MASE(Hyndman & Koehler, 2006; 척도는 2016~2022년 계절 차분의 평균 절대오차), Seasonal Naive 대비 상대 MAE, 평균 순위를 함께 보고한다. MAPE의 신뢰구간은 목표월 단위 블록 부트스트랩으로 구한다. 모델 간 차이는 예측 시계마다 Diebold-Mariano 검정(HLN 보정; Harvey et al., 1997), 모델 신뢰집합(MCS, 90%; Hansen et al., 2011), 평균 순위의 Friedman 검정과 Nemenyi 임계차(Demšar, 2006)로 판단한다. 예측구간은 검증 구간의 예측 오차로 시계마다 만든 80% split conformal 구간(Stankeviciute et al., 2021)과 파운데이션 모델 자체의 분위수 구간을, 적중률과 구간 점수(Gneiting & Raftery, 2007)로 평가한다. 오차의 계절 패턴은 목표월의 달력월별 MAPE와 평균 백분율 오차(편향)로 본다. 미래 입력은 수요 열 없이 만들어 넘기며, 예측 시점 이후 자료를 10배로 바꿔도 사전예측이 그대로인지 자동으로 점검하였다(부록)."),
   ...FIG(fig("fig2_design.png"), "그림 2. 평가 설계. 예측 시점 T에서 12개월 앞까지 예측하고, 목표월이 평가 구간에 드는 예측만 모은다. 설정은 검증 구간에서만 고른다."),
   H2("3.4 계층 예측"),
   P("전국 판매량은 17개 시도의 합이다. 각 시도와 전국을 같은 방법으로 따로 예측한 기본 예측을, 상향식(시도 합), 하향식(최근 3년 같은 달 시도 비중으로 전국 예측을 나눔), MinT(Wickramasuriya et al., 2019)로 조정해 합이 맞게 한다. MinT의 오차 공분산은 검증 구간(목표월 2017~2019년)의 예측 오차로 추정하고 대각 목표로 수축하였다. 시도 판매량의 평가 목표월은 2020~2022년이다."),
@@ -127,10 +139,10 @@ add(
 const cityElast = R.price_elast;
 add(
   H1("4. 결과"),
-  H2("4.1 수요 구조: 도시가스용은 기온, 발전용은 기온만으로 부족하다"),
-  P(`도시가스용 수요는 HDD가 1 늘면 월 ${f2(R.b1)}천 톤 늘고, 단순회귀의 R²는 ${f2(R.r2_simple)}였다. 다만 원 척도에서는 HDD가 클수록 잔차 분산이 커져 등분산이 기각되었고(BP ${pv(R.bp_y)}), Box-Cox 최적 λ는 ${f2(R.boxcox)}(${R.boxcox_ci})로 1과 다르다. √Y로 바꾸면 등분산이 기각되지 않는다(BP ${pv(R.bp_sqrt)}). 그러나 잔차 자기상관이 강해(Durbin-Watson ${f2(R.dw_sqrt)}) 교재식 표준오차는 과소추정되며, HAC 표준오차는 OLS의 ${f1(R.b1_se_hac / R.b1_se)}배였다. 3차항 F 검정은 √Y 모형에서도 곡률을 남겨(${pv(R.lof_sqrt_p)}) HDD 효과가 완전히 선형은 아니었다. 역예측으로 보면 도시가스용 월 3,000천 톤에 해당하는 HDD는 ${f0(R.inverse_hdd)}(${R.inverse})이다.`),
-  P(`요금·영업일·추세를 더한 다중회귀의 R²는 ${f2(R.r2_city_multi)}이고 VIF는 모두 3 미만이었다. 모든 부분집합 선택(BIC, 수정 R², Mallows Cp)은 다섯 변수를 모두 남겼다. 요금 계수를 평균 수준의 탄력성으로 바꾸면 ${f2(cityElast)}로 작다. 구조변화 검정은 2019년 복원값을 포함하면 ${R.break_date}를 가리키지만, 복원 구간을 뺀 2020~2025년만으로는 ${R.break2_date}에 관계가 바뀌었다(${pv(R.break2_p)}). 이 시점은 2022년 도시가스 요금 인상기와 겹친다.`),
-  P(`발전용은 기온만으로 R² ${f2(R.r2_power_weather)}였고, 전력거래량·석탄발전 상한제·LNG 가격·추세를 더해도 ${f2(R.r2_power)}에 그쳤다. 부분 F 검정에서 기온 묶음은 유의했지만(${pv(R.p_weather_power)}), 전력거래량(${pv(R.p_elec)})과 상한제 기간(${pv(R.p_coal)})은 유의하지 않았다. 전력거래량은 기온과 강하게 겹쳐(VIF ${f1(R.vif_elec)}) 따로 효과를 가려내기 어렵다. LNG 가격 계수는 양(+)으로 유의했는데(${pv(R.lng_coef_p)}), 겨울 수요가 현물 가격을 함께 끌어올린 결과로 보여 인과로 해석하지 않는다. 발전용 수요의 나머지 변동은 원전 정비·석탄 상한·신재생처럼 월별 공개 자료가 없는 전력 공급 측 요인에 달려 있다.`),
+  H2("4.1 수요 구조와 회귀 진단"),
+  P(`도시가스용 수요는 HDD가 1 늘면 월 ${f2(R.b1)}천 톤 늘고, 단순회귀의 R²는 ${jo(Number(R.r2_simple).toFixed(3), "였다")}. 다만 원 척도에서는 HDD가 클수록 잔차 분산이 커져 등분산이 기각되었고(BP ${pv(R.bp_y)}), Box-Cox 최적 λ는 ${f2(R.boxcox)}(${R.boxcox_ci})로 1과 다르다. √Y로 바꾸면 등분산이 기각되지 않는다(BP ${pv(R.bp_sqrt)}). 그러나 잔차 자기상관이 강해(Durbin-Watson ${f2(R.dw_sqrt)}) 교재식 표준오차는 과소추정되며, HAC 표준오차는 OLS의 ${f1(R.b1_se_hac / R.b1_se)}배였다. 3차항 F 검정은 √Y 모형에서도 곡률을 남겨(${pv(R.lof_sqrt_p)}) HDD 효과가 완전히 선형은 아니었다. 역예측으로 보면 도시가스용 월 3,000천 톤에 해당하는 HDD는 ${f0(R.inverse_hdd)}(${R.inverse})이다.`),
+  P(`요금·영업일·추세를 더한 다중회귀의 R²는 ${f2(R.r2_city_multi)}이고 VIF는 모두 3 미만이었다. 모든 부분집합 선택(BIC, 수정 R², Mallows Cp)은 다섯 변수를 모두 남겼다. 요금 계수를 평균 수준의 탄력성으로 바꾸면 ${f2(cityElast)}로 작다. 구조변화 검정은 2019년 복원값을 포함하면 ${jo(ym(R.break_date), "을/를")} 가리키지만, 복원 구간을 뺀 2020~2025년만으로는 ${ym(R.break2_date)}에 관계가 바뀌었다(${pv(R.break2_p)}). 이 시점은 2022년 도시가스 요금 인상기와 겹친다.`),
+  P(`발전용은 기온만으로 R² ${jo(f2(R.r2_power_weather), "였고")}, 전력거래량·석탄발전 상한제·LNG 가격·추세를 더해도 ${f2(R.r2_power)}에 그쳤다. 부분 F 검정에서 기온 묶음은 유의했지만(${pv(R.p_weather_power)}), 전력거래량(${pv(R.p_elec)})과 상한제 기간(${pv(R.p_coal)})은 유의하지 않았다. 전력거래량은 기온과 강하게 겹쳐(VIF ${f1(R.vif_elec)}) 따로 효과를 가려내기 어렵다. LNG 가격 계수는 양(+)으로 유의했는데(${pv(R.lng_coef_p)}), 겨울 수요가 현물 가격을 함께 끌어올린 결과로 보여 인과로 해석하지 않는다. 발전용 수요의 나머지 변동은 원전 정비·석탄 상한·신재생처럼 월별 공개 자료가 없는 전력 공급 측 요인에 달려 있다.`),
   H2("4.2 지역별 난방 민감도"),
   P(`2010~2019년 HDD 10 증가당 판매량 증가율은 ${N.province_sens_range.min_prov} ${f1(N.province_sens_range.min)}%에서 ${N.province_sens_range.max_prov} ${f1(N.province_sens_range.max)}%까지 달랐고, 17개 시도의 기울기가 같다는 가설은 기각되었다(F = ${f0(N.province_F)}, p < 0.001). 제주·서울·대전이 높고 울산·충남·경북이 낮아, 산업용 수요가 많은 지역일수록 기온에 덜 민감한 것으로 보인다(시도별 용도 구성 자료는 없어 해석으로만 둔다). 기간별로는 2020~2022년에 17개 시도 가운데 15곳의 민감도가 2010년대보다 커졌다.`),
   ...FIG(fig("fig3_province_sensitivity.png"), "그림 3. (a) 시도별 난방 민감도(HDD 10 증가당 도시가스 판매량 %, 2010~2019년, 당월 + 전월 HDD 효과), (b) 기간별 변화. Newey-West 표준오차로 추정."),
@@ -144,13 +156,13 @@ const sb = (s) => ranked(s)[0];
 const sameTop = ["h1", "h12"].map((k) => best("city", k)[0]);
 add(
   H2("4.3 예측 시계별 정확도"),
-  P(`표 2는 주요 모델의 사전예측 MAPE를 예측 시계별로 보여 준다. 1~12개월 평균으로 도시가스용은 ${nm(sb("city")[0])}(${f1(sb("city")[1])}%), 발전용은 ${nm(sb("power")[0])}(${f1(sb("power")[1])}%), 합계는 ${nm(sb("total")[0])}(${f1(sb("total")[1])}%)가 가장 정확했다. Seasonal Naive 대비로는 도시가스용 ${f1(nat("city", "계절 naive"))}%, 발전용 ${f1(nat("power", "계절 naive"))}%에서 줄어든 것이다. 1개월 앞 최고 모델은 도시가스용 ${nm(best("city", "h1")[0])}, 발전용 ${nm(best("power", "h1")[0])}였고, 12개월 앞에서는 도시가스용 ${nm(best("city", "h12")[0])}, 발전용 ${nm(best("power", "h12")[0])}였다.`),
+  P(`표 2는 주요 모델의 사전예측 MAPE를 예측 시계별로 보여 준다. 1~12개월 평균 MAPE가 가장 낮은 모델은 도시가스용 ${nm(sb("city")[0])}(${f1(sb("city")[1])}%), 발전용 ${nm(sb("power")[0])}(${f1(sb("power")[1])}%), 합계 ${jo(`${nm(sb("total")[0])}(${f1(sb("total")[1])}%)`, "였다")}. Seasonal Naive 대비로는 도시가스용 ${f1(nat("city", "계절 naive"))}%, 발전용 ${f1(nat("power", "계절 naive"))}%에서 줄어든 것이다. 1개월 앞 최고 모델은 도시가스용 ${nm(best("city", "h1")[0])}, 발전용 ${jo(nm(best("power", "h1")[0]), "였고")}, 12개월 앞에서는 도시가스용 ${nm(best("city", "h12")[0])}, 발전용 ${jo(nm(best("power", "h12")[0]), "였다")}. 최고 모델은 예측 시계와 용도에 따라 달랐다.`),
   ...TABLE([["모델", "h = 1", "h = 3", "h = 6", "h = 12", "1~12 평균"],
     ["**도시가스용**", "", "", "", "", ""], ...keyModels.map((m) => row("city", m)),
     ["**발전용**", "", "", "", "", ""], ...keyModels.map((m) => row("power", m)),
     ["**합계**", "", "", "", "", ""], ...keyModels.map((m) => row("total", m))],
   [0.34, 0.12, 0.12, 0.12, 0.12, 0.18], "표 2. 1~12개월 앞 사전예측 MAPE(%), 목표월 2023~2025년(36개월). ● = 1~12개월 평균 손실 기준 90% 모델 신뢰집합(MCS) 포함. 기계학습은 세 계열 평균이 가장 낮은 변형을 표시."),
-  P(`미리 정한 Ensemble은 세 계열 모두에서 1~12개월 평균이 가장 낮았다. 그러나 1~12개월 평균 손실의 MCS에는 ${MODELS.length}개 모델 가운데 도시가스용 ${mcs("city").length}개, 발전용 ${mcs("power").length}개, 합계 ${mcs("total").length}개가 남아, 36개월 평가로는 상위 모델 간 차이를 통계적으로 가릴 수 없었다. MCS에서 빠진(유의하게 나쁜) 모델은 도시가스용 ${outMcs("city")} / 발전용 ${outMcs("power")} / 합계 ${outMcs("total")}였다.${mcs("power").includes("계절 naive") ? " 특히 발전용은 Seasonal Naive까지 MCS에 남았고, 예측 시계별 DM 검정에서 Seasonal Naive보다 유의하게 정확했던 경우도 Ensemble 기준 12개 시계 가운데 " + (N.dm_beats_snaive["power|ex_ante|앙상블"] || 0) + "개뿐이었다(도시가스용은 " + (N.dm_beats_snaive["city|ex_ante|앙상블"] || 0) + "개)." : ""}`),
+  P(`미리 정한 Ensemble은 세 계열 모두에서 1~12개월 평균이 가장 낮았다. 그러나 1~12개월 평균 손실의 MCS에는 ${MODELS.length}개 모델 가운데 도시가스용 ${mcs("city").length}개, 발전용 ${mcs("power").length}개, 합계 ${mcs("total").length}개가 남아, 36개월 평가로는 상위 모델 간 차이를 통계적으로 가릴 수 없었다. MCS에서 빠진(유의하게 나쁜) 모델은 도시가스용(${outMcs("city")}), 발전용(${outMcs("power")}), 합계(${outMcs("total")})였다.${mcs("power").includes("계절 naive") ? " 특히 발전용은 Seasonal Naive까지 MCS에 남았고, 예측 시계별 DM 검정에서 Seasonal Naive보다 유의하게 정확했던 경우도 Ensemble 기준 12개 시계 가운데 " + (N.dm_beats_snaive["power|ex_ante|앙상블"] || 0) + "개뿐이었다(도시가스용은 " + (N.dm_beats_snaive["city|ex_ante|앙상블"] || 0) + "개)." : ""}`),
   ...FIG(fig("fig4_horizon.png"), "그림 4. 예측 시계별 사전예측 MAPE(목표월 2023~2025년). 점선은 Seasonal Naive(기준).", 15.2),
 );
 
@@ -169,7 +181,7 @@ const nearEns = (s) => ALLM.filter((m) => m !== "앙상블" && met(s, m, "rank")
 if (N.metrics) add(
   H2("4.4 여러 지표와 평균 순위"),
   P(`표 3은 12개 모델 전체를 점예측 지표 일곱 가지로 비교한다. Ensemble은 세 계열 모두에서 MAE·MASE·평균 순위가 가장 낮았고(MASE 도시가스용 ${f2(met("city", "앙상블", "MASE"))}, 발전용 ${f2(met("power", "앙상블", "MASE"))}, 합계 ${f2(met("total", "앙상블", "MASE"))}), MAPE로 본 순서와 다른 지표의 순서도 대체로 같았다. 그러나 MAPE의 95% 신뢰구간은 상위 모델끼리 크게 겹쳤다(합계 Ensemble ${f2(met("total", "앙상블", "MAPE"))}% [${f1(met("total", "앙상블", "MAPE_lo"))}, ${f1(met("total", "앙상블", "MAPE_hi"))}], SARIMAX ${f2(met("total", "SARIMAX", "MAPE"))}% [${f1(met("total", "SARIMAX", "MAPE_lo"))}, ${f1(met("total", "SARIMAX", "MAPE_hi"))}]).`),
-  P(`목표월과 시계의 조합 ${fr("total").n}개를 블록으로 한 평균 순위에서 Friedman 검정은 모든 계열에서 순위가 같다는 가설을 기각했고(χ² = ${f0(fr("city").chi2)}, ${f0(fr("power").chi2)}, ${f0(fr("total").chi2)}, 모두 p < 0.001), Nemenyi 임계차는 ${f2(fr("total").CD)}였다(그림 5). Ensemble과 임계차 안에 있는 모델은 도시가스용 ${nearEns("city")}, 발전용 ${nearEns("power")}, 합계 ${nearEns("total")}였다. 같은 목표월을 여러 시계에서 예측하므로 블록이 서로 독립은 아니어서, 이 결과는 기술적 비교로 보고 통계적 판단은 MCS를 따른다.`),
+  P(`목표월과 시계의 조합 ${fr("total").n}개를 블록으로 한 평균 순위에서 Friedman 검정은 모든 계열에서 순위가 같다는 가설을 기각했고(χ² = ${f0(fr("city").chi2)}, ${f0(fr("power").chi2)}, ${f0(fr("total").chi2)}, 모두 p < 0.001), Nemenyi 임계차는 ${jo(f2(fr("total").CD), "였다")}(그림 5). Ensemble과 임계차 안에 있는 모델은 도시가스용(${nearEns("city")}), 발전용(${nearEns("power")}), 합계(${nearEns("total")})였다. 같은 목표월을 여러 시계에서 예측하므로 블록이 서로 독립은 아니어서, 이 결과는 기술적 비교로 보고 통계적 판단은 MCS를 따른다.`),
   ...TABLE([["모델", "MAE", "RMSE", "MAPE (95% CI)", "sMAPE", "MASE", "RelMAE", "평균 순위"],
     ["**도시가스용**", "", "", "", "", "", "", ""], ...metRows("city"),
     ["**발전용**", "", "", "", "", "", "", ""], ...metRows("power"),
@@ -179,7 +191,15 @@ if (N.metrics) add(
   ...FIG(fig("fig9_critical_difference.png"), "그림 5. 평균 순위와 Nemenyi 임계차(CD, α = 0.05). 굵은 막대로 이어진 모델은 평균 순위 차이가 CD보다 작다. 점 색은 모델 계열(회색 기준, 파랑 회귀, 주황 통계 시계열, 초록 기계학습, 노랑 파운데이션 모델, 분홍 Ensemble)."),
 );
 
-// 4.5 예측구간
+// 4.5 달력월별 오차와 편향
+const powerOver = ALLM.filter((m) => met("power", m, "bias_pct") > 0).length;
+if (N.err_month) add(
+  H2("4.5 달력월별 오차와 편향"),
+  P(`Ensemble 사전예측의 오차를 목표월의 달력월별로 나누면(그림 6), 도시가스용은 난방이 시작되거나 끝나는 2~3월과 10~11월에 MAPE가 ${f1(Math.min(em("city", "ex_ante", "eval", 2, "MAPE"), em("city", "ex_ante", "eval", 3, "MAPE"), em("city", "ex_ante", "eval", 10, "MAPE"), em("city", "ex_ante", "eval", 11, "MAPE")))}~${f1(Math.max(em("city", "ex_ante", "eval", 2, "MAPE"), em("city", "ex_ante", "eval", 3, "MAPE"), em("city", "ex_ante", "eval", 10, "MAPE"), em("city", "ex_ante", "eval", 11, "MAPE")))}%로 컸고, 난방 수요가 안정된 12~1월과 냉방기인 7~8월에는 1~2%로 작았다. 환절기에는 난방을 켜고 끄는 시점이 해마다 달라 평년 기온으로 만든 예측과 실제 수요가 크게 어긋난다. 발전용은 12월 MAPE가 ${f1(em("power", "ex_ante", "eval", 12, "MAPE"))}%로 가장 컸고, 평균 오차도 +${f1(em("power", "ex_ante", "eval", 12))}%로 거의 전부 과대예측이었다(11월 +${f1(em("power", "ex_ante", "eval", 11))}%). 2023~2025년 12월의 발전용 수요(${comma(Math.min(...["2023", "2024", "2025"].map((y) => N.power_dec[y])))}~${comma(Math.max(...["2023", "2024", "2025"].map((y) => N.power_dec[y])))}천 톤)가 2017~2022년(${comma(Math.min(...["2017", "2018", "2019", "2020", "2021", "2022"].map((y) => N.power_dec[y])))}~${comma(Math.max(...["2017", "2018", "2019", "2020", "2021", "2022"].map((y) => N.power_dec[y])))}천 톤)보다 낮아졌는데, 모델이 과거 겨울 수준을 따라간 결과다. 1~12개월 전체로는 Ensemble의 평균 오차가 도시가스용 +${f1(met("city", "앙상블", "bias_pct"))}%, 발전용 +${f1(met("power", "앙상블", "bias_pct"))}%였고, 발전용은 12개 모델 가운데 ${powerOver}개가 평균적으로 과대예측하였다.`),
+  ...FIG(fig("fig13_error_month.png"), "그림 6. Ensemble 사전예측의 달력월별 (a) MAPE와 (b) 평균 백분율 오차(+ = 과대예측). 목표월 2023~2025년, 1~12개월 앞 전체. 검정 = 도시가스용, 파랑 = 발전용."),
+);
+
+// 4.6 예측구간
 const IROWS = [["Seasonal Naive", "계절 naive", "conformal"], ["OLS(√Y)", "회귀 √Y", "conformal"], ["SARIMAX", "SARIMAX", "conformal"],
   ["LightGBM(직접)", "LightGBM", "conformal"], ["Hybrid(OLS+Ridge)", "하이브리드 (회귀+Ridge)", "conformal"],
   ["Chronos-2(공변량) 자체 분위수", "Chronos-2 + 공변량", "native"], ["Chronos-2(공변량) conformal", "Chronos-2 + 공변량", "conformal"],
@@ -187,55 +207,59 @@ const IROWS = [["Seasonal Naive", "계절 naive", "conformal"], ["OLS(√Y)", "�
 const bestIS = (s) => { const r = IROWS.map(([lab, m, me]) => [lab, itv(s, m, me).IS]).filter((x) => x[1] != null).sort((a, b) => a[1] - b[1])[0]; return `${r[0]} ${f1(r[1])}`; };
 const isMark = Object.fromEntries(["total", "city", "power"].map((s) => [s, marks(IROWS.map(([, m, me]) => itv(s, m, me).IS))]));
 if (N.intervals) add(
-  H2("4.5 예측구간"),
-  P(`수급계획에는 점예측만큼 불확실성의 크기가 중요하다. 검증 구간(목표월 2020~2022년)의 로그 오차로 시계마다 만든 80% conformal 구간은 평가 구간에서 명목보다 자주 실제값을 포함했다(Ensemble 기준 도시가스용 ${f0(itv("city", "앙상블", "conformal").cov)}%, 발전용 ${f0(itv("power", "앙상블", "conformal").cov)}%, 합계 ${f0(itv("total", "앙상블", "conformal").cov)}%). 검증 구간이 코로나19와 2022년 에너지 가격 급등기를 포함해 오차가 컸기 때문으로, 구간이 보수적으로 넓다. 반대로 Chronos-2(공변량)의 자체 분위수 구간은 도시가스용 ${f0(itv("city", "Chronos-2 + 공변량", "native").cov)}%, 합계 ${f0(itv("total", "Chronos-2 + 공변량", "native").cov)}%만 포함해 불확실성을 과소평가했고, TimesFM 2.5의 자체 구간은 ${f0(Math.min(...["city", "power", "total"].map((s) => itv(s, "TimesFM 2.5", "native").cov)))}~${f0(Math.max(...["city", "power", "total"].map((s) => itv(s, "TimesFM 2.5", "native").cov)))}%로 명목보다 약간 넓었다(표 4, 그림 6).`),
-  P(`적중률과 폭을 함께 따지는 구간 점수가 가장 낮은 것은 도시가스용 ${bestIS("city")}, 발전용 ${bestIS("power")}, 합계 ${bestIS("total")}였다. 예측구간을 실무에 쓰려면 최근 기간의 오차로 보정을 갱신하고, 파운데이션 모델의 분위수도 그대로 믿기보다 같은 방식으로 검증해야 한다.`),
+  H2("4.6 예측구간"),
+  P(`수급계획에는 점예측만큼 불확실성의 크기가 중요하다. 검증 구간(목표월 2020~2022년)의 로그 오차로 시계마다 만든 80% conformal 구간은 평가 구간에서 명목보다 자주 실제값을 포함했다(Ensemble 기준 도시가스용 ${f0(itv("city", "앙상블", "conformal").cov)}%, 발전용 ${f0(itv("power", "앙상블", "conformal").cov)}%, 합계 ${f0(itv("total", "앙상블", "conformal").cov)}%). 검증 구간이 코로나19와 2022년 에너지 가격 급등기를 포함해 오차가 컸기 때문으로, 구간이 보수적으로 넓다. 반대로 Chronos-2(공변량)의 자체 분위수 구간은 도시가스용 ${f0(itv("city", "Chronos-2 + 공변량", "native").cov)}%, 합계 ${f0(itv("total", "Chronos-2 + 공변량", "native").cov)}%만 포함해 불확실성을 과소평가했고, TimesFM 2.5의 자체 구간은 ${f0(Math.min(...["city", "power", "total"].map((s) => itv(s, "TimesFM 2.5", "native").cov)))}~${f0(Math.max(...["city", "power", "total"].map((s) => itv(s, "TimesFM 2.5", "native").cov)))}%로 명목보다 약간 넓었다(표 4, 그림 7).`),
+  P(`적중률과 폭을 함께 따지는 구간 점수가 가장 낮은 것은 도시가스용 ${bestIS("city")}, 발전용 ${bestIS("power")}, 합계 ${jo(bestIS("total"), "였다")}. 예측구간을 실무에 쓰려면 최근 기간의 오차로 보정을 갱신하고, 파운데이션 모델의 분위수도 그대로 믿기보다 같은 방식으로 검증해야 한다.`),
   ...TABLE([["모델", "합계 적중률", "합계 IS", "도시가스 적중률", "도시가스 IS", "발전 적중률", "발전 IS"],
     ...IROWS.map(([lab, m, me]) => [lab, ...["total", "city", "power"].flatMap((s) => [f1(itv(s, m, me).cov), isMark[s](itv(s, m, me).IS, f1(itv(s, m, me).IS))])])],
   [0.31, 0.11, 0.115, 0.115, 0.115, 0.11, 0.125],
   "표 4. 80% 예측구간의 적중률(%)과 구간 점수(IS, 평균 실제값 대비 %, 낮을수록 좋음), 목표월 2023~2025년 사전예측. conformal = 검증 구간 오차로 만든 시계별 구간, 자체 분위수 = 모델이 낸 10%·90% 분위수. 계열마다 **굵게** = 최저 IS, __밑줄__ = 2위.", { size: 15 }),
-  ...FIG(fig("fig11_intervals.png"), "그림 6. 예측 시계별 80% 예측구간의 적중률(위)과 평균 폭(아래). 점선은 명목 수준 80%."),
+  ...FIG(fig("fig11_intervals.png"), "그림 7. 예측 시계별 80% 예측구간의 적중률(위)과 평균 폭(아래). 점선은 명목 수준 80%."),
 );
 
 // 4.4 기온 정보의 가치
 add(
-  H2("4.6 기온 정보의 가치"),
-  P(`실제 기온을 넣은 사후예측과 평년 기온을 넣은 사전예측의 차이를 보면, Ensemble 기준 1~12개월 평균 MAPE는 도시가스용 ${f1(nat("city", "앙상블", "all", "ex_ante"))}% → ${f1(nat("city", "앙상블", "all", "ex_post"))}%, 발전용 ${f1(nat("power", "앙상블", "all", "ex_ante"))}% → ${f1(nat("power", "앙상블", "all", "ex_post"))}%였다. 도시가스용 오차의 약 ${f0(share("city", "앙상블"))}%는 기온 불확실성에서 왔지만, 발전용은 ${f0(share("power", "앙상블"))}%에 그쳤다. 도시가스용은 장기 기온 전망을 개선하는 것이, 발전용은 전력 공급 측 정보를 확보하는 것이 오차를 줄이는 길이다.`),
-  ...FIG(fig("fig5_weather_value.png"), "그림 7. Ensemble의 사전예측(평년 기온)과 사후예측(실제 기온) MAPE. 음영은 완벽한 기온 예보가 줄일 수 있는 오차."),
+  H2("4.7 기온 정보의 가치"),
+  P(`실제 기온을 넣은 사후예측과 평년 기온을 넣은 사전예측의 차이를 보면, Ensemble 기준 1~12개월 평균 MAPE는 도시가스용 ${f1(nat("city", "앙상블", "all", "ex_ante"))}% → ${f1(nat("city", "앙상블", "all", "ex_post"))}%, 발전용 ${f1(nat("power", "앙상블", "all", "ex_ante"))}% → ${f1(nat("power", "앙상블", "all", "ex_post"))}%였다. 도시가스용 오차의 약 ${f0(share("city", "앙상블"))}%는 기온 불확실성에서 왔지만, 발전용은 ${f0(share("power", "앙상블"))}%에 그쳤다. 도시가스용 예측은 장기 기온 전망이 좋아지면 함께 좋아질 여지가 크지만, 발전용은 기온보다 전력 공급 측 정보가 더 필요하다.`),
+  ...FIG(fig("fig5_weather_value.png"), "그림 8. Ensemble의 사전예측(평년 기온)과 사후예측(실제 기온) MAPE. 음영은 완벽한 기온 예보가 줄일 수 있는 오차."),
 );
 
 // 4.5 계층 예측
 const pm = ["계절 naive", "ETS", "회귀 √Y", "Chronos-2 + 공변량"];
 add(
-  H2("4.7 지역별 계층 예측"),
-  P(`시도별 판매량의 1~12개월 앞 예측에서 전국 MAPE는 기본(전국 직접) 예측 기준 ${pm.map((m) => `${nm(m)} ${f1(prov(m, "기본", "전국"))}%`).join(", ")}였다. 상향식과 MinT 조정은 ETS(${f1(prov("ETS", "기본", "전국"))}% → MinT ${f1(prov("ETS", "MinT", "전국"))}%)와 Chronos-2(${f1(prov("Chronos-2 + 공변량", "기본", "전국"))}% → ${f1(prov("Chronos-2 + 공변량", "MinT", "전국"))}%)의 전국 예측을 개선했지만, 전월 기온까지 넣은 회귀는 전국 직접 예측이 가장 정확했고(${f1(prov("회귀 √Y", "기본", "전국"))}%) 조정하면 오히려 나빠졌다(MinT ${f1(prov("회귀 √Y", "MinT", "전국"))}%). 시도 평균 MAPE는 ${f1(prov("Chronos-2 + 공변량", "MinT", "시도 평균"))}~${f1(prov("회귀 √Y", "기본", "시도 평균"))}%로 전국보다 높고, 하향식은 시도 예측을 크게 나쁘게 했다. 계층 조정은 전국 모델이 약할 때 시도 정보를 더해 주는 보완책이며, 잘 설계한 전국 모델을 대신하지는 못한다.`),
-  ...FIG(fig("fig6_hierarchy.png"), "그림 8. 시도별 도시가스 판매량의 계층 예측(목표월 2020~2022년, 1~12개월 평균 MAPE). (a) 전국, (b) 17개 시도 평균."),
+  H2("4.8 지역별 계층 예측"),
+  P(`시도별 판매량의 1~12개월 앞 예측에서 전국 MAPE는 기본(전국 직접) 예측 기준 ${pm.map((m) => `${nm(m)} ${f1(prov(m, "기본", "전국"))}%`).join(", ")}였다. 상향식과 MinT 조정은 ETS(${f1(prov("ETS", "기본", "전국"))}% → MinT ${f1(prov("ETS", "MinT", "전국"))}%)와 Chronos-2(${f1(prov("Chronos-2 + 공변량", "기본", "전국"))}% → ${f1(prov("Chronos-2 + 공변량", "MinT", "전국"))}%)의 전국 예측을 개선했지만, 전월 기온까지 넣은 회귀는 전국 직접 예측이 가장 정확했고(${f1(prov("회귀 √Y", "기본", "전국"))}%) 조정하면 오히려 나빠졌다(MinT ${f1(prov("회귀 √Y", "MinT", "전국"))}%). 시도 평균 MAPE는 ${f1(prov("Chronos-2 + 공변량", "MinT", "시도 평균"))}~${f1(prov("회귀 √Y", "기본", "시도 평균"))}%로 전국보다 높고, 하향식은 시도 예측을 크게 나쁘게 했다. 계층 조정의 이득은 전국 모델이 얼마나 정확한지에 달려 있었고, 전월 기온처럼 지역 자료의 특성을 반영한 전국 모델을 대신하지는 못했다.`),
+  ...FIG(fig("fig6_hierarchy.png"), "그림 9. 시도별 도시가스 판매량의 계층 예측(목표월 2020~2022년, 1~12개월 평균 MAPE). (a) 전국, (b) 17개 시도 평균."),
 );
 
 // 4.6 표본 외
 const hr = (s) => holdRank(s).slice(0, 3).map(([m, v]) => `${nm(m)} ${f1(v)}%`).join(", ");
+const summerBias = MODELS.map((m) => (em("power", "ex_ante", "hold", 7, "bias", m) + em("power", "ex_ante", "hold", 8, "bias", m)) / 2);
 add(
-  H2("4.8 2026년 표본 외 검증"),
-  P(`2025년까지의 자료로 고정한 모델을 2026년 1~9월에 적용하였다. 1~12개월 앞 사전예측의 평균 MAPE 상위 세 모델은 도시가스용 ${hr("city")}, 발전용 ${hr("power")}, 합계 ${hr("total")}였다. 2026년 7~8월 발전용 수요가 각 약 192만 톤으로 2022~2025년 같은 달(132만~164만 톤)보다 크게 늘어 발전용 오차가 컸다. 평가 구간에서 가장 정확했던 Ensemble은 2026년에 합계 ${holdRank("total").findIndex((x) => x[0] === "앙상블") + 1}위, 도시가스용 ${holdRank("city").findIndex((x) => x[0] === "앙상블") + 1}위, 발전용 ${holdRank("power").findIndex((x) => x[0] === "앙상블") + 1}위(${holdRank("total").length}개 모델 중)로, 해마다 최고 모델이 바뀐다는 점이 다시 확인되었다.`),
-  ...FIG(fig("fig7_holdout_2026.png"), "그림 9. 2025년 12월 시점에서 본 2026년 1~9월 예측(사전예측). 노란 음영은 Chronos-2의 80% 예측구간.", 15.5),
+  H2("4.9 2026년 표본 외 검증"),
+  P(`2025년까지의 자료로 고정한 모델을 2026년 1~9월에 적용하였다. 1~12개월 앞 사전예측의 평균 MAPE 상위 세 모델은 도시가스용 ${hr("city")}, 발전용 ${hr("power")}, 합계 ${hr("total")}였다. 평가 구간에서 가장 정확했던 Ensemble은 2026년에 합계 ${holdRank("total").findIndex((x) => x[0] === "앙상블") + 1}위, 도시가스용 ${holdRank("city").findIndex((x) => x[0] === "앙상블") + 1}위, 발전용 ${holdRank("power").findIndex((x) => x[0] === "앙상블") + 1}위(${holdRank("total").length}개 모델 중)로, 해마다 최고 모델이 바뀐다는 점이 다시 확인되었다.`),
+  P(`도시가스용은 평가 구간과 비슷한 정확도를 유지했지만(그림 10), 발전용은 7~8월 오차가 컸다. 2026년 7월과 8월 발전용 공급량은 각각 ${comma(su(2026, 7, "power"))}천 톤과 ${comma(su(2026, 8, "power"))}천 톤으로 2025년 같은 달보다 ${f0((su(2026, 7, "power") / su(2025, 7, "power") - 1) * 100)}%, ${f0((su(2026, 8, "power") / su(2025, 8, "power") - 1) * 100)}% 많았고, 2022~2025년 같은 달의 최댓값(${comma(Math.max(...[2022, 2023, 2024, 2025].map((y) => su(y, 7, "power"))))}천 톤, ${comma(Math.max(...[2022, 2023, 2024, 2025].map((y) => su(y, 8, "power"))))}천 톤)도 넘었다. 그러나 7월 냉방도일은 ${jo(f0(su(2026, 7, "cdd")), "로/으로")} 2025년(${f0(su(2025, 7, "cdd"))})보다 낮았고 8월은 ${jo(f0(su(2026, 8, "cdd")), "로/으로")} 같았다. 12개 모델 모두 7~8월 발전용을 ${f0(-Math.max(...summerBias))}~${f0(-Math.min(...summerBias))}% 낮게 예측했고, 실제 기온을 넣은 사후예측도 Ensemble 기준 7월 ${f0(em("power", "ex_post", "hold", 7)).replace("-", "−")}%, 8월 ${f0(em("power", "ex_post", "hold", 8)).replace("-", "−")}%로 오차가 거의 줄지 않았다. 이 오차는 기온이 아니라 원전 가동이나 석탄 발전 같은 전력 공급 측 변화에서 온 것으로 보이며, 이런 요인의 월별 자료를 넣지 않은 현재 모형으로는 예측할 수 없다.`),
+  ...FIG(fig("fig7_holdout_2026.png"), "그림 10. 2025년 12월 시점에서 본 2026년 1~9월 예측(사전예측). 노란 음영은 Chronos-2의 80% 예측구간.", 15.5),
 );
 
 // 4.7 다른 나라와 비교
 const six = N.six || {};
 add(
-  H2("4.9 다른 나라와의 비교"),
+  H2("4.10 다른 나라와의 비교"),
   P(`같은 모델과 평가 절차를 독일·이탈리아·프랑스·스페인·네덜란드에 적용한 비교 연구(1개월 앞, 2023~2025년)에서 한국의 난방 민감도는 HDD 10당 약 ${f1(six.r5 ? six.r5.KR.hdd10_post : null)}%로 프랑스(${f1(six.r5 ? six.r5.FR.hdd10_post : null)}%)·독일(${f1(six.r5 ? six.r5.DE.hdd10_post : null)}%)보다 낮았다. 유럽은 2022년 에너지 위기로 독일·네덜란드·이탈리아의 기저수요가 12~23% 줄어 위기 변수 없는 회귀가 크게 틀렸지만(네덜란드 ${f1(six.main_ex_post ? six.main_ex_post["회귀 √Y~HDD+가격"].NL : null)}%), 한국은 공급 충격이 없어 기준 회귀(${f1(six.main_ex_post ? six.main_ex_post["회귀 √Y~HDD+가격"].KR : null)}%)도 여섯 나라 가운데 가장 정확했다. 어느 나라에서나 튜닝한 SARIMAX와 미리 정한 Ensemble이 최고 모델과 통계적으로 구별되지 않았다는 점은 한국 다기간 결과와 같은 방향이다.`),
-  ...FIG(fig("fig8_six_countries.png"), "그림 10. 같은 모델로 본 6개국 비교. (a) 난방 민감도(2022년 3월 전후), (b) 1개월 앞 MAPE(기준 회귀와 국가별 최고 모델)."),
+  ...FIG(fig("fig8_six_countries.png"), "그림 11. 같은 모델로 본 6개국 비교. (a) 난방 민감도(2022년 3월 전후), (b) 1개월 앞 MAPE(기준 회귀와 국가별 최고 모델)."),
 );
 
 // ---------------- 5. 논의 ----------------
 add(
   H1("5. 논의"),
-  P("**용도별로 다른 전략이 필요하다.** 도시가스용은 기온으로 대부분 설명되고 오차의 상당 부분이 기온 불확실성이어서, 좋은 기온 시나리오와 √Y 회귀·SARIMAX 같은 단순한 모형으로 충분히 정확하다. 발전용은 기온으로 절반 남짓만 설명되고 기온을 알아도 오차가 크게 줄지 않는다. 발전용 예측을 개선하려면 원전 정비 일정, 석탄 상한제, 전력수요 전망처럼 전력 공급 측 정보를 모형에 넣어야 한다."),
-  P("**단일 최고 모델보다 모델군과 앙상블.** 미리 정한 Ensemble은 평가 구간에서 세 계열 모두 가장 정확했지만, 상위 모델들은 MCS로 구분되지 않았고 2026년에는 순위가 바뀌었다. 어떤 모델이 다음 해에 최고일지 미리 알 수 없으므로, 서로 다른 원리의 모델을 함께 운용하고 평균하는 것이 가장 안전하다."),
-  P("**파운데이션 모델은 강한 기준선이다.** Chronos-2와 TimesFM은 학습 없이도 학습한 모델과 비슷한 정확도를 냈고 예측구간도 함께 준다. 다만 사전학습 자료에 공개 통계가 섞였을 가능성이 있어 2026년 표본 외 결과를 함께 보아야 한다."),
-  P("**지역 정보는 보완재다.** 시도별 난방 민감도는 뚜렷이 달랐지만, 시도 예측을 합치는 것이 전국 예측을 늘 개선하지는 않았다. 판매량의 검침 지연(전월 기온)처럼 지역 자료의 특성을 모형에 반영하는 것이 더 중요했다."),
-  H2("한계"),
+  H2("5.1 용도별로 필요한 정보"),
+  P(`도시가스용은 기온으로 대부분 설명되고 사전예측 오차의 약 ${f0(share("city", "앙상블"))}%가 기온 불확실성이었다. 남은 오차도 난방을 켜고 끄는 시점이 해마다 다른 환절기에 몰려 있었다. 따라서 도시가스용 예측을 개선하려면 장기 기온 전망이나 여러 기온 시나리오를 쓰는 것이 우선이다. 발전용은 기온으로 절반 남짓만 설명되고 실제 기온을 알아도 오차가 ${f0(share("power", "앙상블"))}%만 줄었으며, 2026년 여름에는 기온과 무관하게 수요가 급증하였다. 발전용 예측을 개선하려면 원전 정비 일정, 석탄 발전 제약, 전력수요 전망처럼 전력 공급 측 정보를 모형에 넣어야 한다.`),
+  H2("5.2 선행연구와의 비교"),
+  P(`최용옥·박혜성(2020)은 일별 예측에서 기상청 기온 예측을 반영하면 오차가 크게 줄어든다고 보고했는데, 월별 1~12개월 앞에서도 도시가스용 오차의 상당 부분이 기온 불확실성이어서 같은 방향이다. 이성로(2017)는 수도권·지방 모형의 합산이 전국 예측을 개선한다고 보고했지만, 이 연구에서는 기본 모델이 약할 때(ETS, Chronos-2)만 계층 조정이 전국 예측을 개선했고 전월 기온을 반영한 회귀에서는 전국 직접 예측이 가장 정확하였다. 지역 정보의 가치는 전국 모델이 검침 지연 같은 지역 자료의 특성을 얼마나 반영하는지에 달려 있다. 결합 예측이 단일 모델보다 안정적이라는 결론(Wang et al., 2023)은 평가 구간에서 확인됐지만, 2026년에는 Ensemble의 순위가 내려가 결합도 해마다 최고를 보장하지는 않았다.`),
+  H2("5.3 모델 선택과 운용"),
+  P(`상위 모델들은 MCS와 평균 순위 검정에서 구별되지 않았고, 연도 간 순위 일치도도 중간 정도(Kendall W ${f2(Math.min(...Object.values(N.kendall_W || { a: 0 })))}~${f2(Math.max(...Object.values(N.kendall_W || { a: 0 })))})였다. 어떤 모델이 다음 해에 가장 정확할지 미리 알기 어려우므로, 서로 다른 원리의 모델을 함께 운용하고 평균하는 편이 안정적이다. 파운데이션 모델(Chronos-2, TimesFM 2.5)은 추가 학습 없이 학습한 모델과 비슷한 정확도를 내 기준 모델로 쓸 만했다. 다만 Chronos-2의 자체 80% 구간은 평가 구간에서 ${f0(itv("total", "Chronos-2 + 공변량", "native").cov)}%만 적중해 그대로 쓰기 어려웠고, 사전학습 자료에 공개 통계가 섞였을 가능성이 있어 2026년 표본 외 결과를 함께 보아야 한다.`),
+  H2("5.4 한계"),
   BUL("전국 용도별 자료는 2016년부터라 평가 구간이 36개월이고, 2019년 값은 복원값이다."),
   BUL("시도별 판매량은 2023년 정의 변경으로 2022년까지만 썼고, 용도를 더 나눈 자료(주택·업무·산업)는 월별로 공개되지 않는다."),
   BUL("발전용의 핵심 요인인 원전·석탄 발전량의 월별 공개 자료를 확보하지 못했다."),
@@ -245,8 +269,7 @@ add(
 // ---------------- 6. 결론 ----------------
 add(
   H1("6. 결론"),
-  P(`한국 천연가스 수요를 용도별·지역별로 나눠 1~12개월 앞을 예측하였다. 도시가스용은 수요가중 HDD로 대부분 설명되어 사전예측 MAPE가 ${f1(cb[1])}% 수준이었고, 오차의 상당 부분은 기온 불확실성이었다. 발전용은 기온만으로 설명되지 않아 오차가 ${f1(pb[1])}%로 두 배가량 컸다. 시도별 난방 민감도는 세 배 가까이 달랐지만 계층 조정의 이득은 기본 모델에 따라 달랐다. 수급계획 관점에서는 용도별로 다른 정보(도시가스용은 기온 전망, 발전용은 전력 공급 계획)를 모형에 넣고, 서로 다른 원리의 모델을 앙상블로 함께 운용하는 것이 가장 안정적이다.`),
-  P("모든 자료와 코드, 결과는 공개 저장소(github.com/seoki0804/LNG_D_F, korea/ 폴더)에 있으며 python/run_all.py 한 번으로 재현할 수 있다."),
+  P(`한국 천연가스 수요를 용도별·지역별로 나눠 1~12개월 앞을 예측하고, 12개 모델을 같은 평가 틀에서 비교하였다. 도시가스용은 수요가중 HDD로 대부분 설명되어 사전예측 MAPE가 ${f1(cb[1])}% 수준이었고, 오차의 약 ${f0(share("city", "앙상블"))}%가 기온 불확실성이었다. 발전용은 기온만으로 설명되지 않아 오차가 ${f1(pb[1])}%로 두 배가량 컸고, 2026년 여름에는 기온과 무관한 수요 급증으로 모든 모델이 약 30% 낮게 예측하였다. 시도별 난방 민감도는 세 배 가까이 달랐지만, 계층 조정의 이득은 기본 모델에 따라 달랐다. 수급계획에서는 용도별로 다른 정보(도시가스용은 기온 전망, 발전용은 전력 공급 계획)를 모형에 넣고, 서로 다른 원리의 모델을 함께 운용하는 것이 바람직하다.`),
 );
 
 // ---------------- 참고문헌 ----------------
@@ -254,7 +277,12 @@ add(
   H1("참고문헌"),
   ...[
     "박진수, 김윤배, 정철우 (2013). 도시가스 일일수요의 단기예측. 대한산업공학회지, 39(4), 247-252.",
+    "이근철, 한정희 (2015). 선별적 샘플링을 이용한 국내 도시가스 일별 수요예측 절차 개발. 한국산학기술학회논문지, 16(10), 6860-6868.",
+    "이성로 (2017). 수도권과 지방권 수요예측모형을 통한 전국 도시가스수요전망의 예측력 향상. 자원·환경경제연구, 26(4), 519-547.",
+    "최용옥, 박혜성 (2020). 함수 주성분 분석을 이용한 일별 도시가스 수요 예측. 자원·환경경제연구, 29(4), 419-442.",
     "Amazon (2025). Chronos-2: From univariate to universal forecasting. arXiv:2510.15821.",
+    "Ansari, A. F. et al. (2024). Chronos: Learning the language of time series. Transactions on Machine Learning Research.",
+    "Bates, J. M. & Granger, C. W. J. (1969). The combination of forecasts. Operational Research Quarterly, 20(4), 451-468.",
     "Das, A., Kong, W., Sen, R. & Zhou, Y. (2024). A decoder-only foundation model for time-series forecasting. ICML 2024.",
     "Demšar, J. (2006). Statistical comparisons of classifiers over multiple data sets. Journal of Machine Learning Research, 7, 1-30.",
     "Diebold, F. X. & Mariano, R. S. (1995). Comparing predictive accuracy. Journal of Business & Economic Statistics, 13(3), 253-263.",
@@ -263,10 +291,14 @@ add(
     "Harvey, D., Leybourne, S. & Newbold, P. (1997). Testing the equality of prediction mean squared errors. International Journal of Forecasting, 13(2), 281-291.",
     "Hyndman, R. J. & Koehler, A. B. (2006). Another look at measures of forecast accuracy. International Journal of Forecasting, 22(4), 679-688.",
     "Kutner, M. H., Nachtsheim, C. J., Neter, J. & Li, W. (2004). Applied Linear Statistical Models (5th ed.). McGraw-Hill.",
+    "Liu, J., Wang, S., Wei, N., Chen, X., Xie, H. & Wang, J. (2021). Natural gas consumption forecasting: A discussion on forecasting history and future challenges. Journal of Natural Gas Science and Engineering, 90, 103930.",
     "Lundberg, S. M. & Lee, S.-I. (2017). A unified approach to interpreting model predictions. NeurIPS 2017.",
     "Newey, W. K. & West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. Econometrica, 55(3), 703-708.",
+    "Sarak, H. & Satman, A. (2003). The degree-day method to estimate the residential heating natural gas consumption in Turkey: A case study. Energy, 28(9), 929-939.",
+    "Soldo, B. (2012). Forecasting natural gas consumption. Applied Energy, 92, 26-37.",
     "Stankeviciute, K., Alaa, A. M. & van der Schaar, M. (2021). Conformal time-series forecasting. NeurIPS 2021.",
     "Tian, N. et al. (2023). Application of forecasting strategies and techniques to natural gas consumption: A comprehensive review and comparative study. Engineering Applications of Artificial Intelligence.",
+    "Wang, X., Hyndman, R. J., Li, F. & Kang, Y. (2023). Forecast combinations: An over 50-year review. International Journal of Forecasting, 39(4), 1518-1547.",
     "Wickramasuriya, S. L., Athanasopoulos, G. & Hyndman, R. J. (2019). Optimal forecast reconciliation for hierarchical and grouped time series through trace minimization. Journal of the American Statistical Association, 114(526), 804-819.",
     "자료: 한국가스공사 용도별 월 공급량·지역본부별 공급량·시도별 도시가스 판매현황(공공데이터포털), 기상청 ASOS 일자료, 통계청 KOSIS, FRED. 2026년 11월 21일 호출.",
   ].map((t) => new Paragraph({ spacing: { after: 80 }, indent: { left: 360, hanging: 360 }, children: [new TextRun({ text: t, size: 19 })] })),

@@ -33,6 +33,7 @@ STEPS = [
     ("leakage", [PY, "python/leakage_check.py"]),
     ("figures", [PY, "python/figures.py"]),
     ("numbers", [PY, "python/report_numbers.py"]),
+    ("slide_figures", [PY, "python/slide_figures.py"]),
     ("report", ["node", "report/build_report.js"]),
     ("deck", ["node", "report/build_deck.js"]),
 ]
