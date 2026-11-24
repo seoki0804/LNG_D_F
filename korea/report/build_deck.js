@@ -115,6 +115,11 @@ const prov = (m, me, lv) => (N.prov[`${m}|${me}|${lv}`] || {}).all;
 const share = (s, m) => N.weather_share[`${s}|${m}`];   // 반올림 전 MAPE로 계산한 값 (그림 5와 같음)
 const R = N.reg, D = N.data, PS = N.province_sens_range, SIX = N.six || {};
 const cb = best("city"), pb = best("power"), tb = best("total");
+const met = (s, m, k) => ((N.metrics || {})[`${s}|${m}|ex_ante|eval`] || {})[k];
+const itv = (s, m, me) => (N.intervals || {})[`${s}|${m}|${me}`] || {};
+const fr = (s) => (N.friedman || {})[`${s}|ex_ante`] || {};
+const shp = (s, f) => (N.shap || {})[`${s}|${f}`];
+const nearEns = (k) => Object.keys(NM).filter((m) => m !== "앙상블" && met(k, m, "rank") - met(k, "앙상블", "rank") < fr(k).CD).map(nm).join(", ") || "없음";
 
 // ---------------- 1. 표지 ----------------
 pres.addSection({ title: "도입" });
@@ -201,7 +206,7 @@ bullets(s, ["예측 시점마다 다시 추정해 1~12개월 앞을 한 번에 �
             "모든 시계를 같은 36개 목표월(2023~2025)로 비교",
             "설정·차수는 2020~2022 검증 구간에서만 선택",
             "사전예측 = 평년 기온 · 사후예측 = 실제 기온",
-            "DM 검정 + 모델 신뢰집합(MCS), 누수 자동 점검"], { x: 8.75, y: 1.45, w: 4.0, h: 4.6 }, 14);
+            "DM 검정·MCS·평균 순위 검정, 80% 예측구간, 누수 자동 점검"], { x: 8.75, y: 1.45, w: 4.0, h: 4.6 }, 14);
 caption(s, "모델: Seasonal Naive · OLS(√Y) · SARIMAX · ETS · Ridge/LightGBM(직접 다기간) · Hybrid(OLS+ML) · Chronos-2 · TimesFM 2.5 · Ensemble", 6.2);
 s.addNotes("평가 방법입니다. 예측 시점마다 그때까지의 자료로 모델을 다시 추정해서 다음 12개월을 한 번에 예측합니다. 목표월이 2023년부터 2025년인 예측만 모아서, 1개월 앞이든 12개월 앞이든 같은 36개월로 비교했습니다. 모든 모델의 설정은 그 이전 검증 구간에서만 골랐습니다. 실제 예측처럼 미래 기온 자리에 평년값을 넣는 사전예측을 기본으로 하고, 실제 기온을 넣는 사후예측과 비교해 기온 정보의 가치를 따로 봤습니다.");
 
@@ -254,6 +259,16 @@ s.addTable(rows, { x: MX, y: 1.45, w: W - 2 * MX, colW: [2.6, 3.17, 3.17, 3.19],
 caption(s, "MCS = 최고 모델과 통계적으로 구별되지 않는 모델 집합 (범위 통계량, 정상 부트스트랩 5,000회, 손실 APE)", 6.45);
 s.addNotes(`통계적으로 보면 결론은 조심스럽습니다. 평균으로는 미리 정한 Ensemble이 세 계열 모두 가장 정확했지만, 1개월 앞과 12개월 앞의 최고 모델은 용도마다 다릅니다. 최고 모델과 통계적으로 구별되지 않는 모델 집합에는 12개 중 ${mcs("city").length}개, ${mcs("power").length}개, ${mcs("total").length}개가 남습니다.${mcs("power").includes("계절 naive") ? " 특히 발전용은 작년 같은 달 값을 그대로 쓰는 Seasonal Naive조차 빠지지 않습니다." : ""} 36개월로는 상위 모델끼리의 작은 차이를 가릴 수 없다는 뜻이고, 그래서 한 모델을 고르기보다 서로 다른 원리의 모델을 함께 쓰는 쪽을 권합니다.`);
 
+
+// ---------------- 9-2. 여러 지표와 평균 순위 ----------------
+if (N.metrics) {
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
+  s.addText("지표를 바꿔도 같은 결론: Ensemble이 1위, 상위권 차이는 작다", { placeholder: "title" });
+  figure(s, FIG("fig9_critical_difference.png"), { x: MX, y: 1.2, w: W - 2 * MX, h: 5.05 }, "Fig 9 critical difference");
+  caption(s, `MAE·MASE·평균 순위 모두 Ensemble 1위 (MASE ${f2(met("city", "앙상블", "MASE"))} / ${f2(met("power", "앙상블", "MASE"))} / ${f2(met("total", "앙상블", "MASE"))}) · MAPE 95% 신뢰구간은 상위 모델끼리 겹침 · Friedman p < 0.001, Nemenyi CD = ${f2(fr("total").CD)} · 막대로 이어진 모델은 구별되지 않음`, 6.4);
+  s.addNotes(`MAPE 하나만 보면 지표에 따라 결론이 달라질 수 있어서, 머신러닝 논문에서 쓰는 지표들로 다시 확인했습니다. MAE, MASE, 그리고 목표월과 시계마다 매긴 순위의 평균에서 세 계열 모두 Ensemble이 1위였습니다. 다만 MAPE의 신뢰구간은 상위 모델끼리 겹치고, 그림처럼 평균 순위 차이가 임계차보다 작은 모델들이 굵은 막대로 묶입니다. 합계에서는 ${nearEns("total")}까지 Ensemble과 구별되지 않습니다. 같은 목표월을 여러 시계에서 예측하기 때문에 이 검정은 참고용이고, 결론은 앞의 모델 신뢰집합과 같습니다.`);
+}
+
 // ---------------- 10. 기온의 가치 ----------------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
 s.addText("기온을 알면 도시가스용 오차는 크게 준다, 발전용은 아니다", { placeholder: "title" });
@@ -262,6 +277,28 @@ stat(s, `${f0(share("city", "앙상블"))}%`, "도시가스용 오차 중\n기�
 stat(s, `${f0(share("power", "앙상블"))}%`, "발전용 오차 중\n기온 불확실성 몫", 9.5, 3.35, 3.25, HEX.accent2);
 caption(s, "Ensemble 기준, 사전예측(평년 기온) − 사후예측(실제 기온) MAPE의 비중, 1~12개월 평균", 6.45);
 s.addNotes(`실제 기온을 미리 안다고 가정한 사후예측과 비교해 보았습니다. 도시가스용은 오차의 약 ${f0(share("city", "앙상블"))}%가 기온을 몰라서 생긴 것으로, 기온 전망을 개선하면 그만큼 줄일 수 있습니다. 반면 발전용은 ${f0(share("power", "앙상블"))}%에 그쳐, 기온보다 전력 공급 측 정보가 필요합니다. 용도마다 다른 정보에 투자해야 한다는 실무적 시사점입니다.`);
+
+
+// ---------------- 10-2. 예측구간 ----------------
+if (N.intervals) {
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
+  s.addText("불확실성: AI 모델의 자체 구간은 너무 좁고, 보정 구간은 넓다", { placeholder: "title" });
+  figure(s, FIG("fig11_intervals.png"), { x: MX, y: 1.3, w: 8.6, h: 4.98 }, "Fig 11 intervals");
+  stat(s, `${f0(itv("total", "Chronos-2 + 공변량", "native").cov)}%`, "Chronos-2 자체 80% 구간의\n실제 적중률 (합계)", 9.5, 1.5, 3.25, HEX.accent2);
+  stat(s, `${f0(itv("total", "앙상블", "conformal").cov)}%`, "Ensemble 보정(conformal)\n80% 구간의 적중률 (합계)", 9.5, 3.3, 3.25, HEX.accent1);
+  caption(s, "conformal = 검증 구간(2020~2022) 오차로 시계마다 만든 80% 구간 · 자체 = 모델이 낸 10%·90% 분위수 · 평가 목표월 2023~2025", 6.45);
+  s.addNotes(`수급계획에는 예측값과 함께 불확실성의 범위가 필요합니다. 80% 예측구간이 실제로 얼마나 맞았는지 보았습니다. Chronos-2가 스스로 낸 구간은 합계에서 ${f0(itv("total", "Chronos-2 + 공변량", "native").cov)}%만 맞아 불확실성을 과소평가했습니다. 반대로 검증 구간의 오차로 만든 보정 구간은 ${f0(itv("total", "앙상블", "conformal").cov)}%를 맞춰 너무 넓었는데, 검증 구간에 코로나19와 2022년 가격 급등기가 들어 있었기 때문입니다. 파운데이션 모델의 분위수를 그대로 믿지 말고, 최근 오차로 보정을 갱신해야 한다는 시사점입니다.`);
+
+  // ---------------- 10-3. 특성 기여도 ----------------
+  s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });
+  s.addText("LightGBM이 본 것: 도시가스용은 기온, 발전용은 여러 요인", { placeholder: "title" });
+  figure(s, FIG("fig12_shap.png"), { x: MX, y: 1.4, w: W - 2 * MX, h: 4.3 }, "Fig 12 SHAP");
+  bullets(s, [
+    `도시가스용: 목표월 HDD ${f0(shp("city", "hdd"))}% · 1년 전 수요 ${f0(shp("city", "lag12"))}% → 회귀분석 결과와 같음`,
+    `발전용: HDD ${f0(shp("power", "hdd"))}% · CDD ${f0(shp("power", "cdd"))}% · 1년 전 수요 ${f0(shp("power", "lag12"))}% · 요금 지수 ${f0(shp("power", "log_cpi"))}%(추세 대용) · 석탄 상한제 ${f0(shp("power", "coal_cap"))}%`,
+  ], { x: MX, y: 5.75, w: W - 2 * MX, h: 1.1 }, 14);
+  s.addNotes(`기계학습 모델이 무엇을 보고 예측했는지 SHAP으로 확인했습니다. 도시가스용은 목표월 난방도일이 기여의 ${f0(shp("city", "hdd"))}%를 차지해 회귀분석과 같은 이야기를 합니다. 발전용은 난방도일, 냉방도일, 작년 같은 달 수요, 추세 역할을 하는 요금 지수, 석탄 상한제 기간으로 기여가 흩어져 있습니다. 발전용을 설명할 결정적인 변수가 없다는 뜻이고, 앞에서 본 공급 측 정보의 필요성과 맞닿아 있습니다.`);
+}
 
 // ---------------- 11. 계층 ----------------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "결과" });

@@ -1,0 +1,73 @@
+﻿series,info,model,avg_rank
+city,ex_ante,Chronos-2,6.752314814814815
+city,ex_ante,Chronos-2 + 공변량,6.662037037037037
+city,ex_ante,ETS,7.469907407407407
+city,ex_ante,LightGBM,5.905092592592593
+city,ex_ante,Ridge,6.685185185185185
+city,ex_ante,SARIMAX,5.613425925925926
+city,ex_ante,TimesFM 2.5,6.148148148148148
+city,ex_ante,계절 naive,8.194444444444445
+city,ex_ante,앙상블,5.405092592592593
+city,ex_ante,하이브리드 (회귀+LightGBM),5.916666666666667
+city,ex_ante,하이브리드 (회귀+Ridge),6.087962962962963
+city,ex_ante,회귀 √Y,7.159722222222222
+city,ex_post,Chronos-2,7.199074074074074
+city,ex_post,Chronos-2 + 공변량,6.516203703703703
+city,ex_post,ETS,7.914351851851852
+city,ex_post,LightGBM,5.212962962962963
+city,ex_post,Ridge,7.738425925925926
+city,ex_post,SARIMAX,4.604166666666667
+city,ex_post,TimesFM 2.5,6.962962962962963
+city,ex_post,계절 naive,8.44675925925926
+city,ex_post,앙상블,4.622685185185185
+city,ex_post,하이브리드 (회귀+LightGBM),5.650462962962963
+city,ex_post,하이브리드 (회귀+Ridge),5.476851851851852
+city,ex_post,회귀 √Y,7.655092592592593
+power,ex_ante,Chronos-2,6.618055555555555
+power,ex_ante,Chronos-2 + 공변량,5.752314814814815
+power,ex_ante,ETS,7.525462962962963
+power,ex_ante,LightGBM,6.74537037037037
+power,ex_ante,Ridge,6.856481481481482
+power,ex_ante,SARIMAX,5.493055555555555
+power,ex_ante,TimesFM 2.5,6.412037037037037
+power,ex_ante,계절 naive,7.474537037037037
+power,ex_ante,앙상블,5.326388888888889
+power,ex_ante,하이브리드 (회귀+LightGBM),7.215277777777778
+power,ex_ante,하이브리드 (회귀+Ridge),6.55787037037037
+power,ex_ante,회귀 √Y,6.023148148148148
+power,ex_post,Chronos-2,6.9907407407407405
+power,ex_post,Chronos-2 + 공변량,5.835648148148148
+power,ex_post,ETS,7.893518518518518
+power,ex_post,LightGBM,6.6782407407407405
+power,ex_post,Ridge,6.5092592592592595
+power,ex_post,SARIMAX,5.048611111111111
+power,ex_post,TimesFM 2.5,6.863425925925926
+power,ex_post,계절 naive,7.888888888888889
+power,ex_post,앙상블,4.953703703703703
+power,ex_post,하이브리드 (회귀+LightGBM),7.069444444444445
+power,ex_post,하이브리드 (회귀+Ridge),6.356481481481482
+power,ex_post,회귀 √Y,5.912037037037037
+total,ex_ante,Chronos-2,6.800925925925926
+total,ex_ante,Chronos-2 + 공변량,6.493055555555555
+total,ex_ante,ETS,7.548611111111111
+total,ex_ante,LightGBM,6.423611111111111
+total,ex_ante,Ridge,7.020833333333333
+total,ex_ante,SARIMAX,6.023148148148148
+total,ex_ante,TimesFM 2.5,6.8842592592592595
+total,ex_ante,계절 naive,7.402777777777778
+total,ex_ante,앙상블,5.094907407407407
+total,ex_ante,하이브리드 (회귀+LightGBM),6.479166666666667
+total,ex_ante,하이브리드 (회귀+Ridge),5.608796296296297
+total,ex_ante,회귀 √Y,6.219907407407407
+total,ex_post,Chronos-2,7.460648148148148
+total,ex_post,Chronos-2 + 공변량,6.328703703703703
+total,ex_post,ETS,8.141203703703704
+total,ex_post,LightGBM,5.9467592592592595
+total,ex_post,Ridge,7.3842592592592595
+total,ex_post,SARIMAX,5.356481481481482
+total,ex_post,TimesFM 2.5,7.666666666666667
+total,ex_post,계절 naive,7.909722222222222
+total,ex_post,앙상블,4.546296296296297
+total,ex_post,하이브리드 (회귀+LightGBM),6.597222222222222
+total,ex_post,하이브리드 (회귀+Ridge),4.743055555555555
+total,ex_post,회귀 √Y,5.918981481481482

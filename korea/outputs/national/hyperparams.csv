@@ -1,0 +1,25 @@
+﻿series,model,n_grid,params,val_MAPE
+city,ETS,3,"{""trend"": null}",5.443384405524672
+city,LightGBM,12,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 15}",5.886180314845794
+city,Ridge,4,"{""alpha"": 10.0}",6.253392438196829
+city,SARIMAX,12,"{""exog"": [""hdd""], ""order"": [1, 0, 0], ""seasonal"": [0, 1, 1]}",5.829262693982308
+city,계절 naive,1,{},6.577057657641774
+city,하이브리드 (회귀+LightGBM),8,"{""feats"": [""hdd"", ""cdd"", ""log_cpi""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",5.516665438215137
+city,하이브리드 (회귀+Ridge),12,"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""log_cpi""]}",5.71719985061117
+city,회귀 √Y,4,"{""feats"": [""hdd"", ""cdd"", ""log_cpi""]}",5.217017636126586
+power,ETS,3,"{""trend"": null}",15.393556275518714
+power,LightGBM,12,"{""min_child_samples"": 10, ""n_estimators"": 200, ""num_leaves"": 7}",16.134571921414253
+power,Ridge,4,"{""alpha"": 100.0}",15.794754190477668
+power,SARIMAX,12,"{""exog"": [""hdd"", ""cdd""], ""order"": [2, 0, 0], ""seasonal"": [1, 0, 0]}",15.674295350331304
+power,계절 naive,1,{},15.367170782925436
+power,하이브리드 (회귀+LightGBM),8,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",15.78873633734228
+power,하이브리드 (회귀+Ridge),12,"{""alpha"": 100.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""]}",14.485215873032269
+power,회귀 √Y,4,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_lng""]}",13.73045931775935
+total,ETS,3,"{""trend"": null}",8.975653348198833
+total,LightGBM,12,"{""min_child_samples"": 30, ""n_estimators"": 200, ""num_leaves"": 4}",9.851102389237033
+total,Ridge,4,"{""alpha"": 100.0}",8.811928983513544
+total,SARIMAX,12,"{""exog"": [""hdd"", ""cdd""], ""order"": [1, 0, 0], ""seasonal"": [1, 0, 0]}",9.263143630594485
+total,계절 naive,1,{},9.96835296719662
+total,하이브리드 (회귀+LightGBM),8,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""], ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 4}",8.601606126453616
+total,하이브리드 (회귀+Ridge),12,"{""alpha"": 1.0, ""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""]}",8.21389719477689
+total,회귀 √Y,4,"{""feats"": [""hdd"", ""cdd"", ""coal_cap"", ""log_cpi""]}",8.00878326825075

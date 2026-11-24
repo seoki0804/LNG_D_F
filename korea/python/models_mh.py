@@ -119,6 +119,12 @@ def _season(month):
 
 def _direct(train, fut, make):
     """수요 수준을 직접 예측: log y_목표 ~ h, 달, 목표월 기온, 1년 전 같은 달 수요, 최근 3개월 수요, 요금, 정책·달력."""
+    X, Y, Xf = _direct_xy(train, fut)
+    return np.exp(_fit_predict(make, X, Y, Xf))
+
+
+def _direct_xy(train, fut):
+    """직접 다기간 모델의 학습 설계행렬 X, 목표 Y(log 수요), 예측용 Xf (특성 기여도 분석에도 쓴다)."""
     hs = train.set_index("month")
     y = hs.y
 
@@ -130,7 +136,7 @@ def _direct(train, fut, make):
                               "coal_cap": r.coal_cap, "workdays": r.workdays} for r in rows.itertuples()])
 
     X, Y = _pairs(train, feats, lambda tgt: np.log(y.reindex(tgt).values))
-    return np.exp(_fit_predict(make, X, Y, feats(train.month.max(), fut)))
+    return X, Y, feats(train.month.max(), fut)
 
 
 def _hybrid(train, fut, make, feats=("hdd", "cdd")):

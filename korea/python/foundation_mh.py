@@ -6,7 +6,8 @@
 실행 환경: 저장소 루트의 .venv-fm (multicountry/README.md 참고)
     ..\\.venv-fm\\Scripts\\python python\\foundation_mh.py              (korea/ 에서)
     ..\\.venv-fm\\Scripts\\python python\\foundation_mh.py --province   (시도별 도시가스, 계층 예측용)
-출력: outputs/national/foundation.csv, outputs/province/foundation.csv
+    --val 을 붙이면 전국 검증 구간(목표월 2020~2022)만 예측한다 (예측구간 보정·계산 시간용)
+출력: outputs/national/foundation.csv, outputs/province/foundation.csv, outputs/national/{foundation_val,timing_fm}.csv
 """
 import argparse
 import time
@@ -19,11 +20,12 @@ import pandas as pd
 import torch
 
 from config import OUTPUTS, PROCESSED
-from mh import EVAL, HOLD, H, future_frame, origins
+from mh import EVAL, HOLD, VAL, H, future_frame, origins
 
 torch.manual_seed(0)
 COVS = ["hdd", "cdd", "hdd_l1", "cdd_l1", "workdays", "coal_cap", "cpi_city_gas"]   # 있는 열만 쓴다 (전월 기온은 시도 판매량용)
 SERIES = ["city", "power", "total"]
+TIMES = []   # (모델, 정보 조건, 예측 시점 수, 초): 배치 추론(CPU) 시간
 
 
 def items(frames, windows, info, covariates):
@@ -53,11 +55,13 @@ def chronos(frames, windows):
     out = []
     for covariates, info in ((False, "ex_ante"), (True, "ex_ante"), (True, "ex_post")):
         ctx, fut, _ = items(frames, windows, info, covariates)
+        t = time.perf_counter()
         pred = pipe.predict_df(pd.concat(ctx, ignore_index=True),
                                future_df=pd.concat(fut, ignore_index=True) if covariates else None,
                                id_column="item_id", timestamp_column="timestamp", target="y",
                                prediction_length=H, quantile_levels=[0.1, 0.5, 0.9], freq="MS")
         name = "Chronos-2 + 공변량" if covariates else "Chronos-2"
+        TIMES.append((name, info, len(ctx), time.perf_counter() - t))
         infos = [info] if covariates else ["ex_ante", "ex_post"]      # 단변량은 기온 정보와 무관
         for i in infos:
             out.append(pd.DataFrame({"key": pred.item_id.to_numpy(), "month": pred.timestamp.dt.strftime("%Y-%m"),
@@ -75,7 +79,9 @@ def timesfm_uni(frames, windows):
                                          infer_is_positive=True, fix_quantile_crossing=True))
     ctx, _, keys = items(frames, windows, "ex_ante", False)
     inputs = [c.y.to_numpy(dtype=float) for c in ctx]
+    t = time.perf_counter()
     point, quant = model.forecast(horizon=H, inputs=inputs)
+    TIMES.append(("TimesFM 2.5", "ex_ante", len(inputs), time.perf_counter() - t))
     rows = []
     for k, item in enumerate(keys):
         T = item.split("|")[1]
@@ -97,6 +103,7 @@ def finish(pred, frames):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--province", action="store_true")
+    ap.add_argument("--val", action="store_true", help="전국, 검증 구간(2020~2022)만")
     args = ap.parse_args()
     t0 = time.time()
     if args.province:
@@ -106,10 +113,15 @@ def main():
         df = pd.read_csv(PROCESSED / "national.csv")
         frames = {s: df.rename(columns={s: "y"}).query("month >= '2016-01'").reset_index(drop=True) for s in SERIES}
         windows, out = (EVAL, HOLD), OUTPUTS / "national" / "foundation.csv"
+        if args.val:
+            windows, out = (VAL,), OUTPUTS / "national" / "foundation_val.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
     pred = pd.concat([chronos(frames, windows), timesfm_uni(frames, windows)], ignore_index=True)
     pred = finish(pred, frames)
     pred.to_csv(out, index=False, encoding="utf-8-sig")
+    if args.val:   # 배치 추론 총시간 / 예측 시점 수
+        pd.DataFrame(TIMES, columns=["model", "info", "n", "sec"]).assign(sec_per_origin=lambda d: d.sec / d.n).to_csv(
+            OUTPUTS / "national" / "timing_fm.csv", index=False, encoding="utf-8-sig")
     print(f"저장: {out} ({len(pred)}행, {(time.time() - t0) / 60:.1f}분)")
 
 

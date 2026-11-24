@@ -8,10 +8,11 @@
 
 | 산출물 | 위치 |
 | --- | --- |
-| 논문 형식 보고서 (A4 12쪽, 그림 8 + 부록) | `report/한국_LNG_수요예측_보고서.docx` |
-| 학술대회 발표 자료 (16장, 슬라이드 노트에 발표 스크립트) | `report/한국_LNG_수요예측_발표.pptx` |
+| 논문 형식 보고서 (A4 19쪽, 본문 그림 10·표 4, 부록 그림 3·표 4) | `report/한국_LNG_수요예측_보고서.docx` |
+| 학술대회 발표 자료 (19장, 슬라이드 노트에 발표 스크립트) | `report/한국_LNG_수요예측_발표.pptx` |
 | 연구 제안서·프로젝트 계획서 (Word, Claude Docs에서 내보냄) | `docs/제안서_한국_LNG_수요예측.docx`, `docs/계획서_한국_LNG_수요예측.docx` |
 | 논문 그림 (영문, PNG 300 dpi + PDF) | `outputs/figures/` |
+| 논문용 종합 평가표 (지표 7종·순위 검정·예측구간·ablation·연도별·계산 비용·SHAP) | `outputs/national/paper_metrics.md` |
 | 문서에 쓴 모든 수치 (결과 파일에서 자동 추출) | `report/numbers.json` |
 
 ## 결과 요약
@@ -36,7 +37,11 @@
 - **회귀 추론:** 원 척도는 이분산(BP p < 0.001), Box-Cox λ 0.76 → √Y. 잔차 자기상관이 강해(DW 0.64) HAC 표준오차가 OLS의 1.7배. 2020~2025년 안에서 2022년 7월에 관계가 바뀐다(sup-F p < 0.001, 요금 인상기).
 - **다른 나라와 비교(같은 모델):** 한국은 난방 민감도가 낮고(HDD 10당 1.5%), 1개월 앞 기준 회귀가 6개국 중 가장 정확했다(4.7%).
 - **추가 변수:** SMP·석탄 가격·LNG/석탄 가격비·전력거래량·산업생산을 하나씩 더해 보았다(`outputs/national/variables.md`). 검증 구간 기준으로 고른 13개 조합이 평가 구간에서 평균 0.23%p 나빠지고 유의한 개선이 없어, 기본 설정을 유지했다. 발전용에 가장 필요한 월별 원전·석탄 발전량은 공개 월별 통계가 없다.
-- 누수 점검 72건 모두 통과(`outputs/leakage_check.md`).
+- **지표를 바꿔도 같은 결론:** MAE·RMSE·sMAPE·MASE·RelMAE·평균 순위로도 비교했다. Ensemble이 세 계열 모두 MAE·MASE·평균 순위 1위(MASE 도시가스용 0.62, 발전용 0.61, 합계 0.58). Friedman 검정 p < 0.001, Nemenyi CD = 0.80이지만 MAPE 95% 신뢰구간은 상위 모델끼리 겹친다.
+- **예측구간(80%):** Chronos-2 자체 분위수 구간은 합계 71%만 맞아 불확실성을 과소평가했고, 검증 구간 오차로 만든 conformal 구간은 98%로 보수적이었다(검증 구간에 2022년 가격 급등기 포함).
+- **Ensemble ablation·연도별 강건성:** 구성원을 빼거나 바꾼 이득이 평가 구간과 2026년에서 엇갈려, 미리 정한 평균을 유지했다. 연도 간 모델 순위 일치도는 Kendall W = 0.41~0.51로 중간 정도다.
+- **SHAP(LightGBM):** 도시가스용은 목표월 HDD가 기여의 72%, 발전용은 HDD·CDD·1년 전 수요·요금 지수로 흩어짐.
+- 누수 점검 72건 모두 통과(`outputs/leakage_check.md`). 검증 구간 예측을 다시 만들어 튜닝 기록과 비교한 재현 점검도 차이 0.00%p.
 
 ## 연구 질문
 
@@ -91,13 +96,15 @@ python/
   mh.py               1~12개월 앞 롤링 평가 공통 코드 (미래 입력은 수요 열 없이 만든다)
   models_mh.py        Seasonal Naive, OLS(√Y), SARIMAX, ETS, Ridge·LightGBM(직접 다기간), Hybrid(OLS+ML 잔차 보정)
   run_national.py     전국 용도별: 검증 구간 튜닝 → 평가 → 2026년 표본 외
+  val_predictions.py  검증 구간 예측(예측구간 보정용)과 모델별 계산 시간
   r_variables.py      추가 변수 점검 (SMP·석탄 가격·가격비·전력거래량·산업생산)
-  foundation_mh.py    Chronos-2·TimesFM 2.5 (학습 없음, 저장소 루트 .venv-fm)
+  foundation_mh.py    Chronos-2·TimesFM 2.5 (학습 없음, 저장소 루트 .venv-fm, --val 로 검증 구간)
   province_data.py    시도별 판매량 자료·기간
   run_province.py     시도별 계층 예측과 조정 (상향식·하향식·MinT)
   evaluate.py         앙상블, 예측 시계별 MAPE, DM 검정, 모델 신뢰집합(MCS), 기온 정보의 가치
+  paper_metrics.py    논문용 종합 평가: 지표 7종·95% CI, Friedman/Nemenyi, conformal 예측구간, ablation, 연도별, 계산 비용, SHAP
   leakage_check.py    누수 점검 (예측 시점 이후 자료를 ×10으로 바꿔도 예측 불변)
-  figures.py          논문 그림 8종 + 부록
+  figures.py          논문 그림 12종 + 부록
   report_numbers.py   보고서·발표 자료의 수치를 report/numbers.json으로
   run_all.py          전체 실행 (자료 가공 → 회귀 → 예측 → 평가 → 그림 → 문서)
 R/

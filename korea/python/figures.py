@@ -362,8 +362,148 @@ def figA1():
     save(fig, "figA1_diagnostics")
 
 
+FAMILY = {"계절 naive": C["bench"], "회귀 √Y": C["reg"], "SARIMAX": C["sarimax"], "ETS": C["sarimax"],
+          "Ridge": C["ml"], "LightGBM": C["ml"], "하이브리드 (회귀+Ridge)": C["ml"], "하이브리드 (회귀+LightGBM)": C["ml"],
+          "Chronos-2": C["chronos"], "Chronos-2 + 공변량": C["chronos"], "TimesFM 2.5": C["chronos"], "앙상블": C["ens"]}
+FAMILY_EN = [("Benchmark", C["bench"]), ("Regression", C["reg"]), ("Statistical time series", C["sarimax"]),
+             ("Machine learning", C["ml"]), ("Foundation model", C["chronos"]), ("Ensemble", C["ens"])]
+
+
+# ---------------- Fig 9: 평균 순위와 Nemenyi 임계차 (critical difference) ----------------
+def fig9():
+    rk = pd.read_csv(NAT / "ranks.csv")
+    ft = pd.read_csv(NAT / "friedman.csv")
+    rk, ft = rk[rk["info"] == "ex_ante"], ft[ft["info"] == "ex_ante"]
+    fig, axes = plt.subplots(3, 1, figsize=(W2, 4.7), gridspec_kw={"hspace": 0.3})
+    for ax, ser in zip(axes, ["total", "city", "power"]):
+        r = rk[rk.series == ser].sort_values("avg_rank")
+        t = ft[ft.series == ser].iloc[0]
+        cd, k = t.CD, int(t.k)
+        lo, hi = np.floor(r.avg_rank.min()), np.ceil(r.avg_rank.max())
+        ax.set_xlim(lo - 0.05, hi + 0.05)
+        ax.set_ylim(-0.1, 1.0)
+        ax.axis("off")
+        ax.plot([lo, hi], [0.78, 0.78], color=INK2, lw=0.8)
+        for v in np.arange(lo, hi + 0.01, 0.5):
+            ax.plot([v, v], [0.78, 0.81 if v % 1 else 0.83], color=INK2, lw=0.8)
+            if v % 1 == 0:
+                ax.text(v, 0.87, f"{v:.0f}", ha="center", va="bottom", fontsize=7, color=INK2)
+        names, ranks = r.model.tolist(), r.avg_rank.to_numpy()
+        half = (len(names) + 1) // 2
+        for j, (m, v) in enumerate(zip(names, ranks)):
+            left = j < half
+            y = 0.68 - (j if left else len(names) - 1 - j) * 0.105
+            xt = lo - 0.02 if left else hi + 0.02
+            ax.plot([v, v, xt], [0.78, y, y], color=BASE, lw=0.7, zorder=1)
+            ax.scatter([v], [0.78], s=14, color=FAMILY[m], zorder=3, lw=0)
+            ax.text(xt + (-0.03 if left else 0.03), y, f"{EN[m]}  {v:.2f}" if left else f"{v:.2f}  {EN[m]}",
+                    ha="right" if left else "left", va="center", fontsize=6.6, color=INK)
+        # 임계차 안에서 구별되지 않는 묶음 (Nemenyi)
+        groups, last = [], -1
+        for i in range(len(ranks)):
+            j = max(jj for jj in range(i, len(ranks)) if ranks[jj] - ranks[i] < cd)
+            if j > i and j > last:
+                groups.append((i, j))
+                last = j
+        for g, (i, j) in enumerate(groups):
+            yy = 0.73 - g * 0.035
+            ax.plot([ranks[i] - 0.02, ranks[j] + 0.02], [yy, yy], color=INK, lw=2.0, solid_capstyle="round")
+        ax.plot([lo, lo + cd], [0.97, 0.97], color=INK, lw=1.2)
+        ax.text(lo + cd / 2, 1.0, f"CD = {cd:.2f}", ha="center", va="bottom", fontsize=6.6, color=INK2)
+        ax.text(hi, 1.0, f"{SERIES_EN[ser]}  ·  Friedman χ² = {t.friedman_chi2:.0f}, p < 0.001  ·  N = {int(t.n_blocks)}",
+                ha="right", va="bottom", fontsize=7.5, fontweight="bold", color=INK)
+    save(fig, "fig9_critical_difference")
+
+
+# ---------------- Fig 10: 시계별 Seasonal Naive 대비 개선율 ----------------
+def fig10():
+    s = pd.read_csv(NAT / "summary_all.csv")
+    s = s[(s.window == "eval") & (s["info"] == "ex_ante")]
+    hcols = [f"h{h}" for h in range(1, 13)]
+    cmap = LinearSegmentedColormap.from_list("div", ["#c4501b", "#f3b08a", "#f2f1ed", "#9ec5f4", "#184f95"])
+    fig, axes = plt.subplots(1, 3, figsize=(W2, 3.0), gridspec_kw={"wspace": 0.08})
+    tot = s[s.series == "total"].set_index("model")
+    order = (1 - tot[hcols].div(tot.loc["계절 naive", hcols])).mean(axis=1).drop("계절 naive").sort_values(ascending=False).index
+    for k, (ax, ser) in enumerate(zip(axes, ["total", "city", "power"])):
+        t = s[s.series == ser].set_index("model")
+        skill = (1 - t.loc[order, hcols].div(t.loc["계절 naive", hcols])) * 100
+        im = ax.pcolormesh(np.arange(13) + 0.5, np.arange(len(order) + 1) - 0.5, skill.to_numpy(dtype=float), cmap=cmap,
+                           vmin=-50, vmax=50, edgecolors="white", linewidth=0.8)
+        ax.invert_yaxis()
+        ax.set_xticks(range(1, 13, 2), [str(h) for h in range(1, 13, 2)])
+        ax.set_xlabel("Horizon (months ahead)")
+        ax.set_yticks(range(len(order)), [EN[m] for m in order] if k == 0 else [])
+        ax.set_title(SERIES_EN[ser], fontsize=8.5)
+        ax.grid(False)
+        for sp in ax.spines.values():
+            sp.set_visible(False)
+        ax.tick_params(length=0)
+    cb = fig.colorbar(im, ax=axes, orientation="vertical", fraction=0.025, pad=0.02)
+    cb.set_label("MAPE reduction vs seasonal naive (%)", fontsize=7)
+    cb.ax.tick_params(labelsize=6.5, length=2)
+    cb.outline.set_visible(False)
+    save(fig, "fig10_skill_heatmap")
+
+
+# ---------------- Fig 11: 80% 예측구간 적중률 ----------------
+def fig11():
+    b = pd.read_csv(NAT / "intervals_h.csv")
+    show = [("앙상블", "conformal", C["ens"], "-", "Ensemble (conformal)"),
+            ("SARIMAX", "conformal", C["sarimax"], "-", "SARIMAX (conformal)"),
+            ("회귀 √Y", "conformal", C["reg"], "-", "OLS (√Y) (conformal)"),
+            ("Chronos-2 + 공변량", "native", C["chronos"], "-", "Chronos-2 (covariates), own quantiles"),
+            ("TimesFM 2.5", "native", MUTED, "-", "TimesFM 2.5, own quantiles")]
+    fig, axes = plt.subplots(2, 3, figsize=(W2, 3.9), gridspec_kw={"wspace": 0.3, "hspace": 0.45})
+    for k, ser in enumerate(["total", "city", "power"]):
+        for m, meth, col, ls, lab in show:
+            r = b[(b.series == ser) & (b.model == m) & (b.method == meth)].sort_values("h")
+            if r.empty:
+                continue
+            axes[0, k].plot(r.h, r.coverage, color=col, ls=ls, lw=1.1, marker="o", ms=2, label=lab)
+            axes[1, k].plot(r.h, r.width_pct, color=col, ls=ls, lw=1.1, marker="o", ms=2)
+        axes[0, k].axhline(80, color=INK2, ls="--", lw=0.8)
+        axes[0, k].set_ylim(40, 102)
+        axes[0, k].set_title(SERIES_EN[ser], fontsize=8.5)
+        axes[1, k].set_ylim(0, None)
+        for a in axes[:, k]:
+            a.set_xticks([1, 3, 6, 9, 12])
+            a.grid(axis="x", visible=False)
+        axes[1, k].set_xlabel("Horizon (months ahead)")
+    axes[0, 0].set_ylabel("Coverage of 80% interval (%)")
+    axes[1, 0].set_ylabel("Mean width (% of actual)")
+    h, l = axes[0, 0].get_legend_handles_labels()
+    h.append(plt.Line2D([], [], color=INK2, ls="--", lw=0.8))
+    l.append("Nominal 80%")
+    fig.legend(h, l, loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.1), columnspacing=1.2)
+    save(fig, "fig11_intervals")
+
+
+# ---------------- Fig 12: LightGBM 특성 기여도 (TreeSHAP) ----------------
+FEAT_EN = {"h": "Horizon h", "msin": "Month (sin)", "mcos": "Month (cos)", "hdd": "HDD, target month",
+           "cdd": "CDD, target month", "lag12": "Demand 12 months before target", "last3": "Mean demand, last 3 months",
+           "log_cpi": "City gas price (log CPI)", "coal_cap": "Coal-cap period", "workdays": "Working days"}
+
+
+def fig12():
+    sh = pd.read_csv(NAT / "shap.csv")
+    fig, axes = plt.subplots(1, 3, figsize=(W2, 2.5), gridspec_kw={"wspace": 0.08})
+    order = sh[sh.series == "total"].sort_values("share").feature.tolist()
+    for k, (ax, ser) in enumerate(zip(axes, ["total", "city", "power"])):
+        r = sh[sh.series == ser].set_index("feature").reindex(order)
+        ax.barh(range(len(order)), r.share, color=C["ml"], height=0.62)
+        for i, v in enumerate(r.share):
+            ax.text(v + 0.8, i, f"{v:.0f}", va="center", fontsize=6.3, color=INK2)
+        ax.set_yticks(range(len(order)), [FEAT_EN[f] for f in order] if k == 0 else [])
+        ax.set_xlim(0, sh.share.max() * 1.18)
+        ax.set_xlabel("Share of mean |SHAP| (%)")
+        ax.set_title(SERIES_EN[ser], fontsize=8.5)
+        ax.grid(axis="y", visible=False)
+        ax.tick_params(axis="y", length=0)
+    save(fig, "fig12_shap")
+
+
 ALL = {"fig1": fig1, "fig2": fig2, "fig3": fig3, "fig4": fig4, "fig5": fig5, "fig6": fig6, "fig7": fig7,
-       "fig8": fig8, "figA1": figA1}
+       "fig8": fig8, "fig9": fig9, "fig10": fig10, "fig11": fig11, "fig12": fig12, "figA1": figA1}
 
 if __name__ == "__main__":
     for k in (sys.argv[1:] or ALL):

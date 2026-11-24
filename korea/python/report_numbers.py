@@ -100,6 +100,36 @@ def main():
                      "n_eval_better": sum(g > 0 for g in gains),
                      "n_sig_better_adopted": sum(1 for x in adopted if float(x[5]) > 0 and float(x[6]) < 0.05),
                      "n_sig_worse_adopted": sum(1 for x in adopted if float(x[5]) < 0 and float(x[6]) < 0.05)}
+    # ---- 논문용 종합 평가 (paper_metrics.py)
+    if (NAT / "metrics.csv").exists():
+        mt = pd.read_csv(NAT / "metrics.csv")
+        cols = ["MAE", "RMSE", "MAPE", "MAPE_lo", "MAPE_hi", "sMAPE", "MASE", "RelMAE", "rank", "bias_pct"]
+        N["metrics"] = {f"{s_}|{m}|{i}|{w}": {c: r(v, 4) for c, v in zip(cols, row)}
+                        for s_, m, i, w, row in zip(mt.series, mt.model, mt["info"], mt.window, mt[cols].values.tolist())}
+        ft = pd.read_csv(NAT / "friedman.csv")
+        N["friedman"] = {f"{s_}|{i}": {"chi2": r(c, 1), "p": float(p_), "CD": r(cd, 3), "n": int(n), "k": int(k)}
+                         for s_, i, c, p_, cd, n, k in zip(ft.series, ft["info"], ft.friedman_chi2, ft.friedman_p, ft.CD,
+                                                           ft.n_blocks, ft.k)}
+        it = pd.read_csv(NAT / "intervals.csv")
+        N["intervals"] = {f"{s_}|{m}|{me}": {"cov": r(c, 1), "width": r(w_, 1), "IS": r(i_, 2)}
+                          for s_, m, me, c, w_, i_ in zip(it.series, it.model, it.method, it.coverage, it.width_pct, it.IS_pct)}
+        ab = pd.read_csv(NAT / "ablation.csv")
+        N["ablation"] = {f"{v}|{s_}|{i}|{w}": r(x, 2) for v, s_, i, w, x in zip(ab.variant, ab.series, ab["info"], ab.window, ab.MAPE)}
+        yr = pd.read_csv(NAT / "by_year.csv")
+        N["by_year"] = {f"{s_}|{m}|{y}": r(x, 2) for s_, m, y, x in zip(yr.series, yr.model, yr.year, yr.MAPE)}
+        kw = pd.read_csv(NAT / "by_year_W.csv")
+        N["kendall_W"] = {s_: r(w_, 3) for s_, w_ in zip(kw.series, kw.kendall_W)}
+        cp = pd.read_csv(NAT / "compute.csv")
+        N["compute"] = {m: {"sec": r(sx, 3), "training": t_, "params": "" if pd.isna(pa) else str(pa)}
+                        for m, sx, t_, pa in zip(cp.model, cp.sec_per_origin, cp.training, cp.params)}
+        hp = pd.read_csv(NAT / "hyperparams.csv")
+        N["hyper"] = {f"{s_}|{m}": {"n": int(n), "params": p_, "val": r(v, 2)}
+                      for s_, m, n, p_, v in zip(hp.series, hp.model, hp.n_grid, hp.params, hp.val_MAPE)}
+        sh = pd.read_csv(NAT / "shap.csv")
+        N["shap"] = {f"{s_}|{f}": r(x, 1) for s_, f, x in zip(sh.series, sh.feature, sh.share)}
+        rp = pd.read_csv(NAT / "repro_check.csv")
+        rp = rp[~rp.model.str.contains("LightGBM")]      # LightGBM은 튜닝 때 시드 1개, 최종은 시드 3개 평균
+        N["repro"] = {"n": len(rp), "maxdiff": r((rp.val_MAPE_now - rp.val_MAPE_tuning).abs().max(), 4)}
     # ---- 누수
     lk = (OUTPUTS / "leakage_check.md").read_text(encoding="utf-8") if (OUTPUTS / "leakage_check.md").exists() else ""
     m = re.search(r"(\d+)건 중 통과 (\d+)건", lk)

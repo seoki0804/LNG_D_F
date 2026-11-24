@@ -42,16 +42,18 @@ const numbering = {
   ],
 };
 
-// **굵게**와 *기울임*을 지원하는 간단한 인라인 표기
+// **굵게**, __밑줄__, *기울임*을 지원하는 간단한 인라인 표기
 function runs(text, base = {}) {
   const out = [];
-  const re = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
+  const re = /(\*\*[^*]+\*\*|__[^_]+__|\*[^*]+\*)/g;
   let last = 0, m;
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) out.push(new TextRun({ text: text.slice(last, m.index), ...base }));
     const t = m[0];
-    if (t.startsWith("**")) out.push(new TextRun({ text: t.slice(2, -2), bold: true, ...base }));
-    else out.push(new TextRun({ text: t.slice(1, -1), italics: true, ...base }));
+    // base(표 셀의 bold: undefined 등)가 강조 서식을 덮어쓰지 않도록 base를 먼저 펼친다
+    if (t.startsWith("**")) out.push(new TextRun({ ...base, text: t.slice(2, -2), bold: true }));
+    else if (t.startsWith("__")) out.push(new TextRun({ ...base, text: t.slice(2, -2), underline: {} }));
+    else out.push(new TextRun({ ...base, text: t.slice(1, -1), italics: true }));
     last = m.index + t.length;
   }
   if (last < text.length) out.push(new TextRun({ text: text.slice(last), ...base }));

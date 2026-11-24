@@ -1,0 +1,109 @@
+﻿variant,series,info,window,MAPE
+Ensemble (4),city,ex_ante,eval,4.540692853638668
+Ensemble (4),city,ex_ante,hold,4.975384790571036
+Ensemble (4),city,ex_post,eval,2.7921657781211766
+Ensemble (4),city,ex_post,hold,4.44996391184197
+Ensemble (4),power,ex_ante,eval,9.649128740569568
+Ensemble (4),power,ex_ante,hold,13.967282803823394
+Ensemble (4),power,ex_post,eval,8.454209565639914
+Ensemble (4),power,ex_post,hold,13.499885720766988
+Ensemble (4),total,ex_ante,eval,5.747452483599036
+Ensemble (4),total,ex_ante,hold,10.115660494591022
+Ensemble (4),total,ex_post,eval,4.157398816794236
+Ensemble (4),total,ex_post,hold,9.380729375999401
+"Ensemble (4, 중앙값)",city,ex_ante,eval,4.655912397118113
+"Ensemble (4, 중앙값)",city,ex_ante,hold,5.102663583307262
+"Ensemble (4, 중앙값)",city,ex_post,eval,2.8841763861212257
+"Ensemble (4, 중앙값)",city,ex_post,hold,4.4609009676453
+"Ensemble (4, 중앙값)",power,ex_ante,eval,9.921111858563798
+"Ensemble (4, 중앙값)",power,ex_ante,hold,14.115577754849163
+"Ensemble (4, 중앙값)",power,ex_post,eval,8.703592104681091
+"Ensemble (4, 중앙값)",power,ex_post,hold,13.41268622012713
+"Ensemble (4, 중앙값)",total,ex_ante,eval,5.965657797143113
+"Ensemble (4, 중앙값)",total,ex_ante,hold,10.064365686112668
+"Ensemble (4, 중앙값)",total,ex_post,eval,4.329010256812884
+"Ensemble (4, 중앙값)",total,ex_post,hold,9.469664998964767
+− 회귀 √Y,city,ex_ante,eval,4.618223457236335
+− 회귀 √Y,city,ex_ante,hold,4.916830806299077
+− 회귀 √Y,city,ex_post,eval,2.895189116724502
+− 회귀 √Y,city,ex_post,hold,4.391950622337957
+− 회귀 √Y,power,ex_ante,eval,9.836681176268193
+− 회귀 √Y,power,ex_ante,hold,14.699557078695596
+− 회귀 √Y,power,ex_post,eval,8.690840403166453
+− 회귀 √Y,power,ex_post,hold,14.319229288375249
+− 회귀 √Y,total,ex_ante,eval,6.234954621365545
+− 회귀 √Y,total,ex_ante,hold,9.63105184252452
+− 회귀 √Y,total,ex_post,eval,4.797222547029296
+− 회귀 √Y,total,ex_post,hold,9.112816745146239
+− SARIMAX,city,ex_ante,eval,4.669446314031388
+− SARIMAX,city,ex_ante,hold,4.897154898478184
+− SARIMAX,city,ex_post,eval,3.0963954193231906
+− SARIMAX,city,ex_post,hold,4.568474610995524
+− SARIMAX,power,ex_ante,eval,9.774184114913275
+− SARIMAX,power,ex_ante,hold,14.131819751260707
+− SARIMAX,power,ex_post,eval,8.81799472280327
+− SARIMAX,power,ex_post,hold,13.896377951176516
+− SARIMAX,total,ex_ante,eval,5.8395077380254525
+− SARIMAX,total,ex_ante,hold,10.201500327580883
+− SARIMAX,total,ex_post,eval,4.385936061570921
+− SARIMAX,total,ex_post,hold,9.614573269729366
+− LightGBM,city,ex_ante,eval,4.6583763826934605
+− LightGBM,city,ex_ante,hold,5.0486819310392885
+− LightGBM,city,ex_post,eval,3.0474087558273255
+− LightGBM,city,ex_post,hold,4.482390033954418
+− LightGBM,power,ex_ante,eval,9.611464875718227
+− LightGBM,power,ex_ante,hold,13.884274782900121
+− LightGBM,power,ex_post,eval,8.448371871756413
+− LightGBM,power,ex_post,hold,13.062800702762356
+− LightGBM,total,ex_ante,eval,5.714318461902894
+− LightGBM,total,ex_ante,hold,10.31980825762912
+− LightGBM,total,ex_post,eval,4.063514447493433
+− LightGBM,total,ex_post,hold,9.4945116889875
+− Chronos-2 + 공변량,city,ex_ante,eval,4.496015324172109
+− Chronos-2 + 공변량,city,ex_ante,hold,5.117607955993056
+− Chronos-2 + 공변량,city,ex_post,eval,2.6276619720195344
+− Chronos-2 + 공변량,city,ex_post,hold,4.591182598518544
+− Chronos-2 + 공변량,power,ex_ante,eval,9.770595836515774
+− Chronos-2 + 공변량,power,ex_ante,hold,13.761862902227225
+− Chronos-2 + 공변량,power,ex_post,eval,8.599729781392194
+− Chronos-2 + 공변량,power,ex_post,hold,13.032770653743075
+− Chronos-2 + 공변량,total,ex_ante,eval,5.703601032432819
+− Chronos-2 + 공변량,total,ex_ante,hold,10.325822279450701
+− Chronos-2 + 공변량,total,ex_post,eval,4.007587399172639
+− Chronos-2 + 공변량,total,ex_post,hold,9.389014817120131
+통계 (OLS+SARIMAX),city,ex_ante,eval,4.67363431162405
+통계 (OLS+SARIMAX),city,ex_ante,hold,5.289911156447476
+통계 (OLS+SARIMAX),city,ex_post,eval,2.956392059937984
+통계 (OLS+SARIMAX),city,ex_post,hold,4.75044839088897
+통계 (OLS+SARIMAX),power,ex_ante,eval,9.892153360271024
+통계 (OLS+SARIMAX),power,ex_ante,hold,13.714015006071945
+통계 (OLS+SARIMAX),power,ex_post,eval,8.595093242199308
+통계 (OLS+SARIMAX),power,ex_post,hold,12.405268964802323
+통계 (OLS+SARIMAX),total,ex_ante,eval,5.4949007793900675
+통계 (OLS+SARIMAX),total,ex_ante,hold,10.720415723530044
+통계 (OLS+SARIMAX),total,ex_post,eval,3.8896836008398243
+통계 (OLS+SARIMAX),total,ex_post,hold,9.566691167145775
+AI (LightGBM+Chronos-2),city,ex_ante,eval,4.727660402158005
+AI (LightGBM+Chronos-2),city,ex_ante,hold,4.779026664609534
+AI (LightGBM+Chronos-2),city,ex_post,eval,3.2752932030939705
+AI (LightGBM+Chronos-2),city,ex_post,hold,4.538026991900975
+AI (LightGBM+Chronos-2),power,ex_ante,eval,10.128783943504018
+AI (LightGBM+Chronos-2),power,ex_ante,hold,15.354870408944047
+AI (LightGBM+Chronos-2),power,ex_post,eval,9.479251306091212
+AI (LightGBM+Chronos-2),power,ex_post,hold,15.222955791864898
+AI (LightGBM+Chronos-2),total,ex_ante,eval,6.435204493231223
+AI (LightGBM+Chronos-2),total,ex_ante,hold,9.510905265652001
+AI (LightGBM+Chronos-2),total,ex_post,eval,5.304004898818661
+AI (LightGBM+Chronos-2),total,ex_post,hold,9.293566310621424
+전 모델 평균 (11),city,ex_ante,eval,4.595434704994166
+전 모델 평균 (11),city,ex_ante,hold,5.211030504124454
+전 모델 평균 (11),city,ex_post,eval,3.0907340821300795
+전 모델 평균 (11),city,ex_post,hold,4.439660445833303
+전 모델 평균 (11),power,ex_ante,eval,9.918805564105842
+전 모델 평균 (11),power,ex_ante,hold,13.675721430905355
+전 모델 평균 (11),power,ex_post,eval,9.053259023444237
+전 모델 평균 (11),power,ex_post,hold,13.107797645389944
+전 모델 평균 (11),total,ex_ante,eval,5.89380196129608
+전 모델 평균 (11),total,ex_ante,hold,10.078709207821701
+전 모델 평균 (11),total,ex_post,eval,4.489536984125211
+전 모델 평균 (11),total,ex_post,hold,9.462978482221065
